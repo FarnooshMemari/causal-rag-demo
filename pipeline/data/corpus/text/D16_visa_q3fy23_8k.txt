@@ -1,0 +1,53 @@
+EX-99.1
+2
+q32023earningsrelease.htm
+EX-99.1
+Document
+Visa Inc. Reports Fiscal Third Quarter 2023 Results
+San Francisco, CA, July 25, 2023 – Visa Inc. (NYSE: V)
+• GAAP net income of $4.2B or $2.00 per share and non-GAAP net income of $4.5B or $2.16 per share
+• Net revenues of $8.1B, an increase of 12%, or 13% on a constant-dollar basis
+• Payments volume and processed transaction growth was relatively stable while cross-border volume growth remained strong
+• Share repurchases and dividends of $3.9B
+Income Statement Summary
+In billions, except percentages and per share data. % change is calculated over the comparable prior-year period. | Q3 2023 | Ryan McInerney , Chief Executive Officer, Visa Inc., commented on the results:
+USD | % Change
+Net Revenues | $8.1 | 12%
+GAAP Net Income | $4.2 | 22% | “We reported another quarter of strong results, reflecting stable business trends. Consumer spending remained resilient, driving growth in payments volume and processed transactions. Cross-border volume continued to be a tailwind, fueled by travel growth from the ongoing recovery and summer tourism. We are focused on accelerating our growth across consumer payments, new flows and value added services by investing in our brand, innovation, capabilities, people and clients so that we remain at the center of money movement for years to come.”
+GAAP Earnings Per Share | $2.00 | 25%
+Non-GAAP Net Income (1) | $4.5 | 7%
+Non-GAAP Earnings Per Share (1) | $2.16 | 9%
+(1) Refer to the accompanying financial tables for further details and a reconciliation of the GAAP to non-GAAP measures presented.
+Key Business Drivers
+YoY increase / (decrease), volume in constant dollars | Q3 2023
+Payments Volume | 9%
+Cross-Border Volume Excluding Intra-Europe (2) | 22%
+Cross-Border Volume Total | 17%
+Processed Transactions | 10%
+(2) Cross-border volume excluding transactions within Europe.
+Fiscal Third Quarter 2023 — Financial Highlights
+GAAP net income in the fiscal third quarter was $4.2 billion or $2.00 per share, an increase of 22% and 25%, respectively, over prior year’s results. Current year’s results included a special item of $456 million for a litigation provision associated with the interchange multidistrict litigation ("MDL") case, $85 million of net gains from equity investments and $65 million from the amortization of acquired intangible assets and acquisition-related costs. Prior year’s results included a special item of $716 million for a litigation provision associated with the MDL case, $246 million of net losses from equity investments, and $58 million from the amortization of acquired intangible assets and acquisition-related costs. Excluding these items and related tax impacts, non-GAAP net income for the quarter was $4.5 billion or $2.16 per share, increases of 7% and 9%, respectively, over prior year’s results (refer to the accompanying financial tables for further details and a reconciliation of the GAAP to non-GAAP measures presented). GAAP earnings per share growth was approximately 26% on a constant-dollar basis, which excludes the impact of foreign currency fluctuations against the U.S. dollar. Non-GAAP earnings per share growth was approxima tely 11% on a constant-dollar basis. All references to earnings per share assume fully-diluted class A share count.
+Net revenues in the fiscal third quarter were $8.1 billion, an increase of 12%, driven by the year-over-year growth in payments volume, cross-border volume and processed transactions. Net revenues increased 13% on a constant-dollar basis.
+Payments volume for the three months ended March 31, 2023, on which fiscal third quarter service revenues are recognized, increased 10% over the prior year on a constant-dollar basis.
+Payments volume for the three months ended June 30, 2023, increased 9% over the prior year on a constant-dollar basis.
+Cross-border volume excluding transactions within Europe, which drive our international transaction revenues, increased 22% on a constant-dollar basis for the three months ended June 30, 2023. Total cross-border volume on a constant-dollar basis increased 17% in the quarter.
+Total processed transactions, which represent transactions processed by Visa, for the three months ended June 30, 2023, were 54.0 billion, a 10% increase over the prior year.
+Fiscal third quarter service revenues were $3.7 billion, an increase of 15% over the prior year, and are recognized based on payments volume in the prior quarter. All other revenue categories are recognized based on current quarter activity. Data processing revenues rose 15% over the prior year to $4.1 billion. International transaction revenues grew 14% over the prior year to $2.9 billion. Other revenues of $597 million rose 15% over the prior year. Client incentives, a contra-revenue item, were $3.2 billion and represented 28.1% of gross revenues.
+GAAP operating expenses were $3.1 billion for the fiscal third quarter, a 1% decrease over the prior year's results, primarily driven by a decrease in the litigation provision, largely offset by an increase in personnel expenses. GAAP operating expenses included the special item related to the litigation provision associated with the MDL case, the amortization of acquired intangible assets and acquisition-related costs in the current and prior year. Excluding these operating expense items, non-GAAP operating expenses increased 10% over the prior year, primarily driven by an increase in personnel expenses.
+GAAP non-operating income was $122 million for the fiscal third quarter, including $85 million of net equity investment gains. Excluding this item, non-GAAP non-operating income was $37 million.
+GAAP effective income tax rate was 19.2% for the quarter ended June 30, 2023. Excluding the related tax impacts from the non-GAAP items noted above, the non-GAAP effective income tax rate was 19.4% for the quarter ended June 30, 2023.
+Cash, cash equivalents and investment securities were $20.9 billion at June 30, 2023.
+The weighted-average number of diluted shares of class A common stock outstanding was 2.08 billion for the quarter ended June 30, 2023.
+2
+Other Notable Items
+On June 20, 2023, Visa announced the appointment of Chris Suh as Executive Vice President, Chief Financial Officer, effective August 1, 2023. Mr. Suh commenced employment with Visa on July 10, 2023 as CFO Designate ahead of assuming the CFO position on August 1, 2023.
+On June 28, 2023, Visa deposited $500 million into its litigation escrow account, which was previously established under the Company's U.S. retrospective responsibility plan to insulate the Company and class A shareholders from financial liability for certain litigation cases. This deposit has the same economic effect on earnings per share as repurchasing the Company's class A common stock as it reduces the as-converted class B common stock share count at a volume weighted average price of $227.75.
+On June 28, 2023, Visa announced it signed a definitive agreement to acquire Pismo, a cloud-native issuer processing and core banking platform with operations in Latin America, Asia Pacific and Europe, for $1 billion in cash. The transaction is subject to customary closing conditions, including applicable regulatory reviews and approvals, and is expected to close by the end of 2023.
+During the three months ended June 30, 2023, Visa repurchased 12.9 million shares of class A common stock at an average cost of $229.19 per share for $3.0 billion. The Company had $8.8 billion of remaining authorized funds for share repurchases as of June 30, 2023.
+On July 25, 2023, the board of directors declared a quarterly cash dividend of $0.450 per share of class A common stock (determined in the case of class B and C common stock and series A, B and C convertible participating preferred stock on an as-converted basis) payable on September 1, 2023, to all holders of record as of August 11, 2023.
+Fiscal Third Quarter 2023 Earnings Results Call Details
+Visa’s executive management team will host a live audio webcast beginning at 5:00 p.m. Eastern Time (2:00 p.m. Pacific Time) today to discuss the financial results and business highlights. All interested parties are invited to listen to the live webcast at investor.visa.com . A replay of the webcast will be available on the Visa Investor Relations website for 30 days. Investor information, including supplemental financial information and operational performance data, is available on the Visa Investor Relations website at investor.visa.com .
+3
+Forward-Looking Statements
+About Visa Inc.
+Visa (NYSE: V) is a world leader in digital payments, facilitating transactions between consumers, merchants, financial institutions and government entities across more than 200 countries and territories. Our mission is to connect the world through the most innovative, convenient, reliable and secure payments network, enabling individuals, businesses and economies to thrive. We believe that economies that include everyone everywhere, uplift 

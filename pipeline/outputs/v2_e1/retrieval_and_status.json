@@ -1,0 +1,194 @@
+{
+  "version": "e1_v2",
+  "provenance": "POST-HOC correction written on 2026-10-05 AFTER inspecting v1 E1 results (v1 labelled E1 'supported' on realised McDonald's Q2 revenue growth and treated Home Depot's falling sales as contradiction). Because it was designed after seeing v1 outputs on this event, any v2 result here is not an independent test; the definition must be validated on at least one other event before use. v1 config/graph.json, prompts, outputs and cache are unchanged.",
+  "cutoff": "2023-08-15T10:00:00-04:00",
+  "n_chunks_eligible": 281,
+  "ordinary": {
+    "query": "July 2023 retail sales consumer spending effect outlook equities stocks economy",
+    "note": "same 20 chunks as v1; v2 assesses E1 alone against them (v1 judged all 5 edges in one call)",
+    "results": [
+      {
+        "chunk_id": "D09_beige_book_2023_07#c005",
+        "doc_id": "D09_beige_book_2023_07",
+        "score": 15.572
+      },
+      {
+        "chunk_id": "D01_census_retail_2023_07#c000",
+        "doc_id": "D01_census_retail_2023_07",
+        "score": 12.731
+      },
+      {
+        "chunk_id": "D01_census_retail_2023_07#c001",
+        "doc_id": "D01_census_retail_2023_07",
+        "score": 12.122
+      },
+      {
+        "chunk_id": "D09_beige_book_2023_07#c006",
+        "doc_id": "D09_beige_book_2023_07",
+        "score": 11.579
+      },
+      {
+        "chunk_id": "D16_visa_q3fy23_8k#c007",
+        "doc_id": "D16_visa_q3fy23_8k",
+        "score": 11.223
+      },
+      {
+        "chunk_id": "D09_beige_book_2023_07#c004",
+        "doc_id": "D09_beige_book_2023_07",
+        "score": 10.881
+      },
+      {
+        "chunk_id": "D14_homedepot_q2fy23_8k#c007",
+        "doc_id": "D14_homedepot_q2fy23_8k",
+        "score": 10.318
+      },
+      {
+        "chunk_id": "D08_fomc_minutes_2023_06#c018",
+        "doc_id": "D08_fomc_minutes_2023_06",
+        "score": 10.256
+      },
+      {
+        "chunk_id": "D14_homedepot_q2fy23_8k#c008",
+        "doc_id": "D14_homedepot_q2fy23_8k",
+        "score": 10.206
+      },
+      {
+        "chunk_id": "D14_homedepot_q2fy23_8k#c005",
+        "doc_id": "D14_homedepot_q2fy23_8k",
+        "score": 10.06
+      },
+      {
+        "chunk_id": "D01_census_retail_2023_07#c006",
+        "doc_id": "D01_census_retail_2023_07",
+        "score": 9.882
+      },
+      {
+        "chunk_id": "D16_visa_q3fy23_8k#c008",
+        "doc_id": "D16_visa_q3fy23_8k",
+        "score": 9.761
+      },
+      {
+        "chunk_id": "D08_fomc_minutes_2023_06#c031",
+        "doc_id": "D08_fomc_minutes_2023_06",
+        "score": 9.46
+      },
+      {
+        "chunk_id": "D11_bowman_speech_2023_08_05#c004",
+        "doc_id": "D11_bowman_speech_2023_08_05",
+        "score": 8.911
+      },
+      {
+        "chunk_id": "D07_fomc_presser_2023_07_26#c030",
+        "doc_id": "D07_fomc_presser_2023_07_26",
+        "score": 8.741
+      },
+      {
+        "chunk_id": "D02_bls_cpi_2023_07#c013",
+        "doc_id": "D02_bls_cpi_2023_07",
+        "score": 8.459
+      },
+      {
+        "chunk_id": "D08_fomc_minutes_2023_06#c026",
+        "doc_id": "D08_fomc_minutes_2023_06",
+        "score": 8.413
+      },
+      {
+        "chunk_id": "D01_census_retail_2023_07#c003",
+        "doc_id": "D01_census_retail_2023_07",
+        "score": 8.216
+      },
+      {
+        "chunk_id": "D10_sloos_2023_07#c001",
+        "doc_id": "D10_sloos_2023_07",
+        "score": 8.214
+      },
+      {
+        "chunk_id": "D07_fomc_presser_2023_07_26#c004",
+        "doc_id": "D07_fomc_presser_2023_07_26",
+        "score": 8.188
+      }
+    ]
+  },
+  "graph_guided": {
+    "question": "Do companies explicitly attribute raised, lowered or maintained forward earnings or revenue guidance or outlook to the strength of consumer demand?",
+    "query": "guidance outlook raised full-year expects forecast consumer demand spending strength resilient customers traffic expect sales earnings",
+    "results": [
+      {
+        "chunk_id": "D14_homedepot_q2fy23_8k#c001",
+        "doc_id": "D14_homedepot_q2fy23_8k",
+        "score": 17.481
+      },
+      {
+        "chunk_id": "D08_fomc_minutes_2023_06#c026",
+        "doc_id": "D08_fomc_minutes_2023_06",
+        "score": 16.865
+      },
+      {
+        "chunk_id": "D19_pg_q4fy23_8k#c010",
+        "doc_id": "D19_pg_q4fy23_8k",
+        "score": 16.808
+      },
+      {
+        "chunk_id": "D08_fomc_minutes_2023_06#c025",
+        "doc_id": "D08_fomc_minutes_2023_06",
+        "score": 16.382
+      }
+    ]
+  },
+  "v1_graph_guided_E1_for_comparison": [
+    {
+      "chunk_id": "D14_homedepot_q2fy23_8k#c001",
+      "doc_id": "D14_homedepot_q2fy23_8k",
+      "score": 27.043
+    },
+    {
+      "chunk_id": "D14_homedepot_q2fy23_8k#c000",
+      "doc_id": "D14_homedepot_q2fy23_8k",
+      "score": 27.027
+    },
+    {
+      "chunk_id": "D09_beige_book_2023_07#c004",
+      "doc_id": "D09_beige_book_2023_07",
+      "score": 23.171
+    },
+    {
+      "chunk_id": "D17_mcdonalds_q2_2023_8k#c001",
+      "doc_id": "D17_mcdonalds_q2_2023_8k",
+      "score": 21.639
+    }
+  ],
+  "offline_checks": {
+    "budget_unchanged": true,
+    "no_future_doc_in_retrieval": true,
+    "no_future_doc_in_prompts": true,
+    "prompts_contain_exactly_retrieved_chunks": true,
+    "all_prompt_chunks_at_or_before_cutoff": true,
+    "v2_cache_dir_separate_from_v1": true
+  },
+  "llm_assessment_status": {
+    "ordinary_r0": {
+      "cache_file": "cache/llm_e1_v2/c66c1c705314712e3243c88573b954a0c3cf279b3bca3bb22d97d35d600e25ea.json",
+      "status": "PENDING (no LLM call made)"
+    },
+    "ordinary_r1": {
+      "cache_file": "cache/llm_e1_v2/f9414787d45c1d23a51e93c050fc9951b3a88a9b28201cf50ddc31584b47f1e5.json",
+      "status": "PENDING (no LLM call made)"
+    },
+    "ordinary_r2": {
+      "cache_file": "cache/llm_e1_v2/f7672e9178f5a985e8b234dcbc19f25f36ecc018a0375045265f469e9d564fbc.json",
+      "status": "PENDING (no LLM call made)"
+    },
+    "graph_guided_r0": {
+      "cache_file": "cache/llm_e1_v2/708a604913993618a8328a042dcde787250b793660ee990d29e58bb410aebb47.json",
+      "status": "PENDING (no LLM call made)"
+    },
+    "graph_guided_r1": {
+      "cache_file": "cache/llm_e1_v2/defec1974a51b639ddbb2c7ce2f3045c1a83452d5a80b6aa2fe538c963d75208.json",
+      "status": "PENDING (no LLM call made)"
+    },
+    "graph_guided_r2": {
+      "cache_file": "cache/llm_e1_v2/caa523ffe3af972718d953fd6de6606af8d1fc523e9fb68369fe475b8eca155b.json",
+      "status": "PENDING (no LLM call made)"
+    }
+  }
+}

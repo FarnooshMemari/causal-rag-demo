@@ -1,0 +1,15 @@
+{
+  "_doc": "Expected labels for r2, recorded BEFORE any r2 call; identical to r1. Hidden from the assessor.",
+  "FX1": {
+    "expected": "supported",
+    "why": "explicit attribution of raised forward EPS guidance to stronger consumer demand"
+  },
+  "FX2": {
+    "expected": "contradicted",
+    "why": "stronger demand explicitly fails to improve guidance; offsetting mechanism (ingredient and wage costs compressing margins) stated"
+  },
+  "FX3": {
+    "expected": "insufficient_evidence",
+    "why": "historical revenue growth plus reaffirmed guidance, no demand link"
+  }
+}

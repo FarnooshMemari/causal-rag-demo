@@ -1,0 +1,33 @@
+{
+  "version": "e1_v2",
+  "status": "exploratory",
+  "provenance": "POST-HOC correction written on 2026-10-05 AFTER inspecting v1 E1 results (v1 labelled E1 'supported' on realised McDonald's Q2 revenue growth and treated Home Depot's falling sales as contradiction). Because it was designed after seeing v1 outputs on this event, any v2 result here is not an independent test; the definition must be validated on at least one other event before use. v1 config/graph.json, prompts, outputs and cache are unchanged.",
+  "unchanged_from_v1": ["corpus", "decision_cutoff", "time filter", "BM25 parameters", "retrieval budget (20 ordinary / 4 per edge)", "provider and model", "edges E2-E5", "ordinary broad query"],
+  "nodes": {
+    "consumer_demand": {
+      "label": "Consumer demand strength",
+      "replaces_v1_node": "consumption",
+      "event_context": "July 2023 advance retail sales +0.7% m/m vs +0.4% consensus (released 2023-08-15 08:30 EDT). Documents published before the release are economic CONTEXT, not reactions to this surprise."
+    },
+    "forward_earnings_expectations": {
+      "label": "Forward earnings / revenue expectations and guidance",
+      "replaces_v1_node": "earnings_expectations (v1 label 'Expected corporate earnings / revenues', which let realised revenue count)"
+    }
+  },
+  "edge": {
+    "id": "E1",
+    "version": "e1_v2",
+    "source": "consumer_demand",
+    "target": "forward_earnings_expectations",
+    "pathway": "P1_earnings",
+    "assumed_sign": 1,
+    "condition": "Holds when firms translate stronger consumer demand into improved forward earnings/revenue guidance or outlook, without an offsetting mechanism (e.g. margin compression from input costs, wages, discounting or mix shift).",
+    "retrieval_question": "Do companies explicitly attribute raised, lowered or maintained forward earnings or revenue guidance or outlook to the strength of consumer demand?",
+    "retrieval_query": "guidance outlook raised full-year expects forecast consumer demand spending strength resilient customers traffic expect sales earnings",
+    "criteria": {
+      "supported": "At least one quote explicitly attributes an IMPROVED forward earnings/revenue guidance or outlook to STRONGER consumer demand (attribution and outlook change stated in the source itself, not inferred).",
+      "contradicted": "At least one quote explicitly shows stronger consumer demand FAILING to improve forward expectations, AND a quote states the offsetting mechanism (e.g. margin compression, costs, discounting, mix).",
+      "insufficient_evidence": "Everything else, including: historical/realised sales or revenue growth alone; growth attributed to strategy, pricing or unstated causes; unchanged or reaffirmed guidance without an explicit demand link; weak demand accompanied by weak results (consistent with, not contrary to, the link); general economic outlook without an earnings link."
+    }
+  }
+}

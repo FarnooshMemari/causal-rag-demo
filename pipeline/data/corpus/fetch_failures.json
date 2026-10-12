@@ -1,0 +1,10 @@
+[
+  {
+    "doc_id": "F02_target_q2_2023_8k",
+    "error": "SEC blocked https://www.sec.gov/Archives/edgar/data/27419/000002741923000032/0000027419-23-000032-index.htm; set CRAG_SEC_CONTACT='Name email@domain' and retry"
+  },
+  {
+    "doc_id": "F03_walmart_q2fy24_8k",
+    "error": "SEC blocked https://www.sec.gov/Archives/edgar/data/104169/000010416923000088/0000104169-23-000088-index.htm; set CRAG_SEC_CONTACT='Name email@domain' and retry"
+  }
+]

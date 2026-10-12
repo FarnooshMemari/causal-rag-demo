@@ -1,0 +1,6 @@
+{
+  "_doc": "Expected labels, set BEFORE any model call (2026-10-06). Kept out of assessor inputs. PASS = validated label equals expected label. No tuning or retries after results.",
+  "FX1": {"expected": "supported", "why": "explicit attribution of raised forward EPS guidance to stronger consumer demand"},
+  "FX2": {"expected": "contradicted", "why": "stronger demand explicitly fails to improve guidance; offsetting mechanism (ingredient and wage costs compressing margins) stated"},
+  "FX3": {"expected": "insufficient_evidence", "why": "historical revenue growth plus reaffirmed guidance, no demand link"}
+}

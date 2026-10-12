@@ -1,0 +1,90 @@
+[
+ {
+  "claim": "5G causes COVID-19.",
+  "label": "Refuted",
+  "claim_types": [
+   "Causal Claim"
+  ],
+  "claim_date": "01-01-2021",
+  "speaker": "Fixture",
+  "justification": "synthetic fixture",
+  "questions": [
+   {
+    "question": "Does 5G cause COVID-19?",
+    "answers": [
+     {
+      "answer": "No. Viruses cannot travel on radio waves.",
+      "answer_type": "Abstractive",
+      "source_url": "https://example.org/0"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "claim": "The city budget was cut due to falling tax revenue.",
+  "label": "Supported",
+  "claim_types": [
+   "Causal Claim"
+  ],
+  "claim_date": "01-01-2021",
+  "speaker": "Fixture",
+  "justification": "synthetic fixture",
+  "questions": [
+   {
+    "question": "Why was the budget cut?",
+    "answers": [
+     {
+      "answer": "Officials cited falling tax revenue.",
+      "answer_type": "Abstractive",
+      "source_url": "https://example.org/1"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "claim": "The mayor said the bridge opened in 2010.",
+  "label": "Not Enough Evidence",
+  "claim_types": [
+   "Quote Verification"
+  ],
+  "claim_date": "01-01-2021",
+  "speaker": "Fixture",
+  "justification": "synthetic fixture",
+  "questions": [
+   {
+    "question": "When did the bridge open?",
+    "answers": [
+     {
+      "answer": "No source found.",
+      "answer_type": "Abstractive",
+      "source_url": "https://example.org/2"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "claim": "Unemployment fell to 3% last year.",
+  "label": "Conflicting Evidence/Cherrypicking",
+  "claim_types": [
+   "Numerical Claim"
+  ],
+  "claim_date": "01-01-2021",
+  "speaker": "Fixture",
+  "justification": "synthetic fixture",
+  "questions": [
+   {
+    "question": "What was unemployment?",
+    "answers": [
+     {
+      "answer": "3% by one measure, 6% by another.",
+      "answer_type": "Abstractive",
+      "source_url": "https://example.org/3"
+     }
+    ]
+   }
+  ]
+ }
+]

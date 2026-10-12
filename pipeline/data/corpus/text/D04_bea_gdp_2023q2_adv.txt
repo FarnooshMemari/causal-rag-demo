@@ -1,0 +1,158 @@
+EMBARGOED UNTIL RELEASE AT 8:30 a.m. EDT, Thursday, July 27, 2023 BEA 23–33
+Technical: Lisa Mataloni (301)278-9083 gdpniwd@bea.gov
+Media: Connie O'Connell (301)278-9003 Connie.OConnell@bea.gov
+Gross Domestic Product, Second Quarter 2023
+(Advance Estimate)
+Real gross domestic product (GDP) increased at an annual rate of 2.4 percent in the second quarter of
+2023 (table 1), according to the "advance" estimate released by the Bureau of Economic Analysis. In the
+first quarter, real GDP increased 2.0 percent.
+The GDP estimate released today is based on source data that are incomplete or subject to further
+revision by the source agency (refer to “Source Data for the Advance Estimate” on page 2). The “second”
+estimate for the second quarter, based on more complete data, will be released on August 30, 2023.
+Real GDP: Percent change from preceding quarter
+40
+30
+20
+10
+0
+-10
+-20
+-30
+-40
+Q3 Q4 Q1 Q2 Q3 Q4 Q1 Q2 Q3 Q4 Q1 Q2 Q3 Q4 Q1 Q2
+2019 2020 2021 2022 2023
+U.S. Bureau of Economic Analysis Seasonallyadjusted annual rates
+The increase in real GDP reflected increases in consumer spending, nonresidential fixed investment,
+state and local government spending, private inventory investment, and federal government spending
+that were partly offset by decreases in exports and residential fixed investment. Imports, which are a
+subtraction in the calculation of GDP, decreased (table 2).
+The increase in consumer spending reflected increases in both services and goods. Within services, the
+leading contributors to the increase were housing and utilities, health care, financial services and
+insurance, and transportation services. Within goods, the increase was led by recreational goods and
+
+vehicles as well as gasoline and other energy goods. The increase in nonresidential fixed investment
+reflected increases in equipment, structures, and intellectual property products. The increase in state
+and local spending reflected increases in compensation of state and local government employees and
+gross investment in structures. The increase in private inventory investment reflected increases in both
+farm and nonfarm inventories.
+Compared to the first quarter, the acceleration in GDP in the second quarter primarily reflected an
+upturn in private inventory investment and an acceleration in nonresidential fixed investment. These
+movements were partly offset by a downturn in exports, and decelerations in consumer spending,
+federal government spending, and state and local government spending. Imports turned down.
+Current-dollar GDP increased 4.7 percent at an annual rate, or $305.2 billion, in the second quarter to a
+level of $26.84 trillion. In the first quarter, GDP increased 6.1 percent, or $391.8 billion (tables 1 and 3).
+The price index for gross domestic purchases increased 1.9 percent in the second quarter, compared
+with an increase of 3.8 percent in the first quarter (table 4). The PCE price index increased 2.6 percent,
+compared with an increase of 4.1 percent. Excluding food and energy prices, the PCE price index
+increased 3.8 percent, compared with an increase of 4.9 percent.
+Personal Income
+Current-dollar personal income increased $236.1 billion in the second quarter, compared with an
+increase of $278.0 billion in the first quarter. The increase primarily reflected increases in compensation
+(led by private wages and salaries), personal income receipts on assets (both personal interest income
+and personal dividend income), rental income of persons, and personal current transfer receipts (led by
+government social benefits) (table 8).
+Disposable personal income increased $248.2 billion, or 5.2 percent, in the second quarter, compared
+with an increase of $587.9 billion, or 12.9 percent, in the first quarter. Real disposable personal income
+increased 2.5 percent in the second quarter, compared with an increase of 8.5 percent.
+Personal saving was $869.5 billion in the second quarter, compared with $840.9 billion in the first
+quarter. The personal saving rate—personal saving as a percentage of disposable personal income—
+was 4.4 percent in the second quarter, compared with 4.3 percent in the first quarter.
+Source Data for the Advance Estimate
+The GDP estimate released today is based on source data that are incomplete or subject to further
+revision by the source agency. Information on the source data and key assumptions used in the advance
+estimate is provided in a Technical Note and a detailed "Key Source Data and Assumptions" file posted
+with the release. The "second" estimate for the second quarter, based on more complete data, will be
+released on August 30, 2023. For information on updates to GDP, refer to the "Additional Information"
+section that follows.
+- 2 -
+
+Comprehensive Update of the National Economic Accounts
+BEA will release initial results from the 2023 comprehensive update of the National
+Economic Accounts, which include the National Income and Product Accounts as well as the
+Industry Economic Accounts, on September 28, 2023. The update will present revised
+statistics for GDP, GDP by Industry, and gross domestic income. For details, refer to
+Information on Updates to the National Economic Accounts.
+Next release, August 30, 2023, at 8:30 a.m. EDT
+Gross Domestic Product (Second Estimate)
+Corporate Profits (Preliminary Estimate)
+Second Quarter 2023
+* * *
+- 3 -
+
+Additional Information
+Resources The personal consumption expenditure price index
+measures the prices paid for the goods and services
+Additional resources available at www.bea.gov: purchased by, or on the behalf of, "persons."
+• Stay informed about BEA developments by Personal income is the income received by, or on behalf of,
+reading the BEA blog, signing up for BEA’s email all persons from all sources: from participation as laborers
+subscription service, or following BEA on Twitter in production, from owning a home or business, from the
+@BEA_News. ownership of financial assets, and from government and
+• Historical time series for these estimates can be
+business in the form of transfers. It includes income from
+domestic sources as well as the rest of world. It does not
+accessed in BEA’s interactive data application.
+include realized or unrealized capital gains or losses.
+• Access BEA data by registering for BEA’s data
+Application Programming Interface (API).
+Disposable personal income is the income available to
+• For more on BEA’s statistics, refer to our online
+persons for spending or saving. It is equal to personal
+journal, the Survey of Current Business.
+income less personal current taxes.
+• BEA's news release schedule
+• NIPA Handbook: Concepts and Methods of the
+Personal outlays is the sum of personal consumption
+U.S. National Income and Product Accounts
+expenditures, personal interest payments, and personal
+current transfer payments.
+Definitions
+Personal saving is personal income less personal outlays
+and personal current taxes.
+Gross domestic product (GDP), or value added, is the value
+of the goods and services produced by the nation’s
+The personal saving rate is personal saving as a percentage
+economy less the value of the goods and services used up
+of disposable personal income.
+in production. GDP is also equal to the sum of personal
+consumption expenditures, gross private domestic
+Profits from current production, referred to as corporate
+investment, net exports of goods and services, and
+profits with inventory valuation adjustment (IVA) and
+government consumption expenditures and gross
+capital consumption (CCAdj) adjustment in the National
+investment.
+Income and Product Accounts (NIPAs), is a measure of the
+net income of corporations before deducting income taxes
+Gross domestic income (GDI) is the sum of incomes earned
+that is consistent with the value of goods and services
+and costs incurred in the production of GDP. In national
+measured in GDP. The IVA and CCAdj are adjustments that
+economic accounting, GDP and GDI are conceptually equal.
+convert inventory withdrawals and depreciation of fixed
+In practice, GDP and GDI differ because they are
+assets reported on a tax-return, historical-cost basis to the
+constructed using largely independent source data.
+current-cost economic measures used in the national
+income and product accounts. Profits for domestic
+Gross output is the value of the goods and services
+industries reflect profits for all corporations located within
+produced by the nation’s economy. It is principally
+the geographic borders of the United States. The rest-of-
+measured using industry sales or receipts, including sales to
+the-world (ROW) component of profits is measured as the
+final users (GDP) and sales to other industries (intermediate
+difference between profits received from ROW and profits
+inputs).
+paid to ROW.
+Current-dollar estimates are valued in the prices of the
+For more definitions, refer to the Glossary: National Income
+period when the transactions occurred—that is, at "market
+and Product Accounts.
+value." Also referred to as "nominal estimates" or as
+"current-price estimates."
+Real values are inflation-adjusted estimates—that is,
+estimates that exclude the effects of price changes.
+The gross domestic purchases price index measures the
+prices of final goods and services purchased by U.S.
+residents.
+- 4 -

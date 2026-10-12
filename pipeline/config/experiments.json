@@ -1,0 +1,20 @@
+{
+  "note": "Run profiles. 'dev' is the small development run (cheap, clearly labelled, not a benchmark result). 'full' evaluates the whole labelled split; check cost first (~4 calls per case per benchmark + 1 query-generation call).",
+  "profiles": {
+    "dev": {
+      "backend": "llm", "repeats": 1, "bny_repeats": 1, "workers": 4,
+      "fincausal2026": {"split": "dev_internal", "n": 12, "n_distractors": 200, "budget": 3},
+      "averitec": {"split": "dev", "n": 12, "budget": 10, "stratify_causal": true}
+    },
+    "full": {
+      "backend": "llm", "repeats": 1, "bny_repeats": 3, "workers": 4,
+      "fincausal2026": {"split": "dev_internal", "n": null, "n_distractors": 1600, "budget": 3},
+      "averitec": {"split": "dev", "n": null, "budget": 10, "stratify_causal": false}
+    },
+    "smoke": {
+      "backend": "heuristic", "repeats": 1, "bny_repeats": 1, "workers": 1,
+      "fincausal2026": {"split": "dev_internal", "n": 12, "n_distractors": 200, "budget": 3},
+      "averitec": {"split": "dev", "n": 12, "budget": 10, "stratify_causal": true}
+    }
+  }
+}

@@ -1,0 +1,91 @@
+EMBARGOED UNTIL RELEASE AT 8:30 a.m. EDT, Friday, July 28, 2023 BEA 23–34
+Technical: Lisa Mataloni (Personal Income) (301)278-9083 piniwd@bea.gov
+Kyle Brown (PCE Goods) (301)278-9086 pce@bea.gov
+Jeff Barnett (PCE Services) (301)278-9663
+Media: Connie O'Connell (301)278-9003 Connie.OConnell@bea.gov
+Personal Income and Outlays, June 2023
+Personal income increased $69.5 billion (0.3 percent at a monthly rate) in June, according to estimates
+released today by the Bureau of Economic Analysis (table 3 and table 5). Disposable personal income
+(DPI), personal income less personal current taxes, increased $67.5 billion (0.3 percent) and personal
+consumption expenditures (PCE) increased $100.4 billion (0.5 percent).
+The PCE price index increased 0.2 percent. Excluding food and energy, the PCE price index also
+increased 0.2 percent (table 9). Real DPI increased 0.2 percent in June and real PCE increased 0.4
+percent; goods increased 0.9 percent and services increased 0.1 percent (tables 5 and 7).
+2023
+Feb. Mar. Apr. May June
+Percent change from preceding month
+Personal income:
+Current dollars 0.4 0.4 0.3 0.5 0.3
+Disposable personal income:
+Current dollars 0.6 0.5 0.3 0.5 0.3
+Chained (2012) dollars 0.3 0.3 0.0 0.4 0.2
+Personal consumption expenditures (PCE):
+Current dollars 0.3 0.1 0.6 0.2 0.5
+Chained (2012) dollars 0.0 0.0 0.3 0.1 0.4
+Price indexes:
+PCE 0.3 0.1 0.3 0.1 0.2
+PCE, excluding food and energy 0.3 0.3 0.4 0.3 0.2
+Price indexes: Percent change from month one year ago
+PCE 5.0 4.2 4.3 3.8 3.0
+PCE, excluding food and energy 4.7 4.6 4.6 4.6 4.1
+
+The increase in current-dollar personal income in June primarily reflected an increase in compensation
+that was partly offset by a decrease in personal income receipts on assets (table 3).
+The $100.4 billion increase in current-dollar PCE in June reflected an increase of $51.2 billion in
+spending for services and an increase of $49.1 billion in spending for goods (table 3). Within services,
+the largest contributors to the increase were financial services and insurance (led by portfolio
+management and investment advice services), housing and utilities (led by housing), and recreation
+services. Within goods, the largest contributors to the increase were motor vehicles and parts (led by
+new light trucks) and gasoline and other energy goods (led by motor vehicle fuels, lubricants, and fluids).
+Detailed information on monthly PCE spending can be found on Table 2.4.5U.
+Personal outlays, the sum of PCE, personal interest payments, and personal current transfer payments,
+increased $109.4 billion in June (table 3). Personal saving was $862.4 billion in June and the personal
+saving rate—personal saving as a percentage of disposable personal income—was 4.3 percent (table 1).
+Prices
+From the preceding month, the PCE price index for June increased 0.2 percent (table 9). Prices for goods
+decreased 0.1 percent and prices for services increased 0.3 percent. Food prices decreased 0.1 percent
+and energy prices increased 0.6 percent. Excluding food and energy, the PCE price index increased 0.2
+percent. Detailed monthly PCE price indexes can be found on Table 2.4.4U.
+From the same month one year ago, the PCE price index for June increased 3.0 percent (table 11). Prices
+for goods decreased 0.6 percent and prices for services increased 4.9 percent. Food prices increased 4.6
+percent and energy prices decreased 18.9 percent. Excluding food and energy, the PCE price index
+increased 4.1 percent from one year ago.
+Real PCE
+The increase of 0.4 percent in real PCE in June reflected increases of 0.9 percent in spending on goods
+and 0.1 percent in spending on services (table 7). Within goods, the largest contributors to the increase
+were motor vehicles and parts (led by new light trucks) and recreational goods and vehicles (led by
+video, audio, photographic and information processing equipment and media). Within services, the
+leading contributor to the increase was financial services and insurance (led by portfolio management
+and investment advice services). Detailed information on monthly real PCE spending can be found on
+Table 2.4.6U.
+- 2-
+
+Comprehensive Update of the National Economic Accounts
+BEA will release initial results from the 2023 comprehensive update of the National
+Economic Accounts, which include the National Income and Product Accounts as well as the
+Industry Economic Accounts, on September 28, 2023. The update will present revised
+statistics for GDP, GDP by Industry, and gross domestic income. Updated monthly personal
+income and outlays will be released on September 29, along with the August 2023 estimate.
+For details, refer to Information on Updates to the National Economic Accounts.
+Updates to Personal Income and Outlays
+Estimates have been updated for April and May. Revised and previously published changes from the
+preceding month for current-dollar personal income, and for current-dollar and chained (2012) dollar
+DPI and PCE, are provided below.
+Change from preceding month
+April May
+Previous Revised Previous Revised Previous Revised Previous Revised
+(Billions of dollars) (Percent) (Billions of dollars) (Percent)
+Personal income:
+Current dollars 57.9 57.6 0.3 0.3 91.2 104.1 0.4 0.5
+Disposable personal
+income:
+Current dollars 57.8 60.3 0.3 0.3 86.7 104.3 0.4 0.5
+Chained (2012) dollars -10.8 -5.2 -0.1 0.0 48.2 62.7 0.3 0.4
+Personal consumption
+expenditures:
+Current dollars 108.8 111.2 0.6 0.6 18.9 32.9 0.1 0.2
+Chained (2012) dollars 33.9 39.1 0.2 0.3 -3.7 7.9 0.0 0.1
+* * *
+Next release: August 31, 2023, at 8:30 a.m. EDT
+Personal Income and Outlays, July 2023
+- 3-

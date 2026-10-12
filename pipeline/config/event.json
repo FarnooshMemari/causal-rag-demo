@@ -1,0 +1,45 @@
+{
+  "event_id": "us_retail_sales_2023_07_advance",
+  "description": "U.S. Census Bureau Advance Monthly Sales for Retail and Food Services, July 2023 (Release CB23-127)",
+  "reference_period": "2023-07",
+  "release_timestamp": "2023-08-15T08:30:00-04:00",
+  "release_timestamp_source": "Stated on the release itself: 'FOR RELEASE AT 8:30 AM EDT, TUESDAY, AUGUST 15, 2023' (data/raw/census_adv2307.pdf, page 1)",
+  "decision_cutoff": "2023-08-15T10:00:00-04:00",
+  "decision_cutoff_rationale": "90 minutes after the release: enough for the release and same-morning company disclosures to be public, and before the next scheduled information events (Target Q2 8-K accepted 2023-08-16 06:50 ET; July FOMC minutes released 2023-08-16 14:00 ET).",
+  "first_release_actual": {
+    "headline_mom_pct": 0.7,
+    "headline_mom_ci90_pct": 0.5,
+    "level_usd_billion": 696.4,
+    "yoy_pct": 3.2,
+    "prior_month_revised_mom_pct": 0.3,
+    "prior_month_initial_mom_pct": 0.2,
+    "source_quote": "were $696.4 billion, up 0.7 percent (±0.5 percent) from the previous month, and up 3.2 percent (±0.7 percent) above July 2022",
+    "source": "https://www2.census.gov/retail/releases/historical/marts/adv2307.pdf"
+  },
+  "consensus": {
+    "headline_mom_pct": 0.4,
+    "status": "verified_from_two_independent_public_sources",
+    "sources": [
+      {
+        "publisher": "FXStreet (pre-release preview of nine bank forecasts)",
+        "url": "https://www.fxstreet.com/news/us-retail-sales-preview-forecasts-from-nine-major-banks-growing-moderately-202308141326",
+        "published": "2023-08-14T13:45:32Z (article:published_time meta tag; i.e. before the release)",
+        "quote": "Retail Sales in the US are expected to rise 0.4% month-on-month vs. 0.2% in June."
+      },
+      {
+        "publisher": "CNBC (post-release report citing the Dow Jones survey estimate)",
+        "url": "https://www.cnbc.com/2023/08/15/retail-sales-report-july-2023.html",
+        "published": "2023-08-15 08:34 EDT (byline 'Published Tue, Aug 15 2023 8:34 AM EDT')",
+        "quote": "The advanced retail sales report showed a seasonally adjusted increase of 0.7% for the month, better than the 0.4% Dow Jones estimate."
+      }
+    ],
+    "caveats": "Consensus surveys (Dow Jones, Bloomberg, Reuters) are proprietary; we rely on public reports of them. The prior-month value (0.2%/0.3%) was NOT used as a consensus proxy. Consensus articles are used only for event metadata and are deliberately NOT part of the retrieval corpus (they are news, not primary documents)."
+  },
+  "surprise": {
+    "headline_mom_pp": 0.3,
+    "definition": "first-release actual minus public consensus (0.7 - 0.4), in percentage points; unstandardised (no forecast-dispersion data available)",
+    "sign": "positive (stronger-than-expected consumption)"
+  },
+  "retrieval_dates": "2026-10-05",
+  "hindsight_disclosure": "The project author (an LLM coding agent) and the LLM assessor have general training-data knowledge of post-August-2023 markets. The graph was written from textbook theory before any return series was examined; no return data is downloaded or used anywhere in this project."
+}

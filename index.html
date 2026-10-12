@@ -1,7 +1,144 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="Explore recorded Causal RAG experiment results, retrieval evidence and revised E1 criteria."><title>Causal RAG · Evidence explorer</title><link rel="stylesheet" href="style.css"><script defer src="app.js"></script></head><body>
-<header><div><span class="eyebrow">CAUSAL RAG / FEASIBILITY MVP</span><h1>Evidence explorer</h1></div><span class="recorded">Recorded experiment results</span></header>
-<main><p class="intro">One retail-sales event. Two retrieval methods. Every assessment tied to saved evidence.</p><section id="event" class="event" aria-label="Retail-sales event"></section>
-<div class="workspace"><aside><h2>Economic graph</h2><p class="muted">Select a link. Signs are theoretical assumptions.</p><div id="graph" aria-label="Selectable economic graph"></div><div id="edges"></div><div class="notice">This MVP does not establish causal validity, graph-guided superiority, or portfolio performance.</div></aside>
-<section class="results"><div class="toolbar"><div><span class="eyebrow">SELECTED LINK</span><h2 id="edge-title"></h2></div><label>Definition <select id="version"><option value="v1">v1 · original</option><option value="v2">v2 · revised E1</option></select></label><label>Repeat <select id="repeat"><option value="0">r0</option><option value="1">r1</option><option value="2">r2</option></select></label></div><div id="criteria"></div><div id="comparison" class="comparison" aria-live="polite"></div></section></div>
-<section class="notes"><h2>What the checks show</h2><div class="notegrid"><div><h3>Time filter</h3><p>No future chunks in recorded filtered retrieval. Eight future chunks would have appeared without filtering. The release at 08:30 EDT stayed eligible.</p><p>The separate 16/16 check was reported but is unverifiable: its execution log is unavailable. Filtering cannot verify every timestamp or remove training knowledge.</p></div><div><h3>Evidence and agreement</h3><p>v1: 59/60 quote entries passed citation checks. Real-data v2: 21/21, comprising 9 ordinary and 12 graph-guided context quotes across three repeats. Repeat citations are counted.</p><p>A matching quote does not establish semantic support. Repeat agreement is consistency, not correctness. Human review remains pending.</p></div><div><h3>Missing validation</h3><p>No qualifying E1 link was found in reviewed material; a saved systematic audit of all text is missing.</p><p>Synthetic r1 passed 2/3. After r1, r2 instructions were revised to accept fictional premises; expected labels were recorded before its calls. r2 passed 3/3 once. Real-document accuracy remains unproven.</p></div></div></section>
-<footer>Saved artifacts only · no live analysis or model calls. Next: freeze criteria and queries before testing a second event with a reviewer-labelled, real pre-cutoff demand-to-guidance passage.</footer></main><div id="error" role="alert" hidden></div></body></html>
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Does causal graph structure improve evidence retrieval and verification? Recorded and computed results for ordinary, multi-query and graph-guided RAG.">
+<title>Causal RAG · Research results</title>
+<link rel="stylesheet" href="style.css">
+<script defer src="main.js"></script>
+<script defer src="explorer.js"></script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="top">
+  <div class="brand"><span class="eyebrow">DUKE × BNY · CAUSAL RAG</span><strong>Evidence research viewer</strong></div>
+  <nav aria-label="Primary">
+    <a href="#overview" data-tab="overview">Overview</a>
+    <a href="#bny" data-tab="bny">BNY Case Study</a>
+    <a href="#benchmarks" data-tab="benchmarks">Benchmarks</a>
+    <a href="#guide" data-tab="guide">Guide</a>
+  </nav>
+</header>
+
+<main id="main">
+<!-- ============================== OVERVIEW -->
+<section id="tab-overview" class="tab" aria-labelledby="h-overview">
+  <h1 id="h-overview">Does a causal graph help find and check evidence?</h1>
+  <p class="lead">We test whether giving retrieval and reasoning an explicit cause-and-effect map improves evidence retrieval, verification and multi-step reasoning compared with ordinary and multi-query RAG.</p>
+
+  <figure class="flow" aria-label="Architecture: eight stages from input to evaluation">
+    <ol>
+      <li><b>Input</b><span>event, claim or question</span></li>
+      <li><b>Decompose</b><span>into graph edges</span></li>
+      <li><b>Retrieve</b><span>same corpus &amp; budget</span></li>
+      <li><b>Extract</b><span>verbatim quotes</span></li>
+      <li><b>Assess</b><span>same model &amp; rubric</span></li>
+      <li><b>Validate</b><span>causal safeguards</span></li>
+      <li><b>Path reasoning</b><span>conservative chains</span></li>
+      <li><b>Evaluate</b><span>gold used only here</span></li>
+    </ol>
+    <figcaption>Three methods share every stage. Only <b>graph-guided</b> uses edges, paths and the validator; <b>multi-query</b> gets the same number of queries without the graph.</figcaption>
+  </figure>
+
+  <h2>What is on this site</h2>
+  <div id="status-board" class="status-board" aria-live="polite"></div>
+  <p class="legend"><span class="pill recorded">Recorded</span> original saved experiment &nbsp; <span class="pill computed">Computed</span> new offline run, small sample &nbsp; <span class="pill pending">Unavailable</span> not run or no public gold</p>
+  <p class="caution">Nothing here shows that evidence establishes causality, or that one method is better. Small-sample differences are descriptive.</p>
+</section>
+
+<!-- ============================== BNY -->
+<section id="tab-bny" class="tab" aria-labelledby="h-bny" hidden>
+  <div class="tab-head">
+    <div><h1 id="h-bny">BNY case study · July 2023 retail sales</h1>
+    <p class="lead">One event, five hypothesised links (E1–E5), two competing pathways. Evidence must be public before 10:00 ET on 15 Aug 2023.</p></div>
+    <div class="seg" role="tablist" aria-label="Case study view">
+      <button role="tab" id="bny-v-new" aria-selected="true" data-view="new">Three-method comparison</button>
+      <button role="tab" id="bny-v-orig" aria-selected="false" data-view="orig">Original v1/v2 record</button>
+    </div>
+  </div>
+
+  <div id="bny-new">
+    <div id="bny-status" class="runline"></div>
+    <div class="bny-grid">
+      <div class="panel">
+        <h2 class="h3">Causal graph</h2>
+        <p class="muted small">Select a link. Signs are assumptions, not estimates.</p>
+        <div id="bny-graph"></div>
+        <div id="bny-paths"></div>
+      </div>
+      <div>
+        <div id="bny-edge-head"></div>
+        <div id="bny-compare" class="compare3" aria-live="polite"></div>
+      </div>
+    </div>
+    <details class="panel"><summary>Validator regression on the original recorded v1 run (E1, E5)</summary><div id="bny-regression"></div></details>
+  </div>
+
+  <!-- original explorer: markup and behaviour preserved from v1 site -->
+  <div id="bny-orig" hidden>
+    <section id="event" class="event" aria-label="Retail-sales event"></section>
+    <div class="workspace"><aside><h2>Economic graph</h2><p class="muted">Select a link. Signs are theoretical assumptions.</p><div id="graph" aria-label="Selectable economic graph"></div><div id="edges"></div><div class="notice">This MVP does not establish causal validity, graph-guided superiority, or portfolio performance.</div></aside>
+    <section class="results"><div class="toolbar"><div><span class="eyebrow">SELECTED LINK</span><h2 id="edge-title"></h2></div><label>Definition <select id="version"><option value="v1">v1 · original</option><option value="v2">v2 · revised E1</option></select></label><label>Repeat <select id="repeat"><option value="0">r0</option><option value="1">r1</option><option value="2">r2</option></select></label></div><div id="criteria"></div><div id="comparison" class="comparison" aria-live="polite"></div></section></div>
+    <details class="notes"><summary>What the original checks show</summary><div class="notegrid"><div><h3>Time filter</h3><p>No future chunks in recorded filtered retrieval. Eight future chunks would have appeared without filtering. The release at 08:30 EDT stayed eligible.</p><p>The separate 16/16 check was reported but is unverifiable: its execution log is unavailable. Filtering cannot verify every timestamp or remove training knowledge.</p></div><div><h3>Evidence and agreement</h3><p>v1: 59/60 quote entries passed citation checks. Real-data v2: 21/21, comprising 9 ordinary and 12 graph-guided context quotes across three repeats. Repeat citations are counted.</p><p>A matching quote does not establish semantic support. Repeat agreement is consistency, not correctness. Human review remains pending.</p></div><div><h3>Missing validation</h3><p>No qualifying E1 link was found in reviewed material; a saved systematic audit of all text is missing.</p><p>Synthetic r1 passed 2/3. After r1, r2 instructions were revised to accept fictional premises; expected labels were recorded before its calls. r2 passed 3/3 once. Real-document accuracy remains unproven.</p></div></div></details>
+    <p class="muted small">Saved artifacts only · no live analysis or model calls. Next: freeze criteria and queries before testing a second event with a reviewer-labelled, real pre-cutoff demand-to-guidance passage.</p>
+    <div id="error" role="alert" hidden></div>
+  </div>
+</section>
+
+<!-- ============================== BENCHMARKS -->
+<section id="tab-benchmarks" class="tab" aria-labelledby="h-bench" hidden>
+  <div class="tab-head">
+    <div><h1 id="h-bench">External benchmarks</h1>
+    <p class="lead">Labelled datasets, kept separate from the BNY case study.</p></div>
+    <div class="seg" role="tablist" aria-label="Benchmark">
+      <button role="tab" aria-selected="true" data-bench="fincausal2026">FinCausal 2026</button>
+      <button role="tab" aria-selected="false" data-bench="averitec">AVeriTeC</button>
+    </div>
+  </div>
+  <div id="bench-body" aria-live="polite"></div>
+</section>
+
+<!-- ============================== GUIDE -->
+<section id="tab-guide" class="tab guide" aria-labelledby="h-guide" hidden>
+  <h1 id="h-guide">Guide: how it works</h1>
+  <p class="lead">Each part in plain English: <b>what it is</b> → <b>what it does</b> → <b>why it matters</b>, with a tiny example. Open any item.</p>
+
+  <h2>Walkthrough: one real BNY link (E1)</h2>
+  <ol class="walk">
+    <li><b>Input.</b> July 2023 retail sales came in at +0.7% vs +0.4% expected.</li>
+    <li><b>Graph edge.</b> E1: stronger consumer spending → higher <i>expected</i> company earnings.</li>
+    <li><b>Retrieve.</b> The E1 question searches only documents public before 10:00 ET on 15 Aug 2023.</li>
+    <li><b>Extract.</b> A quote is found: “Consolidated revenues increased 14%” (McDonald’s, Q2 results).</li>
+    <li><b>Assess.</b> The original v1 run labelled E1 “supported”.</li>
+    <li><b>Validate.</b> The validator objects: this is <i>past</i> revenue, not a forward outlook, and nothing ties it to demand. Result: insufficient evidence.</li>
+    <li><b>Path.</b> Because E1 is not supported, the earnings pathway (E1 → E2) cannot be called supported.</li>
+    <li><b>Evaluate.</b> We record the change and its reason; no claim about stock prices is made.</li>
+  </ol>
+
+  <h2>Components</h2>
+  <div class="glossary">
+    <details><summary>Research objective</summary><dl><dt>What</dt><dd>The question this project asks.</dd><dt>Does</dt><dd>Compares three ways of finding and judging evidence.</dd><dt>Why</dt><dd>Tells us if a cause-and-effect map is worth the extra effort.</dd><dt>Example</dt><dd>Does mapping “spending → earnings” find better evidence than one broad search?</dd></dl></details>
+    <details><summary>Input: event, claim or question</summary><dl><dt>What</dt><dd>The thing we start from.</dd><dt>Does</dt><dd>Sets what evidence is needed and, for history, the cutoff time.</dd><dt>Why</dt><dd>A clear input keeps every method on the same task.</dd><dt>Example</dt><dd>Event: retail sales +0.7%. Claim: “5G causes COVID-19.” Question: “Why did revenue rise?”</dd></dl></details>
+    <details><summary>Causal graph, node, edge, path</summary><dl><dt>What</dt><dd>A map of hypothesised cause and effect. Nodes are things (spending, inflation); edges are arrows between them; a path is a chain of arrows.</dd><dt>Does</dt><dd>Breaks a big question into small, checkable links.</dd><dt>Why</dt><dd>A chain is only as strong as its weakest link, so we check each link.</dd><dt>Example</dt><dd>Path P2: spending → inflation → rate expectations → equity valuations (E3, E4, E5).</dd></dl></details>
+    <details><summary>Ordinary RAG</summary><dl><dt>What</dt><dd>One broad search, then one judgment.</dd><dt>Does</dt><dd>Retrieves the top passages for the whole question.</dd><dt>Why</dt><dd>The simple baseline everything is compared with.</dd><dt>Example</dt><dd>“How did July retail sales affect the equity outlook?” → top 20 passages.</dd></dl></details>
+    <details><summary>Multi-Query RAG</summary><dl><dt>What</dt><dd>Several reworded searches, no map.</dd><dt>Does</dt><dd>A model writes N queries from the input; results are merged.</dd><dt>Why</dt><dd>Uses the same number of queries as the graph method, so any gap is not just “more searching”.</dd><dt>Example</dt><dd>Five queries such as “retail sales Treasury yields Fed outlook”.</dd></dl></details>
+    <details><summary>Graph-Guided RAG</summary><dl><dt>What</dt><dd>Search and judge link by link, using the map.</dd><dt>Does</dt><dd>One targeted search per edge, evidence routed to that edge, edge conditions and path position given to the assessor, then validation and path rules.</dd><dt>Why</dt><dd>Tests whether structure, not query count, changes results.</dd><dt>Example</dt><dd>E4 gets its own search: “inflation, federal funds rate, further firming”.</dd></dl></details>
+    <details><summary>Evidence retrieval</summary><dl><dt>What</dt><dd>Finding candidate passages.</dd><dt>Does</dt><dd>Keyword ranking (BM25) over an eligible corpus, same budget for every method.</dd><dt>Why</dt><dd>If the right passage is never found, no reasoning can fix it.</dd><dt>Example</dt><dd>Future documents (e.g., the July FOMC minutes) are removed before search.</dd></dl></details>
+    <details><summary>Evidence extraction</summary><dl><dt>What</dt><dd>Pulling exact quotes or answer spans.</dd><dt>Does</dt><dd>The model must copy text word for word; code checks it.</dd><dt>Why</dt><dd>Exact quotes make every judgment traceable to a source.</dd><dt>Example</dt><dd>A paraphrased quote fails the check and cannot support a label.</dd></dl></details>
+    <details><summary>Evidence assessment</summary><dl><dt>What</dt><dd>A model reading the quotes and giving a label.</dd><dt>Does</dt><dd>Labels each link supported, contradicted or insufficient; or gives a claim verdict.</dd><dt>Why</dt><dd>Same model and rules for all methods keeps the comparison fair.</dd><dt>Example</dt><dd>E4: “supported” because the Fed said restrictive policy is appropriate with inflation above goal.</dd></dl></details>
+    <details><summary>Causal evidence validation</summary><dl><dt>What</dt><dd>A rule-based second check after the model.</dd><dt>Does</dt><dd>Checks the quote is on the right link, published before the cutoff, states a cause (not just co-movement), is forward-looking when needed, and flags conflicts, unmet conditions and other drivers. It can only weaken a label.</dd><dt>Why</dt><dd>Catches known model mistakes. It is a safeguard, not proof of causality.</dd><dt>Example</dt><dd>E5 evidence about housing demand is “off-target” for equity valuations.</dd></dl></details>
+    <details><summary>Path-level reasoning</summary><dl><dt>What</dt><dd>Combining link results into chain results.</dd><dt>Does</dt><dd>Supported only if every link is; broken if any is contradicted; contested if evidence conflicts; otherwise incomplete.</dd><dt>Why</dt><dd>One weak link must not create a “proven” chain. Opposing pathways stay side by side, never netted.</dd><dt>Example</dt><dd>E4 supported but E3 insufficient → P2 is “incomplete”.</dd></dl></details>
+    <details><summary>FinCausal 2026 benchmark</summary><dl><dt>What</dt><dd>Annual-report passages with causal questions and human-marked answers (UAM / Lancaster, CC BY-NC-SA 4.0).</dd><dt>Does</dt><dd>Tests whether the system extracts the right cause or effect span.</dd><dt>Why</dt><dd>Labelled data shows extraction quality objectively. It is not a retrieval benchmark, so we add clearly labelled distractor passages.</dd><dt>Example</dt><dd>“What reason is behind the COR being 5.3 percentage points lower than in 2016?” → “higher prior-year reserve releases following favourable development on liability classes and the non-repeat of the Ogden charge…” (training-set item).</dd></dl></details>
+    <details><summary>AVeriTeC benchmark</summary><dl><dt>What</dt><dd>Real fact-checked claims with four verdicts and annotated evidence (CC BY-NC 4.0).</dd><dt>Does</dt><dd>Tests evidence-based claim verification.</dd><dt>Why</dt><dd>Shows whether the pipeline reaches the right verdict, for causal and non-causal claims separately. It has no gold causal graphs.</dd><dt>Example</dt><dd>“5G causes COVID-19.” → Refuted.</dd></dl></details>
+    <details><summary>Evaluation metrics</summary><dl><dt>What</dt><dd>Scores computed only after predictions are made.</dd><dt>Does</dt><dd>Exact Match and token F1 (answer spans); accuracy, macro-F1 and confusion matrix (verdicts); gold-passage hit rate and MRR (retrieval); quote validity; repeat agreement; cost.</dd><dt>Why</dt><dd>Gold labels are hidden from retrieval and reasoning, so scores are honest.</dd><dt>Example</dt><dd>Token F1 0.67 = two thirds word overlap with the reference answer.</dd></dl></details>
+    <details><summary>Oracle-evidence diagnostic</summary><dl><dt>What</dt><dd>Giving the assessor the reference evidence directly.</dd><dt>Does</dt><dd>Separates “couldn’t find it” from “found it but reasoned wrongly”.</dd><dt>Why</dt><dd>Points to which stage to improve. It is a diagnostic, not a normal result.</dd><dt>Example</dt><dd>Oracle right but method wrong → likely a retrieval failure.</dd></dl></details>
+    <details><summary>Limitations: what this MVP does not prove</summary><dl><dt>What</dt><dd>The boundaries of the evidence.</dd><dt>Does</dt><dd>Prevents over-reading results.</dd><dt>Why</dt><dd>Labels describe what text says, not true causal effects. Small samples give wide uncertainty. The model may know later events from training. BNY is one event without gold labels. The validator’s word rules are crude and were written after seeing E1/E5 errors.</dd><dt>Example</dt><dd>A 12-case difference between methods is not evidence of superiority.</dd></dl></details>
+  </div>
+</section>
+</main>
+
+<footer class="foot">Static viewer of saved results · no model calls or secrets in this site · <a href="https://github.com/FarnooshMemari/causal-rag-demo">source &amp; pipeline</a></footer>
+<div id="tip" class="tip" role="tooltip" hidden></div>
+</body>
+</html>

@@ -1,0 +1,11 @@
+{
+  "_doc": "SYNTHETIC TEST FIXTURES for the E1 v2 assessor. Fictional companies, invented text. NOT part of the corpus, never retrievable, never evidence about any real event. Expected labels are kept in expected_labels.json and are never shown to the assessor.",
+  "fixtures": [
+    {"fixture_id": "FX1", "chunk_id": "SYNTHETIC_FX1#c000", "doc_id": "SYNTHETIC_FX1", "available_at_et": "2023-08-10T08:00:00-04:00",
+     "text": "SYNTHETIC TEST FIXTURE - fictional company, not a real document.\nExample Retail Co. reported second-quarter results. Because consumer demand strengthened markedly during the quarter, the company raised its full-year earnings per share guidance to $4.10-$4.30 from $3.80-$4.00."},
+    {"fixture_id": "FX2", "chunk_id": "SYNTHETIC_FX2#c000", "doc_id": "SYNTHETIC_FX2", "available_at_et": "2023-08-10T08:00:00-04:00",
+     "text": "SYNTHETIC TEST FIXTURE - fictional company, not a real document.\nExample Foods Inc. said consumer demand for its products was stronger than planned in the quarter. However, the company kept its full-year earnings guidance unchanged at $2.00-$2.10 per share, because higher ingredient and wage costs compressed operating margins and offset the benefit of stronger demand."},
+    {"fixture_id": "FX3", "chunk_id": "SYNTHETIC_FX3#c000", "doc_id": "SYNTHETIC_FX3", "available_at_et": "2023-08-10T08:00:00-04:00",
+     "text": "SYNTHETIC TEST FIXTURE - fictional company, not a real document.\nExample Apparel Co. reported second-quarter revenue of $1.2 billion, up 9% from the prior year. The company reaffirmed its full-year earnings guidance of $1.50-$1.60 per share."}
+  ]
+}

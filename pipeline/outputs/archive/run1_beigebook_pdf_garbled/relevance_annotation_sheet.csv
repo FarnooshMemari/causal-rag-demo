@@ -1,0 +1,1145 @@
+edge_id,edge_question,chunk_id,doc_id,doc_type,retrieved_by,graph_rank,ordinary_rank,chunk_text,model_provisional_grade,model_rationale,human_grade(0/1/2),human_notes
+E1,"Is strong consumer spending or retail demand raising company sales, revenue, earnings, or guidance?",D14_homedepot_q2fy23_8k#c001,D14_homedepot_q2fy23_8k,company_earnings_disclosure,graph_guided,1,,"“We were pleased with our performance in the second quarter,” said Ted Decker, chair, president and CEO. “While there was strength in categories associated with smaller projects, we did see continued pressure in certain big-ticket, discretionary categories. We remain very positive on the medium-to-long term outlook for home improvement and our ability to grow share in a large and fragmented market. Our associates did an outstanding job delivering value and service for our customers throughout the quarter and I would like to thank them for their dedication and hard work.”
+Fiscal 2023 Guidance
+The company reaffirmed fiscal 2023 guidance:
+•Sales and comparable sales to decline between 2% and 5% compared to fiscal 2022
+•Operating margin rate to be between 14.3% and 14.0%
+•Tax rate of approximately 24.5%
+•Interest expense of approximately $1.8 billion
+•Diluted earnings-per-share-percent-decline between 7% and 13% compared to fiscal 2022
+Share Repurchase Authorization
+The board of directors also authorized a new $15 billion share repurchase program effective August 15, 2023, replacing its previous authorization.",2,CEO links weak big-ticket discretionary demand to results and guidance; directly bears on the link.,,
+E1,"Is strong consumer spending or retail demand raising company sales, revenue, earnings, or guidance?",D14_homedepot_q2fy23_8k#c000,D14_homedepot_q2fy23_8k,company_earnings_disclosure,graph_guided,2,,"EX-99.1
+2
+hd_exhibit991x7302023.htm
+EX-99.1
+Document
+Exhibit 99.1
+The Home Depot Announces Second Quarter Fiscal 2023 Results;
+Reaffirms Fiscal 2023 Guidance;
+Announces $15 Billion Share Repurchase Authorization
+ATLANTA, August 15, 2023 -- The Home Depot®, the world's largest home improvement retailer, today reported sales of $42.9 billion for the second quarter of fiscal 2023, a decrease of 2.0% from the second quarter of fiscal 2022. Comparable sales for the second quarter of fiscal 2023 decreased 2.0%, and comparable sales in the U.S. decreased 2.0%.
+Net earnings for the second quarter of fiscal 2023 were $4.7 billion, or $4.65 per diluted share, compared with net earnings of $5.2 billion, or $5.05 per diluted share, in the same period of fiscal 2022.",2,Retailer sales and earnings declined with weaker comparable sales; reports company outcomes tied to demand.,,
+E1,"Is strong consumer spending or retail demand raising company sales, revenue, earnings, or guidance?",D09_beige_book_2023_07#c007,D09_beige_book_2023_07,fed_publication,both,3,6,"reported moderate revenue growth. Home sales were eased noticeably. Consumer spending grew steadily.
+disappointing and life sciences leasing activity slowed Housing markets were solid but low inventory continued
+dramatically. The outlook was optimistic outside of real to restrain sales activity.
+estate, but remained neutral or became increasingly
+pessimistic among real estate contacts.
+1
+National Summary
+Philadelphia St. Louis
+Business activity continued to decline slightly during the Economic conditions have remained unchanged since
+current Beige Book period. Consumer demand ticked our previous report. Employers continued to struggle
+down, although elevated profit margins buoyed overall finding skilled workers, but turnover slowed and wage
+sales figures. Employment fell slightly despite improved pressures lessened. Consumer spending was largely
+labor availability. Wage growth and inflation subsided but steady, but contacts reported a shift away from discre-
+continued at a modest pace. Expectations for economic tionary goods. Homebuying activity increased, but the
+growth remained subdued. commercial real estate sector saw worsening conditions.
+Cleveland Minneapolis",1,Regional consumer spending and some revenue growth mentions; weak link to earnings.,,
+E1,"Is strong consumer spending or retail demand raising company sales, revenue, earnings, or guidance?",D17_mcdonalds_q2_2023_8k#c001,D17_mcdonalds_q2_2023_8k,company_earnings_disclosure,graph_guided,4,,"“Our second quarter results reflect consistently strong execution of our Accelerating the Arches strategy, with global comparable sales growth of 11.7% and double-digit comparable sales growth across each of our segments,” said McDonald’s President and Chief Executive Officer, Chris Kempczinski. “The McDonald’s brand has never been stronger and I remain inspired by the ability of the McDonald’s System to create cultural conversations and develop industry-leading innovations. While global macroeconomic challenges persist, we continue to invest in our growth drivers and our brand to meet the customer needs of tomorrow.”
+Second quarter financial performance:
+•Global comparable sales increased 11.7%, reflecting strong comparable sales across all segments:
+•U.S. increased 10.3%
+•International Operated Markets segment increased 11.9%
+•International Developmental Licensed Markets segment increased 14.0%
+•Consolidated revenues increased 14% (14% in constant currencies).
+•Systemwide sales increased 12% (13% in constant currencies).",2,"Strong comparable sales and revenue growth at McDonald's, evidence of strong consumer demand lifting company revenue.",,
+E1,"Is strong consumer spending or retail demand raising company sales, revenue, earnings, or guidance?",D09_beige_book_2023_07#c008,D09_beige_book_2023_07,fed_publication,ordinary,,1,"The Fourth District economy was generally stable in Economic activity in the region grew slightly in recent
+recent weeks as high interest rates continued to con- weeks. Employment rose moderately as labor availability
+strain households’ big-ticket goods purchases and busi- improved. Price pressures were mild and wages rose
+nesses’ project plans. Bankers and transportation firms moderately. Consumer spending was flat. Professional
+cited these effects as contributing to weaker demand for services reported solid activity and a positive outlook.
+their own services. Nevertheless, contacts were general- Residential construction and real estate remained low.
+ly more optimistic about the near-term outlook and less Dry conditions have lowered the farm outlook. Minority-
+concerned that a U.S. recession would occur in 2023. and women-owned firms reported steady activity.
+Richmond Kansas City
+The regional economy grew slightly in recent weeks. Total economic activity across the Tenth District
+Consumer spending on retail goods, as well as on travel changed little during June. Though hiring was flat, ex-",1,Consumer spending conditions by district; no direct earnings link.,,
+E1,"Is strong consumer spending or retail demand raising company sales, revenue, earnings, or guidance?",D01_census_retail_2023_07#c000,D01_census_retail_2023_07,official_economic_release,ordinary,,2,"FOR RELEASE AT 8:30 AM EDT, TUESDAY, AUGUST 15, 2023
+ADVANCE MONTHLY SALES FOR RETAIL AND FOOD SERVICES, JULY 2023
+Release Number: CB23-127
+August 15, 2023 — The U.S. Census Bureau announced the following advance estimates of U.S. retail and
+food services sales for July 2023:
+Percent Change in Retail and Food Services Sales from
+ADVANCE MONTHLY SALES
+Previous Month
+Data adjusted for seasonal variation and holiday and trading-day differences but not for
+price changes.
+2
+July 2023 $696.4 billion 0.7%
+June 2023
+$691.3 billion 0.3%
+0
+(revised)
+Next release: September 14, 2023
+-2
+May June July
+* The 90 percent confidence interval includes zero. There is insufficient statistical
+evidence to conclude that the actual change is different from zero. Total Ex Auto Auto Gen Mer
+Data adjusted for seasonal variation and holiday and trading-day differences but Source:U.S. Census Bureau, Advanced Monthly Retail Trade Survey,
+not for price changes. Source: U.S. Census Bureau, Advanced Monthly Retail August 15, 2023
+Trade Survey, August 15, 2023",1,Retail sales data (consumption) but no link to company earnings.,,
+E1,"Is strong consumer spending or retail demand raising company sales, revenue, earnings, or guidance?",D01_census_retail_2023_07#c001,D01_census_retail_2023_07,official_economic_release,ordinary,,3,"Advance Estimates of U.S. Retail and Food Services
+Advance estimates of U.S. retail and food services sales for July 2023, adjusted for seasonal variation and
+holiday and trading-day differences, but not for price changes, were $696.4 billion, up 0.7 percent (±0.5
+percent) from the previous month, and up 3.2 percent (±0.7 percent) above July 2022. Total sales for the
+May 2023 through July 2023 period were up 2.3 percent (±0.4 percent) from the same period a year ago.
+The May 2023 to June 2023 percent change was revised from up 0.2 percent (±0.5 percent)* to up 0.3
+percent (±0.2 percent).
+Retail trade sales were up 0.6 percent (±0.5 percent) from June 2023, and up 2.0 percent (±0.5 percent)
+above last year. Nonstore retailers were up 10.3 percent (±1.6 percent) from last year, while food services
+and drinking places were up 11.9 percent (±2.3 percent) from July 2022.
+General Information
+The August 2023 Advance Monthly Retail report is scheduled for release on September 14, 2023 at 8:30",1,Consumption measure only; no earnings connection.,,
+E1,"Is strong consumer spending or retail demand raising company sales, revenue, earnings, or guidance?",D09_beige_book_2023_07#c010,D09_beige_book_2023_07,fed_publication,ordinary,,4,"activity slowed. Energy demand was steady. Agriculture evaporated in manufacturing but stayed elevated in the
+conditions softened. service sector. Uncertainty continued to rise, and con-
+tacts cited diminishing demand, higher labor costs, rising
+Chicago
+interest rates, and inflation as their primary outlook con-
+Economic activity was little changed. Employment in-
+cerns.
+creased moderately; nonbusiness contacts saw little
+change in activity; consumer spending was flat; business San Francisco
+spending and construction and real estate activity de- Economic activity softened modestly. Labor availability
+clined slightly; and manufacturing decreased modestly. improved across sectors. Wage growth slowed notably
+Prices and wages rose moderately, while financial condi- while price increases persisted. Retail sales moderated,
+tions tightened slightly further. Expectations for farm and activity in the services sectors eased somewhat.
+incomes in 2023 decreased some. Manufacturing activity was solid but weakened slightly,
+while conditions in the agriculture and residential real
+estate sectors were mixed. Commercial real estate
+activity fell, and financial sector activity was largely un-
+changed.
+2",1,Consumer spending flat and retail sales moderated; no earnings link.,,
+E1,"Is strong consumer spending or retail demand raising company sales, revenue, earnings, or guidance?",D16_visa_q3fy23_8k#c007,D16_visa_q3fy23_8k,company_earnings_disclosure,ordinary,,5,"Cash, cash equivalents and investment securities were $20.9 billion at June 30, 2023.
+The weighted-average number of diluted shares of class A common stock outstanding was 2.08 billion for the quarter ended June 30, 2023.
+2
+Other Notable Items
+On June 20, 2023, Visa announced the appointment of Chris Suh as Executive Vice President, Chief Financial Officer, effective August 1, 2023. Mr. Suh commenced employment with Visa on July 10, 2023 as CFO Designate ahead of assuming the CFO position on August 1, 2023.
+On June 28, 2023, Visa deposited $500 million into its litigation escrow account, which was previously established under the Company's U.S. retrospective responsibility plan to insulate the Company and class A shareholders from financial liability for certain litigation cases. This deposit has the same economic effect on earnings per share as repurchasing the Company's class A common stock as it reduces the as-converted class B common stock share count at a volume weighted average price of $227.75.",0,"Cash, share count and corporate items.",,
+E1,"Is strong consumer spending or retail demand raising company sales, revenue, earnings, or guidance?",D14_homedepot_q2fy23_8k#c007,D14_homedepot_q2fy23_8k,company_earnings_disclosure,ordinary,,7,"Total stockholders’ equity | 1,335 | 237 | 1,562
+Total liabilities and stockholders’ equity | 76,387 | 75,825 | 76,445
+THE HOME DEPOT, INC.
+CONDENSED CONSOLIDATED STATEMENTS OF CASH FLOWS
+(Unaudited)
+Six Months Ended
+in millions | July 30, 2023 | July 31, 2022
+Cash Flows from Operating Activities:
+Net earnings | 8,532 | 9,404
+Reconciliation of net earnings to net cash provided by operating activities:
+Depreciation and amortization | 1,588 | 1,473
+Stock-based compensation expense | 215 | 196
+Changes in working capital | 1,774 | (3,889)
+Changes in deferred income taxes | (48) | (95)
+Other operating activities | 144 | 93
+Net cash provided by operating activities | 12,205 | 7,182
+Cash Flows from Investing Activities:
+Capital expenditures | (1,697) | (1,447)
+Payments for businesses acquired, net | (215) | —
+Other investing activities | 10 | (14)
+Net cash used in investing activities | (1,902) | (1,461)
+Cash Flows from Financing Activities:
+Repayments of short-term debt, net | — | (496)",0,Balance sheet and cash flow items.,,
+E1,"Is strong consumer spending or retail demand raising company sales, revenue, earnings, or guidance?",D08_fomc_minutes_2023_06#c018,D08_fomc_minutes_2023_06,fed_publication,ordinary,,8,"The S&P 500 stock price index increased sizably, on net, over the intermeeting period, led by technology-related stocks. The VIX—the one-month option-implied volatility on the S&P 500 index—edged down, on balance, and ended the period near the 30th percentile of its historical distribution. Bank equity price indexes moved up notably, on net, over the intermeeting period. Stock prices for large banks were only somewhat below their levels before the failure of Silicon Valley Bank (SVB), while those for regional banks remained below their levels in early March.",0,"Equity prices, not consumption-earnings.",,
+E1,"Is strong consumer spending or retail demand raising company sales, revenue, earnings, or guidance?",D14_homedepot_q2fy23_8k#c008,D14_homedepot_q2fy23_8k,company_earnings_disclosure,ordinary,,9,"Proceeds from long-term debt, net of discounts | — | 3,957
+Repayments of long-term debt | (1,130) | (2,366)
+Repurchases of common stock | (4,954) | (3,962)
+Proceeds from sales of common stock | 175 | 142
+Cash dividends | (4,215) | (3,910)
+Other financing activities | (142) | (163)
+Net cash used in financing activities | (10,266) | (6,798)
+Change in cash and cash equivalents | 37 | (1,077)
+Effect of exchange rate changes on cash and cash equivalents | 20 | (7)
+Cash and cash equivalents at beginning of year | 2,757 | 2,343
+Cash and cash equivalents at end of year | 2,814 | 1,259",0,Financing cash flow items.,,
+E1,"Is strong consumer spending or retail demand raising company sales, revenue, earnings, or guidance?",D14_homedepot_q2fy23_8k#c005,D14_homedepot_q2fy23_8k,company_earnings_disclosure,ordinary,,10,"Diluted earnings per share | 4.65 | 5.05 | (7.9) | 8.46 | 9.13 | (7.3)
+Three Months Ended | Six Months Ended
+Selected Sales Data (1) | July 30, 2023 | July 31, 2022 | % Change | July 30, 2023 | July 31, 2022 | % Change
+Customer transactions (in millions) | 459.1 | 467.4 | (1.8) | 850.1 | 878.1 | (3.2)
+Average ticket | 90.07 | 90.02 | 0.1 | 90.92 | 90.82 | 0.1
+Sales per retail square foot | 684.65 | 700.62 | (2.3) | 638.50 | 661.27 | (3.4)
+—————
+(1)Selected Sales Data does not include results for HD Supply.
+THE HOME DEPOT, INC.
+CONDENSED CONSOLIDATED BALANCE SHEETS
+(Unaudited)
+in millions | July 30, 2023 | July 31, 2022 | January 29, 2023
+Assets
+Current assets:
+Cash and cash equivalents | 2,814 | 1,259 | 2,757
+Receivables, net | 3,836 | 3,725 | 3,317
+Merchandise inventories | 23,265 | 26,088 | 24,886
+Other current assets | 1,915 | 1,869 | 1,511",1,Transactions and ticket data and EPS; supports demand softness but without explicit linkage.,,
+E1,"Is strong consumer spending or retail demand raising company sales, revenue, earnings, or guidance?",D01_census_retail_2023_07#c006,D01_census_retail_2023_07,official_economic_release,ordinary,,11,"estimated monthly total). The Census Bureau recommends that individuals using estimates in this report
+incorporate this information into their analyses, as sampling error could affect the conclusions drawn from
+the estimates.
+Nonsampling error encompasses all other factors that contribute to the total error of a sample survey
+estimate. This type of error can occur because of nonresponse, insufficient coverage of the universe of
+retail businesses, mistakes in the recording and coding of data, and other errors of collection, response,
+coverage, or processing. Although nonsampling error is not measured directly, the Census Bureau employs
+quality control procedures throughout the process to minimize this type of error.
+Weather Information
+For information on the impact of weather events on the compilation of this report, please see the
+Frequently Asked Questions (FAQs) on our website at:
+<www.census.gov/retail/marts_weather_faqs.html>
+RESOURCES
+The Rest of the Consumer Spending Story
+Retail and services together represent what’s commonly referred to as consumer spending. Quarterly
+Services Survey (QSS) revenue comprises roughly 2/3 of the personal consumption expenditures",0,Sampling error and methodology notes.,,
+E1,"Is strong consumer spending or retail demand raising company sales, revenue, earnings, or guidance?",D16_visa_q3fy23_8k#c008,D16_visa_q3fy23_8k,company_earnings_disclosure,ordinary,,12,"On June 28, 2023, Visa announced it signed a definitive agreement to acquire Pismo, a cloud-native issuer processing and core banking platform with operations in Latin America, Asia Pacific and Europe, for $1 billion in cash. The transaction is subject to customary closing conditions, including applicable regulatory reviews and approvals, and is expected to close by the end of 2023.
+During the three months ended June 30, 2023, Visa repurchased 12.9 million shares of class A common stock at an average cost of $229.19 per share for $3.0 billion. The Company had $8.8 billion of remaining authorized funds for share repurchases as of June 30, 2023.
+On July 25, 2023, the board of directors declared a quarterly cash dividend of $0.450 per share of class A common stock (determined in the case of class B and C common stock and series A, B and C convertible participating preferred stock on an as-converted basis) payable on September 1, 2023, to all holders of record as of August 11, 2023.",0,"Acquisition, buybacks, dividend.",,
+E1,"Is strong consumer spending or retail demand raising company sales, revenue, earnings, or guidance?",D08_fomc_minutes_2023_06#c031,D08_fomc_minutes_2023_06,fed_publication,ordinary,,13,"In their discussion of the household sector, participants generally noted that consumer spending so far this year had been stronger than expected. Several participants noted that aggregate household wealth remained high, as equity and home prices had not declined much from their recent highs. A few participants mentioned that while, overall, the household sector still retained much of the excess savings it had accumulated during the pandemic, there were signs that consumers were facing increasingly tighter budget constraints, given high inflation and, especially for low-income households, depleted savings.",1,Consumer spending stronger than expected; no company earnings link.,,
+E1,"Is strong consumer spending or retail demand raising company sales, revenue, earnings, or guidance?",D11_bowman_speech_2023_08_05#c004,D11_bowman_speech_2023_08_05,fed_publication,ordinary,,14,"The recent lower inflation reading was positive, but I will be looking for consistent evidence that inflation is on a meaningful path down toward our 2 percent goal as I consider further rate increases and how long the federal funds rate will need to remain at a restrictive level. I will also be watching for signs of slowing in consumer spending and signs that labor market conditions are loosening.
+It's important to reiterate that monetary policy is not on a preset course. My colleagues and I will make our decisions based on the incoming data and its implications for the economic outlook. We should remain willing to raise the federal funds rate at a future meeting if the incoming data indicate that progress on inflation has stalled.
+Returning inflation to our 2 percent goal is necessary to achieve a sustainably strong labor market and economy.",0,Monetary policy remarks; only passing mention of consumer spending.,,
+E1,"Is strong consumer spending or retail demand raising company sales, revenue, earnings, or guidance?",D07_fomc_presser_2023_07_26#c030,D07_fomc_presser_2023_07_26,fed_publication,ordinary,,15,"reversal of the effects [on those prices that resulted] from the war in Ukraine. And that’s, that’s a
+good thing, and the public experiences that, as I mentioned earlier.
+For core inflation, I’d say there also—there has been a role for, for most—for, for both
+factors, both that I mentioned. Clearly, for goods, normalization of supply conditions is playing
+an important role, as is the reversal, the beginning of the reversal, of spending—back into
+services and away from goods.
+And take autos as an example. The combination of an increase in sales and inventories,
+while, while vehicle inflation has decelerated, points to a substantial role for supply, but there’s
+Page 15 of 28
+July 26, 2023 Chair Powell’s Press Conference FINAL
+also a role for demand, as, you know, the loans and things like that are more expensive. So
+they’re both working there. Housing services inflation now starts to move down. Clearly, higher
+rates have, have slowed the housing market. You know, I would say, monetary policy is",1,"Discusses spending shift between goods and services; about consumption, not earnings.",,
+E1,"Is strong consumer spending or retail demand raising company sales, revenue, earnings, or guidance?",D02_bls_cpi_2023_07#c013,D02_bls_cpi_2023_07,official_economic_release,ordinary,,16,"www.bls.gov/cpi/seasonal-adjustment/timeline-seasonal-adjustment-methodology-changes.htm.
+For analyzing short-term price trends in the economy, seasonally adjusted changes are usually
+preferred since they eliminate the effect of changes that normally occur at the same time and
+in about the same magnitude every year-such as price movements resulting from weather events,
+production cycles, model changeovers, holidays, and sales. This allows data users to focus on
+changes that are not typical for the time of year. The unadjusted data are of primary interest
+to consumers concerned about the prices they actually pay. Unadjusted data are also used
+extensively for escalation purposes. Many collective bargaining cont",0,CPI seasonal adjustment methodology.,,
+E1,"Is strong consumer spending or retail demand raising company sales, revenue, earnings, or guidance?",D08_fomc_minutes_2023_06#c026,D08_fomc_minutes_2023_06,fed_publication,ordinary,,17,"The staff continued to judge that uncertainty around the baseline projection was considerable and still viewed the risks as being influenced importantly by the potential macroeconomic implications of banking-sector developments, which could end up being more, or less, negative than assumed in the baseline. Given the continued strength in labor market conditions and the resilience of consumer spending, however, the staff saw the possibility of the economy continuing to grow slowly and avoiding a downturn as almost as likely as the mild‑recession baseline. On balance, the staff saw the risks around the baseline inflation forecast as tilted to the upside, as economic scenarios with higher inflation appeared more likely than scenarios with lower inflation and because inflation could continue to be more persistent than expected and inflation expectations could become unanchored after a long period of elevated inflation.
+Participants' Views on Current Conditions and the Economic Outlook",1,"Mentions resilient consumer spending; macro only, no earnings.",,
+E1,"Is strong consumer spending or retail demand raising company sales, revenue, earnings, or guidance?",D01_census_retail_2023_07#c003,D01_census_retail_2023_07,official_economic_release,ordinary,,18,"United States. Each month, questionnaires are mailed to a probability sample of approximately 4,800
+employer firms selected from the larger Monthly Retail Trade Survey. Advance sales estimates are
+computed using a link relative estimator. For each detailed industry, we compute a ratio of current-to-
+previous month weighted sales using data from units for which we have obtained usable responses for
+both the current and previous month. For each detailed industry, the advance total sales estimates for the
+current month is computed by multiplying this ratio by the preliminary sales estimate for the previous
+month (derived from the larger MRTS) at the appropriate industry level. Total estimates for broader
+industries are computed as the sum of the detailed industry estimates. The link relative estimate is used
+because imputation is not performed for most nonrespondents in MARTS. For a limited number of
+nonresponding companies that have influential effects on the estimates, sales may be estimated based on
+historical performance of that company. The monthly estimates are benchmarked to the annual survey",0,Survey methodology.,,
+E1,"Is strong consumer spending or retail demand raising company sales, revenue, earnings, or guidance?",D10_sloos_2023_07#c001,D10_sloos_2023_07,fed_publication,ordinary,,19,"For loans to households, banks reported that lending standards tightened across all categories of residential real estate (RRE) loans, especially for RRE loans other than government-sponsored enterprise (GSE)-eligible and government loans. Meanwhile, demand weakened for all RRE loan categories. In addition, banks reported tighter standards and weaker demand for home equity lines of credit (HELOCs). Furthermore, standards tightened for all consumer loan categories; demand weakened for auto and other consumer loans, while it remained basically unchanged for credit card loans.
+The July SLOOS included two sets of special questions, which inquired about the current level of lending standards relative to the midpoint of the range over which banks' standards have varied since 2005, as well as questions about banks' expectations for changes in lending standards over the second half of 2023 and reasons for these changes.",0,Bank lending standards and loan demand.,,
+E1,"Is strong consumer spending or retail demand raising company sales, revenue, earnings, or guidance?",D07_fomc_presser_2023_07_26#c004,D07_fomc_presser_2023_07_26,fed_publication,ordinary,,20,"policy rate by 5¼ percentage points since early last year. We have been seeing the effects of our
+policy tightening on demand in the most interest rate–sensitive sectors of the economy,
+particularly housing and investment. It will take time, however, for the full effects of our
+ongoing monetary restraint to be realized, especially on inflation. In addition, the economy is
+facing headwinds from tighter credit conditions for households and businesses, which are likely
+to weigh on economic activity, hiring, and inflation.
+In determining the extent of additional policy firming that may be appropriate to return
+inflation to 2 percent over time, the Committee will take into account the cumulative tightening
+of monetary policy, the lags with which monetary policy affects economic activity and inflation,
+and economic and financial developments. We will continue to make our decisions meeting by
+meeting, based on the totality of the incoming data and their implications for the outlook for
+economic activity and inflation, as well as the balance of risks.",0,Monetary policy and demand in rate-sensitive sectors; no earnings link.,,
+E2,"Do companies report or expect higher earnings, profit growth, buybacks, or shareholder returns?",D19_pg_q4fy23_8k#c003,D19_pg_q4fy23_8k,company_earnings_disclosure,graph_guided,1,,"higher pricing and a one percent increase from favorable mix, partially offset by a three percent decrease in shipment volumes.
+Diluted net earnings per share were $5.90, an increase of two percent versus prior year. Currency-neutral net EPS increased 11% versus the prior year EPS.
+The Company generated operating cash flow of $16.8 billion and net earnings of $14.7 billion for the fiscal year. Adjusted free cash flow productivity was 95%, which is calculated as operating cash flow less capital spending, as a percentage of net earnings. The Company returned over $16 billion of value to shareholders in fiscal 2023 via $9 billion in dividend payments and $7.4 billion of share repurchases. With the dividend increase in April 2023, this marks the 67th consecutive year that P&G has increased its dividend and the 133rd consecutive year that P&G has paid a dividend since its incorporation in 1890.
+April-June Quarter Results",2,"EPS growth, dividends and buybacks reported.",,
+E2,"Do companies report or expect higher earnings, profit growth, buybacks, or shareholder returns?",D16_visa_q3fy23_8k#c000,D16_visa_q3fy23_8k,company_earnings_disclosure,graph_guided,2,,"EX-99.1
+2
+q32023earningsrelease.htm
+EX-99.1
+Document
+Visa Inc. Reports Fiscal Third Quarter 2023 Results
+San Francisco, CA, July 25, 2023 – Visa Inc. (NYSE: V)
+• GAAP net income of $4.2B or $2.00 per share and non-GAAP net income of $4.5B or $2.16 per share
+• Net revenues of $8.1B, an increase of 12%, or 13% on a constant-dollar basis
+• Payments volume and processed transaction growth was relatively stable while cross-border volume growth remained strong
+• Share repurchases and dividends of $3.9B
+Income Statement Summary
+In billions, except percentages and per share data. % change is calculated over the comparable prior-year period. | Q3 2023 | Ryan McInerney , Chief Executive Officer, Visa Inc., commented on the results:
+USD | % Change
+Net Revenues | $8.1 | 12%",2,Earnings growth plus buybacks and dividends reported.,,
+E2,"Do companies report or expect higher earnings, profit growth, buybacks, or shareholder returns?",D16_visa_q3fy23_8k#c003,D16_visa_q3fy23_8k,company_earnings_disclosure,graph_guided,3,,"GAAP net income in the fiscal third quarter was $4.2 billion or $2.00 per share, an increase of 22% and 25%, respectively, over prior year’s results. Current year’s results included a special item of $456 million for a litigation provision associated with the interchange multidistrict litigation (""MDL"") case, $85 million of net gains from equity investments and $65 million from the amortization of acquired intangible assets and acquisition-related costs. Prior year’s results included a special item of $716 million for a litigation provision associated with the MDL case, $246 million of net losses from equity investments, and $58 million from the amortization of acquired intangible assets and acquisition-related costs. Excluding these items and related tax impacts, non-GAAP net income for the quarter was $4.5 billion or $2.16 per share, increases of 7% and 9%, respectively, over prior year’s results (refer to the accompanying financial tables for further details and a reconciliation of the GAAP to non-GAAP measures presented). GAAP earnings per share growth was approximately 26% on a constant-dollar basis, which excludes the impact of foreign currency fluctuations against the U.S. dollar. Non-GAAP earnings per share growth was approxima tely 11% on a constant-dollar basis. All references to earnings per share assume fully-diluted class A share count.",2,Net income and EPS growth reported.,,
+E2,"Do companies report or expect higher earnings, profit growth, buybacks, or shareholder returns?",D17_mcdonalds_q2_2023_8k#c005,D17_mcdonalds_q2_2023_8k,company_earnings_disclosure,graph_guided,4,,"Excluding the above items, results reflected strong operating performance driven primarily by higher sales-driven Franchised margins.
+2
+NET INCOME AND EARNINGS PER SHARE-DILUTED RECONCILIATION
+Dollars in millions, except per share data
+Quarters Ended June 30,
+Net Income | Earnings per share - diluted
+2023 | 2022 | Inc/ (Dec) | Inc/ (Dec) Excluding Currency Translation | 2023 | 2022 | Inc/ (Dec) | Inc/ (Dec) Excluding Currency Translation
+GAAP | 2,310.4 | 1,188.0 | 94 | 95 | 3.15 | 1.60 | 97 | 98
+(Gains)/charges | 13.7 | 668.6 | 0.02 | 0.90
+Tax Settlement | — | 37.2 | — | 0.05
+Non-GAAP | 2,324.1 | 1,893.8 | 23 | 23 | 3.17 | 2.55 | 24 | 25
+Six Months Ended June 30,
+Net Income | Earnings per share - diluted
+2023 | 2022 | Inc/ (Dec) | Inc/ (Dec) Excluding Currency Translation | 2023 | 2022 | Inc/ (Dec) | Inc/ (Dec) Excluding Currency Translation",2,Reports EPS and net income growth.,,
+E2,"Do companies report or expect higher earnings, profit growth, buybacks, or shareholder returns?",D09_beige_book_2023_07#c008,D09_beige_book_2023_07,fed_publication,ordinary,,1,"The Fourth District economy was generally stable in Economic activity in the region grew slightly in recent
+recent weeks as high interest rates continued to con- weeks. Employment rose moderately as labor availability
+strain households’ big-ticket goods purchases and busi- improved. Price pressures were mild and wages rose
+nesses’ project plans. Bankers and transportation firms moderately. Consumer spending was flat. Professional
+cited these effects as contributing to weaker demand for services reported solid activity and a positive outlook.
+their own services. Nevertheless, contacts were general- Residential construction and real estate remained low.
+ly more optimistic about the near-term outlook and less Dry conditions have lowered the farm outlook. Minority-
+concerned that a U.S. recession would occur in 2023. and women-owned firms reported steady activity.
+Richmond Kansas City
+The regional economy grew slightly in recent weeks. Total economic activity across the Tenth District
+Consumer spending on retail goods, as well as on travel changed little during June. Though hiring was flat, ex-",0,Regional activity summaries.,,
+E2,"Do companies report or expect higher earnings, profit growth, buybacks, or shareholder returns?",D01_census_retail_2023_07#c000,D01_census_retail_2023_07,official_economic_release,ordinary,,2,"FOR RELEASE AT 8:30 AM EDT, TUESDAY, AUGUST 15, 2023
+ADVANCE MONTHLY SALES FOR RETAIL AND FOOD SERVICES, JULY 2023
+Release Number: CB23-127
+August 15, 2023 — The U.S. Census Bureau announced the following advance estimates of U.S. retail and
+food services sales for July 2023:
+Percent Change in Retail and Food Services Sales from
+ADVANCE MONTHLY SALES
+Previous Month
+Data adjusted for seasonal variation and holiday and trading-day differences but not for
+price changes.
+2
+July 2023 $696.4 billion 0.7%
+June 2023
+$691.3 billion 0.3%
+0
+(revised)
+Next release: September 14, 2023
+-2
+May June July
+* The 90 percent confidence interval includes zero. There is insufficient statistical
+evidence to conclude that the actual change is different from zero. Total Ex Auto Auto Gen Mer
+Data adjusted for seasonal variation and holiday and trading-day differences but Source:U.S. Census Bureau, Advanced Monthly Retail Trade Survey,
+not for price changes. Source: U.S. Census Bureau, Advanced Monthly Retail August 15, 2023
+Trade Survey, August 15, 2023",0,"Retail sales data, not earnings or equity.",,
+E2,"Do companies report or expect higher earnings, profit growth, buybacks, or shareholder returns?",D01_census_retail_2023_07#c001,D01_census_retail_2023_07,official_economic_release,ordinary,,3,"Advance Estimates of U.S. Retail and Food Services
+Advance estimates of U.S. retail and food services sales for July 2023, adjusted for seasonal variation and
+holiday and trading-day differences, but not for price changes, were $696.4 billion, up 0.7 percent (±0.5
+percent) from the previous month, and up 3.2 percent (±0.7 percent) above July 2022. Total sales for the
+May 2023 through July 2023 period were up 2.3 percent (±0.4 percent) from the same period a year ago.
+The May 2023 to June 2023 percent change was revised from up 0.2 percent (±0.5 percent)* to up 0.3
+percent (±0.2 percent).
+Retail trade sales were up 0.6 percent (±0.5 percent) from June 2023, and up 2.0 percent (±0.5 percent)
+above last year. Nonstore retailers were up 10.3 percent (±1.6 percent) from last year, while food services
+and drinking places were up 11.9 percent (±2.3 percent) from July 2022.
+General Information
+The August 2023 Advance Monthly Retail report is scheduled for release on September 14, 2023 at 8:30",0,Retail sales figures only.,,
+E2,"Do companies report or expect higher earnings, profit growth, buybacks, or shareholder returns?",D09_beige_book_2023_07#c010,D09_beige_book_2023_07,fed_publication,ordinary,,4,"activity slowed. Energy demand was steady. Agriculture evaporated in manufacturing but stayed elevated in the
+conditions softened. service sector. Uncertainty continued to rise, and con-
+tacts cited diminishing demand, higher labor costs, rising
+Chicago
+interest rates, and inflation as their primary outlook con-
+Economic activity was little changed. Employment in-
+cerns.
+creased moderately; nonbusiness contacts saw little
+change in activity; consumer spending was flat; business San Francisco
+spending and construction and real estate activity de- Economic activity softened modestly. Labor availability
+clined slightly; and manufacturing decreased modestly. improved across sectors. Wage growth slowed notably
+Prices and wages rose moderately, while financial condi- while price increases persisted. Retail sales moderated,
+tions tightened slightly further. Expectations for farm and activity in the services sectors eased somewhat.
+incomes in 2023 decreased some. Manufacturing activity was solid but weakened slightly,
+while conditions in the agriculture and residential real
+estate sectors were mixed. Commercial real estate
+activity fell, and financial sector activity was largely un-
+changed.
+2",0,Regional activity summaries.,,
+E2,"Do companies report or expect higher earnings, profit growth, buybacks, or shareholder returns?",D16_visa_q3fy23_8k#c007,D16_visa_q3fy23_8k,company_earnings_disclosure,ordinary,,5,"Cash, cash equivalents and investment securities were $20.9 billion at June 30, 2023.
+The weighted-average number of diluted shares of class A common stock outstanding was 2.08 billion for the quarter ended June 30, 2023.
+2
+Other Notable Items
+On June 20, 2023, Visa announced the appointment of Chris Suh as Executive Vice President, Chief Financial Officer, effective August 1, 2023. Mr. Suh commenced employment with Visa on July 10, 2023 as CFO Designate ahead of assuming the CFO position on August 1, 2023.
+On June 28, 2023, Visa deposited $500 million into its litigation escrow account, which was previously established under the Company's U.S. retrospective responsibility plan to insulate the Company and class A shareholders from financial liability for certain litigation cases. This deposit has the same economic effect on earnings per share as repurchasing the Company's class A common stock as it reduces the as-converted class B common stock share count at a volume weighted average price of $227.75.",1,Share count and escrow acting like buyback; tangential.,,
+E2,"Do companies report or expect higher earnings, profit growth, buybacks, or shareholder returns?",D09_beige_book_2023_07#c007,D09_beige_book_2023_07,fed_publication,ordinary,,6,"reported moderate revenue growth. Home sales were eased noticeably. Consumer spending grew steadily.
+disappointing and life sciences leasing activity slowed Housing markets were solid but low inventory continued
+dramatically. The outlook was optimistic outside of real to restrain sales activity.
+estate, but remained neutral or became increasingly
+pessimistic among real estate contacts.
+1
+National Summary
+Philadelphia St. Louis
+Business activity continued to decline slightly during the Economic conditions have remained unchanged since
+current Beige Book period. Consumer demand ticked our previous report. Employers continued to struggle
+down, although elevated profit margins buoyed overall finding skilled workers, but turnover slowed and wage
+sales figures. Employment fell slightly despite improved pressures lessened. Consumer spending was largely
+labor availability. Wage growth and inflation subsided but steady, but contacts reported a shift away from discre-
+continued at a modest pace. Expectations for economic tionary goods. Homebuying activity increased, but the
+growth remained subdued. commercial real estate sector saw worsening conditions.
+Cleveland Minneapolis",1,Mentions elevated profit margins; thin earnings relevance.,,
+E2,"Do companies report or expect higher earnings, profit growth, buybacks, or shareholder returns?",D14_homedepot_q2fy23_8k#c007,D14_homedepot_q2fy23_8k,company_earnings_disclosure,ordinary,,7,"Total stockholders’ equity | 1,335 | 237 | 1,562
+Total liabilities and stockholders’ equity | 76,387 | 75,825 | 76,445
+THE HOME DEPOT, INC.
+CONDENSED CONSOLIDATED STATEMENTS OF CASH FLOWS
+(Unaudited)
+Six Months Ended
+in millions | July 30, 2023 | July 31, 2022
+Cash Flows from Operating Activities:
+Net earnings | 8,532 | 9,404
+Reconciliation of net earnings to net cash provided by operating activities:
+Depreciation and amortization | 1,588 | 1,473
+Stock-based compensation expense | 215 | 196
+Changes in working capital | 1,774 | (3,889)
+Changes in deferred income taxes | (48) | (95)
+Other operating activities | 144 | 93
+Net cash provided by operating activities | 12,205 | 7,182
+Cash Flows from Investing Activities:
+Capital expenditures | (1,697) | (1,447)
+Payments for businesses acquired, net | (215) | —
+Other investing activities | 10 | (14)
+Net cash used in investing activities | (1,902) | (1,461)
+Cash Flows from Financing Activities:
+Repayments of short-term debt, net | — | (496)",1,"Net earnings and cash flow, partial; earnings lower.",,
+E2,"Do companies report or expect higher earnings, profit growth, buybacks, or shareholder returns?",D08_fomc_minutes_2023_06#c018,D08_fomc_minutes_2023_06,fed_publication,ordinary,,8,"The S&P 500 stock price index increased sizably, on net, over the intermeeting period, led by technology-related stocks. The VIX—the one-month option-implied volatility on the S&P 500 index—edged down, on balance, and ended the period near the 30th percentile of its historical distribution. Bank equity price indexes moved up notably, on net, over the intermeeting period. Stock prices for large banks were only somewhat below their levels before the failure of Silicon Valley Bank (SVB), while those for regional banks remained below their levels in early March.",1,"Equity prices rose, but no link to earnings expectations.",,
+E2,"Do companies report or expect higher earnings, profit growth, buybacks, or shareholder returns?",D14_homedepot_q2fy23_8k#c008,D14_homedepot_q2fy23_8k,company_earnings_disclosure,ordinary,,9,"Proceeds from long-term debt, net of discounts | — | 3,957
+Repayments of long-term debt | (1,130) | (2,366)
+Repurchases of common stock | (4,954) | (3,962)
+Proceeds from sales of common stock | 175 | 142
+Cash dividends | (4,215) | (3,910)
+Other financing activities | (142) | (163)
+Net cash used in financing activities | (10,266) | (6,798)
+Change in cash and cash equivalents | 37 | (1,077)
+Effect of exchange rate changes on cash and cash equivalents | 20 | (7)
+Cash and cash equivalents at beginning of year | 2,757 | 2,343
+Cash and cash equivalents at end of year | 2,814 | 1,259",2,Shows buybacks and dividends rising despite lower earnings; shareholder returns.,,
+E2,"Do companies report or expect higher earnings, profit growth, buybacks, or shareholder returns?",D14_homedepot_q2fy23_8k#c005,D14_homedepot_q2fy23_8k,company_earnings_disclosure,ordinary,,10,"Diluted earnings per share | 4.65 | 5.05 | (7.9) | 8.46 | 9.13 | (7.3)
+Three Months Ended | Six Months Ended
+Selected Sales Data (1) | July 30, 2023 | July 31, 2022 | % Change | July 30, 2023 | July 31, 2022 | % Change
+Customer transactions (in millions) | 459.1 | 467.4 | (1.8) | 850.1 | 878.1 | (3.2)
+Average ticket | 90.07 | 90.02 | 0.1 | 90.92 | 90.82 | 0.1
+Sales per retail square foot | 684.65 | 700.62 | (2.3) | 638.50 | 661.27 | (3.4)
+—————
+(1)Selected Sales Data does not include results for HD Supply.
+THE HOME DEPOT, INC.
+CONDENSED CONSOLIDATED BALANCE SHEETS
+(Unaudited)
+in millions | July 30, 2023 | July 31, 2022 | January 29, 2023
+Assets
+Current assets:
+Cash and cash equivalents | 2,814 | 1,259 | 2,757
+Receivables, net | 3,836 | 3,725 | 3,317
+Merchandise inventories | 23,265 | 26,088 | 24,886
+Other current assets | 1,915 | 1,869 | 1,511",2,"Reports EPS decline, company earnings evidence.",,
+E2,"Do companies report or expect higher earnings, profit growth, buybacks, or shareholder returns?",D01_census_retail_2023_07#c006,D01_census_retail_2023_07,official_economic_release,ordinary,,11,"estimated monthly total). The Census Bureau recommends that individuals using estimates in this report
+incorporate this information into their analyses, as sampling error could affect the conclusions drawn from
+the estimates.
+Nonsampling error encompasses all other factors that contribute to the total error of a sample survey
+estimate. This type of error can occur because of nonresponse, insufficient coverage of the universe of
+retail businesses, mistakes in the recording and coding of data, and other errors of collection, response,
+coverage, or processing. Although nonsampling error is not measured directly, the Census Bureau employs
+quality control procedures throughout the process to minimize this type of error.
+Weather Information
+For information on the impact of weather events on the compilation of this report, please see the
+Frequently Asked Questions (FAQs) on our website at:
+<www.census.gov/retail/marts_weather_faqs.html>
+RESOURCES
+The Rest of the Consumer Spending Story
+Retail and services together represent what’s commonly referred to as consumer spending. Quarterly
+Services Survey (QSS) revenue comprises roughly 2/3 of the personal consumption expenditures",0,Error discussion.,,
+E2,"Do companies report or expect higher earnings, profit growth, buybacks, or shareholder returns?",D16_visa_q3fy23_8k#c008,D16_visa_q3fy23_8k,company_earnings_disclosure,ordinary,,12,"On June 28, 2023, Visa announced it signed a definitive agreement to acquire Pismo, a cloud-native issuer processing and core banking platform with operations in Latin America, Asia Pacific and Europe, for $1 billion in cash. The transaction is subject to customary closing conditions, including applicable regulatory reviews and approvals, and is expected to close by the end of 2023.
+During the three months ended June 30, 2023, Visa repurchased 12.9 million shares of class A common stock at an average cost of $229.19 per share for $3.0 billion. The Company had $8.8 billion of remaining authorized funds for share repurchases as of June 30, 2023.
+On July 25, 2023, the board of directors declared a quarterly cash dividend of $0.450 per share of class A common stock (determined in the case of class B and C common stock and series A, B and C convertible participating preferred stock on an as-converted basis) payable on September 1, 2023, to all holders of record as of August 11, 2023.",2,"Buybacks, remaining authorization, dividend declared.",,
+E2,"Do companies report or expect higher earnings, profit growth, buybacks, or shareholder returns?",D08_fomc_minutes_2023_06#c031,D08_fomc_minutes_2023_06,fed_publication,ordinary,,13,"In their discussion of the household sector, participants generally noted that consumer spending so far this year had been stronger than expected. Several participants noted that aggregate household wealth remained high, as equity and home prices had not declined much from their recent highs. A few participants mentioned that while, overall, the household sector still retained much of the excess savings it had accumulated during the pandemic, there were signs that consumers were facing increasingly tighter budget constraints, given high inflation and, especially for low-income households, depleted savings.",1,Equity wealth supporting spending; equity node only.,,
+E2,"Do companies report or expect higher earnings, profit growth, buybacks, or shareholder returns?",D11_bowman_speech_2023_08_05#c004,D11_bowman_speech_2023_08_05,fed_publication,ordinary,,14,"The recent lower inflation reading was positive, but I will be looking for consistent evidence that inflation is on a meaningful path down toward our 2 percent goal as I consider further rate increases and how long the federal funds rate will need to remain at a restrictive level. I will also be watching for signs of slowing in consumer spending and signs that labor market conditions are loosening.
+It's important to reiterate that monetary policy is not on a preset course. My colleagues and I will make our decisions based on the incoming data and its implications for the economic outlook. We should remain willing to raise the federal funds rate at a future meeting if the incoming data indicate that progress on inflation has stalled.
+Returning inflation to our 2 percent goal is necessary to achieve a sustainably strong labor market and economy.",0,Monetary policy remarks.,,
+E2,"Do companies report or expect higher earnings, profit growth, buybacks, or shareholder returns?",D07_fomc_presser_2023_07_26#c030,D07_fomc_presser_2023_07_26,fed_publication,ordinary,,15,"reversal of the effects [on those prices that resulted] from the war in Ukraine. And that’s, that’s a
+good thing, and the public experiences that, as I mentioned earlier.
+For core inflation, I’d say there also—there has been a role for, for most—for, for both
+factors, both that I mentioned. Clearly, for goods, normalization of supply conditions is playing
+an important role, as is the reversal, the beginning of the reversal, of spending—back into
+services and away from goods.
+And take autos as an example. The combination of an increase in sales and inventories,
+while, while vehicle inflation has decelerated, points to a substantial role for supply, but there’s
+Page 15 of 28
+July 26, 2023 Chair Powell’s Press Conference FINAL
+also a role for demand, as, you know, the loans and things like that are more expensive. So
+they’re both working there. Housing services inflation now starts to move down. Clearly, higher
+rates have, have slowed the housing market. You know, I would say, monetary policy is",0,Inflation drivers.,,
+E2,"Do companies report or expect higher earnings, profit growth, buybacks, or shareholder returns?",D02_bls_cpi_2023_07#c013,D02_bls_cpi_2023_07,official_economic_release,ordinary,,16,"www.bls.gov/cpi/seasonal-adjustment/timeline-seasonal-adjustment-methodology-changes.htm.
+For analyzing short-term price trends in the economy, seasonally adjusted changes are usually
+preferred since they eliminate the effect of changes that normally occur at the same time and
+in about the same magnitude every year-such as price movements resulting from weather events,
+production cycles, model changeovers, holidays, and sales. This allows data users to focus on
+changes that are not typical for the time of year. The unadjusted data are of primary interest
+to consumers concerned about the prices they actually pay. Unadjusted data are also used
+extensively for escalation purposes. Many collective bargaining cont",0,CPI seasonal adjustment note.,,
+E2,"Do companies report or expect higher earnings, profit growth, buybacks, or shareholder returns?",D08_fomc_minutes_2023_06#c026,D08_fomc_minutes_2023_06,fed_publication,ordinary,,17,"The staff continued to judge that uncertainty around the baseline projection was considerable and still viewed the risks as being influenced importantly by the potential macroeconomic implications of banking-sector developments, which could end up being more, or less, negative than assumed in the baseline. Given the continued strength in labor market conditions and the resilience of consumer spending, however, the staff saw the possibility of the economy continuing to grow slowly and avoiding a downturn as almost as likely as the mild‑recession baseline. On balance, the staff saw the risks around the baseline inflation forecast as tilted to the upside, as economic scenarios with higher inflation appeared more likely than scenarios with lower inflation and because inflation could continue to be more persistent than expected and inflation expectations could become unanchored after a long period of elevated inflation.
+Participants' Views on Current Conditions and the Economic Outlook",0,"Macro risks, no earnings/equity link.",,
+E2,"Do companies report or expect higher earnings, profit growth, buybacks, or shareholder returns?",D01_census_retail_2023_07#c003,D01_census_retail_2023_07,official_economic_release,ordinary,,18,"United States. Each month, questionnaires are mailed to a probability sample of approximately 4,800
+employer firms selected from the larger Monthly Retail Trade Survey. Advance sales estimates are
+computed using a link relative estimator. For each detailed industry, we compute a ratio of current-to-
+previous month weighted sales using data from units for which we have obtained usable responses for
+both the current and previous month. For each detailed industry, the advance total sales estimates for the
+current month is computed by multiplying this ratio by the preliminary sales estimate for the previous
+month (derived from the larger MRTS) at the appropriate industry level. Total estimates for broader
+industries are computed as the sum of the detailed industry estimates. The link relative estimate is used
+because imputation is not performed for most nonrespondents in MARTS. For a limited number of
+nonresponding companies that have influential effects on the estimates, sales may be estimated based on
+historical performance of that company. The monthly estimates are benchmarked to the annual survey",0,Survey methodology.,,
+E2,"Do companies report or expect higher earnings, profit growth, buybacks, or shareholder returns?",D10_sloos_2023_07#c001,D10_sloos_2023_07,fed_publication,ordinary,,19,"For loans to households, banks reported that lending standards tightened across all categories of residential real estate (RRE) loans, especially for RRE loans other than government-sponsored enterprise (GSE)-eligible and government loans. Meanwhile, demand weakened for all RRE loan categories. In addition, banks reported tighter standards and weaker demand for home equity lines of credit (HELOCs). Furthermore, standards tightened for all consumer loan categories; demand weakened for auto and other consumer loans, while it remained basically unchanged for credit card loans.
+The July SLOOS included two sets of special questions, which inquired about the current level of lending standards relative to the midpoint of the range over which banks' standards have varied since 2005, as well as questions about banks' expectations for changes in lending standards over the second half of 2023 and reasons for these changes.",0,Bank lending standards.,,
+E2,"Do companies report or expect higher earnings, profit growth, buybacks, or shareholder returns?",D07_fomc_presser_2023_07_26#c004,D07_fomc_presser_2023_07_26,fed_publication,ordinary,,20,"policy rate by 5¼ percentage points since early last year. We have been seeing the effects of our
+policy tightening on demand in the most interest rate–sensitive sectors of the economy,
+particularly housing and investment. It will take time, however, for the full effects of our
+ongoing monetary restraint to be realized, especially on inflation. In addition, the economy is
+facing headwinds from tighter credit conditions for households and businesses, which are likely
+to weigh on economic activity, hiring, and inflation.
+In determining the extent of additional policy firming that may be appropriate to return
+inflation to 2 percent over time, the Committee will take into account the cumulative tightening
+of monetary policy, the lags with which monetary policy affects economic activity and inflation,
+and economic and financial developments. We will continue to make our decisions meeting by
+meeting, based on the totality of the incoming data and their implications for the outlook for
+economic activity and inflation, as well as the balance of risks.",0,"Monetary policy, no earnings or equities.",,
+E3,"Is strong demand or consumer spending adding to inflation pressure, prices, or wage growth?",D07_fomc_presser_2023_07_26#c002,D07_fomc_presser_2023_07_26,fed_publication,graph_guided,1,,"demand in the labor market are coming into better balance. The labor force participation rate has
+moved up since last year, particularly for individuals aged 25 to 54 years. Nominal wage growth
+has shown some signs of easing, and job vacancies have declined so far this year. While the
+jobs-to-workers gap has narrowed, labor demand still substantially exceeds the supply of
+available workers.
+Inflation remains well above our longer-run goal of 2 percent. Over the 12 months
+ending in May, total PCE prices rose 3.8 percent; excluding the volatile food and energy
+categories, core PCE prices rose 4.6 percent. In June, the 12-month change in the consumer
+price index, or CPI, came in at 3.0 percent, and the change in the core, core CPI, was 4.8 percent.
+Inflation has moderated somewhat since the middle of last year. Nonetheless, the process
+of getting inflation back down to 2 percent has a long way to go. Despite elevated inflation,",1,"Inflation and labor demand described, but no consumption-inflation link.",,
+E3,"Is strong demand or consumer spending adding to inflation pressure, prices, or wage growth?",D08_fomc_minutes_2023_06#c025,D08_fomc_minutes_2023_06,fed_publication,graph_guided,2,,"The staff's inflation forecast was little revised relative to the previous projection, and supply–demand imbalances in both goods markets and labor markets were still judged to be easing only slowly. On a four-quarter change basis, total PCE price inflation was projected to be 3.0 percent this year, with core inflation at 3.7 percent. Core goods inflation was forecast to move down further this year and then remain subdued. Housing services inflation was considered to have about peaked and was expected to move down over the rest of the year. Core nonhousing services inflation was projected to slow gradually as nominal wage growth eased further. Reflecting the effects of the easing in resource utilization over the projection, core inflation was forecast to slow through next year but remain moderately above 2 percent. With expected declines in consumer energy prices and further moderation in food price inflation, total inflation was projected to run below core inflation this year and the next. In 2025, both total and core PCE price inflation were expected to be close to 2 percent.",1,Inflation forecast tied to supply-demand imbalances and wage growth; not explicit on consumption.,,
+E3,"Is strong demand or consumer spending adding to inflation pressure, prices, or wage growth?",D09_beige_book_2023_07#c010,D09_beige_book_2023_07,fed_publication,both,3,4,"activity slowed. Energy demand was steady. Agriculture evaporated in manufacturing but stayed elevated in the
+conditions softened. service sector. Uncertainty continued to rise, and con-
+tacts cited diminishing demand, higher labor costs, rising
+Chicago
+interest rates, and inflation as their primary outlook con-
+Economic activity was little changed. Employment in-
+cerns.
+creased moderately; nonbusiness contacts saw little
+change in activity; consumer spending was flat; business San Francisco
+spending and construction and real estate activity de- Economic activity softened modestly. Labor availability
+clined slightly; and manufacturing decreased modestly. improved across sectors. Wage growth slowed notably
+Prices and wages rose moderately, while financial condi- while price increases persisted. Retail sales moderated,
+tions tightened slightly further. Expectations for farm and activity in the services sectors eased somewhat.
+incomes in 2023 decreased some. Manufacturing activity was solid but weakened slightly,
+while conditions in the agriculture and residential real
+estate sectors were mixed. Commercial real estate
+activity fell, and financial sector activity was largely un-
+changed.
+2",1,"Regional spending, prices, and wages mentioned; no explicit link.",,
+E3,"Is strong demand or consumer spending adding to inflation pressure, prices, or wage growth?",D08_fomc_minutes_2023_06#c015,D08_fomc_minutes_2023_06,fed_publication,graph_guided,4,,"Global prices for energy and agricultural commodities were little changed, on net, over the intermeeting period, while prices for metals fell further. Declines in retail energy prices since the beginning of the year contributed to a notable easing in headline consumer price inflation in the foreign economies. By contrast, core inflation had yet to materially decline from its recent highs in many economies. In this context, and with tight labor market conditions, foreign central banks underscored the need to raise policy rates further or hold them at sufficiently restrictive levels to bring inflation back to their respective targets and be well positioned in case inflation failed to decline as expected.
+Staff Review of the Financial Situation",0,"Foreign inflation, not consumption.",,
+E3,"Is strong demand or consumer spending adding to inflation pressure, prices, or wage growth?",D09_beige_book_2023_07#c008,D09_beige_book_2023_07,fed_publication,ordinary,,1,"The Fourth District economy was generally stable in Economic activity in the region grew slightly in recent
+recent weeks as high interest rates continued to con- weeks. Employment rose moderately as labor availability
+strain households’ big-ticket goods purchases and busi- improved. Price pressures were mild and wages rose
+nesses’ project plans. Bankers and transportation firms moderately. Consumer spending was flat. Professional
+cited these effects as contributing to weaker demand for services reported solid activity and a positive outlook.
+their own services. Nevertheless, contacts were general- Residential construction and real estate remained low.
+ly more optimistic about the near-term outlook and less Dry conditions have lowered the farm outlook. Minority-
+concerned that a U.S. recession would occur in 2023. and women-owned firms reported steady activity.
+Richmond Kansas City
+The regional economy grew slightly in recent weeks. Total economic activity across the Tenth District
+Consumer spending on retail goods, as well as on travel changed little during June. Though hiring was flat, ex-",1,"Flat spending, mild price pressures across districts; juxtaposed, not linked.",,
+E3,"Is strong demand or consumer spending adding to inflation pressure, prices, or wage growth?",D01_census_retail_2023_07#c000,D01_census_retail_2023_07,official_economic_release,ordinary,,2,"FOR RELEASE AT 8:30 AM EDT, TUESDAY, AUGUST 15, 2023
+ADVANCE MONTHLY SALES FOR RETAIL AND FOOD SERVICES, JULY 2023
+Release Number: CB23-127
+August 15, 2023 — The U.S. Census Bureau announced the following advance estimates of U.S. retail and
+food services sales for July 2023:
+Percent Change in Retail and Food Services Sales from
+ADVANCE MONTHLY SALES
+Previous Month
+Data adjusted for seasonal variation and holiday and trading-day differences but not for
+price changes.
+2
+July 2023 $696.4 billion 0.7%
+June 2023
+$691.3 billion 0.3%
+0
+(revised)
+Next release: September 14, 2023
+-2
+May June July
+* The 90 percent confidence interval includes zero. There is insufficient statistical
+evidence to conclude that the actual change is different from zero. Total Ex Auto Auto Gen Mer
+Data adjusted for seasonal variation and holiday and trading-day differences but Source:U.S. Census Bureau, Advanced Monthly Retail Trade Survey,
+not for price changes. Source: U.S. Census Bureau, Advanced Monthly Retail August 15, 2023
+Trade Survey, August 15, 2023",1,Retail sales data (consumption node) but no link to inflation.,,
+E3,"Is strong demand or consumer spending adding to inflation pressure, prices, or wage growth?",D01_census_retail_2023_07#c001,D01_census_retail_2023_07,official_economic_release,ordinary,,3,"Advance Estimates of U.S. Retail and Food Services
+Advance estimates of U.S. retail and food services sales for July 2023, adjusted for seasonal variation and
+holiday and trading-day differences, but not for price changes, were $696.4 billion, up 0.7 percent (±0.5
+percent) from the previous month, and up 3.2 percent (±0.7 percent) above July 2022. Total sales for the
+May 2023 through July 2023 period were up 2.3 percent (±0.4 percent) from the same period a year ago.
+The May 2023 to June 2023 percent change was revised from up 0.2 percent (±0.5 percent)* to up 0.3
+percent (±0.2 percent).
+Retail trade sales were up 0.6 percent (±0.5 percent) from June 2023, and up 2.0 percent (±0.5 percent)
+above last year. Nonstore retailers were up 10.3 percent (±1.6 percent) from last year, while food services
+and drinking places were up 11.9 percent (±2.3 percent) from July 2022.
+General Information
+The August 2023 Advance Monthly Retail report is scheduled for release on September 14, 2023 at 8:30",1,Consumer spending figures only; no inflation connection.,,
+E3,"Is strong demand or consumer spending adding to inflation pressure, prices, or wage growth?",D16_visa_q3fy23_8k#c007,D16_visa_q3fy23_8k,company_earnings_disclosure,ordinary,,5,"Cash, cash equivalents and investment securities were $20.9 billion at June 30, 2023.
+The weighted-average number of diluted shares of class A common stock outstanding was 2.08 billion for the quarter ended June 30, 2023.
+2
+Other Notable Items
+On June 20, 2023, Visa announced the appointment of Chris Suh as Executive Vice President, Chief Financial Officer, effective August 1, 2023. Mr. Suh commenced employment with Visa on July 10, 2023 as CFO Designate ahead of assuming the CFO position on August 1, 2023.
+On June 28, 2023, Visa deposited $500 million into its litigation escrow account, which was previously established under the Company's U.S. retrospective responsibility plan to insulate the Company and class A shareholders from financial liability for certain litigation cases. This deposit has the same economic effect on earnings per share as repurchasing the Company's class A common stock as it reduces the as-converted class B common stock share count at a volume weighted average price of $227.75.",0,Corporate items.,,
+E3,"Is strong demand or consumer spending adding to inflation pressure, prices, or wage growth?",D09_beige_book_2023_07#c007,D09_beige_book_2023_07,fed_publication,ordinary,,6,"reported moderate revenue growth. Home sales were eased noticeably. Consumer spending grew steadily.
+disappointing and life sciences leasing activity slowed Housing markets were solid but low inventory continued
+dramatically. The outlook was optimistic outside of real to restrain sales activity.
+estate, but remained neutral or became increasingly
+pessimistic among real estate contacts.
+1
+National Summary
+Philadelphia St. Louis
+Business activity continued to decline slightly during the Economic conditions have remained unchanged since
+current Beige Book period. Consumer demand ticked our previous report. Employers continued to struggle
+down, although elevated profit margins buoyed overall finding skilled workers, but turnover slowed and wage
+sales figures. Employment fell slightly despite improved pressures lessened. Consumer spending was largely
+labor availability. Wage growth and inflation subsided but steady, but contacts reported a shift away from discre-
+continued at a modest pace. Expectations for economic tionary goods. Homebuying activity increased, but the
+growth remained subdued. commercial real estate sector saw worsening conditions.
+Cleveland Minneapolis",1,"Consumer spending and wage pressure by district, parallel but weakly connected.",,
+E3,"Is strong demand or consumer spending adding to inflation pressure, prices, or wage growth?",D14_homedepot_q2fy23_8k#c007,D14_homedepot_q2fy23_8k,company_earnings_disclosure,ordinary,,7,"Total stockholders’ equity | 1,335 | 237 | 1,562
+Total liabilities and stockholders’ equity | 76,387 | 75,825 | 76,445
+THE HOME DEPOT, INC.
+CONDENSED CONSOLIDATED STATEMENTS OF CASH FLOWS
+(Unaudited)
+Six Months Ended
+in millions | July 30, 2023 | July 31, 2022
+Cash Flows from Operating Activities:
+Net earnings | 8,532 | 9,404
+Reconciliation of net earnings to net cash provided by operating activities:
+Depreciation and amortization | 1,588 | 1,473
+Stock-based compensation expense | 215 | 196
+Changes in working capital | 1,774 | (3,889)
+Changes in deferred income taxes | (48) | (95)
+Other operating activities | 144 | 93
+Net cash provided by operating activities | 12,205 | 7,182
+Cash Flows from Investing Activities:
+Capital expenditures | (1,697) | (1,447)
+Payments for businesses acquired, net | (215) | —
+Other investing activities | 10 | (14)
+Net cash used in investing activities | (1,902) | (1,461)
+Cash Flows from Financing Activities:
+Repayments of short-term debt, net | — | (496)",0,Balance sheet/cash flow.,,
+E3,"Is strong demand or consumer spending adding to inflation pressure, prices, or wage growth?",D08_fomc_minutes_2023_06#c018,D08_fomc_minutes_2023_06,fed_publication,ordinary,,8,"The S&P 500 stock price index increased sizably, on net, over the intermeeting period, led by technology-related stocks. The VIX—the one-month option-implied volatility on the S&P 500 index—edged down, on balance, and ended the period near the 30th percentile of its historical distribution. Bank equity price indexes moved up notably, on net, over the intermeeting period. Stock prices for large banks were only somewhat below their levels before the failure of Silicon Valley Bank (SVB), while those for regional banks remained below their levels in early March.",0,Financial markets.,,
+E3,"Is strong demand or consumer spending adding to inflation pressure, prices, or wage growth?",D14_homedepot_q2fy23_8k#c008,D14_homedepot_q2fy23_8k,company_earnings_disclosure,ordinary,,9,"Proceeds from long-term debt, net of discounts | — | 3,957
+Repayments of long-term debt | (1,130) | (2,366)
+Repurchases of common stock | (4,954) | (3,962)
+Proceeds from sales of common stock | 175 | 142
+Cash dividends | (4,215) | (3,910)
+Other financing activities | (142) | (163)
+Net cash used in financing activities | (10,266) | (6,798)
+Change in cash and cash equivalents | 37 | (1,077)
+Effect of exchange rate changes on cash and cash equivalents | 20 | (7)
+Cash and cash equivalents at beginning of year | 2,757 | 2,343
+Cash and cash equivalents at end of year | 2,814 | 1,259",0,Cash flow financing.,,
+E3,"Is strong demand or consumer spending adding to inflation pressure, prices, or wage growth?",D14_homedepot_q2fy23_8k#c005,D14_homedepot_q2fy23_8k,company_earnings_disclosure,ordinary,,10,"Diluted earnings per share | 4.65 | 5.05 | (7.9) | 8.46 | 9.13 | (7.3)
+Three Months Ended | Six Months Ended
+Selected Sales Data (1) | July 30, 2023 | July 31, 2022 | % Change | July 30, 2023 | July 31, 2022 | % Change
+Customer transactions (in millions) | 459.1 | 467.4 | (1.8) | 850.1 | 878.1 | (3.2)
+Average ticket | 90.07 | 90.02 | 0.1 | 90.92 | 90.82 | 0.1
+Sales per retail square foot | 684.65 | 700.62 | (2.3) | 638.50 | 661.27 | (3.4)
+—————
+(1)Selected Sales Data does not include results for HD Supply.
+THE HOME DEPOT, INC.
+CONDENSED CONSOLIDATED BALANCE SHEETS
+(Unaudited)
+in millions | July 30, 2023 | July 31, 2022 | January 29, 2023
+Assets
+Current assets:
+Cash and cash equivalents | 2,814 | 1,259 | 2,757
+Receivables, net | 3,836 | 3,725 | 3,317
+Merchandise inventories | 23,265 | 26,088 | 24,886
+Other current assets | 1,915 | 1,869 | 1,511",0,Company financials.,,
+E3,"Is strong demand or consumer spending adding to inflation pressure, prices, or wage growth?",D01_census_retail_2023_07#c006,D01_census_retail_2023_07,official_economic_release,ordinary,,11,"estimated monthly total). The Census Bureau recommends that individuals using estimates in this report
+incorporate this information into their analyses, as sampling error could affect the conclusions drawn from
+the estimates.
+Nonsampling error encompasses all other factors that contribute to the total error of a sample survey
+estimate. This type of error can occur because of nonresponse, insufficient coverage of the universe of
+retail businesses, mistakes in the recording and coding of data, and other errors of collection, response,
+coverage, or processing. Although nonsampling error is not measured directly, the Census Bureau employs
+quality control procedures throughout the process to minimize this type of error.
+Weather Information
+For information on the impact of weather events on the compilation of this report, please see the
+Frequently Asked Questions (FAQs) on our website at:
+<www.census.gov/retail/marts_weather_faqs.html>
+RESOURCES
+The Rest of the Consumer Spending Story
+Retail and services together represent what’s commonly referred to as consumer spending. Quarterly
+Services Survey (QSS) revenue comprises roughly 2/3 of the personal consumption expenditures",0,"Error discussion, boilerplate.",,
+E3,"Is strong demand or consumer spending adding to inflation pressure, prices, or wage growth?",D16_visa_q3fy23_8k#c008,D16_visa_q3fy23_8k,company_earnings_disclosure,ordinary,,12,"On June 28, 2023, Visa announced it signed a definitive agreement to acquire Pismo, a cloud-native issuer processing and core banking platform with operations in Latin America, Asia Pacific and Europe, for $1 billion in cash. The transaction is subject to customary closing conditions, including applicable regulatory reviews and approvals, and is expected to close by the end of 2023.
+During the three months ended June 30, 2023, Visa repurchased 12.9 million shares of class A common stock at an average cost of $229.19 per share for $3.0 billion. The Company had $8.8 billion of remaining authorized funds for share repurchases as of June 30, 2023.
+On July 25, 2023, the board of directors declared a quarterly cash dividend of $0.450 per share of class A common stock (determined in the case of class B and C common stock and series A, B and C convertible participating preferred stock on an as-converted basis) payable on September 1, 2023, to all holders of record as of August 11, 2023.",0,Corporate items.,,
+E3,"Is strong demand or consumer spending adding to inflation pressure, prices, or wage growth?",D08_fomc_minutes_2023_06#c031,D08_fomc_minutes_2023_06,fed_publication,ordinary,,13,"In their discussion of the household sector, participants generally noted that consumer spending so far this year had been stronger than expected. Several participants noted that aggregate household wealth remained high, as equity and home prices had not declined much from their recent highs. A few participants mentioned that while, overall, the household sector still retained much of the excess savings it had accumulated during the pandemic, there were signs that consumers were facing increasingly tighter budget constraints, given high inflation and, especially for low-income households, depleted savings.",1,Consumer spending stronger than expected; no inflation link.,,
+E3,"Is strong demand or consumer spending adding to inflation pressure, prices, or wage growth?",D11_bowman_speech_2023_08_05#c004,D11_bowman_speech_2023_08_05,fed_publication,ordinary,,14,"The recent lower inflation reading was positive, but I will be looking for consistent evidence that inflation is on a meaningful path down toward our 2 percent goal as I consider further rate increases and how long the federal funds rate will need to remain at a restrictive level. I will also be watching for signs of slowing in consumer spending and signs that labor market conditions are loosening.
+It's important to reiterate that monetary policy is not on a preset course. My colleagues and I will make our decisions based on the incoming data and its implications for the economic outlook. We should remain willing to raise the federal funds rate at a future meeting if the incoming data indicate that progress on inflation has stalled.
+Returning inflation to our 2 percent goal is necessary to achieve a sustainably strong labor market and economy.",1,"Watching consumer spending and inflation as policy inputs, implicit link only.",,
+E3,"Is strong demand or consumer spending adding to inflation pressure, prices, or wage growth?",D07_fomc_presser_2023_07_26#c030,D07_fomc_presser_2023_07_26,fed_publication,ordinary,,15,"reversal of the effects [on those prices that resulted] from the war in Ukraine. And that’s, that’s a
+good thing, and the public experiences that, as I mentioned earlier.
+For core inflation, I’d say there also—there has been a role for, for most—for, for both
+factors, both that I mentioned. Clearly, for goods, normalization of supply conditions is playing
+an important role, as is the reversal, the beginning of the reversal, of spending—back into
+services and away from goods.
+And take autos as an example. The combination of an increase in sales and inventories,
+while, while vehicle inflation has decelerated, points to a substantial role for supply, but there’s
+Page 15 of 28
+July 26, 2023 Chair Powell’s Press Conference FINAL
+also a role for demand, as, you know, the loans and things like that are more expensive. So
+they’re both working there. Housing services inflation now starts to move down. Clearly, higher
+rates have, have slowed the housing market. You know, I would say, monetary policy is",2,"Powell attributes core inflation to supply normalization and demand shifts (spending moving back to services), a role for demand in prices.",,
+E3,"Is strong demand or consumer spending adding to inflation pressure, prices, or wage growth?",D02_bls_cpi_2023_07#c013,D02_bls_cpi_2023_07,official_economic_release,ordinary,,16,"www.bls.gov/cpi/seasonal-adjustment/timeline-seasonal-adjustment-methodology-changes.htm.
+For analyzing short-term price trends in the economy, seasonally adjusted changes are usually
+preferred since they eliminate the effect of changes that normally occur at the same time and
+in about the same magnitude every year-such as price movements resulting from weather events,
+production cycles, model changeovers, holidays, and sales. This allows data users to focus on
+changes that are not typical for the time of year. The unadjusted data are of primary interest
+to consumers concerned about the prices they actually pay. Unadjusted data are also used
+extensively for escalation purposes. Many collective bargaining cont",0,Seasonal adjustment methodology.,,
+E3,"Is strong demand or consumer spending adding to inflation pressure, prices, or wage growth?",D08_fomc_minutes_2023_06#c026,D08_fomc_minutes_2023_06,fed_publication,ordinary,,17,"The staff continued to judge that uncertainty around the baseline projection was considerable and still viewed the risks as being influenced importantly by the potential macroeconomic implications of banking-sector developments, which could end up being more, or less, negative than assumed in the baseline. Given the continued strength in labor market conditions and the resilience of consumer spending, however, the staff saw the possibility of the economy continuing to grow slowly and avoiding a downturn as almost as likely as the mild‑recession baseline. On balance, the staff saw the risks around the baseline inflation forecast as tilted to the upside, as economic scenarios with higher inflation appeared more likely than scenarios with lower inflation and because inflation could continue to be more persistent than expected and inflation expectations could become unanchored after a long period of elevated inflation.
+Participants' Views on Current Conditions and the Economic Outlook",2,"Notes resilient consumer spending and upside inflation risks, linking strength to inflation persistence.",,
+E3,"Is strong demand or consumer spending adding to inflation pressure, prices, or wage growth?",D01_census_retail_2023_07#c003,D01_census_retail_2023_07,official_economic_release,ordinary,,18,"United States. Each month, questionnaires are mailed to a probability sample of approximately 4,800
+employer firms selected from the larger Monthly Retail Trade Survey. Advance sales estimates are
+computed using a link relative estimator. For each detailed industry, we compute a ratio of current-to-
+previous month weighted sales using data from units for which we have obtained usable responses for
+both the current and previous month. For each detailed industry, the advance total sales estimates for the
+current month is computed by multiplying this ratio by the preliminary sales estimate for the previous
+month (derived from the larger MRTS) at the appropriate industry level. Total estimates for broader
+industries are computed as the sum of the detailed industry estimates. The link relative estimate is used
+because imputation is not performed for most nonrespondents in MARTS. For a limited number of
+nonresponding companies that have influential effects on the estimates, sales may be estimated based on
+historical performance of that company. The monthly estimates are benchmarked to the annual survey",0,Survey methodology.,,
+E3,"Is strong demand or consumer spending adding to inflation pressure, prices, or wage growth?",D10_sloos_2023_07#c001,D10_sloos_2023_07,fed_publication,ordinary,,19,"For loans to households, banks reported that lending standards tightened across all categories of residential real estate (RRE) loans, especially for RRE loans other than government-sponsored enterprise (GSE)-eligible and government loans. Meanwhile, demand weakened for all RRE loan categories. In addition, banks reported tighter standards and weaker demand for home equity lines of credit (HELOCs). Furthermore, standards tightened for all consumer loan categories; demand weakened for auto and other consumer loans, while it remained basically unchanged for credit card loans.
+The July SLOOS included two sets of special questions, which inquired about the current level of lending standards relative to the midpoint of the range over which banks' standards have varied since 2005, as well as questions about banks' expectations for changes in lending standards over the second half of 2023 and reasons for these changes.",1,Consumer credit demand weakening; related to consumption only.,,
+E3,"Is strong demand or consumer spending adding to inflation pressure, prices, or wage growth?",D07_fomc_presser_2023_07_26#c004,D07_fomc_presser_2023_07_26,fed_publication,ordinary,,20,"policy rate by 5¼ percentage points since early last year. We have been seeing the effects of our
+policy tightening on demand in the most interest rate–sensitive sectors of the economy,
+particularly housing and investment. It will take time, however, for the full effects of our
+ongoing monetary restraint to be realized, especially on inflation. In addition, the economy is
+facing headwinds from tighter credit conditions for households and businesses, which are likely
+to weigh on economic activity, hiring, and inflation.
+In determining the extent of additional policy firming that may be appropriate to return
+inflation to 2 percent over time, the Committee will take into account the cumulative tightening
+of monetary policy, the lags with which monetary policy affects economic activity and inflation,
+and economic and financial developments. We will continue to make our decisions meeting by
+meeting, based on the totality of the incoming data and their implications for the outlook for
+economic activity and inflation, as well as the balance of risks.",1,Policy restraint on demand and inflation generally; not specifically consumption.,,
+E4,Does inflation or strong economic data imply further Federal Reserve rate increases or keeping rates higher?,D08_fomc_minutes_2023_06#c047,D08_fomc_minutes_2023_06,fed_publication,graph_guided,1,,"The Committee seeks to achieve maximum employment and inflation at the rate of 2 percent over the longer run. In support of these goals, the Committee decided to maintain the target range for the federal funds rate at 5 to 5-1/4 percent. Holding the target range steady at this meeting allows the Committee to assess additional information and its implications for monetary policy. In determining the extent of additional policy firming that may be appropriate to return inflation to 2 percent over time, the Committee will take into account the cumulative tightening of monetary policy, the lags with which monetary policy affects economic activity and inflation, and economic and financial developments. In addition, the Committee will continue reducing its holdings of Treasury securities and agency debt and agency mortgage-backed securities, as described in its previously announced plans. The Committee is strongly committed to returning inflation to its 2 percent objective.",2,Statement tying additional firming to inflation goal.,,
+E4,Does inflation or strong economic data imply further Federal Reserve rate increases or keeping rates higher?,D08_fomc_minutes_2023_06#c043,D08_fomc_minutes_2023_06,fed_publication,graph_guided,2,,"Members agreed that the Committee seeks to achieve maximum employment and inflation at the rate of 2 percent over the longer run. In support of these goals, the members agreed to maintain the target range for the federal funds rate at 5 to 5-1/4 percent. Members agreed that holding the target range steady at this meeting allowed the Committee to assess additional information and its implications for monetary policy. In determining the extent of additional policy firming that may be appropriate to return inflation to 2 percent over time, members concurred that they will take into account the cumulative tightening of monetary policy, the lags with which monetary policy affects economic activity and inflation, and economic and financial developments. In addition, members agreed that the Committee will continue to reduce the Federal Reserve's holdings of Treasury securities and agency debt and agency mortgage-backed securities, as described in its previously announced plans. All members affirmed that they are strongly committed to returning inflation to their 2 percent objective.",2,Additional firming tied to returning inflation to 2 percent.,,
+E4,Does inflation or strong economic data imply further Federal Reserve rate increases or keeping rates higher?,D08_fomc_minutes_2023_06#c039,D08_fomc_minutes_2023_06,fed_publication,graph_guided,3,,"In discussing the policy outlook, all participants continued to anticipate that, with inflation still well above the Committee's 2 percent goal and the labor market remaining very tight, maintaining a restrictive stance for monetary policy would be appropriate to achieve the Committee's objectives. Almost all participants noted that in their economic projections that they judged that additional increases in the target federal funds rate during 2023 would be appropriate. Most participants observed that uncertainty about the outlook for the economy and inflation remained elevated and that additional information would be valuable for considering the appropriate stance of monetary policy. Many also noted that, after rapidly tightening the stance of monetary policy last year, the Committee had slowed the pace of tightening and that a further moderation in the pace of policy firming was appropriate in order to provide additional time to observe the effects of cumulative tightening and assess their implications for policy. Participants agreed that their policy decisions at every meeting would continue to be based on the totality of incoming information and its implications for the economic outlook as well as the balance of risks. They also emphasized the importance of communicating to the public their data-dependent approach. Most participants observed that postmeeting communications, including the SEP, would help clarify their assessment regarding the stance of monetary policy that is likely to be appropriate to bring inflation down to 2 percent over time.",2,Participants link high inflation and tight labor market to additional rate increases and restrictive stance.,,
+E4,Does inflation or strong economic data imply further Federal Reserve rate increases or keeping rates higher?,D06_fomc_statement_2023_07_26#c001,D06_fomc_statement_2023_07_26,fed_publication,graph_guided,4,,"The Committee seeks to achieve maximum employment and inflation at the rate of 2 percent over the longer run. In support of these goals, the Committee decided to raise the target range for the federal funds rate to 5-1/4 to 5-1/2 percent. The Committee will continue to assess additional information and its implications for monetary policy. In determining the extent of additional policy firming that may be appropriate to return inflation to 2 percent over time, the Committee will take into account the cumulative tightening of monetary policy, the lags with which monetary policy affects economic activity and inflation, and economic and financial developments. In addition, the Committee will continue reducing its holdings of Treasury securities and agency debt and agency mortgage-backed securities, as described in its previously announced plans. The Committee is strongly committed to returning inflation to its 2 percent objective.",2,Fed raised rates and ties further firming to returning inflation to 2 percent; directly links inflation to rate policy.,,
+E4,Does inflation or strong economic data imply further Federal Reserve rate increases or keeping rates higher?,D09_beige_book_2023_07#c008,D09_beige_book_2023_07,fed_publication,ordinary,,1,"The Fourth District economy was generally stable in Economic activity in the region grew slightly in recent
+recent weeks as high interest rates continued to con- weeks. Employment rose moderately as labor availability
+strain households’ big-ticket goods purchases and busi- improved. Price pressures were mild and wages rose
+nesses’ project plans. Bankers and transportation firms moderately. Consumer spending was flat. Professional
+cited these effects as contributing to weaker demand for services reported solid activity and a positive outlook.
+their own services. Nevertheless, contacts were general- Residential construction and real estate remained low.
+ly more optimistic about the near-term outlook and less Dry conditions have lowered the farm outlook. Minority-
+concerned that a U.S. recession would occur in 2023. and women-owned firms reported steady activity.
+Richmond Kansas City
+The regional economy grew slightly in recent weeks. Total economic activity across the Tenth District
+Consumer spending on retail goods, as well as on travel changed little during June. Though hiring was flat, ex-",1,"Regional prices/activity, no rate link.",,
+E4,Does inflation or strong economic data imply further Federal Reserve rate increases or keeping rates higher?,D01_census_retail_2023_07#c000,D01_census_retail_2023_07,official_economic_release,ordinary,,2,"FOR RELEASE AT 8:30 AM EDT, TUESDAY, AUGUST 15, 2023
+ADVANCE MONTHLY SALES FOR RETAIL AND FOOD SERVICES, JULY 2023
+Release Number: CB23-127
+August 15, 2023 — The U.S. Census Bureau announced the following advance estimates of U.S. retail and
+food services sales for July 2023:
+Percent Change in Retail and Food Services Sales from
+ADVANCE MONTHLY SALES
+Previous Month
+Data adjusted for seasonal variation and holiday and trading-day differences but not for
+price changes.
+2
+July 2023 $696.4 billion 0.7%
+June 2023
+$691.3 billion 0.3%
+0
+(revised)
+Next release: September 14, 2023
+-2
+May June July
+* The 90 percent confidence interval includes zero. There is insufficient statistical
+evidence to conclude that the actual change is different from zero. Total Ex Auto Auto Gen Mer
+Data adjusted for seasonal variation and holiday and trading-day differences but Source:U.S. Census Bureau, Advanced Monthly Retail Trade Survey,
+not for price changes. Source: U.S. Census Bureau, Advanced Monthly Retail August 15, 2023
+Trade Survey, August 15, 2023",1,"Strong retail sales data, one node (strong data) but no link to rate expectations.",,
+E4,Does inflation or strong economic data imply further Federal Reserve rate increases or keeping rates higher?,D01_census_retail_2023_07#c001,D01_census_retail_2023_07,official_economic_release,ordinary,,3,"Advance Estimates of U.S. Retail and Food Services
+Advance estimates of U.S. retail and food services sales for July 2023, adjusted for seasonal variation and
+holiday and trading-day differences, but not for price changes, were $696.4 billion, up 0.7 percent (±0.5
+percent) from the previous month, and up 3.2 percent (±0.7 percent) above July 2022. Total sales for the
+May 2023 through July 2023 period were up 2.3 percent (±0.4 percent) from the same period a year ago.
+The May 2023 to June 2023 percent change was revised from up 0.2 percent (±0.5 percent)* to up 0.3
+percent (±0.2 percent).
+Retail trade sales were up 0.6 percent (±0.5 percent) from June 2023, and up 2.0 percent (±0.5 percent)
+above last year. Nonstore retailers were up 10.3 percent (±1.6 percent) from last year, while food services
+and drinking places were up 11.9 percent (±2.3 percent) from July 2022.
+General Information
+The August 2023 Advance Monthly Retail report is scheduled for release on September 14, 2023 at 8:30",1,Retail sales details; topical to strong data only.,,
+E4,Does inflation or strong economic data imply further Federal Reserve rate increases or keeping rates higher?,D09_beige_book_2023_07#c010,D09_beige_book_2023_07,fed_publication,ordinary,,4,"activity slowed. Energy demand was steady. Agriculture evaporated in manufacturing but stayed elevated in the
+conditions softened. service sector. Uncertainty continued to rise, and con-
+tacts cited diminishing demand, higher labor costs, rising
+Chicago
+interest rates, and inflation as their primary outlook con-
+Economic activity was little changed. Employment in-
+cerns.
+creased moderately; nonbusiness contacts saw little
+change in activity; consumer spending was flat; business San Francisco
+spending and construction and real estate activity de- Economic activity softened modestly. Labor availability
+clined slightly; and manufacturing decreased modestly. improved across sectors. Wage growth slowed notably
+Prices and wages rose moderately, while financial condi- while price increases persisted. Retail sales moderated,
+tions tightened slightly further. Expectations for farm and activity in the services sectors eased somewhat.
+incomes in 2023 decreased some. Manufacturing activity was solid but weakened slightly,
+while conditions in the agriculture and residential real
+estate sectors were mixed. Commercial real estate
+activity fell, and financial sector activity was largely un-
+changed.
+2",1,"Regional prices and activity, no rate link.",,
+E4,Does inflation or strong economic data imply further Federal Reserve rate increases or keeping rates higher?,D16_visa_q3fy23_8k#c007,D16_visa_q3fy23_8k,company_earnings_disclosure,ordinary,,5,"Cash, cash equivalents and investment securities were $20.9 billion at June 30, 2023.
+The weighted-average number of diluted shares of class A common stock outstanding was 2.08 billion for the quarter ended June 30, 2023.
+2
+Other Notable Items
+On June 20, 2023, Visa announced the appointment of Chris Suh as Executive Vice President, Chief Financial Officer, effective August 1, 2023. Mr. Suh commenced employment with Visa on July 10, 2023 as CFO Designate ahead of assuming the CFO position on August 1, 2023.
+On June 28, 2023, Visa deposited $500 million into its litigation escrow account, which was previously established under the Company's U.S. retrospective responsibility plan to insulate the Company and class A shareholders from financial liability for certain litigation cases. This deposit has the same economic effect on earnings per share as repurchasing the Company's class A common stock as it reduces the as-converted class B common stock share count at a volume weighted average price of $227.75.",0,Corporate items.,,
+E4,Does inflation or strong economic data imply further Federal Reserve rate increases or keeping rates higher?,D09_beige_book_2023_07#c007,D09_beige_book_2023_07,fed_publication,ordinary,,6,"reported moderate revenue growth. Home sales were eased noticeably. Consumer spending grew steadily.
+disappointing and life sciences leasing activity slowed Housing markets were solid but low inventory continued
+dramatically. The outlook was optimistic outside of real to restrain sales activity.
+estate, but remained neutral or became increasingly
+pessimistic among real estate contacts.
+1
+National Summary
+Philadelphia St. Louis
+Business activity continued to decline slightly during the Economic conditions have remained unchanged since
+current Beige Book period. Consumer demand ticked our previous report. Employers continued to struggle
+down, although elevated profit margins buoyed overall finding skilled workers, but turnover slowed and wage
+sales figures. Employment fell slightly despite improved pressures lessened. Consumer spending was largely
+labor availability. Wage growth and inflation subsided but steady, but contacts reported a shift away from discre-
+continued at a modest pace. Expectations for economic tionary goods. Homebuying activity increased, but the
+growth remained subdued. commercial real estate sector saw worsening conditions.
+Cleveland Minneapolis",1,"Regional activity and inflation conditions, no rate link.",,
+E4,Does inflation or strong economic data imply further Federal Reserve rate increases or keeping rates higher?,D14_homedepot_q2fy23_8k#c007,D14_homedepot_q2fy23_8k,company_earnings_disclosure,ordinary,,7,"Total stockholders’ equity | 1,335 | 237 | 1,562
+Total liabilities and stockholders’ equity | 76,387 | 75,825 | 76,445
+THE HOME DEPOT, INC.
+CONDENSED CONSOLIDATED STATEMENTS OF CASH FLOWS
+(Unaudited)
+Six Months Ended
+in millions | July 30, 2023 | July 31, 2022
+Cash Flows from Operating Activities:
+Net earnings | 8,532 | 9,404
+Reconciliation of net earnings to net cash provided by operating activities:
+Depreciation and amortization | 1,588 | 1,473
+Stock-based compensation expense | 215 | 196
+Changes in working capital | 1,774 | (3,889)
+Changes in deferred income taxes | (48) | (95)
+Other operating activities | 144 | 93
+Net cash provided by operating activities | 12,205 | 7,182
+Cash Flows from Investing Activities:
+Capital expenditures | (1,697) | (1,447)
+Payments for businesses acquired, net | (215) | —
+Other investing activities | 10 | (14)
+Net cash used in investing activities | (1,902) | (1,461)
+Cash Flows from Financing Activities:
+Repayments of short-term debt, net | — | (496)",0,Company financials.,,
+E4,Does inflation or strong economic data imply further Federal Reserve rate increases or keeping rates higher?,D08_fomc_minutes_2023_06#c018,D08_fomc_minutes_2023_06,fed_publication,ordinary,,8,"The S&P 500 stock price index increased sizably, on net, over the intermeeting period, led by technology-related stocks. The VIX—the one-month option-implied volatility on the S&P 500 index—edged down, on balance, and ended the period near the 30th percentile of its historical distribution. Bank equity price indexes moved up notably, on net, over the intermeeting period. Stock prices for large banks were only somewhat below their levels before the failure of Silicon Valley Bank (SVB), while those for regional banks remained below their levels in early March.",0,Equity market conditions.,,
+E4,Does inflation or strong economic data imply further Federal Reserve rate increases or keeping rates higher?,D14_homedepot_q2fy23_8k#c008,D14_homedepot_q2fy23_8k,company_earnings_disclosure,ordinary,,9,"Proceeds from long-term debt, net of discounts | — | 3,957
+Repayments of long-term debt | (1,130) | (2,366)
+Repurchases of common stock | (4,954) | (3,962)
+Proceeds from sales of common stock | 175 | 142
+Cash dividends | (4,215) | (3,910)
+Other financing activities | (142) | (163)
+Net cash used in financing activities | (10,266) | (6,798)
+Change in cash and cash equivalents | 37 | (1,077)
+Effect of exchange rate changes on cash and cash equivalents | 20 | (7)
+Cash and cash equivalents at beginning of year | 2,757 | 2,343
+Cash and cash equivalents at end of year | 2,814 | 1,259",0,Company financials.,,
+E4,Does inflation or strong economic data imply further Federal Reserve rate increases or keeping rates higher?,D14_homedepot_q2fy23_8k#c005,D14_homedepot_q2fy23_8k,company_earnings_disclosure,ordinary,,10,"Diluted earnings per share | 4.65 | 5.05 | (7.9) | 8.46 | 9.13 | (7.3)
+Three Months Ended | Six Months Ended
+Selected Sales Data (1) | July 30, 2023 | July 31, 2022 | % Change | July 30, 2023 | July 31, 2022 | % Change
+Customer transactions (in millions) | 459.1 | 467.4 | (1.8) | 850.1 | 878.1 | (3.2)
+Average ticket | 90.07 | 90.02 | 0.1 | 90.92 | 90.82 | 0.1
+Sales per retail square foot | 684.65 | 700.62 | (2.3) | 638.50 | 661.27 | (3.4)
+—————
+(1)Selected Sales Data does not include results for HD Supply.
+THE HOME DEPOT, INC.
+CONDENSED CONSOLIDATED BALANCE SHEETS
+(Unaudited)
+in millions | July 30, 2023 | July 31, 2022 | January 29, 2023
+Assets
+Current assets:
+Cash and cash equivalents | 2,814 | 1,259 | 2,757
+Receivables, net | 3,836 | 3,725 | 3,317
+Merchandise inventories | 23,265 | 26,088 | 24,886
+Other current assets | 1,915 | 1,869 | 1,511",0,Company financials.,,
+E4,Does inflation or strong economic data imply further Federal Reserve rate increases or keeping rates higher?,D01_census_retail_2023_07#c006,D01_census_retail_2023_07,official_economic_release,ordinary,,11,"estimated monthly total). The Census Bureau recommends that individuals using estimates in this report
+incorporate this information into their analyses, as sampling error could affect the conclusions drawn from
+the estimates.
+Nonsampling error encompasses all other factors that contribute to the total error of a sample survey
+estimate. This type of error can occur because of nonresponse, insufficient coverage of the universe of
+retail businesses, mistakes in the recording and coding of data, and other errors of collection, response,
+coverage, or processing. Although nonsampling error is not measured directly, the Census Bureau employs
+quality control procedures throughout the process to minimize this type of error.
+Weather Information
+For information on the impact of weather events on the compilation of this report, please see the
+Frequently Asked Questions (FAQs) on our website at:
+<www.census.gov/retail/marts_weather_faqs.html>
+RESOURCES
+The Rest of the Consumer Spending Story
+Retail and services together represent what’s commonly referred to as consumer spending. Quarterly
+Services Survey (QSS) revenue comprises roughly 2/3 of the personal consumption expenditures",0,Sampling error boilerplate.,,
+E4,Does inflation or strong economic data imply further Federal Reserve rate increases or keeping rates higher?,D16_visa_q3fy23_8k#c008,D16_visa_q3fy23_8k,company_earnings_disclosure,ordinary,,12,"On June 28, 2023, Visa announced it signed a definitive agreement to acquire Pismo, a cloud-native issuer processing and core banking platform with operations in Latin America, Asia Pacific and Europe, for $1 billion in cash. The transaction is subject to customary closing conditions, including applicable regulatory reviews and approvals, and is expected to close by the end of 2023.
+During the three months ended June 30, 2023, Visa repurchased 12.9 million shares of class A common stock at an average cost of $229.19 per share for $3.0 billion. The Company had $8.8 billion of remaining authorized funds for share repurchases as of June 30, 2023.
+On July 25, 2023, the board of directors declared a quarterly cash dividend of $0.450 per share of class A common stock (determined in the case of class B and C common stock and series A, B and C convertible participating preferred stock on an as-converted basis) payable on September 1, 2023, to all holders of record as of August 11, 2023.",0,Corporate items.,,
+E4,Does inflation or strong economic data imply further Federal Reserve rate increases or keeping rates higher?,D08_fomc_minutes_2023_06#c031,D08_fomc_minutes_2023_06,fed_publication,ordinary,,13,"In their discussion of the household sector, participants generally noted that consumer spending so far this year had been stronger than expected. Several participants noted that aggregate household wealth remained high, as equity and home prices had not declined much from their recent highs. A few participants mentioned that while, overall, the household sector still retained much of the excess savings it had accumulated during the pandemic, there were signs that consumers were facing increasingly tighter budget constraints, given high inflation and, especially for low-income households, depleted savings.",1,"Consumer spending strength, no policy link.",,
+E4,Does inflation or strong economic data imply further Federal Reserve rate increases or keeping rates higher?,D11_bowman_speech_2023_08_05#c004,D11_bowman_speech_2023_08_05,fed_publication,ordinary,,14,"The recent lower inflation reading was positive, but I will be looking for consistent evidence that inflation is on a meaningful path down toward our 2 percent goal as I consider further rate increases and how long the federal funds rate will need to remain at a restrictive level. I will also be watching for signs of slowing in consumer spending and signs that labor market conditions are loosening.
+It's important to reiterate that monetary policy is not on a preset course. My colleagues and I will make our decisions based on the incoming data and its implications for the economic outlook. We should remain willing to raise the federal funds rate at a future meeting if the incoming data indicate that progress on inflation has stalled.
+Returning inflation to our 2 percent goal is necessary to achieve a sustainably strong labor market and economy.",2,Fed governor explicitly conditions further rate increases and duration of restrictive rates on inflation progress.,,
+E4,Does inflation or strong economic data imply further Federal Reserve rate increases or keeping rates higher?,D07_fomc_presser_2023_07_26#c030,D07_fomc_presser_2023_07_26,fed_publication,ordinary,,15,"reversal of the effects [on those prices that resulted] from the war in Ukraine. And that’s, that’s a
+good thing, and the public experiences that, as I mentioned earlier.
+For core inflation, I’d say there also—there has been a role for, for most—for, for both
+factors, both that I mentioned. Clearly, for goods, normalization of supply conditions is playing
+an important role, as is the reversal, the beginning of the reversal, of spending—back into
+services and away from goods.
+And take autos as an example. The combination of an increase in sales and inventories,
+while, while vehicle inflation has decelerated, points to a substantial role for supply, but there’s
+Page 15 of 28
+July 26, 2023 Chair Powell’s Press Conference FINAL
+also a role for demand, as, you know, the loans and things like that are more expensive. So
+they’re both working there. Housing services inflation now starts to move down. Clearly, higher
+rates have, have slowed the housing market. You know, I would say, monetary policy is",1,"Discusses drivers of core inflation, not the policy reaction directly.",,
+E4,Does inflation or strong economic data imply further Federal Reserve rate increases or keeping rates higher?,D02_bls_cpi_2023_07#c013,D02_bls_cpi_2023_07,official_economic_release,ordinary,,16,"www.bls.gov/cpi/seasonal-adjustment/timeline-seasonal-adjustment-methodology-changes.htm.
+For analyzing short-term price trends in the economy, seasonally adjusted changes are usually
+preferred since they eliminate the effect of changes that normally occur at the same time and
+in about the same magnitude every year-such as price movements resulting from weather events,
+production cycles, model changeovers, holidays, and sales. This allows data users to focus on
+changes that are not typical for the time of year. The unadjusted data are of primary interest
+to consumers concerned about the prices they actually pay. Unadjusted data are also used
+extensively for escalation purposes. Many collective bargaining cont",0,Seasonal adjustment methodology.,,
+E4,Does inflation or strong economic data imply further Federal Reserve rate increases or keeping rates higher?,D08_fomc_minutes_2023_06#c026,D08_fomc_minutes_2023_06,fed_publication,ordinary,,17,"The staff continued to judge that uncertainty around the baseline projection was considerable and still viewed the risks as being influenced importantly by the potential macroeconomic implications of banking-sector developments, which could end up being more, or less, negative than assumed in the baseline. Given the continued strength in labor market conditions and the resilience of consumer spending, however, the staff saw the possibility of the economy continuing to grow slowly and avoiding a downturn as almost as likely as the mild‑recession baseline. On balance, the staff saw the risks around the baseline inflation forecast as tilted to the upside, as economic scenarios with higher inflation appeared more likely than scenarios with lower inflation and because inflation could continue to be more persistent than expected and inflation expectations could become unanchored after a long period of elevated inflation.
+Participants' Views on Current Conditions and the Economic Outlook",2,"Upside inflation risks and resilient spending in staff outlook; relevant to rate implications, moderately direct.",,
+E4,Does inflation or strong economic data imply further Federal Reserve rate increases or keeping rates higher?,D01_census_retail_2023_07#c003,D01_census_retail_2023_07,official_economic_release,ordinary,,18,"United States. Each month, questionnaires are mailed to a probability sample of approximately 4,800
+employer firms selected from the larger Monthly Retail Trade Survey. Advance sales estimates are
+computed using a link relative estimator. For each detailed industry, we compute a ratio of current-to-
+previous month weighted sales using data from units for which we have obtained usable responses for
+both the current and previous month. For each detailed industry, the advance total sales estimates for the
+current month is computed by multiplying this ratio by the preliminary sales estimate for the previous
+month (derived from the larger MRTS) at the appropriate industry level. Total estimates for broader
+industries are computed as the sum of the detailed industry estimates. The link relative estimate is used
+because imputation is not performed for most nonrespondents in MARTS. For a limited number of
+nonresponding companies that have influential effects on the estimates, sales may be estimated based on
+historical performance of that company. The monthly estimates are benchmarked to the annual survey",0,Survey methodology.,,
+E4,Does inflation or strong economic data imply further Federal Reserve rate increases or keeping rates higher?,D10_sloos_2023_07#c001,D10_sloos_2023_07,fed_publication,ordinary,,19,"For loans to households, banks reported that lending standards tightened across all categories of residential real estate (RRE) loans, especially for RRE loans other than government-sponsored enterprise (GSE)-eligible and government loans. Meanwhile, demand weakened for all RRE loan categories. In addition, banks reported tighter standards and weaker demand for home equity lines of credit (HELOCs). Furthermore, standards tightened for all consumer loan categories; demand weakened for auto and other consumer loans, while it remained basically unchanged for credit card loans.
+The July SLOOS included two sets of special questions, which inquired about the current level of lending standards relative to the midpoint of the range over which banks' standards have varied since 2005, as well as questions about banks' expectations for changes in lending standards over the second half of 2023 and reasons for these changes.",0,Bank lending standards.,,
+E4,Does inflation or strong economic data imply further Federal Reserve rate increases or keeping rates higher?,D07_fomc_presser_2023_07_26#c004,D07_fomc_presser_2023_07_26,fed_publication,ordinary,,20,"policy rate by 5¼ percentage points since early last year. We have been seeing the effects of our
+policy tightening on demand in the most interest rate–sensitive sectors of the economy,
+particularly housing and investment. It will take time, however, for the full effects of our
+ongoing monetary restraint to be realized, especially on inflation. In addition, the economy is
+facing headwinds from tighter credit conditions for households and businesses, which are likely
+to weigh on economic activity, hiring, and inflation.
+In determining the extent of additional policy firming that may be appropriate to return
+inflation to 2 percent over time, the Committee will take into account the cumulative tightening
+of monetary policy, the lags with which monetary policy affects economic activity and inflation,
+and economic and financial developments. We will continue to make our decisions meeting by
+meeting, based on the totality of the incoming data and their implications for the outlook for
+economic activity and inflation, as well as the balance of risks.",2,Extent of additional firming depends on incoming data and inflation outlook; directly bears on link.,,
+E5,"Are higher interest rates or tighter financial conditions weighing on valuations, asset prices, credit, or demand?",D08_fomc_minutes_2023_06#c005,D08_fomc_minutes_2023_06,fed_publication,graph_guided,1,,"The manager turned first to a review of developments in financial markets. Policy-sensitive rates increased over the intermeeting period, reflecting indications of continued resilience in the economy, persistently elevated core inflation, and reduced downside tail risks following the resolution of the debt limit. The shift in policy expectations contributed significantly to higher Treasury yields. The increase in nominal yields primarily reflected higher real rates rather than inflation compensation. Broad equity prices rose, al­though the outperformance was concentrated in a handful of companies with a large market capitalization. Cyclical sectors fared better than sectors that tend to appreciate in a downturn, suggesting some reduced investor concern about downside risks to growth. Investor sentiment about the banking sector improved as perceived tail risks regarding regional banks appeared to have receded. Equity prices for regional banks rose over the intermeeting period but were still well below early March levels. Financial conditions indexes were roughly unchanged, as higher rates and a stronger dollar were offset by higher equity prices and narrower credit spreads.",2,Policy expectations and yields rose while equities rose; evidence the link was not operating.,,
+E5,"Are higher interest rates or tighter financial conditions weighing on valuations, asset prices, credit, or demand?",D08_fomc_minutes_2023_06#c016,D08_fomc_minutes_2023_06,fed_publication,graph_guided,2,,"Over the intermeeting period, market participants appeared to interpret incoming data as signaling, on balance, more resilience in economic activity than previously assumed and viewed communications from FOMC participants overall as pointing to a tighter path for policy than expected. As a result, Treasury yields and the expected future path for the federal funds rate shifted upward significantly. Meanwhile, broad equity prices also increased notably. Financing conditions remained moderately restrictive, but credit availability generally remained solid.",2,Higher expected policy path alongside notably higher equity prices; directly bears on the link.,,
+E5,"Are higher interest rates or tighter financial conditions weighing on valuations, asset prices, credit, or demand?",D07_fomc_presser_2023_07_26#c004,D07_fomc_presser_2023_07_26,fed_publication,both,3,20,"policy rate by 5¼ percentage points since early last year. We have been seeing the effects of our
+policy tightening on demand in the most interest rate–sensitive sectors of the economy,
+particularly housing and investment. It will take time, however, for the full effects of our
+ongoing monetary restraint to be realized, especially on inflation. In addition, the economy is
+facing headwinds from tighter credit conditions for households and businesses, which are likely
+to weigh on economic activity, hiring, and inflation.
+In determining the extent of additional policy firming that may be appropriate to return
+inflation to 2 percent over time, the Committee will take into account the cumulative tightening
+of monetary policy, the lags with which monetary policy affects economic activity and inflation,
+and economic and financial developments. We will continue to make our decisions meeting by
+meeting, based on the totality of the incoming data and their implications for the outlook for
+economic activity and inflation, as well as the balance of risks.",1,"Rate tightening effects on demand and credit, but not equity valuations.",,
+E5,"Are higher interest rates or tighter financial conditions weighing on valuations, asset prices, credit, or demand?",D08_fomc_minutes_2023_06#c021,D08_fomc_minutes_2023_06,fed_publication,graph_guided,4,,"In domestic credit markets, borrowing costs for businesses, households, and municipalities increased notably over the intermeeting period. Interest rates on newly originated bank loans to businesses and households in the first quarter rose further above their peaks from the previous tightening cycle, and yields on leveraged loans also rose, reaching levels close to their peak at the onset of the pandemic. Rates also moved up on a broad array of fixed-income securities, including investment- and speculative-grade corporate bonds, municipal bonds, both agency and non-agency commercial mortgage-backed securities (CMBS), and agency residential mortgage-backed securities. The increases in yields on these instruments over the intermeeting period were generally in line with, or less than, the changes in their Treasury benchmarks. Small businesses and households saw continued increases in their borrowing costs. Rates on 30-year conforming residential mortgages stepped up, broadly in line with increases in comparable-duration Treasury yields. Interest rates on credit card offers continued to rise through April, and auto loan interest rates moved sideways during the intermeeting period. Both credit card and auto loan interest rates stood at, or near, their highest levels since the Global Financial Crisis.",1,Rising borrowing costs; not equity valuation.,,
+E5,"Are higher interest rates or tighter financial conditions weighing on valuations, asset prices, credit, or demand?",D09_beige_book_2023_07#c008,D09_beige_book_2023_07,fed_publication,ordinary,,1,"The Fourth District economy was generally stable in Economic activity in the region grew slightly in recent
+recent weeks as high interest rates continued to con- weeks. Employment rose moderately as labor availability
+strain households’ big-ticket goods purchases and busi- improved. Price pressures were mild and wages rose
+nesses’ project plans. Bankers and transportation firms moderately. Consumer spending was flat. Professional
+cited these effects as contributing to weaker demand for services reported solid activity and a positive outlook.
+their own services. Nevertheless, contacts were general- Residential construction and real estate remained low.
+ly more optimistic about the near-term outlook and less Dry conditions have lowered the farm outlook. Minority-
+concerned that a U.S. recession would occur in 2023. and women-owned firms reported steady activity.
+Richmond Kansas City
+The regional economy grew slightly in recent weeks. Total economic activity across the Tenth District
+Consumer spending on retail goods, as well as on travel changed little during June. Though hiring was flat, ex-",1,High rates constraining demand; not equities.,,
+E5,"Are higher interest rates or tighter financial conditions weighing on valuations, asset prices, credit, or demand?",D01_census_retail_2023_07#c000,D01_census_retail_2023_07,official_economic_release,ordinary,,2,"FOR RELEASE AT 8:30 AM EDT, TUESDAY, AUGUST 15, 2023
+ADVANCE MONTHLY SALES FOR RETAIL AND FOOD SERVICES, JULY 2023
+Release Number: CB23-127
+August 15, 2023 — The U.S. Census Bureau announced the following advance estimates of U.S. retail and
+food services sales for July 2023:
+Percent Change in Retail and Food Services Sales from
+ADVANCE MONTHLY SALES
+Previous Month
+Data adjusted for seasonal variation and holiday and trading-day differences but not for
+price changes.
+2
+July 2023 $696.4 billion 0.7%
+June 2023
+$691.3 billion 0.3%
+0
+(revised)
+Next release: September 14, 2023
+-2
+May June July
+* The 90 percent confidence interval includes zero. There is insufficient statistical
+evidence to conclude that the actual change is different from zero. Total Ex Auto Auto Gen Mer
+Data adjusted for seasonal variation and holiday and trading-day differences but Source:U.S. Census Bureau, Advanced Monthly Retail Trade Survey,
+not for price changes. Source: U.S. Census Bureau, Advanced Monthly Retail August 15, 2023
+Trade Survey, August 15, 2023",0,Retail sales data; no rates/equity link.,,
+E5,"Are higher interest rates or tighter financial conditions weighing on valuations, asset prices, credit, or demand?",D01_census_retail_2023_07#c001,D01_census_retail_2023_07,official_economic_release,ordinary,,3,"Advance Estimates of U.S. Retail and Food Services
+Advance estimates of U.S. retail and food services sales for July 2023, adjusted for seasonal variation and
+holiday and trading-day differences, but not for price changes, were $696.4 billion, up 0.7 percent (±0.5
+percent) from the previous month, and up 3.2 percent (±0.7 percent) above July 2022. Total sales for the
+May 2023 through July 2023 period were up 2.3 percent (±0.4 percent) from the same period a year ago.
+The May 2023 to June 2023 percent change was revised from up 0.2 percent (±0.5 percent)* to up 0.3
+percent (±0.2 percent).
+Retail trade sales were up 0.6 percent (±0.5 percent) from June 2023, and up 2.0 percent (±0.5 percent)
+above last year. Nonstore retailers were up 10.3 percent (±1.6 percent) from last year, while food services
+and drinking places were up 11.9 percent (±2.3 percent) from July 2022.
+General Information
+The August 2023 Advance Monthly Retail report is scheduled for release on September 14, 2023 at 8:30",0,Retail sales figures only.,,
+E5,"Are higher interest rates or tighter financial conditions weighing on valuations, asset prices, credit, or demand?",D09_beige_book_2023_07#c010,D09_beige_book_2023_07,fed_publication,ordinary,,4,"activity slowed. Energy demand was steady. Agriculture evaporated in manufacturing but stayed elevated in the
+conditions softened. service sector. Uncertainty continued to rise, and con-
+tacts cited diminishing demand, higher labor costs, rising
+Chicago
+interest rates, and inflation as their primary outlook con-
+Economic activity was little changed. Employment in-
+cerns.
+creased moderately; nonbusiness contacts saw little
+change in activity; consumer spending was flat; business San Francisco
+spending and construction and real estate activity de- Economic activity softened modestly. Labor availability
+clined slightly; and manufacturing decreased modestly. improved across sectors. Wage growth slowed notably
+Prices and wages rose moderately, while financial condi- while price increases persisted. Retail sales moderated,
+tions tightened slightly further. Expectations for farm and activity in the services sectors eased somewhat.
+incomes in 2023 decreased some. Manufacturing activity was solid but weakened slightly,
+while conditions in the agriculture and residential real
+estate sectors were mixed. Commercial real estate
+activity fell, and financial sector activity was largely un-
+changed.
+2",0,Regional summaries; passing mention of rates concerns.,,
+E5,"Are higher interest rates or tighter financial conditions weighing on valuations, asset prices, credit, or demand?",D16_visa_q3fy23_8k#c007,D16_visa_q3fy23_8k,company_earnings_disclosure,ordinary,,5,"Cash, cash equivalents and investment securities were $20.9 billion at June 30, 2023.
+The weighted-average number of diluted shares of class A common stock outstanding was 2.08 billion for the quarter ended June 30, 2023.
+2
+Other Notable Items
+On June 20, 2023, Visa announced the appointment of Chris Suh as Executive Vice President, Chief Financial Officer, effective August 1, 2023. Mr. Suh commenced employment with Visa on July 10, 2023 as CFO Designate ahead of assuming the CFO position on August 1, 2023.
+On June 28, 2023, Visa deposited $500 million into its litigation escrow account, which was previously established under the Company's U.S. retrospective responsibility plan to insulate the Company and class A shareholders from financial liability for certain litigation cases. This deposit has the same economic effect on earnings per share as repurchasing the Company's class A common stock as it reduces the as-converted class B common stock share count at a volume weighted average price of $227.75.",0,Corporate notes.,,
+E5,"Are higher interest rates or tighter financial conditions weighing on valuations, asset prices, credit, or demand?",D09_beige_book_2023_07#c007,D09_beige_book_2023_07,fed_publication,ordinary,,6,"reported moderate revenue growth. Home sales were eased noticeably. Consumer spending grew steadily.
+disappointing and life sciences leasing activity slowed Housing markets were solid but low inventory continued
+dramatically. The outlook was optimistic outside of real to restrain sales activity.
+estate, but remained neutral or became increasingly
+pessimistic among real estate contacts.
+1
+National Summary
+Philadelphia St. Louis
+Business activity continued to decline slightly during the Economic conditions have remained unchanged since
+current Beige Book period. Consumer demand ticked our previous report. Employers continued to struggle
+down, although elevated profit margins buoyed overall finding skilled workers, but turnover slowed and wage
+sales figures. Employment fell slightly despite improved pressures lessened. Consumer spending was largely
+labor availability. Wage growth and inflation subsided but steady, but contacts reported a shift away from discre-
+continued at a modest pace. Expectations for economic tionary goods. Homebuying activity increased, but the
+growth remained subdued. commercial real estate sector saw worsening conditions.
+Cleveland Minneapolis",0,"Regional activity summaries, no rates-equity link.",,
+E5,"Are higher interest rates or tighter financial conditions weighing on valuations, asset prices, credit, or demand?",D14_homedepot_q2fy23_8k#c007,D14_homedepot_q2fy23_8k,company_earnings_disclosure,ordinary,,7,"Total stockholders’ equity | 1,335 | 237 | 1,562
+Total liabilities and stockholders’ equity | 76,387 | 75,825 | 76,445
+THE HOME DEPOT, INC.
+CONDENSED CONSOLIDATED STATEMENTS OF CASH FLOWS
+(Unaudited)
+Six Months Ended
+in millions | July 30, 2023 | July 31, 2022
+Cash Flows from Operating Activities:
+Net earnings | 8,532 | 9,404
+Reconciliation of net earnings to net cash provided by operating activities:
+Depreciation and amortization | 1,588 | 1,473
+Stock-based compensation expense | 215 | 196
+Changes in working capital | 1,774 | (3,889)
+Changes in deferred income taxes | (48) | (95)
+Other operating activities | 144 | 93
+Net cash provided by operating activities | 12,205 | 7,182
+Cash Flows from Investing Activities:
+Capital expenditures | (1,697) | (1,447)
+Payments for businesses acquired, net | (215) | —
+Other investing activities | 10 | (14)
+Net cash used in investing activities | (1,902) | (1,461)
+Cash Flows from Financing Activities:
+Repayments of short-term debt, net | — | (496)",0,Company cash flows.,,
+E5,"Are higher interest rates or tighter financial conditions weighing on valuations, asset prices, credit, or demand?",D08_fomc_minutes_2023_06#c018,D08_fomc_minutes_2023_06,fed_publication,ordinary,,8,"The S&P 500 stock price index increased sizably, on net, over the intermeeting period, led by technology-related stocks. The VIX—the one-month option-implied volatility on the S&P 500 index—edged down, on balance, and ended the period near the 30th percentile of its historical distribution. Bank equity price indexes moved up notably, on net, over the intermeeting period. Stock prices for large banks were only somewhat below their levels before the failure of Silicon Valley Bank (SVB), while those for regional banks remained below their levels in early March.",1,"Equity price gains described, but no connection to rates stated.",,
+E5,"Are higher interest rates or tighter financial conditions weighing on valuations, asset prices, credit, or demand?",D14_homedepot_q2fy23_8k#c008,D14_homedepot_q2fy23_8k,company_earnings_disclosure,ordinary,,9,"Proceeds from long-term debt, net of discounts | — | 3,957
+Repayments of long-term debt | (1,130) | (2,366)
+Repurchases of common stock | (4,954) | (3,962)
+Proceeds from sales of common stock | 175 | 142
+Cash dividends | (4,215) | (3,910)
+Other financing activities | (142) | (163)
+Net cash used in financing activities | (10,266) | (6,798)
+Change in cash and cash equivalents | 37 | (1,077)
+Effect of exchange rate changes on cash and cash equivalents | 20 | (7)
+Cash and cash equivalents at beginning of year | 2,757 | 2,343
+Cash and cash equivalents at end of year | 2,814 | 1,259",0,Company financing flows.,,
+E5,"Are higher interest rates or tighter financial conditions weighing on valuations, asset prices, credit, or demand?",D14_homedepot_q2fy23_8k#c005,D14_homedepot_q2fy23_8k,company_earnings_disclosure,ordinary,,10,"Diluted earnings per share | 4.65 | 5.05 | (7.9) | 8.46 | 9.13 | (7.3)
+Three Months Ended | Six Months Ended
+Selected Sales Data (1) | July 30, 2023 | July 31, 2022 | % Change | July 30, 2023 | July 31, 2022 | % Change
+Customer transactions (in millions) | 459.1 | 467.4 | (1.8) | 850.1 | 878.1 | (3.2)
+Average ticket | 90.07 | 90.02 | 0.1 | 90.92 | 90.82 | 0.1
+Sales per retail square foot | 684.65 | 700.62 | (2.3) | 638.50 | 661.27 | (3.4)
+—————
+(1)Selected Sales Data does not include results for HD Supply.
+THE HOME DEPOT, INC.
+CONDENSED CONSOLIDATED BALANCE SHEETS
+(Unaudited)
+in millions | July 30, 2023 | July 31, 2022 | January 29, 2023
+Assets
+Current assets:
+Cash and cash equivalents | 2,814 | 1,259 | 2,757
+Receivables, net | 3,836 | 3,725 | 3,317
+Merchandise inventories | 23,265 | 26,088 | 24,886
+Other current assets | 1,915 | 1,869 | 1,511",0,Company financials.,,
+E5,"Are higher interest rates or tighter financial conditions weighing on valuations, asset prices, credit, or demand?",D01_census_retail_2023_07#c006,D01_census_retail_2023_07,official_economic_release,ordinary,,11,"estimated monthly total). The Census Bureau recommends that individuals using estimates in this report
+incorporate this information into their analyses, as sampling error could affect the conclusions drawn from
+the estimates.
+Nonsampling error encompasses all other factors that contribute to the total error of a sample survey
+estimate. This type of error can occur because of nonresponse, insufficient coverage of the universe of
+retail businesses, mistakes in the recording and coding of data, and other errors of collection, response,
+coverage, or processing. Although nonsampling error is not measured directly, the Census Bureau employs
+quality control procedures throughout the process to minimize this type of error.
+Weather Information
+For information on the impact of weather events on the compilation of this report, please see the
+Frequently Asked Questions (FAQs) on our website at:
+<www.census.gov/retail/marts_weather_faqs.html>
+RESOURCES
+The Rest of the Consumer Spending Story
+Retail and services together represent what’s commonly referred to as consumer spending. Quarterly
+Services Survey (QSS) revenue comprises roughly 2/3 of the personal consumption expenditures",0,Sampling error notes.,,
+E5,"Are higher interest rates or tighter financial conditions weighing on valuations, asset prices, credit, or demand?",D16_visa_q3fy23_8k#c008,D16_visa_q3fy23_8k,company_earnings_disclosure,ordinary,,12,"On June 28, 2023, Visa announced it signed a definitive agreement to acquire Pismo, a cloud-native issuer processing and core banking platform with operations in Latin America, Asia Pacific and Europe, for $1 billion in cash. The transaction is subject to customary closing conditions, including applicable regulatory reviews and approvals, and is expected to close by the end of 2023.
+During the three months ended June 30, 2023, Visa repurchased 12.9 million shares of class A common stock at an average cost of $229.19 per share for $3.0 billion. The Company had $8.8 billion of remaining authorized funds for share repurchases as of June 30, 2023.
+On July 25, 2023, the board of directors declared a quarterly cash dividend of $0.450 per share of class A common stock (determined in the case of class B and C common stock and series A, B and C convertible participating preferred stock on an as-converted basis) payable on September 1, 2023, to all holders of record as of August 11, 2023.",0,"Corporate buybacks/acquisition, no link.",,
+E5,"Are higher interest rates or tighter financial conditions weighing on valuations, asset prices, credit, or demand?",D08_fomc_minutes_2023_06#c031,D08_fomc_minutes_2023_06,fed_publication,ordinary,,13,"In their discussion of the household sector, participants generally noted that consumer spending so far this year had been stronger than expected. Several participants noted that aggregate household wealth remained high, as equity and home prices had not declined much from their recent highs. A few participants mentioned that while, overall, the household sector still retained much of the excess savings it had accumulated during the pandemic, there were signs that consumers were facing increasingly tighter budget constraints, given high inflation and, especially for low-income households, depleted savings.",1,"Equity wealth holding up, related to equity node but no rate link.",,
+E5,"Are higher interest rates or tighter financial conditions weighing on valuations, asset prices, credit, or demand?",D11_bowman_speech_2023_08_05#c004,D11_bowman_speech_2023_08_05,fed_publication,ordinary,,14,"The recent lower inflation reading was positive, but I will be looking for consistent evidence that inflation is on a meaningful path down toward our 2 percent goal as I consider further rate increases and how long the federal funds rate will need to remain at a restrictive level. I will also be watching for signs of slowing in consumer spending and signs that labor market conditions are loosening.
+It's important to reiterate that monetary policy is not on a preset course. My colleagues and I will make our decisions based on the incoming data and its implications for the economic outlook. We should remain willing to raise the federal funds rate at a future meeting if the incoming data indicate that progress on inflation has stalled.
+Returning inflation to our 2 percent goal is necessary to achieve a sustainably strong labor market and economy.",1,Policy rate path discussion; no equity link.,,
+E5,"Are higher interest rates or tighter financial conditions weighing on valuations, asset prices, credit, or demand?",D07_fomc_presser_2023_07_26#c030,D07_fomc_presser_2023_07_26,fed_publication,ordinary,,15,"reversal of the effects [on those prices that resulted] from the war in Ukraine. And that’s, that’s a
+good thing, and the public experiences that, as I mentioned earlier.
+For core inflation, I’d say there also—there has been a role for, for most—for, for both
+factors, both that I mentioned. Clearly, for goods, normalization of supply conditions is playing
+an important role, as is the reversal, the beginning of the reversal, of spending—back into
+services and away from goods.
+And take autos as an example. The combination of an increase in sales and inventories,
+while, while vehicle inflation has decelerated, points to a substantial role for supply, but there’s
+Page 15 of 28
+July 26, 2023 Chair Powell’s Press Conference FINAL
+also a role for demand, as, you know, the loans and things like that are more expensive. So
+they’re both working there. Housing services inflation now starts to move down. Clearly, higher
+rates have, have slowed the housing market. You know, I would say, monetary policy is",0,"Inflation drivers; housing mention only, no equity link.",,
+E5,"Are higher interest rates or tighter financial conditions weighing on valuations, asset prices, credit, or demand?",D02_bls_cpi_2023_07#c013,D02_bls_cpi_2023_07,official_economic_release,ordinary,,16,"www.bls.gov/cpi/seasonal-adjustment/timeline-seasonal-adjustment-methodology-changes.htm.
+For analyzing short-term price trends in the economy, seasonally adjusted changes are usually
+preferred since they eliminate the effect of changes that normally occur at the same time and
+in about the same magnitude every year-such as price movements resulting from weather events,
+production cycles, model changeovers, holidays, and sales. This allows data users to focus on
+changes that are not typical for the time of year. The unadjusted data are of primary interest
+to consumers concerned about the prices they actually pay. Unadjusted data are also used
+extensively for escalation purposes. Many collective bargaining cont",0,CPI seasonal adjustment methodology.,,
+E5,"Are higher interest rates or tighter financial conditions weighing on valuations, asset prices, credit, or demand?",D08_fomc_minutes_2023_06#c026,D08_fomc_minutes_2023_06,fed_publication,ordinary,,17,"The staff continued to judge that uncertainty around the baseline projection was considerable and still viewed the risks as being influenced importantly by the potential macroeconomic implications of banking-sector developments, which could end up being more, or less, negative than assumed in the baseline. Given the continued strength in labor market conditions and the resilience of consumer spending, however, the staff saw the possibility of the economy continuing to grow slowly and avoiding a downturn as almost as likely as the mild‑recession baseline. On balance, the staff saw the risks around the baseline inflation forecast as tilted to the upside, as economic scenarios with higher inflation appeared more likely than scenarios with lower inflation and because inflation could continue to be more persistent than expected and inflation expectations could become unanchored after a long period of elevated inflation.
+Participants' Views on Current Conditions and the Economic Outlook",0,Staff outlook risks; no link.,,
+E5,"Are higher interest rates or tighter financial conditions weighing on valuations, asset prices, credit, or demand?",D01_census_retail_2023_07#c003,D01_census_retail_2023_07,official_economic_release,ordinary,,18,"United States. Each month, questionnaires are mailed to a probability sample of approximately 4,800
+employer firms selected from the larger Monthly Retail Trade Survey. Advance sales estimates are
+computed using a link relative estimator. For each detailed industry, we compute a ratio of current-to-
+previous month weighted sales using data from units for which we have obtained usable responses for
+both the current and previous month. For each detailed industry, the advance total sales estimates for the
+current month is computed by multiplying this ratio by the preliminary sales estimate for the previous
+month (derived from the larger MRTS) at the appropriate industry level. Total estimates for broader
+industries are computed as the sum of the detailed industry estimates. The link relative estimate is used
+because imputation is not performed for most nonrespondents in MARTS. For a limited number of
+nonresponding companies that have influential effects on the estimates, sales may be estimated based on
+historical performance of that company. The monthly estimates are benchmarked to the annual survey",0,Survey methodology.,,
+E5,"Are higher interest rates or tighter financial conditions weighing on valuations, asset prices, credit, or demand?",D10_sloos_2023_07#c001,D10_sloos_2023_07,fed_publication,ordinary,,19,"For loans to households, banks reported that lending standards tightened across all categories of residential real estate (RRE) loans, especially for RRE loans other than government-sponsored enterprise (GSE)-eligible and government loans. Meanwhile, demand weakened for all RRE loan categories. In addition, banks reported tighter standards and weaker demand for home equity lines of credit (HELOCs). Furthermore, standards tightened for all consumer loan categories; demand weakened for auto and other consumer loans, while it remained basically unchanged for credit card loans.
+The July SLOOS included two sets of special questions, which inquired about the current level of lending standards relative to the midpoint of the range over which banks' standards have varied since 2005, as well as questions about banks' expectations for changes in lending standards over the second half of 2023 and reasons for these changes.",0,"Bank lending standards; credit, not equity valuation.",,

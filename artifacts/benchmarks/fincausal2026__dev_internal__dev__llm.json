@@ -1,0 +1,2016 @@
+{
+  "task": "extractive_qa",
+  "metrics": {
+    "ordinary": {
+      "n": 12,
+      "exact_match": 0.5833333333333334,
+      "token_f1": 0.9074188660605818,
+      "token_f1_ci95": [
+        0.8380952380952381,
+        0.9757549361207897
+      ],
+      "gold_passage_hit_rate": 1.0,
+      "mrr": 1.0,
+      "span_citation_validity": 1.0,
+      "abstention_rate": 0.0,
+      "multi_step_heuristic": {
+        "n": 5,
+        "exact_match": 0.4,
+        "token_f1": 0.8587576594977773
+      },
+      "single_step_heuristic": {
+        "n": 7,
+        "exact_match": 0.7142857142857143,
+        "token_f1": 0.9421768707482993
+      },
+      "mean_queries": 1.0,
+      "mean_evidence_words": 134.41666666666666,
+      "repeat_agreement": null
+    },
+    "multi_query": {
+      "n": 12,
+      "exact_match": 0.5833333333333334,
+      "token_f1": 0.9074188660605818,
+      "token_f1_ci95": [
+        0.8380952380952381,
+        0.9757549361207897
+      ],
+      "gold_passage_hit_rate": 1.0,
+      "mrr": 0.8611111111111112,
+      "span_citation_validity": 1.0,
+      "abstention_rate": 0.0,
+      "multi_step_heuristic": {
+        "n": 5,
+        "exact_match": 0.4,
+        "token_f1": 0.8587576594977773
+      },
+      "single_step_heuristic": {
+        "n": 7,
+        "exact_match": 0.7142857142857143,
+        "token_f1": 0.9421768707482993
+      },
+      "mean_queries": 2.0,
+      "mean_evidence_words": 139.5,
+      "repeat_agreement": null
+    },
+    "graph_guided": {
+      "n": 12,
+      "exact_match": 0.5833333333333334,
+      "token_f1": 0.9074188660605818,
+      "token_f1_ci95": [
+        0.8380952380952381,
+        0.9757549361207897
+      ],
+      "gold_passage_hit_rate": 1.0,
+      "mrr": 1.0,
+      "span_citation_validity": 1.0,
+      "abstention_rate": 0.0,
+      "multi_step_heuristic": {
+        "n": 5,
+        "exact_match": 0.4,
+        "token_f1": 0.8587576594977773
+      },
+      "single_step_heuristic": {
+        "n": 7,
+        "exact_match": 0.7142857142857143,
+        "token_f1": 0.9421768707482993
+      },
+      "mean_queries": 2.0,
+      "mean_evidence_words": 133.5,
+      "repeat_agreement": null
+    },
+    "oracle": {
+      "n": 12,
+      "exact_match": 0.5833333333333334,
+      "token_f1": 0.9074188660605818,
+      "token_f1_ci95": [
+        0.8380952380952381,
+        0.9757549361207897
+      ],
+      "gold_passage_hit_rate": 1.0,
+      "mrr": 1.0,
+      "span_citation_validity": 1.0,
+      "abstention_rate": 0.0,
+      "multi_step_heuristic": {
+        "n": 5,
+        "exact_match": 0.4,
+        "token_f1": 0.8587576594977773
+      },
+      "single_step_heuristic": {
+        "n": 7,
+        "exact_match": 0.7142857142857143,
+        "token_f1": 0.9421768707482993
+      },
+      "mean_queries": 0.0,
+      "mean_evidence_words": 49.333333333333336,
+      "repeat_agreement": null
+    }
+  },
+  "samples": [
+    {
+      "case_id": "fc26-1446",
+      "input": "What was the cause for the additional compensatory cash payments to Dave Shemmans and Mark Garrett?",
+      "metadata": {},
+      "graph": {
+        "graph_id": "fincausal:fc26-1446",
+        "frozen": false,
+        "provenance": "deterministic question parse (no gold)",
+        "nodes": [
+          {
+            "id": "asked",
+            "label": "unknown cause (answer)"
+          },
+          {
+            "id": "known",
+            "label": "additional compensatory cash payments Dave Shemmans and Mark Garrett"
+          }
+        ],
+        "edges": [
+          {
+            "id": "Q1",
+            "source": "asked",
+            "target": "known",
+            "sign": 1,
+            "condition": "",
+            "assumptions": [],
+            "references": [],
+            "question": "What caused 'additional compensatory cash payments Dave Shemmans and Mark Garrett'?",
+            "query": "additional compensatory cash payments Dave Shemmans and Mark Garrett due to because as a result of driven by owing to reflecting resulting in led to caused by attributable || additional compensatory cash payments Dave Shemmans and Mark Garrett",
+            "path": "asked_cause"
+          }
+        ],
+        "paths": {
+          "P": [
+            "Q1"
+          ]
+        }
+      },
+      "gold": {
+        "answer": "these awards did not receive any benefit from the November 2016 final dividend",
+        "multi_step_heuristic": true
+      },
+      "methods": {
+        "ordinary": {
+          "prediction": "due to a technical timing issue, these awards did not receive any benefit from the November 2016 final dividend",
+          "cited": "FC-5c99a6bcdb",
+          "span_valid": true,
+          "explanation": "The excerpt says the compensatory payment was made because a technical timing issue meant the awards got no benefit from the November 2016 final dividend.",
+          "em": 0.0,
+          "f1": 0.828,
+          "gold_retrieved": true,
+          "error": "Right passage; span differs from gold (token F1 0.83): boundary or selection error.",
+          "queries": [
+            "What was the cause for the additional compensatory cash payments to Dave Shemmans and Mark Garrett?"
+          ],
+          "retrieved": [
+            {
+              "id": "FC-5c99a6bcdb",
+              "text": "The value of the October 2013 Bonus-Linked Shares vesting was £325,098.45 for Dave Shemmans, and £148,082.29 for Mark Garrett inclusive of an additional compensatory cash payment (Dave Shemmans: £4,468.25; Mark Garrett: £2,035.29) made because, due to a technical timing issue, these awards did not receive any benefit from the November 2016 final dividend.",
+              "gold": true
+            },
+            {
+              "id": "FC-c2bb0e3e7d",
+              "text": "What's that building, mum? must be one of the most asked, and occasionally dreaded, questions posed on the London Eye. Not anymore, thanks to Spirent's Landslide test platform.",
+              "gold": false
+            },
+            {
+              "id": "FC-6b91661883",
+              "text": "However, 2016 marked a turning point with commodity prices recovering and some stocks more than doubling in aggregate over the course of the year, and thus driving relative underperformance.",
+              "gold": false
+            }
+          ]
+        },
+        "multi_query": {
+          "prediction": "due to a technical timing issue, these awards did not receive any benefit from the November 2016 final dividend",
+          "cited": "FC-5c99a6bcdb",
+          "span_valid": true,
+          "explanation": "The excerpt says the compensatory payments were made because a technical timing issue meant the awards missed the November 2016 final dividend.",
+          "em": 0.0,
+          "f1": 0.828,
+          "gold_retrieved": true,
+          "error": "Right passage; span differs from gold (token F1 0.83): boundary or selection error.",
+          "queries": [
+            "Dave Shemmans Mark Garrett additional cash payments compensation",
+            "Shemmans Garrett compensatory cash payment reason executive agreement"
+          ],
+          "retrieved": [
+            {
+              "id": "FC-5c99a6bcdb",
+              "text": "The value of the October 2013 Bonus-Linked Shares vesting was £325,098.45 for Dave Shemmans, and £148,082.29 for Mark Garrett inclusive of an additional compensatory cash payment (Dave Shemmans: £4,468.25; Mark Garrett: £2,035.29) made because, due to a technical timing issue, these awards did not receive any benefit from the November 2016 final dividend.",
+              "gold": true
+            },
+            {
+              "id": "FC-6b91661883",
+              "text": "However, 2016 marked a turning point with commodity prices recovering and some stocks more than doubling in aggregate over the course of the year, and thus driving relative underperformance.",
+              "gold": false
+            },
+            {
+              "id": "FC-61e1b6fb73",
+              "text": "In 2018 the company promoted its relationship with universities and research centers as a source of innovation and technology transfer, giving rise to seminars such as Indradays and Chairs, as well as specific frameworks and agreements.",
+              "gold": false
+            }
+          ]
+        },
+        "graph_guided": {
+          "prediction": "due to a technical timing issue, these awards did not receive any benefit from the November 2016 final dividend",
+          "cited": "FC-5c99a6bcdb",
+          "span_valid": true,
+          "explanation": "The excerpt says the compensatory payments were made because a technical timing issue meant the awards got no benefit from the November 2016 final dividend.",
+          "em": 0.0,
+          "f1": 0.828,
+          "gold_retrieved": true,
+          "error": "Right passage; span differs from gold (token F1 0.83): boundary or selection error.",
+          "queries": [
+            "additional compensatory cash payments Dave Shemmans and Mark Garrett due to because as a result of driven by owing to reflecting resulting in led to caused by attributable",
+            "additional compensatory cash payments Dave Shemmans and Mark Garrett"
+          ],
+          "retrieved": [
+            {
+              "id": "FC-5c99a6bcdb",
+              "text": "The value of the October 2013 Bonus-Linked Shares vesting was £325,098.45 for Dave Shemmans, and £148,082.29 for Mark Garrett inclusive of an additional compensatory cash payment (Dave Shemmans: £4,468.25; Mark Garrett: £2,035.29) made because, due to a technical timing issue, these awards did not receive any benefit from the November 2016 final dividend.",
+              "gold": true
+            },
+            {
+              "id": "FC-bddc46399a",
+              "text": "Operating cash flow rose by 1% in headline terms, despite a decrease in adjusted operating profit, driven by a strong cash conversion of 116% driven by tight working capital control, strong collections and high Penguin Random House cash dividends.",
+              "gold": false
+            },
+            {
+              "id": "FC-6b91661883",
+              "text": "However, 2016 marked a turning point with commodity prices recovering and some stocks more than doubling in aggregate over the course of the year, and thus driving relative underperformance.",
+              "gold": false
+            }
+          ]
+        },
+        "oracle": {
+          "prediction": "due to a technical timing issue, these awards did not receive any benefit from the November 2016 final dividend",
+          "cited": "FC-5c99a6bcdb",
+          "span_valid": true,
+          "explanation": "The excerpt says the compensatory payment was made because the awards missed the November 2016 final dividend owing to a technical timing issue.",
+          "em": 0.0,
+          "f1": 0.828,
+          "gold_retrieved": true,
+          "error": "Right passage; span differs from gold (token F1 0.83): boundary or selection error.",
+          "queries": [],
+          "retrieved": [
+            {
+              "id": "FC-5c99a6bcdb",
+              "text": "The value of the October 2013 Bonus-Linked Shares vesting was £325,098.45 for Dave Shemmans, and £148,082.29 for Mark Garrett inclusive of an additional compensatory cash payment (Dave Shemmans: £4,468.25; Mark Garrett: £2,035.29) made because, due to a technical timing issue, these awards did not receive any benefit from the November 2016 final dividend.",
+              "gold": true
+            }
+          ]
+        }
+      }
+    },
+    {
+      "case_id": "fc26-1602",
+      "input": "What is the reason for the absence of increases in non-executive directors' remuneration during 2017?",
+      "metadata": {},
+      "graph": {
+        "graph_id": "fincausal:fc26-1602",
+        "frozen": false,
+        "provenance": "deterministic question parse (no gold)",
+        "nodes": [
+          {
+            "id": "asked",
+            "label": "unknown cause (answer)"
+          },
+          {
+            "id": "known",
+            "label": "absence increases non-executive directors' remuneration during 2017"
+          }
+        ],
+        "edges": [
+          {
+            "id": "Q1",
+            "source": "asked",
+            "target": "known",
+            "sign": 1,
+            "condition": "",
+            "assumptions": [],
+            "references": [],
+            "question": "What caused 'absence increases non-executive directors' remuneration during 2017'?",
+            "query": "absence increases non-executive directors' remuneration during 2017 due to because as a result of driven by owing to reflecting resulting in led to caused by attributable || absence increases non-executive directors' remuneration during 2017",
+            "path": "asked_cause"
+          }
+        ],
+        "paths": {
+          "P": [
+            "Q1"
+          ]
+        }
+      },
+      "gold": {
+        "answer": "In May 2016 the non-executive directors agreed to defer part of their remuneration (Mr MacLellan £20,000 Mr Balfour and Mr Sweetman £5,000 each) until the earlier of their resignation or December 2017",
+        "multi_step_heuristic": false
+      },
+      "methods": {
+        "ordinary": {
+          "prediction": "In May 2016 the non-executive directors agreed to defer part of their remuneration (Mr MacLellan £20,000 Mr Balfour and Mr Sweetman £5,000 each) until the earlier of their resignation or December 2017.",
+          "cited": "FC-54ba7e8c28",
+          "span_valid": true,
+          "explanation": "The excerpt says the directors agreed to defer part of their remuneration, and \"therefore\" there were no increases during 2017.",
+          "em": 1.0,
+          "f1": 1.0,
+          "gold_retrieved": true,
+          "error": "Exact match.",
+          "queries": [
+            "What is the reason for the absence of increases in non-executive directors' remuneration during 2017?"
+          ],
+          "retrieved": [
+            {
+              "id": "FC-54ba7e8c28",
+              "text": "e) In May 2016 the non-executive directors agreed to defer part of their remuneration (Mr MacLellan £20,000 Mr Balfour and Mr Sweetman £5,000 each) until the earlier of their resignation or December 2017. There were, therefore, no increases in non-executive directors' remuneration during 2017.",
+              "gold": true
+            },
+            {
+              "id": "FC-f9544b7177",
+              "text": "Executive Directors are permitted to serve as Non-Executive Directors of other companies, on the grounds that this can help to broaden the skills and experience of the Director.",
+              "gold": false
+            },
+            {
+              "id": "FC-1d66f182b5",
+              "text": "The fees paid to Non-Executive Directors are determined by the Board in light of independent surveys of fees paid to Non-Executive Directors of comparable companies and with regard to the time commitment and responsibilities involved.",
+              "gold": false
+            }
+          ]
+        },
+        "multi_query": {
+          "prediction": "In May 2016 the non-executive directors agreed to defer part of their remuneration (Mr MacLellan £20,000 Mr Balfour and Mr Sweetman £5,000 each) until the earlier of their resignation or December 2017.",
+          "cited": "FC-54ba7e8c28",
+          "span_valid": true,
+          "explanation": "The excerpt says the directors agreed to defer part of their pay, and \"therefore\" there were no increases in 2017.",
+          "em": 1.0,
+          "f1": 1.0,
+          "gold_retrieved": true,
+          "error": "Exact match.",
+          "queries": [
+            "non-executive directors fees no increase 2017 remuneration report",
+            "non-executive director fees unchanged 2017 reason fee review"
+          ],
+          "retrieved": [
+            {
+              "id": "FC-54ba7e8c28",
+              "text": "e) In May 2016 the non-executive directors agreed to defer part of their remuneration (Mr MacLellan £20,000 Mr Balfour and Mr Sweetman £5,000 each) until the earlier of their resignation or December 2017. There were, therefore, no increases in non-executive directors' remuneration during 2017.",
+              "gold": true
+            },
+            {
+              "id": "FC-1d66f182b5",
+              "text": "The fees paid to Non-Executive Directors are determined by the Board in light of independent surveys of fees paid to Non-Executive Directors of comparable companies and with regard to the time commitment and responsibilities involved.",
+              "gold": false
+            },
+            {
+              "id": "FC-acb6589fcf",
+              "text": "As noted in the Strategic Report, all of the Directors are non-executive and therefore there is no Chief Executive Officer.",
+              "gold": false
+            }
+          ]
+        },
+        "graph_guided": {
+          "prediction": "In May 2016 the non-executive directors agreed to defer part of their remuneration (Mr MacLellan £20,000 Mr Balfour and Mr Sweetman £5,000 each) until the earlier of their resignation or December 2017.",
+          "cited": "FC-54ba7e8c28",
+          "span_valid": true,
+          "explanation": "The excerpt says that, because the directors agreed in May 2016 to defer part of their remuneration, there were no increases during 2017 (\"therefore\").",
+          "em": 1.0,
+          "f1": 1.0,
+          "gold_retrieved": true,
+          "error": "Exact match.",
+          "queries": [
+            "absence increases non-executive directors' remuneration during 2017 due to because as a result of driven by owing to reflecting resulting in led to caused by attributable",
+            "absence increases non-executive directors' remuneration during 2017"
+          ],
+          "retrieved": [
+            {
+              "id": "FC-54ba7e8c28",
+              "text": "e) In May 2016 the non-executive directors agreed to defer part of their remuneration (Mr MacLellan £20,000 Mr Balfour and Mr Sweetman £5,000 each) until the earlier of their resignation or December 2017. There were, therefore, no increases in non-executive directors' remuneration during 2017.",
+              "gold": true
+            },
+            {
+              "id": "FC-f9544b7177",
+              "text": "Executive Directors are permitted to serve as Non-Executive Directors of other companies, on the grounds that this can help to broaden the skills and experience of the Director.",
+              "gold": false
+            },
+            {
+              "id": "FC-bb0e6e52f9",
+              "text": "Overall, the performance of the executive directors was strong this year during a period of significant change, and has resulted in a bonus outturn of 78% of the maximum, fractionally higher than in 2016.",
+              "gold": false
+            }
+          ]
+        },
+        "oracle": {
+          "prediction": "In May 2016 the non-executive directors agreed to defer part of their remuneration (Mr MacLellan £20,000 Mr Balfour and Mr Sweetman £5,000 each) until the earlier of their resignation or December 2017.",
+          "cited": "FC-54ba7e8c28",
+          "span_valid": true,
+          "explanation": "The excerpt says the deferral agreed in May 2016 ran until resignation or December 2017, so there were therefore no increases in 2017.",
+          "em": 1.0,
+          "f1": 1.0,
+          "gold_retrieved": true,
+          "error": "Exact match.",
+          "queries": [],
+          "retrieved": [
+            {
+              "id": "FC-54ba7e8c28",
+              "text": "e) In May 2016 the non-executive directors agreed to defer part of their remuneration (Mr MacLellan £20,000 Mr Balfour and Mr Sweetman £5,000 each) until the earlier of their resignation or December 2017. There were, therefore, no increases in non-executive directors' remuneration during 2017.",
+              "gold": true
+            }
+          ]
+        }
+      }
+    },
+    {
+      "case_id": "fc26-69",
+      "input": "What do the heavy delays to new buildings under construction imply?",
+      "metadata": {},
+      "graph": {
+        "graph_id": "fincausal:fc26-69",
+        "frozen": false,
+        "provenance": "deterministic question parse (no gold)",
+        "nodes": [
+          {
+            "id": "known",
+            "label": "heavy delays new buildings under construction"
+          },
+          {
+            "id": "asked",
+            "label": "unknown effect (answer)"
+          }
+        ],
+        "edges": [
+          {
+            "id": "Q1",
+            "source": "known",
+            "target": "asked",
+            "sign": 1,
+            "condition": "",
+            "assumptions": [],
+            "references": [],
+            "question": "What does 'heavy delays new buildings under construction' lead to?",
+            "query": "heavy delays new buildings under construction due to because as a result of driven by owing to reflecting resulting in led to caused by attributable || heavy delays new buildings under construction",
+            "path": "asked_effect"
+          }
+        ],
+        "paths": {
+          "P": [
+            "Q1"
+          ]
+        }
+      },
+      "gold": {
+        "answer": "tankers scheduled for delivery in 2016 slipped into 2017 and beyond",
+        "multi_step_heuristic": false
+      },
+      "methods": {
+        "ordinary": {
+          "prediction": "tankers scheduled for delivery in 2016 slipped into 2017 and beyond and resulted in lower overall fleet growth in 2016 than expected",
+          "cited": "FC-e8c2c57d64",
+          "span_valid": true,
+          "explanation": "The excerpt states that delays mean tankers due in 2016 slipped to 2017+, causing lower-than-expected 2016 fleet growth.",
+          "em": 0.0,
+          "f1": 0.667,
+          "gold_retrieved": true,
+          "error": "Right passage; span differs from gold (token F1 0.67): boundary or selection error.",
+          "queries": [
+            "What do the heavy delays to new buildings under construction imply?"
+          ],
+          "retrieved": [
+            {
+              "id": "FC-e8c2c57d64",
+              "text": "Heavy delays to new buildings under construction mean that tankers scheduled for delivery in 2016 slipped into 2017 and beyond and resulted in lower overall fleet growth in 2016 than expected.",
+              "gold": true
+            },
+            {
+              "id": "FC-c2bb0e3e7d",
+              "text": "What's that building, mum? must be one of the most asked, and occasionally dreaded, questions posed on the London Eye. Not anymore, thanks to Spirent's Landslide test platform.",
+              "gold": false
+            },
+            {
+              "id": "FC-3b020654a3",
+              "text": "The current Directors' Remuneration Policy was adopted by the shareholders at our 2014 AGM and, under company law, shareholders must be asked to approve a new Policy at least every three years.",
+              "gold": false
+            }
+          ]
+        },
+        "multi_query": {
+          "prediction": "tankers scheduled for delivery in 2016 slipped into 2017 and beyond and resulted in lower overall fleet growth in 2016 than expected",
+          "cited": "FC-e8c2c57d64",
+          "span_valid": true,
+          "explanation": "The excerpt says heavy delays mean tankers due in 2016 slipped to 2017+, resulting in lower-than-expected fleet growth in 2016.",
+          "em": 0.0,
+          "f1": 0.667,
+          "gold_retrieved": true,
+          "error": "Right passage; span differs from gold (token F1 0.67): boundary or selection error.",
+          "queries": [
+            "construction project delays causes and implications new buildings",
+            "building construction delays economic impact cost overruns housing supply"
+          ],
+          "retrieved": [
+            {
+              "id": "FC-e8c2c57d64",
+              "text": "Heavy delays to new buildings under construction mean that tankers scheduled for delivery in 2016 slipped into 2017 and beyond and resulted in lower overall fleet growth in 2016 than expected.",
+              "gold": true
+            },
+            {
+              "id": "FC-b403e8800e",
+              "text": "Capital expenditure was £3.5 million in FY2017 which compares with £2.3 million in FY2016. This increase arose because significant investment was made in the year to increase our capacity and capabilities across the Group for future growth. Specific capital expenditure in the year included: additional capacity to the Films division through the installation of a new extrusion line; adding new extrusion lines at Bell Plastics to meet increased demands from existing and new customers; and adding new injection moulding machines for a new bearings project and further investment in tooling.",
+              "gold": false
+            },
+            {
+              "id": "FC-9617c2c100",
+              "text": "In 2017, the average supply chain greenhouse gas emissions from all of Drax's biomass supplies amounted to 36g CO 2 /MJ. This is an increase of 6% compared with 2016 because we sourced a higher proportion of our biomass supplies from the US.",
+              "gold": false
+            }
+          ]
+        },
+        "graph_guided": {
+          "prediction": "tankers scheduled for delivery in 2016 slipped into 2017 and beyond and resulted in lower overall fleet growth in 2016 than expected",
+          "cited": "FC-e8c2c57d64",
+          "span_valid": true,
+          "explanation": "The excerpt says heavy delays mean tankers due in 2016 slipped to 2017 and beyond, resulting in lower fleet growth than expected.",
+          "em": 0.0,
+          "f1": 0.667,
+          "gold_retrieved": true,
+          "error": "Right passage; span differs from gold (token F1 0.67): boundary or selection error.",
+          "queries": [
+            "heavy delays new buildings under construction due to because as a result of driven by owing to reflecting resulting in led to caused by attributable",
+            "heavy delays new buildings under construction"
+          ],
+          "retrieved": [
+            {
+              "id": "FC-e8c2c57d64",
+              "text": "Heavy delays to new buildings under construction mean that tankers scheduled for delivery in 2016 slipped into 2017 and beyond and resulted in lower overall fleet growth in 2016 than expected.",
+              "gold": true
+            },
+            {
+              "id": "FC-13a1800485",
+              "text": "At the start of the year, we also reduced the size of our transport fleet by 10% in light of network changes. At this point, we decided against further reducing the size of the fleet due to the future demand from new contracts. As a result, the business carried significant excess costs of under-utilised trucks during the current financial year.",
+              "gold": false
+            },
+            {
+              "id": "FC-3b020654a3",
+              "text": "The current Directors' Remuneration Policy was adopted by the shareholders at our 2014 AGM and, under company law, shareholders must be asked to approve a new Policy at least every three years.",
+              "gold": false
+            }
+          ]
+        },
+        "oracle": {
+          "prediction": "tankers scheduled for delivery in 2016 slipped into 2017 and beyond and resulted in lower overall fleet growth in 2016 than expected",
+          "cited": "FC-e8c2c57d64",
+          "span_valid": true,
+          "explanation": "The excerpt states that heavy newbuilding delays mean 2016-scheduled tanker deliveries slipped later, resulting in lower-than-expected 2016 fleet growth.",
+          "em": 0.0,
+          "f1": 0.667,
+          "gold_retrieved": true,
+          "error": "Right passage; span differs from gold (token F1 0.67): boundary or selection error.",
+          "queries": [],
+          "retrieved": [
+            {
+              "id": "FC-e8c2c57d64",
+              "text": "Heavy delays to new buildings under construction mean that tankers scheduled for delivery in 2016 slipped into 2017 and beyond and resulted in lower overall fleet growth in 2016 than expected.",
+              "gold": true
+            }
+          ]
+        }
+      }
+    },
+    {
+      "case_id": "fc26-463",
+      "input": "What were the implications of the significant losses incurred on the East Anglia One project?",
+      "metadata": {},
+      "graph": {
+        "graph_id": "fincausal:fc26-463",
+        "frozen": false,
+        "provenance": "deterministic question parse (no gold)",
+        "nodes": [
+          {
+            "id": "known",
+            "label": "significant losses incurred on East Anglia One project"
+          },
+          {
+            "id": "asked",
+            "label": "unknown effect (answer)"
+          }
+        ],
+        "edges": [
+          {
+            "id": "Q1",
+            "source": "known",
+            "target": "asked",
+            "sign": 1,
+            "condition": "",
+            "assumptions": [],
+            "references": [],
+            "question": "What does 'significant losses incurred on East Anglia One project' lead to?",
+            "query": "significant losses incurred on East Anglia One project due to because as a result of driven by owing to reflecting resulting in led to caused by attributable || significant losses incurred on East Anglia One project",
+            "path": "asked_effect"
+          }
+        ],
+        "paths": {
+          "P": [
+            "Q1"
+          ]
+        }
+      },
+      "gold": {
+        "answer": "it was recognised that additional improvements had to be made around project risk reporting, measurement of performance against metrics and feeding lessons learned from previous projects into future bidding activities",
+        "multi_step_heuristic": false
+      },
+      "methods": {
+        "ordinary": {
+          "prediction": "additional improvements had to be made around project risk reporting, measurement of performance against metrics and feeding lessons learned from previous projects into future bidding activities",
+          "cited": "FC-0efcbab986",
+          "span_valid": true,
+          "explanation": "The excerpt says that, given the significant East Anglia One losses, improvements were recognised as necessary in risk reporting, performance measurement and applying lessons to future bids.",
+          "em": 0.0,
+          "f1": 0.929,
+          "gold_retrieved": true,
+          "error": "Right passage; span differs from gold (token F1 0.93): boundary or selection error.",
+          "queries": [
+            "What were the implications of the significant losses incurred on the East Anglia One project?"
+          ],
+          "retrieved": [
+            {
+              "id": "FC-0efcbab986",
+              "text": "However, in light of the significant losses incurred on the East Anglia One project, it was recognised that additional improvements had to be made around project risk reporting, measurement of performance against metrics and feeding lessons learned from previous projects into future bidding activities.",
+              "gold": true
+            },
+            {
+              "id": "FC-c2bb0e3e7d",
+              "text": "What's that building, mum? must be one of the most asked, and occasionally dreaded, questions posed on the London Eye. Not anymore, thanks to Spirent's Landslide test platform.",
+              "gold": false
+            },
+            {
+              "id": "FC-99bd5eeb1a",
+              "text": "The Audit Committee, together with the Board, considered what were the significant risks and issues in relation to the Financial Statements and how these would be addressed. The most significant risk identified is set out below: Revenue recognition — The Group has a multiplicity of complex contract mechanisms. As a result, a risk of misstatement of revenue is expected to arise.",
+              "gold": false
+            }
+          ]
+        },
+        "multi_query": {
+          "prediction": "additional improvements had to be made around project risk reporting, measurement of performance against metrics and feeding lessons learned from previous projects into future bidding activities",
+          "cited": "FC-0efcbab986",
+          "span_valid": true,
+          "explanation": "The excerpt says that, given the East Anglia One losses, improvements were recognised as necessary in risk reporting, performance measurement and applying lessons to future bids.",
+          "em": 0.0,
+          "f1": 0.929,
+          "gold_retrieved": true,
+          "error": "Right passage; span differs from gold (token F1 0.93): boundary or selection error.",
+          "queries": [
+            "East Anglia One offshore wind project losses impact",
+            "East Anglia One cost overruns write-down consequences ScottishPower Iberdrola"
+          ],
+          "retrieved": [
+            {
+              "id": "FC-0efcbab986",
+              "text": "However, in light of the significant losses incurred on the East Anglia One project, it was recognised that additional improvements had to be made around project risk reporting, measurement of performance against metrics and feeding lessons learned from previous projects into future bidding activities.",
+              "gold": true
+            },
+            {
+              "id": "FC-d04ac56feb",
+              "text": "The impact will be the loss of market share due to a new competitor and reduced profitability and cash flow.",
+              "gold": false
+            },
+            {
+              "id": "FC-58565cd2f6",
+              "text": "Own sourced nickel production of 57,500 tonnes was 8,700 tonnes (13%) down on 2016, mainly due to a higher proportion of third-party feeds in the production mix, as noted above. Total production including third-party feeds was 87,100 tonnes, down 7% on 2016.",
+              "gold": false
+            }
+          ]
+        },
+        "graph_guided": {
+          "prediction": "additional improvements had to be made around project risk reporting, measurement of performance against metrics and feeding lessons learned from previous projects into future bidding activities",
+          "cited": "FC-0efcbab986",
+          "span_valid": true,
+          "explanation": "The excerpt states that, given the significant East Anglia One losses, it was recognised that improvements were needed in risk reporting, performance measurement and applying lessons learned to bidding.",
+          "em": 0.0,
+          "f1": 0.929,
+          "gold_retrieved": true,
+          "error": "Right passage; span differs from gold (token F1 0.93): boundary or selection error.",
+          "queries": [
+            "significant losses incurred on East Anglia One project due to because as a result of driven by owing to reflecting resulting in led to caused by attributable",
+            "significant losses incurred on East Anglia One project"
+          ],
+          "retrieved": [
+            {
+              "id": "FC-0efcbab986",
+              "text": "However, in light of the significant losses incurred on the East Anglia One project, it was recognised that additional improvements had to be made around project risk reporting, measurement of performance against metrics and feeding lessons learned from previous projects into future bidding activities.",
+              "gold": true
+            },
+            {
+              "id": "FC-5047ac22e0",
+              "text": "Profit after tax rose from $68.1m in 2016 to $117.6m, driven by underlying earnings growth and a one-off tax credit as result of changes to US tax legislation.",
+              "gold": false
+            },
+            {
+              "id": "FC-28e69323c4",
+              "text": "Asia‑Pacific (APAC) In APAC, constant currency revenue was up 25% with significant increases in both Asia and Australia. However the operating loss was only slightly less than in 2016, largely as a result of two major contracts in Australia, where adverse ground conditions, technical issues and a contractual dispute resulted in a total loss on these contracts of £14m.",
+              "gold": false
+            }
+          ]
+        },
+        "oracle": {
+          "prediction": "additional improvements had to be made around project risk reporting, measurement of performance against metrics and feeding lessons learned from previous projects into future bidding activities",
+          "cited": "FC-0efcbab986",
+          "span_valid": true,
+          "explanation": "The excerpt says the East Anglia One losses led to recognition that improvements were needed in risk reporting, performance measurement and applying lessons learned to future bids.",
+          "em": 0.0,
+          "f1": 0.929,
+          "gold_retrieved": true,
+          "error": "Right passage; span differs from gold (token F1 0.93): boundary or selection error.",
+          "queries": [],
+          "retrieved": [
+            {
+              "id": "FC-0efcbab986",
+              "text": "However, in light of the significant losses incurred on the East Anglia One project, it was recognised that additional improvements had to be made around project risk reporting, measurement of performance against metrics and feeding lessons learned from previous projects into future bidding activities.",
+              "gold": true
+            }
+          ]
+        }
+      }
+    },
+    {
+      "case_id": "fc26-1306",
+      "input": "What prompted the increase in total employee pay expenditure?",
+      "metadata": {},
+      "graph": {
+        "graph_id": "fincausal:fc26-1306",
+        "frozen": false,
+        "provenance": "deterministic question parse (no gold)",
+        "nodes": [
+          {
+            "id": "asked",
+            "label": "unknown cause (answer)"
+          },
+          {
+            "id": "known",
+            "label": "increase total employee pay expenditure"
+          }
+        ],
+        "edges": [
+          {
+            "id": "Q1",
+            "source": "asked",
+            "target": "known",
+            "sign": 1,
+            "condition": "",
+            "assumptions": [],
+            "references": [],
+            "question": "What caused 'increase total employee pay expenditure'?",
+            "query": "increase total employee pay expenditure due to because as a result of driven by owing to reflecting resulting in led to caused by attributable || increase total employee pay expenditure",
+            "path": "asked_cause"
+          }
+        ],
+        "paths": {
+          "P": [
+            "Q1"
+          ]
+        }
+      },
+      "gold": {
+        "answer": "the year on year exchange rate movement as well as higher bonus payments",
+        "multi_step_heuristic": true
+      },
+      "methods": {
+        "ordinary": {
+          "prediction": "the year on year exchange rate movement as well as higher bonus payments, due to bonus targets being achieved in some parts of the business",
+          "cited": "FC-62e5d8d968",
+          "span_valid": true,
+          "explanation": "The excerpt states the employee pay increase is due to exchange rate movement and higher bonus payments from bonus targets being achieved.",
+          "em": 0.0,
+          "f1": 0.686,
+          "gold_retrieved": true,
+          "error": "Right passage; span differs from gold (token F1 0.69): boundary or selection error.",
+          "queries": [
+            "What prompted the increase in total employee pay expenditure?"
+          ],
+          "retrieved": [
+            {
+              "id": "FC-62e5d8d968",
+              "text": "Dividends are the interim and final dividends paid in respect of the financial year ended 31 December 2016 and the interim dividend paid and the final dividend recommended in respect of the financial year ended 31 December 2017. The total employee pay expenditure increase is due to the year on year exchange rate movement as well as higher bonus payments, due to bonus targets being achieved in some parts of the business.",
+              "gold": true
+            },
+            {
+              "id": "FC-bda111129d",
+              "text": "In view of the strong performance in the year, I am pleased to report that the Board is recommending a final dividend of 5.20p, giving a total for the year of 8.00p, an increase of 14% over the total paid for the 2016 year.",
+              "gold": false
+            },
+            {
+              "id": "FC-d05514b697",
+              "text": "S&M infrastructure expanded in the US Sales and marketing expenditure was £28.6 million (2016: £20.4 million). The increase in cost is due to an expansion of the salesforce in order to increase the reach into target prescribers as well as having salesforce costs for the entire year.",
+              "gold": false
+            }
+          ]
+        },
+        "multi_query": {
+          "prediction": "the year on year exchange rate movement as well as higher bonus payments, due to bonus targets being achieved in some parts of the business",
+          "cited": "FC-62e5d8d968",
+          "span_valid": true,
+          "explanation": "The excerpt states the total employee pay expenditure increase is due to exchange rate movement and higher bonus payments.",
+          "em": 0.0,
+          "f1": 0.686,
+          "gold_retrieved": true,
+          "error": "Right passage; span differs from gold (token F1 0.69): boundary or selection error.",
+          "queries": [
+            "increase in total employee compensation expense reasons",
+            "employee costs rose due to headcount growth wage increases salaries and wages expense"
+          ],
+          "retrieved": [
+            {
+              "id": "FC-c1a340dcc9",
+              "text": "Other expense, net increased by $85.0 million to $561.8 million for the year ended December 31, 2017 from $476.8 million in 2016, primarily due to a full year of interest expense incurred on borrowings used to fund the acquisition of Baxalta",
+              "gold": false
+            },
+            {
+              "id": "FC-62e5d8d968",
+              "text": "Dividends are the interim and final dividends paid in respect of the financial year ended 31 December 2016 and the interim dividend paid and the final dividend recommended in respect of the financial year ended 31 December 2017. The total employee pay expenditure increase is due to the year on year exchange rate movement as well as higher bonus payments, due to bonus targets being achieved in some parts of the business.",
+              "gold": true
+            },
+            {
+              "id": "FC-d0ba1512d8",
+              "text": "In 2018 the majority of employees across the Group have received average salary increases ranging from 2.0%–3.25%, dependent on geographical location with the principal exception being those employees based in Brazil, Latin America and China where, due to inflation, current market salary increases are higher.",
+              "gold": false
+            }
+          ]
+        },
+        "graph_guided": {
+          "prediction": "the year on year exchange rate movement as well as higher bonus payments, due to bonus targets being achieved in some parts of the business",
+          "cited": "FC-62e5d8d968",
+          "span_valid": true,
+          "explanation": "The excerpt states the total employee pay expenditure increase is due to exchange rate movement and higher bonus payments from bonus targets being achieved.",
+          "em": 0.0,
+          "f1": 0.686,
+          "gold_retrieved": true,
+          "error": "Right passage; span differs from gold (token F1 0.69): boundary or selection error.",
+          "queries": [
+            "increase total employee pay expenditure due to because as a result of driven by owing to reflecting resulting in led to caused by attributable",
+            "increase total employee pay expenditure"
+          ],
+          "retrieved": [
+            {
+              "id": "FC-62e5d8d968",
+              "text": "Dividends are the interim and final dividends paid in respect of the financial year ended 31 December 2016 and the interim dividend paid and the final dividend recommended in respect of the financial year ended 31 December 2017. The total employee pay expenditure increase is due to the year on year exchange rate movement as well as higher bonus payments, due to bonus targets being achieved in some parts of the business.",
+              "gold": true
+            },
+            {
+              "id": "FC-94d7b5a366",
+              "text": "The increase in operating income (€+1.181 million; +37%), owing to the strong performance of the Upstream segment, drove EBITDA upward by +12%.",
+              "gold": false
+            },
+            {
+              "id": "FC-bda111129d",
+              "text": "In view of the strong performance in the year, I am pleased to report that the Board is recommending a final dividend of 5.20p, giving a total for the year of 8.00p, an increase of 14% over the total paid for the 2016 year.",
+              "gold": false
+            }
+          ]
+        },
+        "oracle": {
+          "prediction": "the year on year exchange rate movement as well as higher bonus payments, due to bonus targets being achieved in some parts of the business",
+          "cited": "FC-62e5d8d968",
+          "span_valid": true,
+          "explanation": "The excerpt states the increase in total employee pay expenditure is due to exchange rate movement and higher bonus payments from achieved targets.",
+          "em": 0.0,
+          "f1": 0.686,
+          "gold_retrieved": true,
+          "error": "Right passage; span differs from gold (token F1 0.69): boundary or selection error.",
+          "queries": [],
+          "retrieved": [
+            {
+              "id": "FC-62e5d8d968",
+              "text": "Dividends are the interim and final dividends paid in respect of the financial year ended 31 December 2016 and the interim dividend paid and the final dividend recommended in respect of the financial year ended 31 December 2017. The total employee pay expenditure increase is due to the year on year exchange rate movement as well as higher bonus payments, due to bonus targets being achieved in some parts of the business.",
+              "gold": true
+            }
+          ]
+        }
+      }
+    },
+    {
+      "case_id": "fc26-813",
+      "input": "What factors contribute to the Group's strong underlying cash generation?",
+      "metadata": {},
+      "graph": {
+        "graph_id": "fincausal:fc26-813",
+        "frozen": false,
+        "provenance": "deterministic question parse (no gold)",
+        "nodes": [
+          {
+            "id": "asked",
+            "label": "unknown cause (answer)"
+          },
+          {
+            "id": "known",
+            "label": "Group's strong underlying cash generation"
+          }
+        ],
+        "edges": [
+          {
+            "id": "Q1",
+            "source": "asked",
+            "target": "known",
+            "sign": 1,
+            "condition": "",
+            "assumptions": [],
+            "references": [],
+            "question": "What caused 'Group's strong underlying cash generation'?",
+            "query": "Group's strong underlying cash generation due to because as a result of driven by owing to reflecting resulting in led to caused by attributable || Group's strong underlying cash generation",
+            "path": "asked_cause"
+          }
+        ],
+        "paths": {
+          "P": [
+            "Q1"
+          ]
+        }
+      },
+      "gold": {
+        "answer": "a combination of the trading performance and further reductions in working capital",
+        "multi_step_heuristic": true
+      },
+      "methods": {
+        "ordinary": {
+          "prediction": "a combination of the trading performance and further reductions in working capital",
+          "cited": "FC-ab0609850f",
+          "span_valid": true,
+          "explanation": "The excerpt says the Group's strong underlying cash generation results from trading performance combined with further working capital reductions.",
+          "em": 1.0,
+          "f1": 1.0,
+          "gold_retrieved": true,
+          "error": "Exact match.",
+          "queries": [
+            "What factors contribute to the Group's strong underlying cash generation?"
+          ],
+          "retrieved": [
+            {
+              "id": "FC-ab0609850f",
+              "text": "Net debt increased by £3.1 million to £13.0 million (31 May 2016: £9.9 million), reflecting the capital investment in the year of £9.4 million partly offset by the strong underlying cash generation of the Group resulting from a combination of the trading performance and further reductions in working capital.",
+              "gold": true
+            },
+            {
+              "id": "FC-a3a675f106",
+              "text": "Cash generation was lower than in recent years due to targeted investment in working capital and continued investment in the balance sheet, including gross capital expenditure at 1.27x Depreciation. The Group remains cash generative and Leverage at the year end of 1.83x was again comfortably back within the Group's",
+              "gold": false
+            },
+            {
+              "id": "FC-bddc46399a",
+              "text": "Operating cash flow rose by 1% in headline terms, despite a decrease in adjusted operating profit, driven by a strong cash conversion of 116% driven by tight working capital control, strong collections and high Penguin Random House cash dividends.",
+              "gold": false
+            }
+          ]
+        },
+        "multi_query": {
+          "prediction": "a combination of the trading performance and further reductions in working capital",
+          "cited": "FC-ab0609850f",
+          "span_valid": true,
+          "explanation": "The excerpt says the Group's strong underlying cash generation resulted from trading performance combined with further working capital reductions.",
+          "em": 1.0,
+          "f1": 1.0,
+          "gold_retrieved": true,
+          "error": "Exact match.",
+          "queries": [
+            "Group strong underlying cash generation drivers operating cash flow conversion",
+            "Group cash generation working capital capital expenditure free cash flow underlying"
+          ],
+          "retrieved": [
+            {
+              "id": "FC-bddc46399a",
+              "text": "Operating cash flow rose by 1% in headline terms, despite a decrease in adjusted operating profit, driven by a strong cash conversion of 116% driven by tight working capital control, strong collections and high Penguin Random House cash dividends.",
+              "gold": false
+            },
+            {
+              "id": "FC-a3a675f106",
+              "text": "Cash generation was lower than in recent years due to targeted investment in working capital and continued investment in the balance sheet, including gross capital expenditure at 1.27x Depreciation. The Group remains cash generative and Leverage at the year end of 1.83x was again comfortably back within the Group's",
+              "gold": false
+            },
+            {
+              "id": "FC-ab0609850f",
+              "text": "Net debt increased by £3.1 million to £13.0 million (31 May 2016: £9.9 million), reflecting the capital investment in the year of £9.4 million partly offset by the strong underlying cash generation of the Group resulting from a combination of the trading performance and further reductions in working capital.",
+              "gold": true
+            }
+          ]
+        },
+        "graph_guided": {
+          "prediction": "a combination of the trading performance and further reductions in working capital",
+          "cited": "FC-ab0609850f",
+          "span_valid": true,
+          "explanation": "The excerpt says the Group's strong underlying cash generation resulted from trading performance combined with further working capital reductions.",
+          "em": 1.0,
+          "f1": 1.0,
+          "gold_retrieved": true,
+          "error": "Exact match.",
+          "queries": [
+            "Group's strong underlying cash generation due to because as a result of driven by owing to reflecting resulting in led to caused by attributable",
+            "Group's strong underlying cash generation"
+          ],
+          "retrieved": [
+            {
+              "id": "FC-ab0609850f",
+              "text": "Net debt increased by £3.1 million to £13.0 million (31 May 2016: £9.9 million), reflecting the capital investment in the year of £9.4 million partly offset by the strong underlying cash generation of the Group resulting from a combination of the trading performance and further reductions in working capital.",
+              "gold": true
+            },
+            {
+              "id": "FC-bddc46399a",
+              "text": "Operating cash flow rose by 1% in headline terms, despite a decrease in adjusted operating profit, driven by a strong cash conversion of 116% driven by tight working capital control, strong collections and high Penguin Random House cash dividends.",
+              "gold": false
+            },
+            {
+              "id": "FC-a3a675f106",
+              "text": "Cash generation was lower than in recent years due to targeted investment in working capital and continued investment in the balance sheet, including gross capital expenditure at 1.27x Depreciation. The Group remains cash generative and Leverage at the year end of 1.83x was again comfortably back within the Group's",
+              "gold": false
+            }
+          ]
+        },
+        "oracle": {
+          "prediction": "a combination of the trading performance and further reductions in working capital",
+          "cited": "FC-ab0609850f",
+          "span_valid": true,
+          "explanation": "The excerpt says the strong underlying cash generation resulted from trading performance combined with further working capital reductions.",
+          "em": 1.0,
+          "f1": 1.0,
+          "gold_retrieved": true,
+          "error": "Exact match.",
+          "queries": [],
+          "retrieved": [
+            {
+              "id": "FC-ab0609850f",
+              "text": "Net debt increased by £3.1 million to £13.0 million (31 May 2016: £9.9 million), reflecting the capital investment in the year of £9.4 million partly offset by the strong underlying cash generation of the Group resulting from a combination of the trading performance and further reductions in working capital.",
+              "gold": true
+            }
+          ]
+        }
+      }
+    },
+    {
+      "case_id": "fc26-1226",
+      "input": "What impact did the new directives and mandates of European regulatory and supervisory bodies have?",
+      "metadata": {},
+      "graph": {
+        "graph_id": "fincausal:fc26-1226",
+        "frozen": false,
+        "provenance": "deterministic question parse (no gold)",
+        "nodes": [
+          {
+            "id": "known",
+            "label": "new directives and mandates European regulatory and supervisory bodies"
+          },
+          {
+            "id": "asked",
+            "label": "unknown effect (answer)"
+          }
+        ],
+        "edges": [
+          {
+            "id": "Q1",
+            "source": "known",
+            "target": "asked",
+            "sign": 1,
+            "condition": "",
+            "assumptions": [],
+            "references": [],
+            "question": "What does 'new directives and mandates European regulatory and supervisory bodies' lead to?",
+            "query": "new directives and mandates European regulatory and supervisory bodies due to because as a result of driven by owing to reflecting resulting in led to caused by attributable || new directives and mandates European regulatory and supervisory bodies",
+            "path": "asked_effect"
+          }
+        ],
+        "paths": {
+          "P": [
+            "Q1"
+          ]
+        }
+      },
+      "gold": {
+        "answer": "The purchase process at Bankinter has been transformed in recent years",
+        "multi_step_heuristic": false
+      },
+      "methods": {
+        "ordinary": {
+          "prediction": "The purchase process at Bankinter has been transformed in recent years",
+          "cited": "FC-d47a60e2cd",
+          "span_valid": true,
+          "explanation": "The excerpt says Bankinter's purchase process was transformed as a result of guidelines and requirements from European regulators and supervisors.",
+          "em": 1.0,
+          "f1": 1.0,
+          "gold_retrieved": true,
+          "error": "Exact match.",
+          "queries": [
+            "What impact did the new directives and mandates of European regulatory and supervisory bodies have?"
+          ],
+          "retrieved": [
+            {
+              "id": "FC-d47a60e2cd",
+              "text": "The purchase process at Bankinter has been transformed in recent years as a result of the guidelines and requirements of European regulation and supervision organisations, in particular, the European Central Bank, the European Banking Authority (EBA) and the Single Resolution Board.",
+              "gold": true
+            },
+            {
+              "id": "FC-b549ffcbcb",
+              "text": "The Board discussed a number of issues arising from the UK's vote to leave the European Union in June 2016. We are closely following developments arising as a result of the UK's decision to leave the European Union.",
+              "gold": false
+            },
+            {
+              "id": "FC-d04ac56feb",
+              "text": "The impact will be the loss of market share due to a new competitor and reduced profitability and cash flow.",
+              "gold": false
+            }
+          ]
+        },
+        "multi_query": {
+          "prediction": "The purchase process at Bankinter has been transformed in recent years",
+          "cited": "FC-d47a60e2cd",
+          "span_valid": true,
+          "explanation": "The excerpt says the guidelines and requirements of European regulators transformed Bankinter's purchase process.",
+          "em": 1.0,
+          "f1": 1.0,
+          "gold_retrieved": true,
+          "error": "Exact match.",
+          "queries": [
+            "impact of new European regulatory supervisory directives mandates EU regulation compliance effects",
+            "European Banking Authority ESMA EIOPA new directives requirements impact on financial institutions"
+          ],
+          "retrieved": [
+            {
+              "id": "FC-d47a60e2cd",
+              "text": "The purchase process at Bankinter has been transformed in recent years as a result of the guidelines and requirements of European regulation and supervision organisations, in particular, the European Central Bank, the European Banking Authority (EBA) and the Single Resolution Board.",
+              "gold": true
+            },
+            {
+              "id": "FC-dc822d8df9",
+              "text": "While we face existing regulatory and government investigations in a number of jurisdictions, and over the past year the number of individual and US class action lawsuits has increased, the risk of non-compliance has stabilised as a result of our mitigating controls. While we continue to manage the effects associated",
+              "gold": false
+            },
+            {
+              "id": "FC-901458a170",
+              "text": "The credit risk arises from cash and cash equivalents, financial instruments, deposits with financial institutions, debt available for sale and accounts receivable.",
+              "gold": false
+            }
+          ]
+        },
+        "graph_guided": {
+          "prediction": "The purchase process at Bankinter has been transformed in recent years",
+          "cited": "FC-d47a60e2cd",
+          "span_valid": true,
+          "explanation": "The excerpt says Bankinter's purchase process was transformed as a result of guidelines and requirements of European regulatory and supervisory bodies.",
+          "em": 1.0,
+          "f1": 1.0,
+          "gold_retrieved": true,
+          "error": "Exact match.",
+          "queries": [
+            "new directives and mandates European regulatory and supervisory bodies due to because as a result of driven by owing to reflecting resulting in led to caused by attributable",
+            "new directives and mandates European regulatory and supervisory bodies"
+          ],
+          "retrieved": [
+            {
+              "id": "FC-d47a60e2cd",
+              "text": "The purchase process at Bankinter has been transformed in recent years as a result of the guidelines and requirements of European regulation and supervision organisations, in particular, the European Central Bank, the European Banking Authority (EBA) and the Single Resolution Board.",
+              "gold": true
+            },
+            {
+              "id": "FC-b549ffcbcb",
+              "text": "The Board discussed a number of issues arising from the UK's vote to leave the European Union in June 2016. We are closely following developments arising as a result of the UK's decision to leave the European Union.",
+              "gold": false
+            },
+            {
+              "id": "FC-f6ee235107",
+              "text": "Fiscal pressures on Government as a result of reduced revenues due to lower oil prices is evident in the increasing number of audits being undertaken to identify areas of non-compliance. The Group remains committed to maintaining the highest levels of compliance and works closely with local regulatory authorities.",
+              "gold": false
+            }
+          ]
+        },
+        "oracle": {
+          "prediction": "The purchase process at Bankinter has been transformed in recent years",
+          "cited": "FC-d47a60e2cd",
+          "span_valid": true,
+          "explanation": "The excerpt says the guidelines and requirements of European regulators transformed Bankinter's purchase process; that transformation is the effect.",
+          "em": 1.0,
+          "f1": 1.0,
+          "gold_retrieved": true,
+          "error": "Exact match.",
+          "queries": [],
+          "retrieved": [
+            {
+              "id": "FC-d47a60e2cd",
+              "text": "The purchase process at Bankinter has been transformed in recent years as a result of the guidelines and requirements of European regulation and supervision organisations, in particular, the European Central Bank, the European Banking Authority (EBA) and the Single Resolution Board.",
+              "gold": true
+            }
+          ]
+        }
+      }
+    },
+    {
+      "case_id": "fc26-90",
+      "input": "What led to B having over 100,000 accounts and deposit balances of approximately £1 billion since its launch in May 2016?",
+      "metadata": {},
+      "graph": {
+        "graph_id": "fincausal:fc26-90",
+        "frozen": false,
+        "provenance": "deterministic question parse (no gold)",
+        "nodes": [
+          {
+            "id": "asked",
+            "label": "unknown cause (answer)"
+          },
+          {
+            "id": "known",
+            "label": "B having over 100 000 accounts and deposit balances approximately £1 billion since its launch May 2016"
+          }
+        ],
+        "edges": [
+          {
+            "id": "Q1",
+            "source": "asked",
+            "target": "known",
+            "sign": 1,
+            "condition": "",
+            "assumptions": [],
+            "references": [],
+            "question": "What caused 'B having over 100 000 accounts and deposit balances approximately £1 billion since its launch May 2016'?",
+            "query": "B having over 100 000 accounts and deposit balances approximately £1 billion since its launch May 2016 due to because as a result of driven by owing to reflecting resulting in led to caused by attributable || B having over 100 000 accounts and deposit balances approximately £1 billion since its launch May 2016",
+            "path": "asked_cause"
+          }
+        ],
+        "paths": {
+          "P": [
+            "Q1"
+          ]
+        }
+      },
+      "gold": {
+        "answer": "a market-leading customer experience and, at September 2017, B had a Net Promoter Score (NPS) of over 40",
+        "multi_step_heuristic": true
+      },
+      "methods": {
+        "ordinary": {
+          "prediction": "B's product offering and advanced functionality has resulted in a market-leading customer experience and, at September 2017, B had a Net Promoter Score (NPS) of over 40",
+          "cited": "FC-60b1fc2dac",
+          "span_valid": true,
+          "explanation": "The excerpt says that B's product offering, advanced functionality and resulting market-leading customer experience (NPS over 40) led to over 100,000 accounts and c.£1bn deposits.",
+          "em": 0.0,
+          "f1": 0.78,
+          "gold_retrieved": true,
+          "error": "Right passage; span differs from gold (token F1 0.78): boundary or selection error.",
+          "queries": [
+            "What led to B having over 100,000 accounts and deposit balances of approximately £1 billion since its launch in May 2016?"
+          ],
+          "retrieved": [
+            {
+              "id": "FC-60b1fc2dac",
+              "text": "B's product offering and advanced functionality has resulted in a market-leading customer experience and, at September 2017, B had a Net Promoter Score (NPS) of over 40. As a result, since its launch in May 2016, B has over 100,000 accounts and deposit balances of c.£1bn.",
+              "gold": true
+            },
+            {
+              "id": "FC-54ba7e8c28",
+              "text": "e) In May 2016 the non-executive directors agreed to defer part of their remuneration (Mr MacLellan £20,000 Mr Balfour and Mr Sweetman £5,000 each) until the earlier of their resignation or December 2017. There were, therefore, no increases in non-executive directors' remuneration during 2017.",
+              "gold": false
+            },
+            {
+              "id": "FC-901458a170",
+              "text": "The credit risk arises from cash and cash equivalents, financial instruments, deposits with financial institutions, debt available for sale and accounts receivable.",
+              "gold": false
+            }
+          ]
+        },
+        "multi_query": {
+          "prediction": "B's product offering and advanced functionality has resulted in a market-leading customer experience and, at September 2017, B had a Net Promoter Score (NPS) of over 40",
+          "cited": "FC-60b1fc2dac",
+          "span_valid": true,
+          "explanation": "The excerpt says B's product offering and functionality produced a market-leading customer experience and NPS over 40, and \"as a result\" B has over 100,000 accounts and c.£1bn deposits.",
+          "em": 0.0,
+          "f1": 0.78,
+          "gold_retrieved": true,
+          "error": "Right passage; span differs from gold (token F1 0.78): boundary or selection error.",
+          "queries": [
+            "bank launched May 2016 over 100,000 accounts £1 billion deposits",
+            "B digital bank launch May 2016 customer growth deposits £1bn accounts"
+          ],
+          "retrieved": [
+            {
+              "id": "FC-60b1fc2dac",
+              "text": "B's product offering and advanced functionality has resulted in a market-leading customer experience and, at September 2017, B had a Net Promoter Score (NPS) of over 40. As a result, since its launch in May 2016, B has over 100,000 accounts and deposit balances of c.£1bn.",
+              "gold": true
+            },
+            {
+              "id": "FC-84a17d01e4",
+              "text": "Despite some recent improvements, the Ukrainian banking sector remains weakly capitalised and so the risks associated with the banks in Ukraine remain significant, including in relation to the banks with which the Group operates bank accounts. As a consequence, the Group also maintains a significant proportion of its cash holdings in international banks outside Ukraine.",
+              "gold": false
+            },
+            {
+              "id": "FC-54ba7e8c28",
+              "text": "e) In May 2016 the non-executive directors agreed to defer part of their remuneration (Mr MacLellan £20,000 Mr Balfour and Mr Sweetman £5,000 each) until the earlier of their resignation or December 2017. There were, therefore, no increases in non-executive directors' remuneration during 2017.",
+              "gold": false
+            }
+          ]
+        },
+        "graph_guided": {
+          "prediction": "B's product offering and advanced functionality has resulted in a market-leading customer experience and, at September 2017, B had a Net Promoter Score (NPS) of over 40",
+          "cited": "FC-60b1fc2dac",
+          "span_valid": true,
+          "explanation": "The excerpt says \"As a result\" of B's product offering, advanced functionality and market-leading customer experience (NPS over 40), B has over 100,000 accounts and c.£1bn deposits.",
+          "em": 0.0,
+          "f1": 0.78,
+          "gold_retrieved": true,
+          "error": "Right passage; span differs from gold (token F1 0.78): boundary or selection error.",
+          "queries": [
+            "B having over 100 000 accounts and deposit balances approximately £1 billion since its launch May 2016 due to because as a result of driven by owing to reflecting resulting in led to caused by attributable",
+            "B having over 100 000 accounts and deposit balances approximately £1 billion since its launch May 2016"
+          ],
+          "retrieved": [
+            {
+              "id": "FC-60b1fc2dac",
+              "text": "B's product offering and advanced functionality has resulted in a market-leading customer experience and, at September 2017, B had a Net Promoter Score (NPS) of over 40. As a result, since its launch in May 2016, B has over 100,000 accounts and deposit balances of c.£1bn.",
+              "gold": true
+            },
+            {
+              "id": "FC-dd1e1c3eb6",
+              "text": "Portfolio performance remained steady reflecting the continuing low base rate environment and stable economic conditions. The non-performing proportion of outstanding balances decreased due to an improved performance and a reduction in repossession stock. The recovery book impairment coverage ratio increased driven by a reduction in the number of customers.",
+              "gold": false
+            },
+            {
+              "id": "FC-54ba7e8c28",
+              "text": "e) In May 2016 the non-executive directors agreed to defer part of their remuneration (Mr MacLellan £20,000 Mr Balfour and Mr Sweetman £5,000 each) until the earlier of their resignation or December 2017. There were, therefore, no increases in non-executive directors' remuneration during 2017.",
+              "gold": false
+            }
+          ]
+        },
+        "oracle": {
+          "prediction": "B's product offering and advanced functionality has resulted in a market-leading customer experience and, at September 2017, B had a Net Promoter Score (NPS) of over 40",
+          "cited": "FC-60b1fc2dac",
+          "span_valid": true,
+          "explanation": "The excerpt says \"As a result\" of the product offering, market-leading customer experience and NPS over 40, B has over 100,000 accounts and c.£1bn deposits.",
+          "em": 0.0,
+          "f1": 0.78,
+          "gold_retrieved": true,
+          "error": "Right passage; span differs from gold (token F1 0.78): boundary or selection error.",
+          "queries": [],
+          "retrieved": [
+            {
+              "id": "FC-60b1fc2dac",
+              "text": "B's product offering and advanced functionality has resulted in a market-leading customer experience and, at September 2017, B had a Net Promoter Score (NPS) of over 40. As a result, since its launch in May 2016, B has over 100,000 accounts and deposit balances of c.£1bn.",
+              "gold": true
+            }
+          ]
+        }
+      }
+    },
+    {
+      "case_id": "fc26-973",
+      "input": "What were the consequences of unforeseen changes to the Board in September?",
+      "metadata": {},
+      "graph": {
+        "graph_id": "fincausal:fc26-973",
+        "frozen": false,
+        "provenance": "deterministic question parse (no gold)",
+        "nodes": [
+          {
+            "id": "known",
+            "label": "unforeseen changes Board September"
+          },
+          {
+            "id": "asked",
+            "label": "unknown effect (answer)"
+          }
+        ],
+        "edges": [
+          {
+            "id": "Q1",
+            "source": "known",
+            "target": "asked",
+            "sign": 1,
+            "condition": "",
+            "assumptions": [],
+            "references": [],
+            "question": "What does 'unforeseen changes Board September' lead to?",
+            "query": "unforeseen changes Board September due to because as a result of driven by owing to reflecting resulting in led to caused by attributable || unforeseen changes Board September",
+            "path": "asked_effect"
+          }
+        ],
+        "paths": {
+          "P": [
+            "Q1"
+          ]
+        }
+      },
+      "gold": {
+        "answer": "for a short period of time, excluding the Chairman, less than half of the directors were non-executive",
+        "multi_step_heuristic": false
+      },
+      "methods": {
+        "ordinary": {
+          "prediction": "for a short period of time, excluding the Chairman, less than half of the directors were non-executive",
+          "cited": "FC-e8f7e69b6a",
+          "span_valid": true,
+          "explanation": "The excerpt states that unforeseen September Board changes meant that briefly, excluding the Chairman, fewer than half of directors were non-executive.",
+          "em": 1.0,
+          "f1": 1.0,
+          "gold_retrieved": true,
+          "error": "Exact match.",
+          "queries": [
+            "What were the consequences of unforeseen changes to the Board in September?"
+          ],
+          "retrieved": [
+            {
+              "id": "FC-e8f7e69b6a",
+              "text": "The Society is committed to maintaining a dialogue with its members and details of engagement activities are included in the Corporate Responsibility Report. Unforeseen changes to the Board in September meant that for a short period of time, excluding the Chairman, less than half of the directors were non-executive.",
+              "gold": true
+            },
+            {
+              "id": "FC-a4bb231520",
+              "text": "In light of recent changes to the AIM Rules for Companies the Board of Directors is currently reviewing which corporate governance code to adopt as required from 28 September 2018.",
+              "gold": false
+            },
+            {
+              "id": "FC-99bd5eeb1a",
+              "text": "The Audit Committee, together with the Board, considered what were the significant risks and issues in relation to the Financial Statements and how these would be addressed. The most significant risk identified is set out below: Revenue recognition — The Group has a multiplicity of complex contract mechanisms. As a result, a risk of misstatement of revenue is expected to arise.",
+              "gold": false
+            }
+          ]
+        },
+        "multi_query": {
+          "prediction": "for a short period of time, excluding the Chairman, less than half of the directors were non-executive",
+          "cited": "FC-e8f7e69b6a",
+          "span_valid": true,
+          "explanation": "The excerpt says unforeseen September Board changes meant that briefly, excluding the Chairman, fewer than half of directors were non-executive.",
+          "em": 1.0,
+          "f1": 1.0,
+          "gold_retrieved": true,
+          "error": "Exact match.",
+          "queries": [
+            "Board unexpected changes September consequences",
+            "board member departures resignations September impact"
+          ],
+          "retrieved": [
+            {
+              "id": "FC-a4bb231520",
+              "text": "In light of recent changes to the AIM Rules for Companies the Board of Directors is currently reviewing which corporate governance code to adopt as required from 28 September 2018.",
+              "gold": false
+            },
+            {
+              "id": "FC-e8f7e69b6a",
+              "text": "The Society is committed to maintaining a dialogue with its members and details of engagement activities are included in the Corporate Responsibility Report. Unforeseen changes to the Board in September meant that for a short period of time, excluding the Chairman, less than half of the directors were non-executive.",
+              "gold": true
+            },
+            {
+              "id": "FC-60b1fc2dac",
+              "text": "B's product offering and advanced functionality has resulted in a market-leading customer experience and, at September 2017, B had a Net Promoter Score (NPS) of over 40. As a result, since its launch in May 2016, B has over 100,000 accounts and deposit balances of c.£1bn.",
+              "gold": false
+            }
+          ]
+        },
+        "graph_guided": {
+          "prediction": "for a short period of time, excluding the Chairman, less than half of the directors were non-executive",
+          "cited": "FC-e8f7e69b6a",
+          "span_valid": true,
+          "explanation": "The excerpt states unforeseen September Board changes meant that briefly fewer than half of directors (excluding Chairman) were non-executive.",
+          "em": 1.0,
+          "f1": 1.0,
+          "gold_retrieved": true,
+          "error": "Exact match.",
+          "queries": [
+            "unforeseen changes Board September due to because as a result of driven by owing to reflecting resulting in led to caused by attributable",
+            "unforeseen changes Board September"
+          ],
+          "retrieved": [
+            {
+              "id": "FC-e8f7e69b6a",
+              "text": "The Society is committed to maintaining a dialogue with its members and details of engagement activities are included in the Corporate Responsibility Report. Unforeseen changes to the Board in September meant that for a short period of time, excluding the Chairman, less than half of the directors were non-executive.",
+              "gold": true
+            },
+            {
+              "id": "FC-a4bb231520",
+              "text": "In light of recent changes to the AIM Rules for Companies the Board of Directors is currently reviewing which corporate governance code to adopt as required from 28 September 2018.",
+              "gold": false
+            },
+            {
+              "id": "FC-5047ac22e0",
+              "text": "Profit after tax rose from $68.1m in 2016 to $117.6m, driven by underlying earnings growth and a one-off tax credit as result of changes to US tax legislation.",
+              "gold": false
+            }
+          ]
+        },
+        "oracle": {
+          "prediction": "for a short period of time, excluding the Chairman, less than half of the directors were non-executive",
+          "cited": "FC-e8f7e69b6a",
+          "span_valid": true,
+          "explanation": "The excerpt states the unforeseen September Board changes meant that, briefly, less than half of directors (excluding the Chairman) were non-executive.",
+          "em": 1.0,
+          "f1": 1.0,
+          "gold_retrieved": true,
+          "error": "Exact match.",
+          "queries": [],
+          "retrieved": [
+            {
+              "id": "FC-e8f7e69b6a",
+              "text": "The Society is committed to maintaining a dialogue with its members and details of engagement activities are included in the Corporate Responsibility Report. Unforeseen changes to the Board in September meant that for a short period of time, excluding the Chairman, less than half of the directors were non-executive.",
+              "gold": true
+            }
+          ]
+        }
+      }
+    },
+    {
+      "case_id": "fc26-1132",
+      "input": "What do the differences between accounting and taxable profits and losses reported in each period result in?",
+      "metadata": {},
+      "graph": {
+        "graph_id": "fincausal:fc26-1132",
+        "frozen": false,
+        "provenance": "deterministic question parse (no gold)",
+        "nodes": [
+          {
+            "id": "known",
+            "label": "differences between accounting and taxable profits and losses reported each period"
+          },
+          {
+            "id": "asked",
+            "label": "unknown effect (answer)"
+          }
+        ],
+        "edges": [
+          {
+            "id": "Q1",
+            "source": "known",
+            "target": "asked",
+            "sign": 1,
+            "condition": "",
+            "assumptions": [],
+            "references": [],
+            "question": "What does 'differences between accounting and taxable profits and losses reported each period' lead to?",
+            "query": "differences between accounting and taxable profits and losses reported each period due to because as a result of driven by owing to reflecting resulting in led to caused by attributable || differences between accounting and taxable profits and losses reported each period",
+            "path": "asked_effect"
+          }
+        ],
+        "paths": {
+          "P": [
+            "Q1"
+          ]
+        }
+      },
+      "gold": {
+        "answer": "temporary differences arise on the amount certain assets and liabilities are carried at for accounting purposes and their respective tax values",
+        "multi_step_heuristic": false
+      },
+      "methods": {
+        "ordinary": {
+          "prediction": "temporary differences arise on the amount certain assets and liabilities are carried at for accounting purposes and their respective tax values",
+          "cited": "FC-331a590a6b",
+          "span_valid": true,
+          "explanation": "The excerpt says differences between accounting and taxable profits and losses cause temporary differences between carrying amounts of assets and liabilities and their tax values.",
+          "em": 1.0,
+          "f1": 1.0,
+          "gold_retrieved": true,
+          "error": "Exact match.",
+          "queries": [
+            "What do the differences between accounting and taxable profits and losses reported in each period result in?"
+          ],
+          "retrieved": [
+            {
+              "id": "FC-331a590a6b",
+              "text": "Because of the differences between accounting and taxable profits and losses reported in each period, temporary differences arise on the amount certain assets and liabilities are carried at for accounting purposes and their respective tax values. Deferred tax is the amount of tax payable or recoverable on these temporary differences.",
+              "gold": true
+            },
+            {
+              "id": "FC-5d78a81256",
+              "text": "The pre-tax discount rates used in the value in use calculations reflect the Group's assessment of the current market and other risks specific to the CGUs. Long-term growth rates are applied after the forecast period. Long-term growth rates are based on external reports on long-term CPI inflation rates for the geographic market in which each CGU operate and therefore do not exceed the long-term average growth prospects for the individual markets.",
+              "gold": false
+            },
+            {
+              "id": "FC-9e3d61fae7",
+              "text": "Each year, new stores that have been open throughout the previous financial year become classified as 'LFL ' stores. Therefore, within the prior year comparative, the split between LFL and new stores alters each year, and the analysis of the FY16 'LFL ' sales and 'new store' sales differs from the corresponding analysis for FY16 shown in last year's Annual Report.",
+              "gold": false
+            }
+          ]
+        },
+        "multi_query": {
+          "prediction": "temporary differences arise on the amount certain assets and liabilities are carried at for accounting purposes and their respective tax values",
+          "cited": "FC-331a590a6b",
+          "span_valid": true,
+          "explanation": "The excerpt states that differences between accounting and taxable profits and losses cause temporary differences between carrying amounts and tax values of assets and liabilities.",
+          "em": 1.0,
+          "f1": 1.0,
+          "gold_retrieved": true,
+          "error": "Exact match.",
+          "queries": [
+            "differences between accounting profit and taxable profit deferred tax temporary differences",
+            "deferred tax assets and liabilities arise from timing differences between accounting and taxable income"
+          ],
+          "retrieved": [
+            {
+              "id": "FC-331a590a6b",
+              "text": "Because of the differences between accounting and taxable profits and losses reported in each period, temporary differences arise on the amount certain assets and liabilities are carried at for accounting purposes and their respective tax values. Deferred tax is the amount of tax payable or recoverable on these temporary differences.",
+              "gold": true
+            },
+            {
+              "id": "FC-9e52ad1c10",
+              "text": "The tax rate on statutory profits was 18.5% (2016: 19.3%) and is lower than the effective rate on adjusted profits primarily due to a reduction in the applicable deferred tax rate on the balance sheet carrying value of biological assets based on the anticipated mix of future sales by territory.",
+              "gold": false
+            },
+            {
+              "id": "FC-35a13a4ee0",
+              "text": "The tax paid for the year was $454 million (20% of Reported profit before tax). The cash tax paid for the year was $1,095 million higher than the tax charge for the year as a result of certain items with no cash impact including $617 million deferred tax credit",
+              "gold": false
+            }
+          ]
+        },
+        "graph_guided": {
+          "prediction": "temporary differences arise on the amount certain assets and liabilities are carried at for accounting purposes and their respective tax values",
+          "cited": "FC-331a590a6b",
+          "span_valid": true,
+          "explanation": "The excerpt says that, because of these differences, temporary differences arise between the carrying amounts of assets and liabilities and their tax values.",
+          "em": 1.0,
+          "f1": 1.0,
+          "gold_retrieved": true,
+          "error": "Exact match.",
+          "queries": [
+            "differences between accounting and taxable profits and losses reported each period due to because as a result of driven by owing to reflecting resulting in led to caused by attributable",
+            "differences between accounting and taxable profits and losses reported each period"
+          ],
+          "retrieved": [
+            {
+              "id": "FC-331a590a6b",
+              "text": "Because of the differences between accounting and taxable profits and losses reported in each period, temporary differences arise on the amount certain assets and liabilities are carried at for accounting purposes and their respective tax values. Deferred tax is the amount of tax payable or recoverable on these temporary differences.",
+              "gold": true
+            },
+            {
+              "id": "FC-da702760d5",
+              "text": "As a result of the high revenues and gross profit, profit before tax increased by 27% to $39.3 million (2016: $31.0 million). Net income for the period was $31.9 million, reflecting an increase of 25% (2016: $25.6 million). Net income included non-controlling interests of $1.5 million.",
+              "gold": false
+            },
+            {
+              "id": "FC-9e3d61fae7",
+              "text": "Each year, new stores that have been open throughout the previous financial year become classified as 'LFL ' stores. Therefore, within the prior year comparative, the split between LFL and new stores alters each year, and the analysis of the FY16 'LFL ' sales and 'new store' sales differs from the corresponding analysis for FY16 shown in last year's Annual Report.",
+              "gold": false
+            }
+          ]
+        },
+        "oracle": {
+          "prediction": "temporary differences arise on the amount certain assets and liabilities are carried at for accounting purposes and their respective tax values",
+          "cited": "FC-331a590a6b",
+          "span_valid": true,
+          "explanation": "The excerpt states that differences between accounting and taxable profits and losses cause temporary differences between carrying amounts and tax values of assets and liabilities.",
+          "em": 1.0,
+          "f1": 1.0,
+          "gold_retrieved": true,
+          "error": "Exact match.",
+          "queries": [],
+          "retrieved": [
+            {
+              "id": "FC-331a590a6b",
+              "text": "Because of the differences between accounting and taxable profits and losses reported in each period, temporary differences arise on the amount certain assets and liabilities are carried at for accounting purposes and their respective tax values. Deferred tax is the amount of tax payable or recoverable on these temporary differences.",
+              "gold": true
+            }
+          ]
+        }
+      }
+    },
+    {
+      "case_id": "fc26-1377",
+      "input": "What accounts for the failure to exceed the long-term average growth prospects in individual markets?",
+      "metadata": {},
+      "graph": {
+        "graph_id": "fincausal:fc26-1377",
+        "frozen": false,
+        "provenance": "deterministic question parse (no gold)",
+        "nodes": [
+          {
+            "id": "asked",
+            "label": "unknown cause (answer)"
+          },
+          {
+            "id": "known",
+            "label": "accounts failure exceed long-term average growth prospects individual markets"
+          }
+        ],
+        "edges": [
+          {
+            "id": "Q1",
+            "source": "asked",
+            "target": "known",
+            "sign": 1,
+            "condition": "",
+            "assumptions": [],
+            "references": [],
+            "question": "What caused 'accounts failure exceed long-term average growth prospects individual markets'?",
+            "query": "accounts failure exceed long-term average growth prospects individual markets due to because as a result of driven by owing to reflecting resulting in led to caused by attributable || accounts failure exceed long-term average growth prospects individual markets",
+            "path": "asked_cause"
+          }
+        ],
+        "paths": {
+          "P": [
+            "Q1"
+          ]
+        }
+      },
+      "gold": {
+        "answer": "Long-term growth rates are based on external reports on long-term CPI inflation rates for the geographic market in which each CGU operate",
+        "multi_step_heuristic": true
+      },
+      "methods": {
+        "ordinary": {
+          "prediction": "Long-term growth rates are based on external reports on long-term CPI inflation rates for the geographic market in which each CGU operate",
+          "cited": "FC-5d78a81256",
+          "span_valid": true,
+          "explanation": "The excerpt says growth rates are based on external long-term CPI inflation reports for each CGU's market, so they do not exceed the markets' long-term average growth prospects.",
+          "em": 1.0,
+          "f1": 1.0,
+          "gold_retrieved": true,
+          "error": "Exact match.",
+          "queries": [
+            "What accounts for the failure to exceed the long-term average growth prospects in individual markets?"
+          ],
+          "retrieved": [
+            {
+              "id": "FC-5d78a81256",
+              "text": "The pre-tax discount rates used in the value in use calculations reflect the Group's assessment of the current market and other risks specific to the CGUs. Long-term growth rates are applied after the forecast period. Long-term growth rates are based on external reports on long-term CPI inflation rates for the geographic market in which each CGU operate and therefore do not exceed the long-term average growth prospects for the individual markets.",
+              "gold": true
+            },
+            {
+              "id": "FC-1e3c52b95a",
+              "text": "Under local legislation or regulation for all divisions of the group, the directors have responsibility for maintenance and projections of solvency and for assessment of capital requirements, based on risk assessments, and for establishing the level of long-term business provisions, including the adoption of appropriate assumptions.",
+              "gold": false
+            },
+            {
+              "id": "FC-0e61d5743c",
+              "text": "Stalbridge's flexible and responsive approach is very well received by their clients. Given that Stalbridge's operating model has no long term customer contracts, a real focus is placed on customer satisfaction and building a reputation for providing very high service levels.",
+              "gold": false
+            }
+          ]
+        },
+        "multi_query": {
+          "prediction": "Long-term growth rates are based on external reports on long-term CPI inflation rates for the geographic market in which each CGU operate",
+          "cited": "FC-5d78a81256",
+          "span_valid": true,
+          "explanation": "The excerpt says growth rates are based on external long-term CPI inflation reports for each CGU's market, so they do not exceed long-term average growth prospects.",
+          "em": 1.0,
+          "f1": 1.0,
+          "gold_retrieved": true,
+          "error": "Exact match.",
+          "queries": [
+            "factors preventing individual markets from exceeding long-term average growth",
+            "market-specific constraints underperformance versus long-term growth potential"
+          ],
+          "retrieved": [
+            {
+              "id": "FC-5d78a81256",
+              "text": "The pre-tax discount rates used in the value in use calculations reflect the Group's assessment of the current market and other risks specific to the CGUs. Long-term growth rates are applied after the forecast period. Long-term growth rates are based on external reports on long-term CPI inflation rates for the geographic market in which each CGU operate and therefore do not exceed the long-term average growth prospects for the individual markets.",
+              "gold": true
+            },
+            {
+              "id": "FC-f7fc352b78",
+              "text": "We maximise the potential returns accrued from this infrastructure through multiple further factors, including: • Our capital-light business model, which enables us to respond and adapt rapidly to the changing needs of our customers and markets • Our disciplined approach to capital allocation, which enables us to support organic growth through creating new services, developing client relationships in high-margin areas and investing in the most attractive growth opportunities.",
+              "gold": false
+            },
+            {
+              "id": "FC-f59b81c0fd",
+              "text": "Brazil has significant long-term potential and the success of the local team in capturing this potential has resulted in the creation of a very valuable asset in Brazil, which is not reflected in the Group's headline numbers. As shares in this business become available, we have continued to purchase our full allocation. As a result, we now own 32% of the iFood operation (2016: 30%). Head office costs Head office costs were £17.0 million (2016: £14.2 million), reflecting the increase in headcount required to build a great technology company and run an international group.",
+              "gold": false
+            }
+          ]
+        },
+        "graph_guided": {
+          "prediction": "Long-term growth rates are based on external reports on long-term CPI inflation rates for the geographic market in which each CGU operate",
+          "cited": "FC-5d78a81256",
+          "span_valid": true,
+          "explanation": "The excerpt says growth rates based on external CPI inflation reports for each CGU's market, therefore they do not exceed long-term average growth prospects.",
+          "em": 1.0,
+          "f1": 1.0,
+          "gold_retrieved": true,
+          "error": "Exact match.",
+          "queries": [
+            "accounts failure exceed long-term average growth prospects individual markets due to because as a result of driven by owing to reflecting resulting in led to caused by attributable",
+            "accounts failure exceed long-term average growth prospects individual markets"
+          ],
+          "retrieved": [
+            {
+              "id": "FC-5d78a81256",
+              "text": "The pre-tax discount rates used in the value in use calculations reflect the Group's assessment of the current market and other risks specific to the CGUs. Long-term growth rates are applied after the forecast period. Long-term growth rates are based on external reports on long-term CPI inflation rates for the geographic market in which each CGU operate and therefore do not exceed the long-term average growth prospects for the individual markets.",
+              "gold": true
+            },
+            {
+              "id": "FC-448df794e6",
+              "text": "The US Dollar PGM basket price (including by-products) increased by 6% compared to the 2016 average price, resulting in an increase in revenue of $89 million. It should be noted that whilst the US Dollar basket price increased compared to 2016, in Rand terms the basket price (including by-products) decreased by 3% driven by the stronger Rand.",
+              "gold": false
+            },
+            {
+              "id": "FC-1e3c52b95a",
+              "text": "Under local legislation or regulation for all divisions of the group, the directors have responsibility for maintenance and projections of solvency and for assessment of capital requirements, based on risk assessments, and for establishing the level of long-term business provisions, including the adoption of appropriate assumptions.",
+              "gold": false
+            }
+          ]
+        },
+        "oracle": {
+          "prediction": "Long-term growth rates are based on external reports on long-term CPI inflation rates for the geographic market in which each CGU operate",
+          "cited": "FC-5d78a81256",
+          "span_valid": true,
+          "explanation": "The excerpt says growth rates do not exceed long-term average growth prospects because they are based on external reports on long-term CPI inflation for each CGU's geographic market.",
+          "em": 1.0,
+          "f1": 1.0,
+          "gold_retrieved": true,
+          "error": "Exact match.",
+          "queries": [],
+          "retrieved": [
+            {
+              "id": "FC-5d78a81256",
+              "text": "The pre-tax discount rates used in the value in use calculations reflect the Group's assessment of the current market and other risks specific to the CGUs. Long-term growth rates are applied after the forecast period. Long-term growth rates are based on external reports on long-term CPI inflation rates for the geographic market in which each CGU operate and therefore do not exceed the long-term average growth prospects for the individual markets.",
+              "gold": true
+            }
+          ]
+        }
+      }
+    },
+    {
+      "case_id": "fc26-191",
+      "input": "Why has the Committee considered it appropriate not to disclose the actual targets for these awards?",
+      "metadata": {},
+      "graph": {
+        "graph_id": "fincausal:fc26-191",
+        "frozen": false,
+        "provenance": "deterministic question parse (no gold)",
+        "nodes": [
+          {
+            "id": "asked",
+            "label": "unknown cause (answer)"
+          },
+          {
+            "id": "known",
+            "label": "Committee considered it appropriate not disclose actual targets these awards"
+          }
+        ],
+        "edges": [
+          {
+            "id": "Q1",
+            "source": "asked",
+            "target": "known",
+            "sign": 1,
+            "condition": "",
+            "assumptions": [],
+            "references": [],
+            "question": "What caused 'Committee considered it appropriate not disclose actual targets these awards'?",
+            "query": "Committee considered it appropriate not disclose actual targets these awards due to because as a result of driven by owing to reflecting resulting in led to caused by attributable || Committee considered it appropriate not disclose actual targets these awards",
+            "path": "asked_cause"
+          }
+        ],
+        "paths": {
+          "P": [
+            "Q1"
+          ]
+        }
+      },
+      "gold": {
+        "answer": "they were set at a time when the Company was a private company and as such the Board considers the underlying targets to be commercially sensitive",
+        "multi_step_heuristic": false
+      },
+      "methods": {
+        "ordinary": {
+          "prediction": "they were set at a time when the Company was a private company and as such the Board considers the underlying targets to be commercially sensitive",
+          "cited": "FC-263a83ae86",
+          "span_valid": true,
+          "explanation": "The excerpt states the targets were set when the Company was private and the Board considers them commercially sensitive.",
+          "em": 1.0,
+          "f1": 1.0,
+          "gold_retrieved": true,
+          "error": "Exact match.",
+          "queries": [
+            "Why has the Committee considered it appropriate not to disclose the actual targets for these awards?"
+          ],
+          "retrieved": [
+            {
+              "id": "FC-263a83ae86",
+              "text": "The Committee has considered it appropriate not to disclose the actual targets for these awards as they were set at a time when the Company was a private company and as such the Board considers the underlying targets to be commercially sensitive.",
+              "gold": true
+            },
+            {
+              "id": "FC-42b189c403",
+              "text": "Whilst the 2016/17 Adjusted PBT outcome of £332m (at 2015/16 exchange rates; £462m at reported rates) is above threshold, Christopher Bailey decided that he did not wish to be considered for any bonus in respect of 2016/17 in light of the underlying financial performance of the business for the year. The Committee considered his decision and deemed it to be appropriate. His bonus payment for 2016/17 will therefore be nil.",
+              "gold": false
+            },
+            {
+              "id": "FC-ce81e14406",
+              "text": "In 2017 there was an increase in the number and timing of Remuneration Committee meetings to ensure we have adequate time to completely consider market and business context for future targets. The 2018 LTIP targets were agreed closer to the sign off date of this report, thereby taking full account of the prevailing external economic environment and investors' views, which can change quickly due to market and political sentiment.",
+              "gold": false
+            }
+          ]
+        },
+        "multi_query": {
+          "prediction": "they were set at a time when the Company was a private company and as such the Board considers the underlying targets to be commercially sensitive",
+          "cited": "FC-263a83ae86",
+          "span_valid": true,
+          "explanation": "The excerpt says the targets were set when the Company was private, so the Board considers them commercially sensitive.",
+          "em": 1.0,
+          "f1": 1.0,
+          "gold_retrieved": true,
+          "error": "Exact match.",
+          "queries": [
+            "remuneration committee does not disclose actual targets commercially sensitive incentive awards",
+            "annual bonus performance targets not disclosed prospectively competitive harm retrospective disclosure"
+          ],
+          "retrieved": [
+            {
+              "id": "FC-263a83ae86",
+              "text": "The Committee has considered it appropriate not to disclose the actual targets for these awards as they were set at a time when the Company was a private company and as such the Board considers the underlying targets to be commercially sensitive.",
+              "gold": true
+            },
+            {
+              "id": "FC-4ddc48dfa4",
+              "text": "The objectives themselves are considered commercially sensitive and will therefore be disclosed on a retrospective basis in next year's annual report on remuneration (as long as such targets are no longer considered commercially sensitive at that point). This bonus is wholly payable in cash.",
+              "gold": false
+            },
+            {
+              "id": "FC-8bca5368d5",
+              "text": "The proposed target levels for the year have been set to be challenging relative to the business plan. The Committee feels that specific targets relating to the 2017/18 bonus scheme are currently commercially sensitive and as such will not be disclosed.",
+              "gold": false
+            }
+          ]
+        },
+        "graph_guided": {
+          "prediction": "they were set at a time when the Company was a private company and as such the Board considers the underlying targets to be commercially sensitive",
+          "cited": "FC-263a83ae86",
+          "span_valid": true,
+          "explanation": "The excerpt explicitly gives the reason: targets were set when the Company was private and the Board considers them commercially sensitive.",
+          "em": 1.0,
+          "f1": 1.0,
+          "gold_retrieved": true,
+          "error": "Exact match.",
+          "queries": [
+            "Committee considered it appropriate not disclose actual targets these awards due to because as a result of driven by owing to reflecting resulting in led to caused by attributable",
+            "Committee considered it appropriate not disclose actual targets these awards"
+          ],
+          "retrieved": [
+            {
+              "id": "FC-263a83ae86",
+              "text": "The Committee has considered it appropriate not to disclose the actual targets for these awards as they were set at a time when the Company was a private company and as such the Board considers the underlying targets to be commercially sensitive.",
+              "gold": true
+            },
+            {
+              "id": "FC-50acbfebd1",
+              "text": "Quality Incentive Contract (QICs) bonuses were £6.9m (2016: £1.1m) as a result of improved performance against Transport for London (TfL) quality targets, reflecting route restructuring by TfL due to congestion.",
+              "gold": false
+            },
+            {
+              "id": "FC-42b189c403",
+              "text": "Whilst the 2016/17 Adjusted PBT outcome of £332m (at 2015/16 exchange rates; £462m at reported rates) is above threshold, Christopher Bailey decided that he did not wish to be considered for any bonus in respect of 2016/17 in light of the underlying financial performance of the business for the year. The Committee considered his decision and deemed it to be appropriate. His bonus payment for 2016/17 will therefore be nil.",
+              "gold": false
+            }
+          ]
+        },
+        "oracle": {
+          "prediction": "they were set at a time when the Company was a private company and as such the Board considers the underlying targets to be commercially sensitive",
+          "cited": "FC-263a83ae86",
+          "span_valid": true,
+          "explanation": "The excerpt states the targets were set when the Company was private and the Board considers them commercially sensitive.",
+          "em": 1.0,
+          "f1": 1.0,
+          "gold_retrieved": true,
+          "error": "Exact match.",
+          "queries": [],
+          "retrieved": [
+            {
+              "id": "FC-263a83ae86",
+              "text": "The Committee has considered it appropriate not to disclose the actual targets for these awards as they were set at a time when the Company was a private company and as such the Board considers the underlying targets to be commercially sensitive.",
+              "gold": true
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "run": {
+    "label": "dev",
+    "backend": "llm",
+    "status": "computed",
+    "provider": "claude_cli",
+    "model": "claude-sonnet-5-5",
+    "llm_cache_namespace": "bench_v1",
+    "repeats": 1,
+    "budget_passages": 3,
+    "created_utc": "2026-10-12T21:33:19+00:00",
+    "wall_time_s": 9.5,
+    "usage": {
+      "llm_responses": 60,
+      "cost_usd_recorded": 0.3426,
+      "mean_latency_s": 3.4183333333333334
+    }
+  },
+  "dataset": {
+    "citation": "Moreno-Sandoval et al. (2026), The Financial Document Causality Detection Shared Task (FinCausal 2026), FNP@LREC 2026.",
+    "paper": "https://aclanthology.org/2026.fnp-1.11/",
+    "dataset_doi": "https://doi.org/10.21950/H7RKHH",
+    "license": "CC-BY-NC-SA-4.0",
+    "files": {
+      "train_en_2000.csv": "https://edatos.consorciomadrono.es/api/access/datafile/51166",
+      "test_en_500.csv": "https://edatos.consorciomadrono.es/api/access/datafile/51165",
+      "readme-en.txt": "https://edatos.consorciomadrono.es/api/access/datafile/51163"
+    },
+    "format": "CSV ';'-separated: id;context;question;answer (train). Test has no answer column (gold withheld by organisers).",
+    "split": "dev_internal",
+    "n_cases": 12,
+    "n_passages": 212,
+    "n_distractor_passages": 200,
+    "corpus_note": "Controlled retrieval corpus constructed for this project: every evaluated case's own context plus 200 distractor contexts from the other internal split. FinCausal is an extractive QA dataset, not a native document-retrieval benchmark.",
+    "split_note": "dev_internal = deterministic ~20% hash split of the official training file (the official test gold is not public).",
+    "multi_step_note": "The released CSV does not mark multi-step chains; the subgroup flag (>=2 causal connectives in the gold context) is a heuristic computed in the evaluation layer only.",
+    "has_gold": true
+  },
+  "config": {
+    "profile": "dev",
+    "split": "dev_internal",
+    "n": 12,
+    "n_distractors": 200,
+    "budget": 3,
+    "repeats": 1
+  }
+}

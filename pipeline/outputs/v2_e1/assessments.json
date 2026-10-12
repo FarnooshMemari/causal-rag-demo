@@ -1,0 +1,259 @@
+{
+  "version": "e1_v2",
+  "provenance": "POST-HOC correction written on 2026-10-05 AFTER inspecting v1 E1 results (v1 labelled E1 'supported' on realised McDonald's Q2 revenue growth and treated Home Depot's falling sales as contradiction). Because it was designed after seeing v1 outputs on this event, any v2 result here is not an independent test; the definition must be validated on at least one other event before use. v1 config/graph.json, prompts, outputs and cache are unchanged.",
+  "conditions": {
+    "ordinary": [
+      {
+        "repeat": 0,
+        "edge_id": "E1",
+        "label": "insufficient_evidence",
+        "supporting_evidence": [],
+        "contradicting_evidence": [],
+        "context_evidence": [
+          {
+            "doc_id": "D08_fomc_minutes_2023_06",
+            "chunk_id": "D08_fomc_minutes_2023_06#c031",
+            "quote": "participants generally noted that consumer spending so far this year had been stronger than expected.",
+            "evidence_type": "demand_context",
+            "citation_status": "valid"
+          },
+          {
+            "doc_id": "D14_homedepot_q2fy23_8k",
+            "chunk_id": "D14_homedepot_q2fy23_8k#c005",
+            "quote": "Customer transactions (in millions) | 459.1 | 467.4 | (1.8)",
+            "evidence_type": "historical_results",
+            "citation_status": "valid"
+          },
+          {
+            "doc_id": "D01_census_retail_2023_07",
+            "chunk_id": "D01_census_retail_2023_07#c001",
+            "quote": "were $696.4 billion, up 0.7 percent (±0.5 percent) from the previous month, and up 3.2 percent (±0.7 percent) above July 2022.",
+            "evidence_type": "historical_results",
+            "citation_status": "valid"
+          }
+        ],
+        "conflict": false,
+        "explanation": "No excerpt has a company attributing raised, lowered or maintained forward guidance to consumer demand. The excerpts give macro context (FOMC: spending stronger than expected; Census: July sales up 0.7%) and realised company data (Home Depot transactions down 1.8%), with no guidance link.",
+        "validated_label": "insufficient_evidence",
+        "meets_v2_criteria": true,
+        "explanation_numbers_not_in_quotes": [],
+        "conflict_observed": false,
+        "code": 0,
+        "note": "evidence_type tags are model-assigned; code verifies quotes, not the semantics of the tags"
+      },
+      {
+        "repeat": 1,
+        "edge_id": "E1",
+        "label": "insufficient_evidence",
+        "supporting_evidence": [],
+        "contradicting_evidence": [],
+        "context_evidence": [
+          {
+            "doc_id": "D08_fomc_minutes_2023_06",
+            "chunk_id": "D08_fomc_minutes_2023_06#c031",
+            "quote": "participants generally noted that consumer spending so far this year had been stronger than expected.",
+            "evidence_type": "demand_context",
+            "citation_status": "valid"
+          },
+          {
+            "doc_id": "D09_beige_book_2023_07",
+            "chunk_id": "D09_beige_book_2023_07#c004",
+            "quote": "Consumer demand ticked down, although elevated profit margins buoyed overall sales figures.",
+            "evidence_type": "other_context",
+            "citation_status": "valid"
+          },
+          {
+            "doc_id": "D01_census_retail_2023_07",
+            "chunk_id": "D01_census_retail_2023_07#c001",
+            "quote": "up 0.7 percent (±0.5 percent) from the previous month, and up 3.2 percent (±0.7 percent) above July 2022.",
+            "evidence_type": "historical_results",
+            "citation_status": "valid"
+          }
+        ],
+        "conflict": false,
+        "explanation": "No excerpt shows a company attributing raised, lowered or maintained forward guidance to consumer demand. The FOMC minutes describe spending as stronger than expected, and Census reports realised July sales growth. Both describe demand or past results only, with no link to forward earnings or guidance, so the evidence is insufficient.",
+        "validated_label": "insufficient_evidence",
+        "meets_v2_criteria": true,
+        "explanation_numbers_not_in_quotes": [],
+        "conflict_observed": false,
+        "code": 0,
+        "note": "evidence_type tags are model-assigned; code verifies quotes, not the semantics of the tags"
+      },
+      {
+        "repeat": 2,
+        "edge_id": "E1",
+        "label": "insufficient_evidence",
+        "supporting_evidence": [],
+        "contradicting_evidence": [],
+        "context_evidence": [
+          {
+            "doc_id": "D08_fomc_minutes_2023_06",
+            "chunk_id": "D08_fomc_minutes_2023_06#c031",
+            "quote": "participants generally noted that consumer spending so far this year had been stronger than expected.",
+            "evidence_type": "demand_context",
+            "citation_status": "valid"
+          },
+          {
+            "doc_id": "D14_homedepot_q2fy23_8k",
+            "chunk_id": "D14_homedepot_q2fy23_8k#c005",
+            "quote": "Customer transactions (in millions) | 459.1 | 467.4 | (1.8)",
+            "evidence_type": "historical_results",
+            "citation_status": "valid"
+          },
+          {
+            "doc_id": "D01_census_retail_2023_07",
+            "chunk_id": "D01_census_retail_2023_07#c001",
+            "quote": "were $696.4 billion, up 0.7 percent (±0.5 percent) from the previous month",
+            "evidence_type": "historical_results",
+            "citation_status": "valid"
+          }
+        ],
+        "conflict": false,
+        "explanation": "No excerpt has a company tying raised, lowered or maintained guidance to consumer demand. The FOMC minutes and Census release describe demand and realised sales (stronger spending, +0.7% m/m) without any guidance link. Home Depot's excerpt shows only historical results (transactions down 1.8%), with no outlook attribution. Evidence is insufficient.",
+        "validated_label": "insufficient_evidence",
+        "meets_v2_criteria": true,
+        "explanation_numbers_not_in_quotes": [],
+        "conflict_observed": false,
+        "code": 0,
+        "note": "evidence_type tags are model-assigned; code verifies quotes, not the semantics of the tags"
+      }
+    ],
+    "graph_guided": [
+      {
+        "repeat": 0,
+        "edge_id": "E1",
+        "label": "insufficient_evidence",
+        "supporting_evidence": [],
+        "contradicting_evidence": [],
+        "context_evidence": [
+          {
+            "doc_id": "D14_homedepot_q2fy23_8k",
+            "chunk_id": "D14_homedepot_q2fy23_8k#c001",
+            "quote": "The company reaffirmed fiscal 2023 guidance:",
+            "evidence_type": "guidance_unchanged",
+            "citation_status": "valid"
+          },
+          {
+            "doc_id": "D14_homedepot_q2fy23_8k",
+            "chunk_id": "D14_homedepot_q2fy23_8k#c001",
+            "quote": "While there was strength in categories associated with smaller projects, we did see continued pressure in certain big-ticket, discretionary categories.",
+            "evidence_type": "demand_context",
+            "citation_status": "valid"
+          },
+          {
+            "doc_id": "D08_fomc_minutes_2023_06",
+            "chunk_id": "D08_fomc_minutes_2023_06#c026",
+            "quote": "Given the continued strength in labor market conditions and the resilience of consumer spending, however, the staff saw the possibility of the economy continuing to grow slowly and avoiding a downturn",
+            "evidence_type": "demand_context",
+            "citation_status": "valid"
+          },
+          {
+            "doc_id": "D19_pg_q4fy23_8k",
+            "chunk_id": "D19_pg_q4fy23_8k#c010",
+            "quote": "The Company said its current outlook estimates a net benefit of around $400 million after-tax from favorable commodity costs net of unfavorable foreign exchange.",
+            "evidence_type": "other_context",
+            "citation_status": "valid"
+          }
+        ],
+        "conflict": false,
+        "explanation": "Home Depot reaffirmed guidance with mixed demand (small-project strength, big-ticket pressure) but no explicit demand attribution of an outlook change. FOMC minutes describe resilient spending only as general economic context. P&G's outlook is tied to commodity costs and FX, not consumer demand. No excerpt explicitly links improved guidance to stronger demand, nor shows the offsetting-mechanism contradiction.",
+        "validated_label": "insufficient_evidence",
+        "meets_v2_criteria": true,
+        "explanation_numbers_not_in_quotes": [],
+        "conflict_observed": false,
+        "code": 0,
+        "note": "evidence_type tags are model-assigned; code verifies quotes, not the semantics of the tags"
+      },
+      {
+        "repeat": 1,
+        "edge_id": "E1",
+        "label": "insufficient_evidence",
+        "supporting_evidence": [],
+        "contradicting_evidence": [],
+        "context_evidence": [
+          {
+            "doc_id": "D14_homedepot_q2fy23_8k",
+            "chunk_id": "D14_homedepot_q2fy23_8k#c001",
+            "quote": "The company reaffirmed fiscal 2023 guidance:",
+            "evidence_type": "guidance_unchanged",
+            "citation_status": "valid"
+          },
+          {
+            "doc_id": "D14_homedepot_q2fy23_8k",
+            "chunk_id": "D14_homedepot_q2fy23_8k#c001",
+            "quote": "While there was strength in categories associated with smaller projects, we did see continued pressure in certain big-ticket, discretionary categories.",
+            "evidence_type": "demand_context",
+            "citation_status": "valid"
+          },
+          {
+            "doc_id": "D08_fomc_minutes_2023_06",
+            "chunk_id": "D08_fomc_minutes_2023_06#c026",
+            "quote": "Given the continued strength in labor market conditions and the resilience of consumer spending, however, the staff saw the possibility of the economy continuing to grow slowly and avoiding a downturn",
+            "evidence_type": "demand_context",
+            "citation_status": "valid"
+          },
+          {
+            "doc_id": "D19_pg_q4fy23_8k",
+            "chunk_id": "D19_pg_q4fy23_8k#c010",
+            "quote": "P&G expects fiscal year 2024 all-in sales growth in the range of three to four percent versus the prior year.",
+            "evidence_type": "other_context",
+            "citation_status": "valid"
+          }
+        ],
+        "conflict": false,
+        "explanation": "Pre-release context only. Home Depot reaffirmed guidance and described mixed demand (small-project strength, big-ticket pressure) without tying guidance to demand strength. The FOMC minutes note resilient consumer spending but give no company guidance link. P&G gives an outlook with no stated demand attribution. No quote explicitly attributes improved guidance to stronger demand, or shows strong demand failing to lift expectations alongside an offsetting mechanism.",
+        "validated_label": "insufficient_evidence",
+        "meets_v2_criteria": true,
+        "explanation_numbers_not_in_quotes": [],
+        "conflict_observed": false,
+        "code": 0,
+        "note": "evidence_type tags are model-assigned; code verifies quotes, not the semantics of the tags"
+      },
+      {
+        "repeat": 2,
+        "edge_id": "E1",
+        "label": "insufficient_evidence",
+        "supporting_evidence": [],
+        "contradicting_evidence": [],
+        "context_evidence": [
+          {
+            "doc_id": "D14_homedepot_q2fy23_8k",
+            "chunk_id": "D14_homedepot_q2fy23_8k#c001",
+            "quote": "The company reaffirmed fiscal 2023 guidance:",
+            "evidence_type": "guidance_unchanged",
+            "citation_status": "valid"
+          },
+          {
+            "doc_id": "D14_homedepot_q2fy23_8k",
+            "chunk_id": "D14_homedepot_q2fy23_8k#c001",
+            "quote": "While there was strength in categories associated with smaller projects, we did see continued pressure in certain big-ticket, discretionary categories.",
+            "evidence_type": "demand_context",
+            "citation_status": "valid"
+          },
+          {
+            "doc_id": "D08_fomc_minutes_2023_06",
+            "chunk_id": "D08_fomc_minutes_2023_06#c026",
+            "quote": "Given the continued strength in labor market conditions and the resilience of consumer spending, however, the staff saw the possibility of the economy continuing to grow slowly",
+            "evidence_type": "demand_context",
+            "citation_status": "valid"
+          },
+          {
+            "doc_id": "D19_pg_q4fy23_8k",
+            "chunk_id": "D19_pg_q4fy23_8k#c010",
+            "quote": "P&G expects fiscal year 2024 all-in sales growth in the range of three to four percent versus the prior year.",
+            "evidence_type": "other_context",
+            "citation_status": "valid"
+          }
+        ],
+        "conflict": false,
+        "explanation": "Home Depot reaffirmed guidance, noting mixed demand (small-project strength, big-ticket pressure), but did not link guidance to consumer demand strength. The FOMC minutes describe resilient spending without an earnings link. P&G gives an outlook with no explicit demand attribution. No excerpt ties an outlook change to stronger demand, and none shows an offsetting mechanism.",
+        "validated_label": "insufficient_evidence",
+        "meets_v2_criteria": true,
+        "explanation_numbers_not_in_quotes": [],
+        "conflict_observed": false,
+        "code": 0,
+        "note": "evidence_type tags are model-assigned; code verifies quotes, not the semantics of the tags"
+      }
+    ]
+  }
+}

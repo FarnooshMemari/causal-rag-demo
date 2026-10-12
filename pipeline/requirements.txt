@@ -1,0 +1,8 @@
+# Python 3.11+ (tested on 3.12.11)
+requests>=2.31
+beautifulsoup4>=4.12
+lxml>=5.0
+pdfplumber>=0.11
+pytest>=8.0  # tests only
+# LLM: no SDK needed. Default provider is the locally authenticated `claude` CLI (Claude Code >= 2.1);
+# optional anthropic/openai providers use plain HTTP via `requests` (see README).

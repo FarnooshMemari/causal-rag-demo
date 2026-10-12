@@ -1,0 +1,125 @@
+EX-99.1
+2
+hd_exhibit991x7302023.htm
+EX-99.1
+Document
+Exhibit 99.1
+The Home Depot Announces Second Quarter Fiscal 2023 Results;
+Reaffirms Fiscal 2023 Guidance;
+Announces $15 Billion Share Repurchase Authorization
+ATLANTA, August 15, 2023 -- The Home Depot®, the world's largest home improvement retailer, today reported sales of $42.9 billion for the second quarter of fiscal 2023, a decrease of 2.0% from the second quarter of fiscal 2022. Comparable sales for the second quarter of fiscal 2023 decreased 2.0%, and comparable sales in the U.S. decreased 2.0%.
+Net earnings for the second quarter of fiscal 2023 were $4.7 billion, or $4.65 per diluted share, compared with net earnings of $5.2 billion, or $5.05 per diluted share, in the same period of fiscal 2022.
+“We were pleased with our performance in the second quarter,” said Ted Decker, chair, president and CEO. “While there was strength in categories associated with smaller projects, we did see continued pressure in certain big-ticket, discretionary categories. We remain very positive on the medium-to-long term outlook for home improvement and our ability to grow share in a large and fragmented market. Our associates did an outstanding job delivering value and service for our customers throughout the quarter and I would like to thank them for their dedication and hard work.”
+Fiscal 2023 Guidance
+The company reaffirmed fiscal 2023 guidance:
+•Sales and comparable sales to decline between 2% and 5% compared to fiscal 2022
+•Operating margin rate to be between 14.3% and 14.0%
+•Tax rate of approximately 24.5%
+•Interest expense of approximately $1.8 billion
+•Diluted earnings-per-share-percent-decline between 7% and 13% compared to fiscal 2022
+Share Repurchase Authorization
+The board of directors also authorized a new $15 billion share repurchase program effective August 15, 2023, replacing its previous authorization.
+The Home Depot will conduct a conference call today at 9 a.m. ET to discuss information included in this news release and related matters. The conference call will be available in its entirety through a webcast and replay at ir.homedepot.com/events-and-presentations.
+At the end of the second quarter, the company operated a total of 2,326 retail stores in all 50 states, the District of Columbia, Puerto Rico, the U.S. Virgin Islands, Guam, 10 Canadian provinces and Mexico. The Company employs over 470,000 associates. The Home Depot's stock is traded on the New York Stock Exchange (NYSE: HD) and is included in the Dow Jones industrial average and Standard & Poor's 500 index.
+###
+Forward-looking statements speak only as of the date they are made, and we do not undertake to update these statements other than as required by law. You are advised, however, to review any further disclosures we make on related subjects in our filings with the Securities and Exchange Commission and in our other public statements.
+For more information, contact:
+Financial Community | News Media
+Isabel Janci | Sara Gorman
+Vice President of Investor Relations and Treasurer | Senior Director of Corporate Communications
+770-384-2666 | 770-384-2852
+isabel_janci@homedepot.com | sara_gorman@homedepot.com
+THE HOME DEPOT, INC.
+CONDENSED CONSOLIDATED STATEMENTS OF EARNINGS
+(Unaudited)
+Three Months Ended | Six Months Ended
+in millions, except per share data | July 30, 2023 | July 31, 2022 | % Change | July 30, 2023 | July 31, 2022 | % Change
+Net sales | 42,916 | 43,792 | (2.0) | 80,173 | 82,700 | (3.1)
+Cost of sales | 28,759 | 29,309 | (1.9) | 53,459 | 55,072 | (2.9)
+Gross profit | 14,157 | 14,483 | (2.3) | 26,714 | 27,628 | (3.3)
+Operating expenses:
+Selling, general and administrative | 6,915 | 6,657 | 3.9 | 13,270 | 13,267 | —
+Depreciation and amortization | 653 | 616 | 6.0 | 1,304 | 1,222 | 6.7
+Total operating expenses | 7,568 | 7,273 | 4.1 | 14,574 | 14,489 | 0.6
+Operating income | 6,589 | 7,210 | (8.6) | 12,140 | 13,139 | (7.6)
+Interest and other (income) expense:
+Interest income and other, net | (41) | (2) | N/M | (74) | (5) | N/M
+Interest expense | 469 | 381 | 23.1 | 943 | 753 | 25.2
+Interest and other, net | 428 | 379 | 12.9 | 869 | 748 | 16.2
+Earnings before provision for income taxes | 6,161 | 6,831 | (9.8) | 11,271 | 12,391 | (9.0)
+Provision for income taxes | 1,502 | 1,658 | (9.4) | 2,739 | 2,987 | (8.3)
+Net earnings | 4,659 | 5,173 | (9.9) | 8,532 | 9,404 | (9.3)
+Basic weighted average common shares | 1,000 | 1,023 | (2.2) | 1,005 | 1,026 | (2.0)
+Basic earnings per share | 4.66 | 5.06 | (7.9) | 8.49 | 9.17 | (7.4)
+Diluted weighted average common shares | 1,003 | 1,025 | (2.1) | 1,008 | 1,030 | (2.1)
+Diluted earnings per share | 4.65 | 5.05 | (7.9) | 8.46 | 9.13 | (7.3)
+Three Months Ended | Six Months Ended
+Selected Sales Data (1) | July 30, 2023 | July 31, 2022 | % Change | July 30, 2023 | July 31, 2022 | % Change
+Customer transactions (in millions) | 459.1 | 467.4 | (1.8) | 850.1 | 878.1 | (3.2)
+Average ticket | 90.07 | 90.02 | 0.1 | 90.92 | 90.82 | 0.1
+Sales per retail square foot | 684.65 | 700.62 | (2.3) | 638.50 | 661.27 | (3.4)
+—————
+(1)Selected Sales Data does not include results for HD Supply.
+THE HOME DEPOT, INC.
+CONDENSED CONSOLIDATED BALANCE SHEETS
+(Unaudited)
+in millions | July 30, 2023 | July 31, 2022 | January 29, 2023
+Assets
+Current assets:
+Cash and cash equivalents | 2,814 | 1,259 | 2,757
+Receivables, net | 3,836 | 3,725 | 3,317
+Merchandise inventories | 23,265 | 26,088 | 24,886
+Other current assets | 1,915 | 1,869 | 1,511
+Total current assets | 31,830 | 32,941 | 32,471
+Net property and equipment | 25,879 | 25,247 | 25,631
+Operating lease right-of-use assets | 7,139 | 6,132 | 6,941
+Goodwill | 7,664 | 7,451 | 7,444
+Other assets | 3,875 | 4,054 | 3,958
+Total assets | 76,387 | 75,825 | 76,445
+Liabilities and Stockholders' Equity
+Current liabilities:
+Short-term debt | — | 539 | —
+Accounts payable | 12,104 | 14,348 | 11,443
+Accrued salaries and related expenses | 2,022 | 2,204 | 1,991
+Current installments of long-term debt | 1,352 | 1,218 | 1,231
+Current operating lease liabilities | 1,011 | 919 | 945
+Other current liabilities | 7,738 | 8,606 | 7,500
+Total current liabilities | 24,227 | 27,834 | 23,110
+Long-term debt, excluding current installments | 40,754 | 39,271 | 41,962
+Long-term operating lease liabilities | 6,376 | 5,431 | 6,226
+Other long-term liabilities | 3,695 | 3,052 | 3,585
+Total liabilities | 75,052 | 75,588 | 74,883
+Total stockholders’ equity | 1,335 | 237 | 1,562
+Total liabilities and stockholders’ equity | 76,387 | 75,825 | 76,445
+THE HOME DEPOT, INC.
+CONDENSED CONSOLIDATED STATEMENTS OF CASH FLOWS
+(Unaudited)
+Six Months Ended
+in millions | July 30, 2023 | July 31, 2022
+Cash Flows from Operating Activities:
+Net earnings | 8,532 | 9,404
+Reconciliation of net earnings to net cash provided by operating activities:
+Depreciation and amortization | 1,588 | 1,473
+Stock-based compensation expense | 215 | 196
+Changes in working capital | 1,774 | (3,889)
+Changes in deferred income taxes | (48) | (95)
+Other operating activities | 144 | 93
+Net cash provided by operating activities | 12,205 | 7,182
+Cash Flows from Investing Activities:
+Capital expenditures | (1,697) | (1,447)
+Payments for businesses acquired, net | (215) | —
+Other investing activities | 10 | (14)
+Net cash used in investing activities | (1,902) | (1,461)
+Cash Flows from Financing Activities:
+Repayments of short-term debt, net | — | (496)
+Proceeds from long-term debt, net of discounts | — | 3,957
+Repayments of long-term debt | (1,130) | (2,366)
+Repurchases of common stock | (4,954) | (3,962)
+Proceeds from sales of common stock | 175 | 142
+Cash dividends | (4,215) | (3,910)
+Other financing activities | (142) | (163)
+Net cash used in financing activities | (10,266) | (6,798)
+Change in cash and cash equivalents | 37 | (1,077)
+Effect of exchange rate changes on cash and cash equivalents | 20 | (7)
+Cash and cash equivalents at beginning of year | 2,757 | 2,343
+Cash and cash equivalents at end of year | 2,814 | 1,259

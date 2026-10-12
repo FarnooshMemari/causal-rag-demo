@@ -1,0 +1,84 @@
+{
+  "graph_id": "retail_sales_two_pathway_v1",
+  "frozen_before_returns": true,
+  "frozen_note": "Written from textbook macro-finance theory before corpus retrieval or LLM assessment; no asset-return data is used anywhere in this project. Signs are conditional THEORETICAL assumptions, not estimates.",
+  "nodes": [
+    {"id": "consumption", "label": "Consumer spending strength (retail-sales surprise)", "observable_at_cutoff": "Census advance retail sales, July 2023: +0.7% m/m vs +0.4% consensus"},
+    {"id": "earnings_expectations", "label": "Expected corporate earnings / revenues"},
+    {"id": "equity_support", "label": "Equity prices (cash-flow channel)"},
+    {"id": "inflation_pressure", "label": "Inflation pressure"},
+    {"id": "rate_expectations", "label": "Expected policy / interest-rate path"},
+    {"id": "equity_valuation_pressure", "label": "Equity prices (discount-rate channel)"}
+  ],
+  "edges": [
+    {
+      "id": "E1",
+      "source": "consumption",
+      "target": "earnings_expectations",
+      "pathway": "P1_earnings",
+      "assumed_sign": 1,
+      "condition": "Holds when higher nominal sales translate into revenue growth without offsetting margin compression (e.g. from input-cost or wage pressure, discounting, or mix shift).",
+      "mechanism": "Retail and food-service sales are revenue for consumer-facing firms; aggregate profits are pro-cyclical.",
+      "references": ["10.1016/j.jacceco.2013.10.001", "10.1086/296344"],
+      "retrieval_question": "Is strong consumer spending or retail demand raising company sales, revenue, earnings, or guidance?",
+      "retrieval_query": "consumer spending demand sales revenue earnings guidance outlook comparable sales customers traffic net sales increased raised guidance"
+    },
+    {
+      "id": "E2",
+      "source": "earnings_expectations",
+      "target": "equity_support",
+      "pathway": "P1_earnings",
+      "assumed_sign": 1,
+      "condition": "Holds holding discount rates constant (cash-flow news channel).",
+      "mechanism": "Present-value identity: higher expected cash flows raise prices for given discount rates.",
+      "references": ["10.1093/rfs/1.3.195"],
+      "retrieval_question": "Do companies report or expect higher earnings, profit growth, buybacks, or shareholder returns?",
+      "retrieval_query": "earnings per share net income operating income profit growth record results share repurchase dividend shareholders raised full-year outlook"
+    },
+    {
+      "id": "E3",
+      "source": "consumption",
+      "target": "inflation_pressure",
+      "pathway": "P2_rates",
+      "assumed_sign": 1,
+      "condition": "Holds when the economy is near capacity / the labour market is tight, so excess demand shows up in prices rather than quantities.",
+      "mechanism": "Demand-pull inflation / Phillips-curve logic.",
+      "references": ["10.1257/aer.p20161003"],
+      "retrieval_question": "Is strong demand or consumer spending adding to inflation pressure, prices, or wage growth?",
+      "retrieval_query": "demand inflation pressure prices rising consumer prices wage growth tight labor market services inflation core inflation elevated"
+    },
+    {
+      "id": "E4",
+      "source": "inflation_pressure",
+      "target": "rate_expectations",
+      "pathway": "P2_rates",
+      "assumed_sign": 1,
+      "condition": "Holds when inflation is above target and the central bank's reaction function is data-dependent.",
+      "mechanism": "Policy-rule (Taylor-rule) reaction to inflation; long rates react to macro news.",
+      "references": ["10.1016/0167-2231(93)90009-L", "10.1257/0002828053828446"],
+      "retrieval_question": "Does inflation or strong economic data imply further Federal Reserve rate increases or keeping rates higher?",
+      "retrieval_query": "inflation federal funds rate additional policy firming increase rates restrictive data dependent tighten hold rates steady"
+    },
+    {
+      "id": "E5",
+      "source": "rate_expectations",
+      "target": "equity_valuation_pressure",
+      "pathway": "P2_rates",
+      "assumed_sign": -1,
+      "condition": "Holds when the rate increase is not offset by stronger expected cash flows; sign of the TOTAL effect of good macro news on equities is state-dependent.",
+      "mechanism": "Higher discount rates lower present values; good news can be bad for stocks in expansions.",
+      "references": ["10.1111/j.1540-6261.2005.00760.x", "10.1111/j.1540-6261.2005.00742.x", "10.1093/rfs/6.3.683", "10.1016/j.jinteco.2007.02.004"],
+      "retrieval_question": "Are higher interest rates or tighter financial conditions weighing on valuations, asset prices, credit, or demand?",
+      "retrieval_query": "higher interest rates tighter financial credit conditions borrowing costs asset prices valuations equity prices weigh on economic activity"
+    }
+  ],
+  "pathways": {
+    "P1_earnings": {"edges": ["E1", "E2"], "net_hypothesised_sign_on_equities": 1},
+    "P2_rates": {"edges": ["E3", "E4", "E5"], "net_hypothesised_sign_on_equities": -1}
+  },
+  "ordinary_baseline": {
+    "question": "How did the July 2023 retail sales report affect the outlook for US equities?",
+    "query": "July 2023 retail sales consumer spending effect outlook equities stocks economy"
+  },
+  "theory_vs_evidence_note": "References establish that each mechanism is theoretically/empirically plausible IN GENERAL. Whether a mechanism was ACTIVE around 2023-08-15 is judged only from the point-in-time corpus by the evidence assessor."
+}

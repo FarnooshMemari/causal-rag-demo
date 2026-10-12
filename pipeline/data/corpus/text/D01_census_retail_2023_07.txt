@@ -1,0 +1,115 @@
+FOR RELEASE AT 8:30 AM EDT, TUESDAY, AUGUST 15, 2023
+ADVANCE MONTHLY SALES FOR RETAIL AND FOOD SERVICES, JULY 2023
+Release Number: CB23-127
+August 15, 2023 — The U.S. Census Bureau announced the following advance estimates of U.S. retail and
+food services sales for July 2023:
+Percent Change in Retail and Food Services Sales from
+ADVANCE MONTHLY SALES
+Previous Month
+Data adjusted for seasonal variation and holiday and trading-day differences but not for
+price changes.
+2
+July 2023 $696.4 billion 0.7%
+June 2023
+$691.3 billion 0.3%
+0
+(revised)
+Next release: September 14, 2023
+-2
+May June July
+* The 90 percent confidence interval includes zero. There is insufficient statistical
+evidence to conclude that the actual change is different from zero. Total Ex Auto Auto Gen Mer
+Data adjusted for seasonal variation and holiday and trading-day differences but Source:U.S. Census Bureau, Advanced Monthly Retail Trade Survey,
+not for price changes. Source: U.S. Census Bureau, Advanced Monthly Retail August 15, 2023
+Trade Survey, August 15, 2023
+Advance Estimates of U.S. Retail and Food Services
+Advance estimates of U.S. retail and food services sales for July 2023, adjusted for seasonal variation and
+holiday and trading-day differences, but not for price changes, were $696.4 billion, up 0.7 percent (±0.5
+percent) from the previous month, and up 3.2 percent (±0.7 percent) above July 2022. Total sales for the
+May 2023 through July 2023 period were up 2.3 percent (±0.4 percent) from the same period a year ago.
+The May 2023 to June 2023 percent change was revised from up 0.2 percent (±0.5 percent)* to up 0.3
+percent (±0.2 percent).
+Retail trade sales were up 0.6 percent (±0.5 percent) from June 2023, and up 2.0 percent (±0.5 percent)
+above last year. Nonstore retailers were up 10.3 percent (±1.6 percent) from last year, while food services
+and drinking places were up 11.9 percent (±2.3 percent) from July 2022.
+General Information
+The August 2023 Advance Monthly Retail report is scheduled for release on September 14, 2023 at 8:30
+a.m. EDT. View the full schedule in the Economic Briefing Room: <https://www.census.gov/economic-
+indicators/>. The full text and tables of this release can be found at <www.census.gov/retail/>.
+Data Inquiries Media Inquiries
+Economic Indicators Division, Retail Indicator Branch Public Information Office
+301-763-2713 301-763-3030
+eid.retail.indicator.branch@census.gov pio@census.gov
+
+EXPLANATORY NOTES
+The advance estimates are based on a subsample of the Census Bureau’s full retail and food services
+sample. A stratified random sampling method is used to select approximately 4,800 retail and food
+services firms whose sales are then weighted and benchmarked to represent the complete universe of
+over three million retail and food services firms. For more information on how data is collected for the
+Advance Monthly Retail Trade Survey, see our methodology page at:
+<https://www.census.gov/retail/marts/how_surveys_are_collected.html>.
+Survey Description
+The U.S. Census Bureau conducts the Advance Monthly Retail Trade and Food Services Survey to provide
+an early estimate of monthly sales by kind of business for retail and food service firms located in the
+United States. Each month, questionnaires are mailed to a probability sample of approximately 4,800
+employer firms selected from the larger Monthly Retail Trade Survey. Advance sales estimates are
+computed using a link relative estimator. For each detailed industry, we compute a ratio of current-to-
+previous month weighted sales using data from units for which we have obtained usable responses for
+both the current and previous month. For each detailed industry, the advance total sales estimates for the
+current month is computed by multiplying this ratio by the preliminary sales estimate for the previous
+month (derived from the larger MRTS) at the appropriate industry level. Total estimates for broader
+industries are computed as the sum of the detailed industry estimates. The link relative estimate is used
+because imputation is not performed for most nonrespondents in MARTS. For a limited number of
+nonresponding companies that have influential effects on the estimates, sales may be estimated based on
+historical performance of that company. The monthly estimates are benchmarked to the annual survey
+estimates from the Annual Retail Trade Survey once available. The estimates are adjusted for seasonal
+variation and holiday and trading day differences. Additional information on MARTS and MRTS can be
+found on the Census Bureau website at: <www.census.gov/retail>.
+The Census Bureau has reviewed this data product to ensure appropriate access, use, and
+disclosure avoidance protection of the confidential source data (Project No. 7504206, Disclosure Review
+Board (DRB) approval number: CBDRB-FY23-001).
+Reliability of Estimates
+Because the estimates presented in this report are based on a sample survey, they contain sampling error
+and nonsampling error.
+Sampling error is the difference between the estimate and the result that would be obtained from a
+complete enumeration of the sampling frame conducted under the same survey conditions. This error
+Data Inquiries Media Inquiries
+Economic Indicators Division, Retail Indicator Branch Public Information Office
+301-763-2713 301-763-3030
+eid.retail.indicator.branch@census.gov pio@census.gov
+
+occurs because only a subset of the entire sampling frame is measured in a sample survey. Standard errors
+and coefficients of variation (CV), as given in Table 3 of this report, are estimated measures of sampling
+variation.
+The margin of sampling error, as used on page 1, gives a range about the estimate which is a 90 percent
+confidence interval. If, for example, the percent change estimate is +1.2 percent and its estimated
+standard error is 0.9 percent, then the margin of sampling error is ±1.753 x 0.9 percent or ±1.6 percent,
+and the 90 percent confidence interval is –0.4 percent to +2.8 percent. If the interval contains 0, then one
+does not have sufficient evidence to conclude at the 90 percent confidence level that the change is
+different from zero and therefore the change is not statistically significant. Estimated changes shown in
+the text are statistically significant unless otherwise noted. For a monthly total, the median estimated
+coefficient of variation is given. The resulting confidence interval is the estimated value ±1.753 x CV x (the
+estimated monthly total). The Census Bureau recommends that individuals using estimates in this report
+incorporate this information into their analyses, as sampling error could affect the conclusions drawn from
+the estimates.
+Nonsampling error encompasses all other factors that contribute to the total error of a sample survey
+estimate. This type of error can occur because of nonresponse, insufficient coverage of the universe of
+retail businesses, mistakes in the recording and coding of data, and other errors of collection, response,
+coverage, or processing. Although nonsampling error is not measured directly, the Census Bureau employs
+quality control procedures throughout the process to minimize this type of error.
+Weather Information
+For information on the impact of weather events on the compilation of this report, please see the
+Frequently Asked Questions (FAQs) on our website at:
+<www.census.gov/retail/marts_weather_faqs.html>
+RESOURCES
+The Rest of the Consumer Spending Story
+Retail and services together represent what’s commonly referred to as consumer spending. Quarterly
+Services Survey (QSS) revenue comprises roughly 2/3 of the personal consumption expenditures
+component of the U.S. Gross Domestic Product (GDP) measured by the Bureau of Economic Analysis (BEA).
+The first quarter 2023 Quarterly Services Report was released on June 9, 2023 at 10:00 AM. Learn about
+historical revenue trends for certain industries going back 15 years and other data, such as in-patient days
+and discharges for hospitals, by visiting <https://www.census.gov/services/index.html>
+Data Inquiries Media Inquiries
+Economic Indicators Division, Retail Indicator Branch Public Information Office
+301-763-2713 301-763-3030
+eid.retail.indicator.branch@census.gov pio@census.gov

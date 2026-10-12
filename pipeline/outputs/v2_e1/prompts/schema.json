@@ -1,0 +1,152 @@
+{
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "assessments"
+  ],
+  "properties": {
+    "assessments": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "edge_id",
+          "label",
+          "supporting_evidence",
+          "contradicting_evidence",
+          "context_evidence",
+          "conflict",
+          "explanation"
+        ],
+        "properties": {
+          "edge_id": {
+            "type": "string"
+          },
+          "label": {
+            "type": "string",
+            "enum": [
+              "supported",
+              "contradicted",
+              "insufficient_evidence"
+            ]
+          },
+          "supporting_evidence": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "doc_id",
+                "chunk_id",
+                "quote",
+                "evidence_type"
+              ],
+              "properties": {
+                "doc_id": {
+                  "type": "string"
+                },
+                "chunk_id": {
+                  "type": "string"
+                },
+                "quote": {
+                  "type": "string"
+                },
+                "evidence_type": {
+                  "type": "string",
+                  "enum": [
+                    "demand_linked_outlook_change",
+                    "demand_without_outlook_improvement",
+                    "offsetting_mechanism",
+                    "historical_results",
+                    "guidance_unchanged",
+                    "demand_context",
+                    "other_context"
+                  ]
+                }
+              }
+            }
+          },
+          "contradicting_evidence": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "doc_id",
+                "chunk_id",
+                "quote",
+                "evidence_type"
+              ],
+              "properties": {
+                "doc_id": {
+                  "type": "string"
+                },
+                "chunk_id": {
+                  "type": "string"
+                },
+                "quote": {
+                  "type": "string"
+                },
+                "evidence_type": {
+                  "type": "string",
+                  "enum": [
+                    "demand_linked_outlook_change",
+                    "demand_without_outlook_improvement",
+                    "offsetting_mechanism",
+                    "historical_results",
+                    "guidance_unchanged",
+                    "demand_context",
+                    "other_context"
+                  ]
+                }
+              }
+            }
+          },
+          "context_evidence": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "doc_id",
+                "chunk_id",
+                "quote",
+                "evidence_type"
+              ],
+              "properties": {
+                "doc_id": {
+                  "type": "string"
+                },
+                "chunk_id": {
+                  "type": "string"
+                },
+                "quote": {
+                  "type": "string"
+                },
+                "evidence_type": {
+                  "type": "string",
+                  "enum": [
+                    "demand_linked_outlook_change",
+                    "demand_without_outlook_improvement",
+                    "offsetting_mechanism",
+                    "historical_results",
+                    "guidance_unchanged",
+                    "demand_context",
+                    "other_context"
+                  ]
+                }
+              }
+            }
+          },
+          "conflict": {
+            "type": "boolean"
+          },
+          "explanation": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  }
+}

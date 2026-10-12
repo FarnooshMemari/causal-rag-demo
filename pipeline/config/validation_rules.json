@@ -1,0 +1,23 @@
+{
+  "version": "validator_v1",
+  "status": "exploratory",
+  "provenance": "Written on 2026-10-12 AFTER the v1 and E1-v2 results were inspected. Term lists encode what each node means; they are not tuned on labels of any external benchmark. Because E1 and E5 failures were known when writing them, BNY validator results on this event are regression checks, not an independent test. config/graph.json is unchanged.",
+  "event_release_et": "2023-08-15T08:30:00-04:00",
+  "edges": {
+    "E1": {"source_terms": ["consumer", "demand", "spending", "customer", "traffic", "retail sales", "comparable sales"],
+           "target_terms": ["earnings", "revenue", "sales", "profit", "guidance", "outlook", "eps"],
+           "requires_forward_looking": true},
+    "E2": {"source_terms": ["earnings", "profit", "eps", "income", "results", "outlook", "guidance"],
+           "target_terms": ["stock", "equity", "equities", "share price", "shares", "valuation", "s&p", "market capitalization"],
+           "requires_forward_looking": false},
+    "E3": {"source_terms": ["demand", "spending", "consumer", "labor market", "labour market", "tight"],
+           "target_terms": ["inflation", "prices", "price", "wage"],
+           "requires_forward_looking": false},
+    "E4": {"source_terms": ["inflation", "price"],
+           "target_terms": ["federal funds", "policy", "rate", "rates", "firming", "tighten", "restrictive"],
+           "requires_forward_looking": false},
+    "E5": {"source_terms": ["interest rate", "rates", "tightening", "yields", "financial conditions", "borrowing costs"],
+           "target_terms": ["equity", "equities", "stock", "valuation", "asset prices", "share price", "s&p"],
+           "requires_forward_looking": false}
+  }
+}

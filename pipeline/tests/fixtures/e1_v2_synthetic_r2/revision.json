@@ -1,0 +1,22 @@
+{
+  "revision": "e1_v2_fixtures_r2",
+  "recorded_utc": "2026-10-06T05:18:05+00:00",
+  "type": "test-design revision (synthetic only), recorded AFTER seeing r1 results (FX1 FAIL attributed to the in-text synthetic marker)",
+  "change": "Prepend the instruction below, unchanged, to every fixture's user input. Nothing else changes.",
+  "instruction": "This is a synthetic interpretation exercise. Treat the fictional statements as given premises and classify whether they support, contradict, or provide insufficient evidence for E1 within the hypothetical scenario. Do not assess their authenticity or claim real-world evidence.",
+  "placement": "first paragraph of the user message, followed by a blank line, then the unchanged v2 build_prompt output",
+  "unchanged": [
+    "fixture texts and synthetic markers (fixtures.json, sha256 below)",
+    "v2 system prompt",
+    "schema",
+    "build_prompt",
+    "validator",
+    "provider/model",
+    "expected labels"
+  ],
+  "fixtures_file": "tests/fixtures/e1_v2_synthetic/fixtures.json",
+  "fixtures_sha256": "55ab6def6cb46d24c3bb9c9ee12b03bf38d0aeb3e08a91a3c4755a7ce3048a96",
+  "r1_expected_labels_sha256": "3796d563ae52c26efad4933cffee7ea3ba7d5595c3c34e8542d508de814c24f2",
+  "calls": "exactly one per fixture, max 3, no retries, no tuning",
+  "scope": "Tests scenario interpretation of controlled premises. Does not test real-document assessment, retrieval, or real-world causal validity; passing does not resolve real-world false-negative risk."
+}

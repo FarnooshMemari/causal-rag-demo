@@ -1,0 +1,102 @@
+{
+  "_doc": "SYNTHETIC r2 test-design revision: scenario interpretation of fictional premises; not real evidence.",
+  "revision": "e1_v2_fixtures_r2",
+  "instruction": "This is a synthetic interpretation exercise. Treat the fictional statements as given premises and classify whether they support, contradict, or provide insufficient evidence for E1 within the hypothetical scenario. Do not assess their authenticity or claim real-world evidence.",
+  "fixtures": [
+    {
+      "fixture_id": "FX1",
+      "synthetic": true,
+      "expected": "supported",
+      "result": "PASS",
+      "edge_id": "E1",
+      "label": "supported",
+      "supporting_evidence": [
+        {
+          "doc_id": "SYNTHETIC_FX1",
+          "chunk_id": "SYNTHETIC_FX1#c000",
+          "quote": "Because consumer demand strengthened markedly during the quarter, the company raised its full-year earnings per share guidance to $4.10-$4.30 from $3.80-$4.00.",
+          "evidence_type": "demand_linked_outlook_change",
+          "citation_status": "valid"
+        }
+      ],
+      "contradicting_evidence": [],
+      "context_evidence": [],
+      "conflict": false,
+      "explanation": "The excerpt itself attributes a raised full-year EPS guidance to strengthened consumer demand, stating both the causal link and the outlook change explicitly. It was published before the retail-sales release, so it is economic context, not a reaction to the surprise. No offsetting mechanism is quoted.",
+      "validated_label": "supported",
+      "meets_v2_criteria": true,
+      "explanation_numbers_not_in_quotes": [],
+      "conflict_observed": false,
+      "code": 1,
+      "note": "evidence_type tags are model-assigned; code verifies quotes, not the semantics of the tags"
+    },
+    {
+      "fixture_id": "FX2",
+      "synthetic": true,
+      "expected": "contradicted",
+      "result": "PASS",
+      "edge_id": "E1",
+      "label": "contradicted",
+      "supporting_evidence": [],
+      "contradicting_evidence": [
+        {
+          "doc_id": "SYNTHETIC_FX2",
+          "chunk_id": "SYNTHETIC_FX2#c000",
+          "quote": "consumer demand for its products was stronger than planned in the quarter. However, the company kept its full-year earnings guidance unchanged at $2.00-$2.10 per share",
+          "evidence_type": "demand_without_outlook_improvement",
+          "citation_status": "valid"
+        },
+        {
+          "doc_id": "SYNTHETIC_FX2",
+          "chunk_id": "SYNTHETIC_FX2#c000",
+          "quote": "higher ingredient and wage costs compressed operating margins and offset the benefit of stronger demand.",
+          "evidence_type": "offsetting_mechanism",
+          "citation_status": "valid"
+        }
+      ],
+      "context_evidence": [],
+      "conflict": true,
+      "explanation": "The excerpt (published pre-release, so context) states stronger demand but unchanged guidance at $2.00-$2.10 per share, and names the offsetting mechanism: higher ingredient and wage costs compressing margins. This meets the contradicted criteria: demand failing to improve outlook plus an explicit offset.",
+      "validated_label": "contradicted",
+      "meets_v2_criteria": true,
+      "explanation_numbers_not_in_quotes": [],
+      "conflict_observed": false,
+      "code": -1,
+      "note": "evidence_type tags are model-assigned; code verifies quotes, not the semantics of the tags"
+    },
+    {
+      "fixture_id": "FX3",
+      "synthetic": true,
+      "expected": "insufficient_evidence",
+      "result": "PASS",
+      "edge_id": "E1",
+      "label": "insufficient_evidence",
+      "supporting_evidence": [],
+      "contradicting_evidence": [],
+      "context_evidence": [
+        {
+          "doc_id": "SYNTHETIC_FX3",
+          "chunk_id": "SYNTHETIC_FX3#c000",
+          "quote": "Example Apparel Co. reported second-quarter revenue of $1.2 billion, up 9% from the prior year.",
+          "evidence_type": "historical_results",
+          "citation_status": "valid"
+        },
+        {
+          "doc_id": "SYNTHETIC_FX3",
+          "chunk_id": "SYNTHETIC_FX3#c000",
+          "quote": "The company reaffirmed its full-year earnings guidance of $1.50-$1.60 per share.",
+          "evidence_type": "guidance_unchanged",
+          "citation_status": "valid"
+        }
+      ],
+      "conflict": false,
+      "explanation": "The excerpt shows realised revenue growth of 9% and reaffirmed guidance, but neither is attributed to consumer demand. Guidance was unchanged, not improved, and no offsetting mechanism is stated. It was published before the release, so it is context only. This is insufficient evidence under the E1 criteria.",
+      "validated_label": "insufficient_evidence",
+      "meets_v2_criteria": true,
+      "explanation_numbers_not_in_quotes": [],
+      "conflict_observed": false,
+      "code": 0,
+      "note": "evidence_type tags are model-assigned; code verifies quotes, not the semantics of the tags"
+    }
+  ]
+}

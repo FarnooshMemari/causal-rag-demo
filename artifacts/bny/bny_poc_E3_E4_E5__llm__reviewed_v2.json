@@ -1,0 +1,1411 @@
+{
+  "methods": {
+    "ordinary": [
+      {
+        "repeat": 0,
+        "queries": [
+          "July 2023 retail sales consumer spending effect outlook equities stocks economy"
+        ],
+        "routing": {
+          "all": [
+            "D09_beige_book_2023_07#c005",
+            "D01_census_retail_2023_07#c000",
+            "D01_census_retail_2023_07#c001",
+            "D09_beige_book_2023_07#c006",
+            "D16_visa_q3fy23_8k#c007",
+            "D09_beige_book_2023_07#c004",
+            "D14_homedepot_q2fy23_8k#c007",
+            "D08_fomc_minutes_2023_06#c018",
+            "D14_homedepot_q2fy23_8k#c008"
+          ]
+        },
+        "n_queries": 1,
+        "evidence_words": 1280,
+        "future_chunks_retrieved": [],
+        "edges": [
+          {
+            "edge_id": "E3",
+            "assessor_label": "insufficient_evidence",
+            "citation_checked_label": "insufficient_evidence",
+            "explanation": "No excerpt states that consumer spending strength added to inflation. Beige Book notes show wage pressures easing and labor markets less tight, while Richmond reports robust but easing price growth; spending and prices only co-occur.",
+            "evidence_kind": "association",
+            "assumption_status": "unmet",
+            "alternative_explanations": [],
+            "validator": {
+              "edge_id": "E3",
+              "assessor_label": "insufficient_evidence",
+              "judgment": "insufficient_evidence",
+              "downgraded": false,
+              "reasons": [
+                "Validator agrees with the assessor label."
+              ],
+              "checks": {
+                "citation": true,
+                "point_in_time": true,
+                "relationship": true,
+                "mechanism": false,
+                "conflict": false,
+                "contradiction": "correlation_only",
+                "assumptions": "unmet",
+                "confounding": []
+              },
+              "quotes": {
+                "supporting_evidence": [
+                  {
+                    "chunk_id": "D09_beige_book_2023_07#c005",
+                    "quote": "price growth eased slightly but remained robust, overall.",
+                    "citation_status": "valid",
+                    "kind": "target_only",
+                    "forward_looking": false,
+                    "contradiction_type": "co_movement",
+                    "confounders": []
+                  }
+                ],
+                "contradicting_evidence": [
+                  {
+                    "chunk_id": "D09_beige_book_2023_07#c006",
+                    "quote": "Labor markets became less tight, and wage pressures eased.",
+                    "citation_status": "valid",
+                    "kind": "co_mention",
+                    "forward_looking": false,
+                    "contradiction_type": "co_movement",
+                    "confounders": []
+                  }
+                ]
+              },
+              "disclaimer": "Wording-based safeguard; not proof of causality."
+            },
+            "original_validator": {
+              "judgment": "insufficient_evidence",
+              "reasons": [
+                "Validator agrees with the assessor label."
+              ]
+            }
+          },
+          {
+            "edge_id": "E4",
+            "assessor_label": "insufficient_evidence",
+            "citation_checked_label": "insufficient_evidence",
+            "explanation": "No excerpt links inflation or strong data to expected Fed rate increases or higher-for-longer rates. The Beige Book and retail release describe activity and prices only, so the link is not addressed.",
+            "evidence_kind": "none",
+            "assumption_status": "not_verified",
+            "alternative_explanations": [],
+            "validator": {
+              "edge_id": "E4",
+              "assessor_label": "insufficient_evidence",
+              "judgment": "insufficient_evidence",
+              "downgraded": false,
+              "reasons": [
+                "Evidence is missing or does not address the relationship."
+              ],
+              "checks": {
+                "citation": true,
+                "point_in_time": true,
+                "relationship": false,
+                "mechanism": false,
+                "conflict": false,
+                "contradiction": "none",
+                "assumptions": "not_verified",
+                "confounding": []
+              },
+              "quotes": {
+                "supporting_evidence": [],
+                "contradicting_evidence": []
+              },
+              "disclaimer": "Wording-based safeguard; not proof of causality."
+            },
+            "original_validator": {
+              "judgment": "insufficient_evidence",
+              "reasons": [
+                "Evidence is missing or does not address the relationship."
+              ]
+            }
+          },
+          {
+            "edge_id": "E5",
+            "assessor_label": "insufficient_evidence",
+            "citation_checked_label": "insufficient_evidence",
+            "explanation": "High rates are said to constrain household and business demand, but that concerns demand, not equity valuations. The S&P 500 rose sizably over the period, and no quote ties rates to lower equity prices.",
+            "evidence_kind": "association",
+            "assumption_status": "not_verified",
+            "alternative_explanations": [],
+            "validator": {
+              "edge_id": "E5",
+              "assessor_label": "insufficient_evidence",
+              "judgment": "insufficient_evidence",
+              "downgraded": false,
+              "reasons": [
+                "Evidence is missing or does not address the relationship."
+              ],
+              "checks": {
+                "citation": true,
+                "point_in_time": true,
+                "relationship": false,
+                "mechanism": false,
+                "conflict": false,
+                "contradiction": "correlation_only",
+                "assumptions": "not_verified",
+                "confounding": []
+              },
+              "quotes": {
+                "supporting_evidence": [
+                  {
+                    "chunk_id": "D09_beige_book_2023_07#c005",
+                    "quote": "high interest rates continued to constrain households' big-ticket goods purchases and businesses' project plans.",
+                    "citation_status": "valid",
+                    "kind": "off_target",
+                    "forward_looking": true,
+                    "contradiction_type": "co_movement",
+                    "confounders": []
+                  }
+                ],
+                "contradicting_evidence": [
+                  {
+                    "chunk_id": "D08_fomc_minutes_2023_06#c018",
+                    "quote": "The S&P 500 stock price index increased sizably, on net, over the intermeeting period, led by technology-related stocks.",
+                    "citation_status": "valid",
+                    "kind": "target_only",
+                    "forward_looking": false,
+                    "contradiction_type": "co_movement",
+                    "confounders": []
+                  }
+                ]
+              },
+              "disclaimer": "Wording-based safeguard; not proof of causality."
+            },
+            "original_validator": {
+              "judgment": "insufficient_evidence",
+              "reasons": [
+                "Validator agrees with the assessor label."
+              ]
+            }
+          }
+        ],
+        "paths": {
+          "paths": {
+            "P2_rates": {
+              "edges": [
+                "E3",
+                "E4",
+                "E5"
+              ],
+              "edge_states": [
+                "insufficient_evidence",
+                "insufficient_evidence",
+                "insufficient_evidence"
+              ],
+              "status": "incomplete",
+              "edges_supported": 0,
+              "edges_total": 3,
+              "unsupported_edges": [
+                "E3",
+                "E4",
+                "E5"
+              ],
+              "broken_by": [],
+              "hypothesised_sign_if_chain_holds": -1
+            }
+          },
+          "competing_pathways_both_supported": false,
+          "net_conclusion": null,
+          "net_conclusion_note": "Not computed: opposing pathways are kept separate; evidence labels are not effect sizes."
+        },
+        "original_paths": {
+          "paths": {
+            "P2_rates": {
+              "edges": [
+                "E3",
+                "E4",
+                "E5"
+              ],
+              "edge_states": [
+                "insufficient_evidence",
+                "insufficient_evidence",
+                "insufficient_evidence"
+              ],
+              "status": "incomplete",
+              "edges_supported": 0,
+              "edges_total": 3,
+              "unsupported_edges": [
+                "E3",
+                "E4",
+                "E5"
+              ],
+              "hypothesised_sign_if_chain_holds": -1
+            }
+          },
+          "competing_pathways_both_supported": false,
+          "net_conclusion": null,
+          "net_conclusion_note": "Not computed: opposing pathways are kept separate; evidence labels are not effect sizes."
+        }
+      }
+    ],
+    "multi_query": [
+      {
+        "repeat": 0,
+        "queries": [
+          "July 2023 US retail sales report stocks reaction",
+          "August 2023 retail sales beat expectations S&P 500 Treasury yields Fed outlook",
+          "July retail sales 0.7% rise Wall Street equities rate hike expectations"
+        ],
+        "routing": {
+          "all": [
+            "D01_census_retail_2023_07#c001",
+            "D01_census_retail_2023_07#c000",
+            "D17_mcdonalds_q2_2023_8k#c000",
+            "D08_fomc_minutes_2023_06#c008",
+            "D08_fomc_minutes_2023_06#c019",
+            "D14_homedepot_q2fy23_8k#c005",
+            "D08_fomc_minutes_2023_06#c017",
+            "D07_fomc_presser_2023_07_26#c013",
+            "D16_visa_q3fy23_8k#c008"
+          ]
+        },
+        "n_queries": 3,
+        "evidence_words": 1377,
+        "future_chunks_retrieved": [],
+        "edges": [
+          {
+            "edge_id": "E3",
+            "assessor_label": "insufficient_evidence",
+            "citation_checked_label": "insufficient_evidence",
+            "explanation": "The Census release shows sales up 0.7% but explicitly not adjusted for price changes, and no excerpt links spending strength to prices or wage growth. Only the spending node is described.",
+            "evidence_kind": "node_only",
+            "assumption_status": "not_verified",
+            "alternative_explanations": [],
+            "validator": {
+              "edge_id": "E3",
+              "assessor_label": "insufficient_evidence",
+              "judgment": "insufficient_evidence",
+              "downgraded": false,
+              "reasons": [
+                "Evidence is missing or does not address the relationship."
+              ],
+              "checks": {
+                "citation": true,
+                "point_in_time": true,
+                "relationship": false,
+                "mechanism": false,
+                "conflict": false,
+                "contradiction": "none",
+                "assumptions": "not_verified",
+                "confounding": []
+              },
+              "quotes": {
+                "supporting_evidence": [],
+                "contradicting_evidence": []
+              },
+              "disclaimer": "Wording-based safeguard; not proof of causality."
+            },
+            "original_validator": {
+              "judgment": "insufficient_evidence",
+              "reasons": [
+                "Evidence is missing or does not address the relationship."
+              ]
+            }
+          },
+          {
+            "edge_id": "E4",
+            "assessor_label": "insufficient_evidence",
+            "citation_checked_label": "insufficient_evidence",
+            "explanation": "Policy-rate expectations rose, but the minutes describe inflation news as mixed and inflation compensation little changed, so the rise is not attributed to inflation pressure. The Powell question only raises conditional possibilities about holding rates.",
+            "evidence_kind": "association",
+            "assumption_status": "not_verified",
+            "alternative_explanations": [
+              "strong economic data",
+              "central bank communications"
+            ],
+            "validator": {
+              "edge_id": "E4",
+              "assessor_label": "insufficient_evidence",
+              "judgment": "insufficient_evidence",
+              "downgraded": false,
+              "reasons": [
+                "Validator agrees with the assessor label."
+              ],
+              "checks": {
+                "citation": true,
+                "point_in_time": true,
+                "relationship": true,
+                "mechanism": false,
+                "conflict": false,
+                "contradiction": "none",
+                "assumptions": "not_verified",
+                "confounding": [
+                  "central bank communications",
+                  "strong economic data"
+                ]
+              },
+              "quotes": {
+                "supporting_evidence": [
+                  {
+                    "chunk_id": "D08_fomc_minutes_2023_06#c017",
+                    "quote": "The expected path of the policy rate implied by market quotes moved up notably over the intermeeting period.",
+                    "citation_status": "valid",
+                    "kind": "target_only",
+                    "forward_looking": true,
+                    "contradiction_type": "co_movement",
+                    "confounders": []
+                  }
+                ],
+                "contradicting_evidence": [
+                  {
+                    "chunk_id": "D08_fomc_minutes_2023_06#c017",
+                    "quote": "as measures of inflation compensation were little changed, on net, amid somewhat mixed news on inflation.",
+                    "citation_status": "valid",
+                    "kind": "off_target",
+                    "forward_looking": false,
+                    "contradiction_type": "co_movement",
+                    "confounders": [
+                      "inflation"
+                    ]
+                  }
+                ]
+              },
+              "disclaimer": "Wording-based safeguard; not proof of causality."
+            },
+            "original_validator": {
+              "judgment": "insufficient_evidence",
+              "reasons": [
+                "Validator agrees with the assessor label."
+              ]
+            }
+          },
+          {
+            "edge_id": "E5",
+            "assessor_label": "insufficient_evidence",
+            "citation_checked_label": "insufficient_evidence",
+            "explanation": "Higher policy-rate expectations and yields are noted, but no excerpt shows US equity valuations falling. Foreign equities were little changed despite the rise in yields, which is only weakly relevant to US equities.",
+            "evidence_kind": "none",
+            "assumption_status": "not_verified",
+            "alternative_explanations": [],
+            "validator": {
+              "edge_id": "E5",
+              "assessor_label": "insufficient_evidence",
+              "judgment": "insufficient_evidence",
+              "downgraded": false,
+              "reasons": [
+                "Validator agrees with the assessor label."
+              ],
+              "checks": {
+                "citation": true,
+                "point_in_time": true,
+                "relationship": false,
+                "mechanism": false,
+                "conflict": false,
+                "contradiction": "causal",
+                "assumptions": "not_verified",
+                "confounding": []
+              },
+              "quotes": {
+                "supporting_evidence": [],
+                "contradicting_evidence": [
+                  {
+                    "chunk_id": "D08_fomc_minutes_2023_06#c019",
+                    "quote": "Notwithstanding the rise in global yields, foreign equity prices, credit spreads, and risk sentiment in foreign markets were little changed over the intermeeting period.",
+                    "citation_status": "valid",
+                    "kind": "co_mention",
+                    "forward_looking": false,
+                    "contradiction_type": "counter_example",
+                    "confounders": []
+                  }
+                ]
+              },
+              "disclaimer": "Wording-based safeguard; not proof of causality."
+            },
+            "original_validator": {
+              "judgment": "insufficient_evidence",
+              "reasons": [
+                "Validator agrees with the assessor label."
+              ]
+            }
+          }
+        ],
+        "paths": {
+          "paths": {
+            "P2_rates": {
+              "edges": [
+                "E3",
+                "E4",
+                "E5"
+              ],
+              "edge_states": [
+                "insufficient_evidence",
+                "insufficient_evidence",
+                "insufficient_evidence"
+              ],
+              "status": "incomplete",
+              "edges_supported": 0,
+              "edges_total": 3,
+              "unsupported_edges": [
+                "E3",
+                "E4",
+                "E5"
+              ],
+              "broken_by": [],
+              "hypothesised_sign_if_chain_holds": -1
+            }
+          },
+          "competing_pathways_both_supported": false,
+          "net_conclusion": null,
+          "net_conclusion_note": "Not computed: opposing pathways are kept separate; evidence labels are not effect sizes."
+        },
+        "original_paths": {
+          "paths": {
+            "P2_rates": {
+              "edges": [
+                "E3",
+                "E4",
+                "E5"
+              ],
+              "edge_states": [
+                "insufficient_evidence",
+                "insufficient_evidence",
+                "insufficient_evidence"
+              ],
+              "status": "incomplete",
+              "edges_supported": 0,
+              "edges_total": 3,
+              "unsupported_edges": [
+                "E3",
+                "E4",
+                "E5"
+              ],
+              "hypothesised_sign_if_chain_holds": -1
+            }
+          },
+          "competing_pathways_both_supported": false,
+          "net_conclusion": null,
+          "net_conclusion_note": "Not computed: opposing pathways are kept separate; evidence labels are not effect sizes."
+        }
+      }
+    ],
+    "graph_guided": [
+      {
+        "repeat": 0,
+        "queries": [
+          "demand inflation pressure prices rising consumer prices wage growth tight labor market services inflation core inflation elevated",
+          "inflation federal funds rate additional policy firming increase rates restrictive data dependent tighten hold rates steady",
+          "higher interest rates tighter financial credit conditions borrowing costs asset prices valuations equity prices weigh on economic activity"
+        ],
+        "routing": {
+          "E3": [
+            "D07_fomc_presser_2023_07_26#c002",
+            "D08_fomc_minutes_2023_06#c025",
+            "D08_fomc_minutes_2023_06#c015"
+          ],
+          "E4": [
+            "D08_fomc_minutes_2023_06#c047",
+            "D08_fomc_minutes_2023_06#c043",
+            "D08_fomc_minutes_2023_06#c039"
+          ],
+          "E5": [
+            "D08_fomc_minutes_2023_06#c005",
+            "D08_fomc_minutes_2023_06#c016",
+            "D07_fomc_presser_2023_07_26#c004"
+          ]
+        },
+        "n_queries": 3,
+        "evidence_words": 1411,
+        "future_chunks_retrieved": [],
+        "edges": [
+          {
+            "edge_id": "E3",
+            "assessor_label": "insufficient_evidence",
+            "citation_checked_label": "insufficient_evidence",
+            "explanation": "The excerpts show a tight labor market (labor demand exceeding supply), which is the condition, and inflation that is elevated but easing. None of them states that consumer spending strength or retail sales are adding to inflation. The evidence is node-level or concerns wages, so it is insufficient.",
+            "evidence_kind": "node_only",
+            "assumption_status": "met",
+            "alternative_explanations": [
+              "supply–demand imbalances in goods and labor markets",
+              "nominal wage growth",
+              "energy and food prices"
+            ],
+            "validator": {
+              "edge_id": "E3",
+              "assessor_label": "insufficient_evidence",
+              "judgment": "insufficient_evidence",
+              "downgraded": false,
+              "reasons": [
+                "Evidence is missing or does not address the relationship."
+              ],
+              "checks": {
+                "citation": true,
+                "point_in_time": true,
+                "relationship": false,
+                "mechanism": false,
+                "conflict": false,
+                "contradiction": "correlation_only",
+                "assumptions": "met",
+                "confounding": [
+                  "energy and food prices",
+                  "nominal wage growth",
+                  "supply–demand imbalances in goods and labor markets"
+                ]
+              },
+              "quotes": {
+                "supporting_evidence": [
+                  {
+                    "chunk_id": "D07_fomc_presser_2023_07_26#c002",
+                    "quote": "labor demand still substantially exceeds the supply of available workers.",
+                    "citation_status": "valid",
+                    "kind": "off_target",
+                    "forward_looking": false,
+                    "contradiction_type": "co_movement",
+                    "confounders": []
+                  }
+                ],
+                "contradicting_evidence": [
+                  {
+                    "chunk_id": "D08_fomc_minutes_2023_06#c025",
+                    "quote": "Core nonhousing services inflation was projected to slow gradually as nominal wage growth eased further.",
+                    "citation_status": "valid",
+                    "kind": "target_only",
+                    "forward_looking": true,
+                    "contradiction_type": "co_movement",
+                    "confounders": [
+                      "inflation"
+                    ]
+                  }
+                ]
+              },
+              "disclaimer": "Wording-based safeguard; not proof of causality."
+            },
+            "original_validator": {
+              "judgment": "insufficient_evidence",
+              "reasons": [
+                "Validator agrees with the assessor label."
+              ]
+            }
+          },
+          {
+            "edge_id": "E4",
+            "assessor_label": "supported",
+            "citation_checked_label": "supported",
+            "explanation": "The June minutes tie elevated inflation and a tight labor market to a restrictive stance and expected further 2023 rate increases. They also stress a data-dependent approach, which meets the condition. The rate hold and slower pace are noted but do not contradict the link.",
+            "evidence_kind": "explicit_attribution",
+            "assumption_status": "met",
+            "alternative_explanations": [
+              "very tight labor market",
+              "cumulative tightening and policy lags"
+            ],
+            "validator": {
+              "edge_id": "E4",
+              "assessor_label": "supported",
+              "judgment": "supported",
+              "downgraded": false,
+              "reasons": [
+                "Plausible alternative drivers mentioned: cumulative tightening and policy lags, inflation, very tight labor market."
+              ],
+              "checks": {
+                "citation": true,
+                "point_in_time": true,
+                "relationship": true,
+                "mechanism": true,
+                "conflict": false,
+                "contradiction": "none",
+                "assumptions": "met",
+                "confounding": [
+                  "cumulative tightening and policy lags",
+                  "inflation",
+                  "very tight labor market"
+                ]
+              },
+              "quotes": {
+                "supporting_evidence": [
+                  {
+                    "chunk_id": "D08_fomc_minutes_2023_06#c039",
+                    "quote": "with inflation still well above the Committee's 2 percent goal and the labor market remaining very tight, maintaining a restrictive stance for monetary policy would be appropriate",
+                    "citation_status": "valid",
+                    "kind": "co_mention",
+                    "forward_looking": false,
+                    "contradiction_type": "co_movement",
+                    "confounders": [
+                      "inflation"
+                    ]
+                  },
+                  {
+                    "chunk_id": "D08_fomc_minutes_2023_06#c039",
+                    "quote": "Almost all participants noted that in their economic projections that they judged that additional increases in the target federal funds rate during 2023 would be appropriate.",
+                    "citation_status": "valid",
+                    "kind": "target_only",
+                    "forward_looking": true,
+                    "contradiction_type": "co_movement",
+                    "confounders": []
+                  }
+                ],
+                "contradicting_evidence": []
+              },
+              "disclaimer": "Wording-based safeguard; not proof of causality."
+            },
+            "original_validator": {
+              "judgment": "supported",
+              "reasons": [
+                "Plausible alternative drivers mentioned: cumulative tightening and policy lags, inflation, very tight labor market."
+              ]
+            }
+          },
+          {
+            "edge_id": "E5",
+            "assessor_label": "contradicted",
+            "citation_checked_label": "contradicted",
+            "explanation": "The minutes show the expected policy path and yields rising significantly while broad equity prices rose notably, the opposite of the hypothesised discount-rate effect. The presser notes tightening weighing on demand in housing and investment, not on equity valuations, so it supports the link only weakly.",
+            "evidence_kind": "association",
+            "assumption_status": "met",
+            "alternative_explanations": [
+              "resilient economic activity",
+              "reduced downside tail risks after debt limit resolution",
+              "improved sentiment on regional banks",
+              "narrower credit spreads",
+              "concentration in a few large-cap companies"
+            ],
+            "validator": {
+              "edge_id": "E5",
+              "assessor_label": "contradicted",
+              "judgment": "insufficient_evidence",
+              "downgraded": true,
+              "reasons": [
+                "Contradicting quotes show co-movement, offsetting only: concurrent movements are correlation and do not refute a ceteris-paribus mechanism (other drivers named: concentration in a few large-cap companies, improved sentiment on regional banks, narrower credit spreads, reduced downside tail risks after debt limit resolution, resilient economic activity)."
+              ],
+              "checks": {
+                "citation": true,
+                "point_in_time": true,
+                "relationship": false,
+                "mechanism": false,
+                "conflict": false,
+                "contradiction": "correlation_only",
+                "assumptions": "met",
+                "confounding": [
+                  "concentration in a few large-cap companies",
+                  "improved sentiment on regional banks",
+                  "narrower credit spreads",
+                  "reduced downside tail risks after debt limit resolution",
+                  "resilient economic activity"
+                ]
+              },
+              "quotes": {
+                "supporting_evidence": [
+                  {
+                    "chunk_id": "D07_fomc_presser_2023_07_26#c004",
+                    "quote": "We have been seeing the effects of our policy tightening on demand in the most interest rate–sensitive sectors of the economy, particularly housing and investment.",
+                    "citation_status": "valid",
+                    "kind": "off_target",
+                    "forward_looking": false,
+                    "contradiction_type": "co_movement",
+                    "confounders": []
+                  }
+                ],
+                "contradicting_evidence": [
+                  {
+                    "chunk_id": "D08_fomc_minutes_2023_06#c016",
+                    "quote": "Treasury yields and the expected future path for the federal funds rate shifted upward significantly. Meanwhile, broad equity prices also increased notably.",
+                    "citation_status": "valid",
+                    "kind": "co_mention",
+                    "forward_looking": true,
+                    "contradiction_type": "co_movement",
+                    "confounders": []
+                  },
+                  {
+                    "chunk_id": "D08_fomc_minutes_2023_06#c005",
+                    "quote": "Financial conditions indexes were roughly unchanged, as higher rates and a stronger dollar were offset by higher equity prices and narrower credit spreads.",
+                    "citation_status": "valid",
+                    "kind": "causal_statement",
+                    "forward_looking": false,
+                    "contradiction_type": "offsetting",
+                    "confounders": []
+                  }
+                ]
+              },
+              "disclaimer": "Wording-based safeguard; not proof of causality."
+            },
+            "original_validator": {
+              "judgment": "contradicted",
+              "reasons": [
+                "Validator agrees with the assessor label."
+              ]
+            }
+          }
+        ],
+        "paths": {
+          "paths": {
+            "P2_rates": {
+              "edges": [
+                "E3",
+                "E4",
+                "E5"
+              ],
+              "edge_states": [
+                "insufficient_evidence",
+                "supported",
+                "insufficient_evidence"
+              ],
+              "status": "incomplete",
+              "edges_supported": 1,
+              "edges_total": 3,
+              "unsupported_edges": [
+                "E3",
+                "E5"
+              ],
+              "broken_by": [],
+              "hypothesised_sign_if_chain_holds": -1
+            }
+          },
+          "competing_pathways_both_supported": false,
+          "net_conclusion": null,
+          "net_conclusion_note": "Not computed: opposing pathways are kept separate; evidence labels are not effect sizes."
+        },
+        "original_paths": {
+          "paths": {
+            "P2_rates": {
+              "edges": [
+                "E3",
+                "E4",
+                "E5"
+              ],
+              "edge_states": [
+                "insufficient_evidence",
+                "supported",
+                "contradicted"
+              ],
+              "status": "broken",
+              "edges_supported": 1,
+              "edges_total": 3,
+              "unsupported_edges": [
+                "E3",
+                "E5"
+              ],
+              "hypothesised_sign_if_chain_holds": -1
+            }
+          },
+          "competing_pathways_both_supported": false,
+          "net_conclusion": null,
+          "net_conclusion_note": "Not computed: opposing pathways are kept separate; evidence labels are not effect sizes."
+        }
+      }
+    ]
+  },
+  "graph": {
+    "graph_id": "retail_sales_two_pathway_v1",
+    "frozen": true,
+    "provenance": "Written from textbook macro-finance theory before corpus retrieval or LLM assessment; no asset-return data is used anywhere in this project. Signs are conditional THEORETICAL assumptions, not estimates.",
+    "nodes": [
+      {
+        "id": "consumption",
+        "label": "Consumer spending strength (retail-sales surprise)"
+      },
+      {
+        "id": "earnings_expectations",
+        "label": "Expected corporate earnings / revenues"
+      },
+      {
+        "id": "equity_support",
+        "label": "Equity prices (cash-flow channel)"
+      },
+      {
+        "id": "inflation_pressure",
+        "label": "Inflation pressure"
+      },
+      {
+        "id": "rate_expectations",
+        "label": "Expected policy / interest-rate path"
+      },
+      {
+        "id": "equity_valuation_pressure",
+        "label": "Equity prices (discount-rate channel)"
+      }
+    ],
+    "edges": [
+      {
+        "id": "E1",
+        "source": "consumption",
+        "target": "earnings_expectations",
+        "sign": 1,
+        "condition": "Holds when higher nominal sales translate into revenue growth without offsetting margin compression (e.g. from input-cost or wage pressure, discounting, or mix shift).",
+        "assumptions": [
+          "Retail and food-service sales are revenue for consumer-facing firms; aggregate profits are pro-cyclical."
+        ],
+        "references": [
+          "10.1016/j.jacceco.2013.10.001",
+          "10.1086/296344"
+        ],
+        "question": "Is strong consumer spending or retail demand raising company sales, revenue, earnings, or guidance?",
+        "query": "consumer spending demand sales revenue earnings guidance outlook comparable sales customers traffic net sales increased raised guidance",
+        "path": "P1_earnings"
+      },
+      {
+        "id": "E2",
+        "source": "earnings_expectations",
+        "target": "equity_support",
+        "sign": 1,
+        "condition": "Holds holding discount rates constant (cash-flow news channel).",
+        "assumptions": [
+          "Present-value identity: higher expected cash flows raise prices for given discount rates."
+        ],
+        "references": [
+          "10.1093/rfs/1.3.195"
+        ],
+        "question": "Do companies report or expect higher earnings, profit growth, buybacks, or shareholder returns?",
+        "query": "earnings per share net income operating income profit growth record results share repurchase dividend shareholders raised full-year outlook",
+        "path": "P1_earnings"
+      },
+      {
+        "id": "E3",
+        "source": "consumption",
+        "target": "inflation_pressure",
+        "sign": 1,
+        "condition": "Holds when the economy is near capacity / the labour market is tight, so excess demand shows up in prices rather than quantities.",
+        "assumptions": [
+          "Demand-pull inflation / Phillips-curve logic."
+        ],
+        "references": [
+          "10.1257/aer.p20161003"
+        ],
+        "question": "Is strong demand or consumer spending adding to inflation pressure, prices, or wage growth?",
+        "query": "demand inflation pressure prices rising consumer prices wage growth tight labor market services inflation core inflation elevated",
+        "path": "P2_rates"
+      },
+      {
+        "id": "E4",
+        "source": "inflation_pressure",
+        "target": "rate_expectations",
+        "sign": 1,
+        "condition": "Holds when inflation is above target and the central bank's reaction function is data-dependent.",
+        "assumptions": [
+          "Policy-rule (Taylor-rule) reaction to inflation; long rates react to macro news."
+        ],
+        "references": [
+          "10.1016/0167-2231(93)90009-L",
+          "10.1257/0002828053828446"
+        ],
+        "question": "Does inflation or strong economic data imply further Federal Reserve rate increases or keeping rates higher?",
+        "query": "inflation federal funds rate additional policy firming increase rates restrictive data dependent tighten hold rates steady",
+        "path": "P2_rates"
+      },
+      {
+        "id": "E5",
+        "source": "rate_expectations",
+        "target": "equity_valuation_pressure",
+        "sign": -1,
+        "condition": "Holds when the rate increase is not offset by stronger expected cash flows; sign of the TOTAL effect of good macro news on equities is state-dependent.",
+        "assumptions": [
+          "Higher discount rates lower present values; good news can be bad for stocks in expansions."
+        ],
+        "references": [
+          "10.1111/j.1540-6261.2005.00760.x",
+          "10.1111/j.1540-6261.2005.00742.x",
+          "10.1093/rfs/6.3.683",
+          "10.1016/j.jinteco.2007.02.004"
+        ],
+        "question": "Are higher interest rates or tighter financial conditions weighing on valuations, asset prices, credit, or demand?",
+        "query": "higher interest rates tighter financial credit conditions borrowing costs asset prices valuations equity prices weigh on economic activity",
+        "path": "P2_rates"
+      }
+    ],
+    "paths": {
+      "P1_earnings": [
+        "E1",
+        "E2"
+      ],
+      "P2_rates": [
+        "E3",
+        "E4",
+        "E5"
+      ]
+    }
+  },
+  "edges_assessed": [
+    "E3",
+    "E4",
+    "E5"
+  ],
+  "evidence": {
+    "D01_census_retail_2023_07#c000": {
+      "source": "D01_census_retail_2023_07",
+      "title": null,
+      "available_at_et": "2023-08-15T08:30:00-04:00",
+      "text": "FOR RELEASE AT 8:30 AM EDT, TUESDAY, AUGUST 15, 2023\nADVANCE MONTHLY SALES FOR RETAIL AND FOOD SERVICES, JULY 2023\nRelease Number: CB23-127\nAugust 15, 2023 — The U.S. Census Bureau announced the following advance estimates of U.S. retail and\nfood services sales for July 2023:\nPercent Change in Retail and Food Services Sales from\nADVANCE MONTHLY SALES\nPrevious Month\nData adjusted for seasonal variation and holiday and trading-day differences but not for\nprice changes.\n2\nJuly 2023 $696.4 billion 0.7%\nJune 2023\n$691.3 billion 0.3%\n0\n(revised)\nNext release: September 14, 2023\n-2\nMay June July\n* The 90 percent confidence interval includes zero. There is insufficient statistical\nevidence to conclude that the actual change is different from zero. Total Ex Auto Auto Gen Mer\nData adjusted for seasonal variation and holiday and trading-day differences but Source:U.S. Census Bureau, Advanced Monthly Retail Trade Survey,\nnot for price changes. Source: U.S. Census Bureau, Advanced Monthly Retail August 15, 2023\nTrade Survey, August 15, 2023"
+    },
+    "D01_census_retail_2023_07#c001": {
+      "source": "D01_census_retail_2023_07",
+      "title": null,
+      "available_at_et": "2023-08-15T08:30:00-04:00",
+      "text": "Advance Estimates of U.S. Retail and Food Services\nAdvance estimates of U.S. retail and food services sales for July 2023, adjusted for seasonal variation and\nholiday and trading-day differences, but not for price changes, were $696.4 billion, up 0.7 percent (±0.5\npercent) from the previous month, and up 3.2 percent (±0.7 percent) above July 2022. Total sales for the\nMay 2023 through July 2023 period were up 2.3 percent (±0.4 percent) from the same period a year ago.\nThe May 2023 to June 2023 percent change was revised from up 0.2 percent (±0.5 percent)* to up 0.3\npercent (±0.2 percent).\nRetail trade sales were up 0.6 percent (±0.5 percent) from June 2023, and up 2.0 percent (±0.5 percent)\nabove last year. Nonstore retailers were up 10.3 percent (±1.6 percent) from last year, while food services\nand drinking places were up 11.9 percent (±2.3 percent) from July 2022.\nGeneral Information\nThe August 2023 Advance Monthly Retail report is scheduled for release on September 14, 2023 at 8:30"
+    },
+    "D07_fomc_presser_2023_07_26#c002": {
+      "source": "D07_fomc_presser_2023_07_26",
+      "title": null,
+      "available_at_et": "2023-08-09T13:52:12-04:00",
+      "text": "demand in the labor market are coming into better balance. The labor force participation rate has\nmoved up since last year, particularly for individuals aged 25 to 54 years. Nominal wage growth\nhas shown some signs of easing, and job vacancies have declined so far this year. While the\njobs-to-workers gap has narrowed, labor demand still substantially exceeds the supply of\navailable workers.\nInflation remains well above our longer-run goal of 2 percent. Over the 12 months\nending in May, total PCE prices rose 3.8 percent; excluding the volatile food and energy\ncategories, core PCE prices rose 4.6 percent. In June, the 12-month change in the consumer\nprice index, or CPI, came in at 3.0 percent, and the change in the core, core CPI, was 4.8 percent.\nInflation has moderated somewhat since the middle of last year. Nonetheless, the process\nof getting inflation back down to 2 percent has a long way to go. Despite elevated inflation,"
+    },
+    "D07_fomc_presser_2023_07_26#c004": {
+      "source": "D07_fomc_presser_2023_07_26",
+      "title": null,
+      "available_at_et": "2023-08-09T13:52:12-04:00",
+      "text": "policy rate by 5¼ percentage points since early last year. We have been seeing the effects of our\npolicy tightening on demand in the most interest rate–sensitive sectors of the economy,\nparticularly housing and investment. It will take time, however, for the full effects of our\nongoing monetary restraint to be realized, especially on inflation. In addition, the economy is\nfacing headwinds from tighter credit conditions for households and businesses, which are likely\nto weigh on economic activity, hiring, and inflation.\nIn determining the extent of additional policy firming that may be appropriate to return\ninflation to 2 percent over time, the Committee will take into account the cumulative tightening\nof monetary policy, the lags with which monetary policy affects economic activity and inflation,\nand economic and financial developments. We will continue to make our decisions meeting by\nmeeting, based on the totality of the incoming data and their implications for the outlook for\neconomic activity and inflation, as well as the balance of risks."
+    },
+    "D07_fomc_presser_2023_07_26#c013": {
+      "source": "D07_fomc_presser_2023_07_26",
+      "title": null,
+      "available_at_et": "2023-08-09T13:52:12-04:00",
+      "text": "we did take that step today.\nMICHELLE SMITH. Nick.\nNICK TIMIRAOS. Nick Timiraos of the Wall Street Journal. Chair Powell, markets\nwidely believe the median FOMC participant’s inflation forecast from June for the fourth quarter\nof this year will be too high, given autos and shelter, and that by September, that may warrant a\ndownward revision in the inflation forecast of 20 to 30 basis points. Would that type of inflation\nprogress be enough to hold rates steady from here, or do you need to see below-trend growth and\ndecelerating labor income growth to be convinced that you’ve done enough?\nCHAIR POWELL. So it’s hard to pick the pieces apart and say, you know, how much of\nthis and how much of that. You know, we’ll be looking at everything. And, you know, we’ll, of\ncourse, we’ll be looking to see whether the signal from June’s CPI is replicated or, or the\nopposite of replicated or whether it’s somewhere in the middle. We’ll be looking at the growth"
+    },
+    "D08_fomc_minutes_2023_06#c005": {
+      "source": "D08_fomc_minutes_2023_06",
+      "title": null,
+      "available_at_et": "2023-07-05T14:00:00-04:00",
+      "text": "The manager turned first to a review of developments in financial markets. Policy-sensitive rates increased over the intermeeting period, reflecting indications of continued resilience in the economy, persistently elevated core inflation, and reduced downside tail risks following the resolution of the debt limit. The shift in policy expectations contributed significantly to higher Treasury yields. The increase in nominal yields primarily reflected higher real rates rather than inflation compensation. Broad equity prices rose, al­though the outperformance was concentrated in a handful of companies with a large market capitalization. Cyclical sectors fared better than sectors that tend to appreciate in a downturn, suggesting some reduced investor concern about downside risks to growth. Investor sentiment about the banking sector improved as perceived tail risks regarding regional banks appeared to have receded. Equity prices for regional banks rose over the intermeeting period but were still well below early March levels. Financial conditions indexes were roughly unchanged, as higher rates and a stronger dollar were offset by higher equity prices and narrower credit spreads."
+    },
+    "D08_fomc_minutes_2023_06#c008": {
+      "source": "D08_fomc_minutes_2023_06",
+      "title": null,
+      "available_at_et": "2023-07-05T14:00:00-04:00",
+      "text": "The manager then turned to money market developments and policy implementation. The median respondent to the Desk surveys expected the three-month bill yield to increase slightly relative to the similar-maturity overnight index swap (OIS) rate and to remain above it into the fourth quarter. This expectation likely reflected a combination of rising net supply of bills as part of the Treasury Department's plan to rebuild the Treasury General Account (TGA) following the resolution of the debt limit and expectations for healthy investor demand for bills. The overnight reverse repurchase agreement (ON RRP) facility, which continued to support effective policy implementation and control over the federal funds rate, saw somewhat lower participation since the resolution of the debt limit, consistent with the historical experience that ON RRP participation is typically responsive to changes in money market conditions. The median respondent to the Desk's Survey of Primary Dealers expected ON RRP participation to trend lower over the rest of this year. The staff assessed that the replenishment of the TGA and the ongoing balance sheet runoff, among other factors, were likely to subtract from reserves more than the decline in ON RRP participation would add to them. On net, the staff judged that reserves at the end of the year were likely to remain abundant. Uncertainty surrounding the outlooks for both reserves and ON RRP participation was substantial."
+    },
+    "D08_fomc_minutes_2023_06#c015": {
+      "source": "D08_fomc_minutes_2023_06",
+      "title": null,
+      "available_at_et": "2023-07-05T14:00:00-04:00",
+      "text": "Global prices for energy and agricultural commodities were little changed, on net, over the intermeeting period, while prices for metals fell further. Declines in retail energy prices since the beginning of the year contributed to a notable easing in headline consumer price inflation in the foreign economies. By contrast, core inflation had yet to materially decline from its recent highs in many economies. In this context, and with tight labor market conditions, foreign central banks underscored the need to raise policy rates further or hold them at sufficiently restrictive levels to bring inflation back to their respective targets and be well positioned in case inflation failed to decline as expected.\nStaff Review of the Financial Situation"
+    },
+    "D08_fomc_minutes_2023_06#c016": {
+      "source": "D08_fomc_minutes_2023_06",
+      "title": null,
+      "available_at_et": "2023-07-05T14:00:00-04:00",
+      "text": "Over the intermeeting period, market participants appeared to interpret incoming data as signaling, on balance, more resilience in economic activity than previously assumed and viewed communications from FOMC participants overall as pointing to a tighter path for policy than expected. As a result, Treasury yields and the expected future path for the federal funds rate shifted upward significantly. Meanwhile, broad equity prices also increased notably. Financing conditions remained moderately restrictive, but credit availability generally remained solid."
+    },
+    "D08_fomc_minutes_2023_06#c017": {
+      "source": "D08_fomc_minutes_2023_06",
+      "title": null,
+      "available_at_et": "2023-07-05T14:00:00-04:00",
+      "text": "The expected path of the policy rate implied by market quotes moved up notably over the intermeeting period. A straight read of federal funds futures rates suggested that market participants expected that the federal funds rate would be roughly flat over the course of the rest of this year. The year-end expected rate was about 70 basis points higher than the year-end expectation before the May FOMC meeting. Beyond this year, the policy rate path implied by OIS quotes also moved up, to about 3.7 percent by the end of 2024. Similarly, nominal Treasury yields rose significantly. The rise in nominal yields mostly reflected an increase in real yields, as measures of inflation compensation were little changed, on net, amid somewhat mixed news on inflation. Measures of uncertainty about the path of interest rates remained very elevated by historical standards."
+    },
+    "D08_fomc_minutes_2023_06#c018": {
+      "source": "D08_fomc_minutes_2023_06",
+      "title": null,
+      "available_at_et": "2023-07-05T14:00:00-04:00",
+      "text": "The S&P 500 stock price index increased sizably, on net, over the intermeeting period, led by technology-related stocks. The VIX—the one-month option-implied volatility on the S&P 500 index—edged down, on balance, and ended the period near the 30th percentile of its historical distribution. Bank equity price indexes moved up notably, on net, over the intermeeting period. Stock prices for large banks were only somewhat below their levels before the failure of Silicon Valley Bank (SVB), while those for regional banks remained below their levels in early March."
+    },
+    "D08_fomc_minutes_2023_06#c019": {
+      "source": "D08_fomc_minutes_2023_06",
+      "title": null,
+      "available_at_et": "2023-07-05T14:00:00-04:00",
+      "text": "Market-based policy rate expectations rose notably in most advanced foreign economies, as core inflation data surprised to the upside in some countries and central bank communications were perceived as pointing to more restrictive policy than expected. Notwithstanding the rise in global yields, foreign equity prices, credit spreads, and risk sentiment in foreign markets were little changed over the intermeeting period. The staff's trade-weighted broad dollar index was also little changed, on net, but the exchange value of the dollar appreciated significantly against the Chinese renminbi amid increased investor concerns over China's economic growth prospects."
+    },
+    "D08_fomc_minutes_2023_06#c025": {
+      "source": "D08_fomc_minutes_2023_06",
+      "title": null,
+      "available_at_et": "2023-07-05T14:00:00-04:00",
+      "text": "The staff's inflation forecast was little revised relative to the previous projection, and supply–demand imbalances in both goods markets and labor markets were still judged to be easing only slowly. On a four-quarter change basis, total PCE price inflation was projected to be 3.0 percent this year, with core inflation at 3.7 percent. Core goods inflation was forecast to move down further this year and then remain subdued. Housing services inflation was considered to have about peaked and was expected to move down over the rest of the year. Core nonhousing services inflation was projected to slow gradually as nominal wage growth eased further. Reflecting the effects of the easing in resource utilization over the projection, core inflation was forecast to slow through next year but remain moderately above 2 percent. With expected declines in consumer energy prices and further moderation in food price inflation, total inflation was projected to run below core inflation this year and the next. In 2025, both total and core PCE price inflation were expected to be close to 2 percent."
+    },
+    "D08_fomc_minutes_2023_06#c039": {
+      "source": "D08_fomc_minutes_2023_06",
+      "title": null,
+      "available_at_et": "2023-07-05T14:00:00-04:00",
+      "text": "In discussing the policy outlook, all participants continued to anticipate that, with inflation still well above the Committee's 2 percent goal and the labor market remaining very tight, maintaining a restrictive stance for monetary policy would be appropriate to achieve the Committee's objectives. Almost all participants noted that in their economic projections that they judged that additional increases in the target federal funds rate during 2023 would be appropriate. Most participants observed that uncertainty about the outlook for the economy and inflation remained elevated and that additional information would be valuable for considering the appropriate stance of monetary policy. Many also noted that, after rapidly tightening the stance of monetary policy last year, the Committee had slowed the pace of tightening and that a further moderation in the pace of policy firming was appropriate in order to provide additional time to observe the effects of cumulative tightening and assess their implications for policy. Participants agreed that their policy decisions at every meeting would continue to be based on the totality of incoming information and its implications for the economic outlook as well as the balance of risks. They also emphasized the importance of communicating to the public their data-dependent approach. Most participants observed that postmeeting communications, including the SEP, would help clarify their assessment regarding the stance of monetary policy that is likely to be appropriate to bring inflation down to 2 percent over time."
+    },
+    "D08_fomc_minutes_2023_06#c043": {
+      "source": "D08_fomc_minutes_2023_06",
+      "title": null,
+      "available_at_et": "2023-07-05T14:00:00-04:00",
+      "text": "Members agreed that the Committee seeks to achieve maximum employment and inflation at the rate of 2 percent over the longer run. In support of these goals, the members agreed to maintain the target range for the federal funds rate at 5 to 5-1/4 percent. Members agreed that holding the target range steady at this meeting allowed the Committee to assess additional information and its implications for monetary policy. In determining the extent of additional policy firming that may be appropriate to return inflation to 2 percent over time, members concurred that they will take into account the cumulative tightening of monetary policy, the lags with which monetary policy affects economic activity and inflation, and economic and financial developments. In addition, members agreed that the Committee will continue to reduce the Federal Reserve's holdings of Treasury securities and agency debt and agency mortgage-backed securities, as described in its previously announced plans. All members affirmed that they are strongly committed to returning inflation to their 2 percent objective."
+    },
+    "D08_fomc_minutes_2023_06#c047": {
+      "source": "D08_fomc_minutes_2023_06",
+      "title": null,
+      "available_at_et": "2023-07-05T14:00:00-04:00",
+      "text": "The Committee seeks to achieve maximum employment and inflation at the rate of 2 percent over the longer run. In support of these goals, the Committee decided to maintain the target range for the federal funds rate at 5 to 5-1/4 percent. Holding the target range steady at this meeting allows the Committee to assess additional information and its implications for monetary policy. In determining the extent of additional policy firming that may be appropriate to return inflation to 2 percent over time, the Committee will take into account the cumulative tightening of monetary policy, the lags with which monetary policy affects economic activity and inflation, and economic and financial developments. In addition, the Committee will continue reducing its holdings of Treasury securities and agency debt and agency mortgage-backed securities, as described in its previously announced plans. The Committee is strongly committed to returning inflation to its 2 percent objective."
+    },
+    "D09_beige_book_2023_07#c004": {
+      "source": "D09_beige_book_2023_07",
+      "title": null,
+      "available_at_et": "2023-07-12T14:00:00-04:00",
+      "text": "Business activity expanded at a slight pace. Employment gains were small and prices were stable. Consumer spending increased by a small margin. Manufacturers reported moderate revenue growth. Home sales were disappointing and life sciences leasing activity slowed dramatically. The outlook was optimistic outside of real estate, but remained neutral or became increasingly pessimistic among real estate contacts.\nNew York\nRegional economic activity stabilized after a period of weakness. Labor market conditions were strong, with some firming in recent weeks. Inflationary pressures eased noticeably. Consumer spending grew steadily. Housing markets were solid but low inventory continued to restrain sales activity.\nPhiladelphia\nBusiness activity continued to decline slightly during the current Beige Book period. Consumer demand ticked down, although elevated profit margins buoyed overall sales figures. Employment fell slightly despite improved labor availability. Wage growth and inflation subsided but continued at a modest pace. Expectations for economic growth remained subdued.\nCleveland"
+    },
+    "D09_beige_book_2023_07#c005": {
+      "source": "D09_beige_book_2023_07",
+      "title": null,
+      "available_at_et": "2023-07-12T14:00:00-04:00",
+      "text": "The Fourth District economy was generally stable in recent weeks as high interest rates continued to constrain households' big-ticket goods purchases and businesses' project plans. Bankers and transportation firms cited these effects as contributing to weaker demand for their own services. Nevertheless, contacts were generally more optimistic about the near-term outlook and less concerned that a U.S. recession would occur in 2023.\nRichmond\nThe regional economy grew slightly in recent weeks. Consumer spending on retail goods, as well as on travel and tourism, picked up modestly. Manufacturing and transportation sectors noted a slowdown in demand. Residential real estate was constrained by a lack of inventory. Commercial real estate activity and lending declined. Employment increased moderately and price growth eased slightly but remained robust, overall.\nAtlanta"
+    },
+    "D09_beige_book_2023_07#c006": {
+      "source": "D09_beige_book_2023_07",
+      "title": null,
+      "available_at_et": "2023-07-12T14:00:00-04:00",
+      "text": "Economic activity grew slowly. Labor markets became less tight, and wage pressures eased. Nonlabor costs moderated, on balance. Discretionary retail sales softened. Auto sales remained strong. Domestic leisure travel softened, and international and business travel rose. Housing demand remained strong. Transportation activity slowed. Energy demand was steady. Agriculture conditions softened.\nChicago\nEconomic activity was little changed. Employment increased moderately; nonbusiness contacts saw little change in activity; consumer spending was flat; business spending and construction and real estate activity declined slightly; and manufacturing decreased modestly. Prices and wages rose moderately, while financial conditions tightened slightly further. Expectations for farm incomes in 2023 decreased some.\nSt. Louis\nEconomic conditions have remained unchanged since our previous report. Employers continued to struggle finding skilled workers, but turnover slowed and wage pressures lessened. Consumer spending was largely steady, but contacts reported a shift away from discretionary goods. Homebuying activity increased, but the commercial real estate sector saw worsening conditions.\nMinneapolis"
+    },
+    "D14_homedepot_q2fy23_8k#c005": {
+      "source": "D14_homedepot_q2fy23_8k",
+      "title": null,
+      "available_at_et": "2023-08-15T06:18:54-04:00",
+      "text": "Diluted earnings per share | 4.65 | 5.05 | (7.9) | 8.46 | 9.13 | (7.3)\nThree Months Ended | Six Months Ended\nSelected Sales Data (1) | July 30, 2023 | July 31, 2022 | % Change | July 30, 2023 | July 31, 2022 | % Change\nCustomer transactions (in millions) | 459.1 | 467.4 | (1.8) | 850.1 | 878.1 | (3.2)\nAverage ticket | 90.07 | 90.02 | 0.1 | 90.92 | 90.82 | 0.1\nSales per retail square foot | 684.65 | 700.62 | (2.3) | 638.50 | 661.27 | (3.4)\n—————\n(1)Selected Sales Data does not include results for HD Supply.\nTHE HOME DEPOT, INC.\nCONDENSED CONSOLIDATED BALANCE SHEETS\n(Unaudited)\nin millions | July 30, 2023 | July 31, 2022 | January 29, 2023\nAssets\nCurrent assets:\nCash and cash equivalents | 2,814 | 1,259 | 2,757\nReceivables, net | 3,836 | 3,725 | 3,317\nMerchandise inventories | 23,265 | 26,088 | 24,886\nOther current assets | 1,915 | 1,869 | 1,511"
+    },
+    "D14_homedepot_q2fy23_8k#c007": {
+      "source": "D14_homedepot_q2fy23_8k",
+      "title": null,
+      "available_at_et": "2023-08-15T06:18:54-04:00",
+      "text": "Total stockholders’ equity | 1,335 | 237 | 1,562\nTotal liabilities and stockholders’ equity | 76,387 | 75,825 | 76,445\nTHE HOME DEPOT, INC.\nCONDENSED CONSOLIDATED STATEMENTS OF CASH FLOWS\n(Unaudited)\nSix Months Ended\nin millions | July 30, 2023 | July 31, 2022\nCash Flows from Operating Activities:\nNet earnings | 8,532 | 9,404\nReconciliation of net earnings to net cash provided by operating activities:\nDepreciation and amortization | 1,588 | 1,473\nStock-based compensation expense | 215 | 196\nChanges in working capital | 1,774 | (3,889)\nChanges in deferred income taxes | (48) | (95)\nOther operating activities | 144 | 93\nNet cash provided by operating activities | 12,205 | 7,182\nCash Flows from Investing Activities:\nCapital expenditures | (1,697) | (1,447)\nPayments for businesses acquired, net | (215) | —\nOther investing activities | 10 | (14)\nNet cash used in investing activities | (1,902) | (1,461)\nCash Flows from Financing Activities:\nRepayments of short-term debt, net | — | (496)"
+    },
+    "D14_homedepot_q2fy23_8k#c008": {
+      "source": "D14_homedepot_q2fy23_8k",
+      "title": null,
+      "available_at_et": "2023-08-15T06:18:54-04:00",
+      "text": "Proceeds from long-term debt, net of discounts | — | 3,957\nRepayments of long-term debt | (1,130) | (2,366)\nRepurchases of common stock | (4,954) | (3,962)\nProceeds from sales of common stock | 175 | 142\nCash dividends | (4,215) | (3,910)\nOther financing activities | (142) | (163)\nNet cash used in financing activities | (10,266) | (6,798)\nChange in cash and cash equivalents | 37 | (1,077)\nEffect of exchange rate changes on cash and cash equivalents | 20 | (7)\nCash and cash equivalents at beginning of year | 2,757 | 2,343\nCash and cash equivalents at end of year | 2,814 | 1,259"
+    },
+    "D16_visa_q3fy23_8k#c007": {
+      "source": "D16_visa_q3fy23_8k",
+      "title": null,
+      "available_at_et": "2023-07-25T16:05:51-04:00",
+      "text": "Cash, cash equivalents and investment securities were $20.9 billion at June 30, 2023.\nThe weighted-average number of diluted shares of class A common stock outstanding was 2.08 billion for the quarter ended June 30, 2023.\n2\nOther Notable Items\nOn June 20, 2023, Visa announced the appointment of Chris Suh as Executive Vice President, Chief Financial Officer, effective August 1, 2023. Mr. Suh commenced employment with Visa on July 10, 2023 as CFO Designate ahead of assuming the CFO position on August 1, 2023.\nOn June 28, 2023, Visa deposited $500 million into its litigation escrow account, which was previously established under the Company's U.S. retrospective responsibility plan to insulate the Company and class A shareholders from financial liability for certain litigation cases. This deposit has the same economic effect on earnings per share as repurchasing the Company's class A common stock as it reduces the as-converted class B common stock share count at a volume weighted average price of $227.75."
+    },
+    "D16_visa_q3fy23_8k#c008": {
+      "source": "D16_visa_q3fy23_8k",
+      "title": null,
+      "available_at_et": "2023-07-25T16:05:51-04:00",
+      "text": "On June 28, 2023, Visa announced it signed a definitive agreement to acquire Pismo, a cloud-native issuer processing and core banking platform with operations in Latin America, Asia Pacific and Europe, for $1 billion in cash. The transaction is subject to customary closing conditions, including applicable regulatory reviews and approvals, and is expected to close by the end of 2023.\nDuring the three months ended June 30, 2023, Visa repurchased 12.9 million shares of class A common stock at an average cost of $229.19 per share for $3.0 billion. The Company had $8.8 billion of remaining authorized funds for share repurchases as of June 30, 2023.\nOn July 25, 2023, the board of directors declared a quarterly cash dividend of $0.450 per share of class A common stock (determined in the case of class B and C common stock and series A, B and C convertible participating preferred stock on an as-converted basis) payable on September 1, 2023, to all holders of record as of August 11, 2023."
+    },
+    "D17_mcdonalds_q2_2023_8k#c000": {
+      "source": "D17_mcdonalds_q2_2023_8k",
+      "title": null,
+      "available_at_et": "2023-07-27T07:02:08-04:00",
+      "text": "EX-99.1\n2\nexhibit991-6302023.htm\nEX-99.1\nDocument\nExhibit 99.1\nFOR IMMEDIATE RELEASE | FOR MORE INFORMATION CONTACT:\n7/27/2023 | Investors: Mike Cieplak, investor.relations@us.mcd.com\nMedia: Lauren Altmin, lauren.altmin@us.mcd.com\nMcDONALD'S REPORTS SECOND QUARTER 2023 RESULTS\n•Global comparable sales increased 11.7% for the quarter, with double-digit growth across each segment\n•Digital Systemwide sales* in our top six markets were over $8 billion for the quarter, representing nearly 40% of their Systemwide sales\nCHICAGO, IL - McDonald's Corporation today announced results for the second quarter ended June 30, 2023."
+    }
+  },
+  "regression_on_recorded_v1": {
+    "note": "Validator applied post hoc to recorded v1 outputs; rules were written after seeing v1, so this is a regression check, not a test.",
+    "rows": [
+      {
+        "condition": "ordinary",
+        "repeat": 0,
+        "edge_id": "E1",
+        "v1_label": "insufficient_evidence",
+        "validator": "insufficient_evidence",
+        "reasons": [
+          "Validator agrees with the assessor label."
+        ]
+      },
+      {
+        "condition": "ordinary",
+        "repeat": 0,
+        "edge_id": "E2",
+        "v1_label": "insufficient_evidence",
+        "validator": "insufficient_evidence",
+        "reasons": [
+          "Validator agrees with the assessor label."
+        ]
+      },
+      {
+        "condition": "ordinary",
+        "repeat": 0,
+        "edge_id": "E3",
+        "v1_label": "insufficient_evidence",
+        "validator": "insufficient_evidence",
+        "reasons": [
+          "Validator agrees with the assessor label."
+        ]
+      },
+      {
+        "condition": "ordinary",
+        "repeat": 0,
+        "edge_id": "E4",
+        "v1_label": "supported",
+        "validator": "insufficient_evidence",
+        "reasons": [
+          "1 supporting quote(s) do not mention the target concept (off-target evidence).",
+          "Evidence shows the concepts together but states no causal link or mechanism (association only)."
+        ]
+      },
+      {
+        "condition": "ordinary",
+        "repeat": 0,
+        "edge_id": "E5",
+        "v1_label": "supported",
+        "validator": "insufficient_evidence",
+        "reasons": [
+          "2 supporting quote(s) do not mention the target concept (off-target evidence).",
+          "No valid supporting quote addresses the claimed relationship."
+        ]
+      },
+      {
+        "condition": "ordinary",
+        "repeat": 1,
+        "edge_id": "E1",
+        "v1_label": "insufficient_evidence",
+        "validator": "insufficient_evidence",
+        "reasons": [
+          "Validator agrees with the assessor label."
+        ]
+      },
+      {
+        "condition": "ordinary",
+        "repeat": 1,
+        "edge_id": "E2",
+        "v1_label": "insufficient_evidence",
+        "validator": "insufficient_evidence",
+        "reasons": [
+          "Validator agrees with the assessor label."
+        ]
+      },
+      {
+        "condition": "ordinary",
+        "repeat": 1,
+        "edge_id": "E3",
+        "v1_label": "contradicted",
+        "validator": "conflicting",
+        "reasons": [
+          "Valid on-target evidence exists on both sides.",
+          "Plausible alternative drivers mentioned: inflation."
+        ]
+      },
+      {
+        "condition": "ordinary",
+        "repeat": 1,
+        "edge_id": "E4",
+        "v1_label": "supported",
+        "validator": "insufficient_evidence",
+        "reasons": [
+          "Evidence shows the concepts together but states no causal link or mechanism (association only)."
+        ]
+      },
+      {
+        "condition": "ordinary",
+        "repeat": 1,
+        "edge_id": "E5",
+        "v1_label": "supported",
+        "validator": "insufficient_evidence",
+        "reasons": [
+          "1 supporting quote(s) do not mention the target concept (off-target evidence).",
+          "Some quotes could not be verified verbatim in the cited excerpt and were excluded.",
+          "No valid supporting quote addresses the claimed relationship."
+        ]
+      },
+      {
+        "condition": "ordinary",
+        "repeat": 2,
+        "edge_id": "E1",
+        "v1_label": "insufficient_evidence",
+        "validator": "insufficient_evidence",
+        "reasons": [
+          "Validator agrees with the assessor label."
+        ]
+      },
+      {
+        "condition": "ordinary",
+        "repeat": 2,
+        "edge_id": "E2",
+        "v1_label": "insufficient_evidence",
+        "validator": "insufficient_evidence",
+        "reasons": [
+          "Validator agrees with the assessor label."
+        ]
+      },
+      {
+        "condition": "ordinary",
+        "repeat": 2,
+        "edge_id": "E3",
+        "v1_label": "insufficient_evidence",
+        "validator": "insufficient_evidence",
+        "reasons": [
+          "Validator agrees with the assessor label."
+        ]
+      },
+      {
+        "condition": "ordinary",
+        "repeat": 2,
+        "edge_id": "E4",
+        "v1_label": "supported",
+        "validator": "insufficient_evidence",
+        "reasons": [
+          "Evidence shows the concepts together but states no causal link or mechanism (association only)."
+        ]
+      },
+      {
+        "condition": "ordinary",
+        "repeat": 2,
+        "edge_id": "E5",
+        "v1_label": "supported",
+        "validator": "insufficient_evidence",
+        "reasons": [
+          "1 supporting quote(s) do not mention the target concept (off-target evidence).",
+          "No valid supporting quote addresses the claimed relationship."
+        ]
+      },
+      {
+        "condition": "graph_guided",
+        "repeat": 0,
+        "edge_id": "E1",
+        "v1_label": "supported",
+        "validator": "insufficient_evidence",
+        "reasons": [
+          "Target is an expectation, but supporting quotes describe realised results, not forward-looking guidance."
+        ]
+      },
+      {
+        "condition": "graph_guided",
+        "repeat": 0,
+        "edge_id": "E2",
+        "v1_label": "insufficient_evidence",
+        "validator": "insufficient_evidence",
+        "reasons": [
+          "Evidence is missing or does not address the relationship."
+        ]
+      },
+      {
+        "condition": "graph_guided",
+        "repeat": 0,
+        "edge_id": "E3",
+        "v1_label": "insufficient_evidence",
+        "validator": "insufficient_evidence",
+        "reasons": [
+          "Evidence is missing or does not address the relationship."
+        ]
+      },
+      {
+        "condition": "graph_guided",
+        "repeat": 0,
+        "edge_id": "E4",
+        "v1_label": "supported",
+        "validator": "insufficient_evidence",
+        "reasons": [
+          "Evidence shows the concepts together but states no causal link or mechanism (association only)."
+        ]
+      },
+      {
+        "condition": "graph_guided",
+        "repeat": 0,
+        "edge_id": "E5",
+        "v1_label": "contradicted",
+        "validator": "contradicted",
+        "reasons": [
+          "Validator agrees with the assessor label."
+        ]
+      },
+      {
+        "condition": "graph_guided",
+        "repeat": 1,
+        "edge_id": "E1",
+        "v1_label": "supported",
+        "validator": "insufficient_evidence",
+        "reasons": [
+          "Target is an expectation, but supporting quotes describe realised results, not forward-looking guidance."
+        ]
+      },
+      {
+        "condition": "graph_guided",
+        "repeat": 1,
+        "edge_id": "E2",
+        "v1_label": "insufficient_evidence",
+        "validator": "insufficient_evidence",
+        "reasons": [
+          "Evidence is missing or does not address the relationship."
+        ]
+      },
+      {
+        "condition": "graph_guided",
+        "repeat": 1,
+        "edge_id": "E3",
+        "v1_label": "insufficient_evidence",
+        "validator": "insufficient_evidence",
+        "reasons": [
+          "Validator agrees with the assessor label."
+        ]
+      },
+      {
+        "condition": "graph_guided",
+        "repeat": 1,
+        "edge_id": "E4",
+        "v1_label": "supported",
+        "validator": "insufficient_evidence",
+        "reasons": [
+          "Evidence shows the concepts together but states no causal link or mechanism (association only)."
+        ]
+      },
+      {
+        "condition": "graph_guided",
+        "repeat": 1,
+        "edge_id": "E5",
+        "v1_label": "contradicted",
+        "validator": "contradicted",
+        "reasons": [
+          "Validator agrees with the assessor label."
+        ]
+      },
+      {
+        "condition": "graph_guided",
+        "repeat": 2,
+        "edge_id": "E1",
+        "v1_label": "supported",
+        "validator": "insufficient_evidence",
+        "reasons": [
+          "Target is an expectation, but supporting quotes describe realised results, not forward-looking guidance."
+        ]
+      },
+      {
+        "condition": "graph_guided",
+        "repeat": 2,
+        "edge_id": "E2",
+        "v1_label": "insufficient_evidence",
+        "validator": "insufficient_evidence",
+        "reasons": [
+          "Evidence is missing or does not address the relationship."
+        ]
+      },
+      {
+        "condition": "graph_guided",
+        "repeat": 2,
+        "edge_id": "E3",
+        "v1_label": "insufficient_evidence",
+        "validator": "insufficient_evidence",
+        "reasons": [
+          "Evidence is missing or does not address the relationship."
+        ]
+      },
+      {
+        "condition": "graph_guided",
+        "repeat": 2,
+        "edge_id": "E4",
+        "v1_label": "supported",
+        "validator": "insufficient_evidence",
+        "reasons": [
+          "Evidence shows the concepts together but states no causal link or mechanism (association only)."
+        ]
+      },
+      {
+        "condition": "graph_guided",
+        "repeat": 2,
+        "edge_id": "E5",
+        "v1_label": "contradicted",
+        "validator": "contradicted",
+        "reasons": [
+          "Validator agrees with the assessor label."
+        ]
+      }
+    ]
+  },
+  "run": {
+    "backend": "llm",
+    "status": "computed",
+    "provider": "claude_cli",
+    "model": "claude-sonnet-5-5",
+    "assessor_prompt_version": "bny_v3 (v1 rules + edge-level rules 8)",
+    "budget_chunks": 9,
+    "repeats": 1,
+    "cutoff": "2023-08-15T10:00:00-04:00",
+    "n_eligible_chunks": 281,
+    "validator_rules": "Written on 2026-10-12 AFTER the v1 and E1-v2 results were inspected. Term lists encode what each node means; they are not tuned on labels of any external benchmark. Because E1 and E5 failures were known when writing them, BNY validator results on this event are regression checks, not an independent test. config/graph.json is unchanged.",
+    "created_utc": "2026-10-15T12:25:15+00:00",
+    "wall_time_s": 31.2,
+    "usage": {
+      "llm_responses": 6,
+      "cost_usd_recorded": 0.1111,
+      "mean_latency_s": 5.183333333333334
+    },
+    "note": "Domain case study (one event), not a gold-labelled benchmark. Labels describe evidence wording, not causal identification.",
+    "label": "Small qualitative demonstration (one event, 3 edges, one repeat); not statistical evidence of superiority.",
+    "review": {
+      "validator_version": "v2 (contradiction requires a negated link or an unconfounded counter-example)",
+      "reviewed_utc": "2026-10-15T14:15:22+00:00",
+      "model_calls": 0,
+      "note": "Same stored assessor outputs, re-validated. Original verdicts kept as original_validator / original_paths."
+    }
+  }
+}

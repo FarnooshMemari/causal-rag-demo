@@ -20,6 +20,7 @@ python -m crag.cli smoke                       # synthetic fixtures, heuristic b
 python -m crag.cli bench-download              # FinCausal 2026 EN + AVeriTeC dev into data/benchmarks/ (git-ignored)
 python -m crag.cli bny-run   --profile dev     # BNY three-method case study
 python -m crag.cli bny-poc                     # meeting demo: E3-E5, 9 passages, 1 repeat (~$0.11)
+python -m crag.cli bny-review                  # re-validate the demo with the current validator (no model calls)
 python -m crag.cli bench-run --profile dev     # small dev sample (12 cases per benchmark)
 python -m crag.cli bench-run --profile full    # whole labelled split: check cost first
 ```

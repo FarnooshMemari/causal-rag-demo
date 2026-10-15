@@ -18,7 +18,7 @@ def _bench(name, split, n, data_dir=None, **kw):
 
 def main():
     p = argparse.ArgumentParser(description="Causal RAG: BNY case study + external benchmarks")
-    p.add_argument("step", choices=V1_STEPS + ["all", "bench-download", "bench-run", "bny-run", "bny-poc", "smoke"])
+    p.add_argument("step", choices=V1_STEPS + ["all", "bench-download", "bench-run", "bny-run", "bny-poc", "bny-review", "smoke"])
     p.add_argument("--refresh", action="store_true", help="re-download sources (default: use cached raw files)")
     p.add_argument("--profile", default="dev", help="profile in config/experiments.json (dev | full)")
     p.add_argument("--dataset", choices=["fincausal2026", "averitec", "both"], default="both")
@@ -58,6 +58,10 @@ def main():
     elif a.step == "bny-run":
         res = experiment.run_bny(backend, cfg["bny_repeats"])
         print(experiment.write_artifact("bny", f"bny_three_method__{a.profile}__{backend}", res))
+    elif a.step == "bny-review":
+        name = "bny_poc_E3_E4_E5__llm"
+        src = json.loads((experiment.ARTIFACTS / "bny" / f"{name}.json").read_text())
+        print(experiment.write_artifact("bny", f"{name}__reviewed_v2", experiment.review_bny(src)))
     elif a.step == "bny-poc":
         poc = cfg.get("bny_poc", {"edges": ["E3", "E4", "E5"], "budget": 9})
         res = experiment.run_bny(backend, 1, poc["edges"], poc["budget"])

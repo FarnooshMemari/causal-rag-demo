@@ -10,6 +10,11 @@ reason. It checks, per edge:
   forward         for expectation-type targets, forward-looking language (realised results are
                   not expectations)
   conflict        valid, on-target quotes on both sides => 'conflicting'
+  contradiction   (v2) a 'contradicted' label needs a genuine contradiction: a quote that negates the
+                  link ("had little effect on", "not driven by") or an explicit counter-example
+                  ("despite") with no alternative drivers named. Opposite co-movement ("rates rose;
+                  meanwhile equities rose") and offsetting forces ("offset by") are correlation, not
+                  evidence against a ceteris-paribus mechanism, and are downgraded.
   assumptions     edge condition is reported as verified / unmet / not verified
   confounding     alternative drivers named in the supporting quotes are surfaced
 
@@ -28,6 +33,10 @@ CAUSAL = re.compile(r"\b(because|due to|driven by|drove|driving|reflect\w*|as a 
                     r"push\w* (?:up|down)|helped|hurt|constrain\w*|dampen\w*|restrain\w*)\b", re.I)
 FORWARD = re.compile(r"\b(expect\w*|outlook|guidance|forecast\w*|anticipat\w*|project\w*|will|going forward|full[- ]year|"
                      r"next (?:year|quarter)|raised (?:its|our|the)? ?(?:outlook|guidance|forecast))\b", re.I)
+NEGATED_LINK = re.compile(r"\b(no (?:material |significant |discernible )?(?:effect|impact|influence)|(?:little|limited|negligible) (?:effect|impact|influence)|"
+                          r"did not (?:affect|weigh|lead|cause|push|drive|reduce|lift|raise)|not (?:driven|caused|explained) by|"
+                          r"unaffected|unrelated|insensitive|rather than|instead of|irrespective of|regardless of)\b", re.I)
+COUNTER = re.compile(r"\b(despite|even as|even though|although|notwithstanding|in spite of)\b", re.I)
 CONFOUNDERS = re.compile(r"\b(pric(?:e|es|ing) increases?|menu pric\w*|inflation\w*|weather|currenc\w*|foreign exchange|acquisition\w*|"
                          r"one[- ]time|non-repeat\w*|timing|calendar|strateg\w*|cost[- ]cutting|restructuring|tax\w*)\b", re.I)
 
@@ -53,7 +62,9 @@ def classify_quote(quote, rule):
         kind = "co_mention"
     else:
         kind = "target_only"
-    return {"kind": kind, "forward_looking": bool(FORWARD.search(quote)),
+    contra = "negated_link" if NEGATED_LINK.search(quote) else "counter_example" if COUNTER.search(quote) else \
+        "offsetting" if re.search(r"\boffset\w*", quote, re.I) else "co_movement"
+    return {"kind": kind, "forward_looking": bool(FORWARD.search(quote)), "contradiction_type": contra,
             "confounders": sorted({m.group(0).lower() for m in CONFOUNDERS.finditer(quote)})}
 
 
@@ -75,8 +86,12 @@ def validate_edge(item, rule, lookup=None, cutoff=None, condition=""):
             kept.append(d)
         sides[side] = kept
     usable = lambda side: [q for q in sides[side] if "excluded" not in q and q["kind"] != "off_target"]
-    sup, con = usable("supporting_evidence"), usable("contradicting_evidence")
+    sup, con_all = usable("supporting_evidence"), usable("contradicting_evidence")
     raw = item.get("validated_label", item.get("label"))
+    alternatives = sorted({c for q in con_all for c in q["confounders"]} | set(item.get("alternative_explanations") or []))
+    # genuine contradiction: the link itself is negated, or an explicit counter-example with no other named drivers
+    con = [q for q in con_all if q["kind"] != "target_only" and (q["contradiction_type"] == "negated_link"
+           or (q["contradiction_type"] == "counter_example" and not alternatives))]
     kind_hint = item.get("evidence_kind")  # optional assessor field
     checks = {"citation": all(q["citation_status"] == "valid" for s in sides.values() for q in s),
               "point_in_time": not any(q.get("excluded") == "published after the decision cutoff" for s in sides.values() for q in s)}
@@ -95,7 +110,8 @@ def validate_edge(item, rule, lookup=None, cutoff=None, condition=""):
         if strong and not fwd:
             reasons.append("Target is an expectation, but supporting quotes describe realised results, not forward-looking guidance.")
         strong = fwd
-    checks.update(relationship=bool(sup), mechanism=bool(strong), conflict=bool(sup) and bool(con))
+    checks.update(relationship=bool(sup), mechanism=bool(strong), conflict=bool(sup) and bool(con),
+                  contradiction="causal" if con else ("correlation_only" if con_all else "none"))
 
     assumption = item.get("assumption_status") or "not_verified"
     checks["assumptions"] = assumption
@@ -104,8 +120,15 @@ def validate_edge(item, rule, lookup=None, cutoff=None, condition=""):
 
     if raw == "contradicted":
         judgment = "contradicted" if con else "insufficient_evidence"
-        if not con:
+        if not con_all:
             reasons.append("No valid, on-target contradicting quote.")
+        elif not con:
+            kinds = sorted({q["contradiction_type"].replace("_", "-") for q in con_all})
+            reasons.append(f"Contradicting quotes show {', '.join(kinds)} only: concurrent movements are correlation and do not "
+                           "refute a ceteris-paribus mechanism" + (f" (other drivers named: {', '.join(alternatives)})." if alternatives else "."))
+        elif assumption == "unmet":
+            judgment = "insufficient_evidence"
+            reasons.append("The edge's condition is reported as unmet, so contrary evidence cannot test the edge.")
         elif sup:
             judgment = "conflicting"
             reasons.append("Valid on-target evidence exists on both sides.")

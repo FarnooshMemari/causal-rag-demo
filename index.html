@@ -12,56 +12,29 @@
 <body>
 <a class="skip" href="#main">Skip to content</a>
 <header class="top">
-  <div class="brand"><span class="eyebrow">DUKE × BNY · CAUSAL RAG</span><strong>Evidence research viewer</strong></div>
+  <div class="brand"><span class="eyebrow">DUKE × BNY · CAUSAL RAG</span><strong>Causal evidence dashboard</strong></div>
   <nav aria-label="Primary">
-    <a href="#overview" data-tab="overview">Overview</a>
-    <a href="#bny" data-tab="bny">BNY Case Study</a>
+    <a href="#experiment" data-tab="experiment">Experiment</a>
     <a href="#benchmarks" data-tab="benchmarks">Benchmarks</a>
-    <a href="#guide" data-tab="guide">Guide</a>
+    <a href="#guide" data-tab="guide">How it works</a>
   </nav>
 </header>
 
 <main id="main">
-<!-- ============================== OVERVIEW -->
-<section id="tab-overview" class="tab" aria-labelledby="h-overview">
-  <h1 id="h-overview">Does a causal graph help find and check evidence?</h1>
-  <p class="lead">We test whether giving retrieval and reasoning an explicit cause-and-effect map improves evidence retrieval, verification and multi-step reasoning compared with ordinary and multi-query RAG.</p>
+<!-- ============================== EXPERIMENT -->
+<section id="tab-experiment" class="tab" aria-labelledby="h-exp">
+  <h1 id="h-exp">Does a causal graph help check a chain of evidence?</h1>
+  <p class="lead">BNY case · July 2023 U.S. retail sales. Three retrieval methods test the same three-link chain, with the same corpus, model, rubric and evidence budget.</p>
+  <div id="exp-body" aria-live="polite"></div>
 
-  <figure class="flow" aria-label="Architecture: eight stages from input to evaluation">
-    <ol>
-      <li><b>Input</b><span>event, claim or question</span></li>
-      <li><b>Decompose</b><span>into graph edges</span></li>
-      <li><b>Retrieve</b><span>same corpus &amp; budget</span></li>
-      <li><b>Extract</b><span>verbatim quotes</span></li>
-      <li><b>Assess</b><span>same model &amp; rubric</span></li>
-      <li><b>Validate</b><span>causal safeguards</span></li>
-      <li><b>Path reasoning</b><span>conservative chains</span></li>
-      <li><b>Evaluate</b><span>gold used only here</span></li>
-    </ol>
-    <figcaption>Three methods share every stage. Only <b>graph-guided</b> uses edges, paths and the validator; <b>multi-query</b> gets the same number of queries without the graph.</figcaption>
-  </figure>
-
-  <h2>What is on this site</h2>
-  <div id="status-board" class="status-board" aria-live="polite"></div>
-  <p class="legend"><span class="pill recorded">Recorded</span> original saved experiment &nbsp; <span class="pill computed">Computed</span> new offline run, small sample &nbsp; <span class="pill pending">Unavailable</span> not run or no public gold</p>
-  <p class="caution">Nothing here shows that evidence establishes causality, or that one method is better. Small-sample differences are descriptive.</p>
-</section>
-
-<!-- ============================== BNY -->
-<section id="tab-bny" class="tab" aria-labelledby="h-bny" hidden>
-  <div class="tab-head">
-    <div><h1 id="h-bny">BNY case study · July 2023 retail sales</h1>
-    <p class="lead">One event, five hypothesised links (E1–E5), two competing pathways. Evidence must be public before 10:00 ET on 15 Aug 2023.</p></div>
-    <div class="seg" role="tablist" aria-label="Case study view">
-      <button role="tab" id="bny-v-poc" aria-selected="true" data-view="poc">Demo · E3→E5</button>
-      <button role="tab" id="bny-v-new" aria-selected="false" data-view="new">Three-method comparison</button>
-      <button role="tab" id="bny-v-orig" aria-selected="false" data-view="orig">Original v1/v2 record</button>
-    </div>
+  <details class="panel earlier"><summary>Earlier runs: full E1–E5 comparison and the original v1/v2 record</summary>
+  <div class="seg" role="tablist" aria-label="Earlier run" style="margin:12px 0">
+    <button role="tab" id="bny-v-new" aria-selected="true" data-view="new">E1–E5 three-method run</button>
+    <button role="tab" id="bny-v-orig" aria-selected="false" data-view="orig">Original v1/v2 record</button>
   </div>
+  <p class="small muted">Shown as originally computed (validator v1); not re-reviewed.</p>
 
-  <div id="bny-poc"></div>
-
-  <div id="bny-new" hidden>
+  <div id="bny-new">
     <div id="bny-status" class="runline"></div>
     <div class="bny-grid">
       <div class="panel">
@@ -87,25 +60,62 @@
     <p class="muted small">Saved artifacts only · no live analysis or model calls. Next: freeze criteria and queries before testing a second event with a reviewer-labelled, real pre-cutoff demand-to-guidance passage.</p>
     <div id="error" role="alert" hidden></div>
   </div>
+  </details>
 </section>
 
 <!-- ============================== BENCHMARKS -->
 <section id="tab-benchmarks" class="tab" aria-labelledby="h-bench" hidden>
   <div class="tab-head">
-    <div><h1 id="h-bench">External benchmarks</h1>
-    <p class="lead">Labelled datasets, kept separate from the BNY case study.</p></div>
+    <div><h1 id="h-bench">Benchmarks</h1>
+    <p class="lead">Labelled public datasets, kept separate from the BNY case. Only small development runs exist so far.</p></div>
     <div class="seg" role="tablist" aria-label="Benchmark">
       <button role="tab" aria-selected="true" data-bench="fincausal2026">FinCausal 2026</button>
       <button role="tab" aria-selected="false" data-bench="averitec">AVeriTeC</button>
     </div>
   </div>
+  <div id="bench-status" class="status-board"></div>
   <div id="bench-body" aria-live="polite"></div>
+  <details class="panel"><summary>Comparability and limitations</summary><ul class="small">
+    <li>All three methods share the corpus, retriever, model, assessor prompt and passage budget; Multi-Query gets the same number of queries as Graph-Guided.</li>
+    <li>Gold answers and verdicts are sealed and used only for scoring. Official test sets have no public gold, so dev/internal splits are used.</li>
+    <li>FinCausal is extractive QA with an added, clearly labelled distractor corpus; the current distractors are too easy (all methods find the gold passage).</li>
+    <li>AVeriTeC uses the released dev top-k sentence pool, not the full 11.5 GB knowledge store. Causal-claim subsets are very small.</li>
+    <li>n=12 per benchmark: no difference shown here is statistically meaningful. Full evaluation is pending approval of its cost.</li></ul></details>
 </section>
 
 <!-- ============================== GUIDE -->
 <section id="tab-guide" class="tab guide" aria-labelledby="h-guide" hidden>
-  <h1 id="h-guide">Guide: how it works</h1>
-  <p class="lead">Each part in plain English: <b>what it is</b> → <b>what it does</b> → <b>why it matters</b>, with a tiny example. Open any item.</p>
+  <h1 id="h-guide">How it works</h1>
+  <p class="lead">The pipeline in plain English. Each component: <b>what it is</b> → <b>what it does</b> → <b>why it matters</b>, with a short example.</p>
+
+  <h2>Workflow</h2>
+  <figure class="flow" aria-label="Architecture: eight stages from input to evaluation">
+    <ol>
+      <li><b>Input</b><span>event, claim or question</span></li>
+      <li><b>Decompose</b><span>into graph edges</span></li>
+      <li><b>Retrieve</b><span>same corpus &amp; budget</span></li>
+      <li><b>Extract</b><span>verbatim quotes</span></li>
+      <li><b>Assess</b><span>same model &amp; rubric</span></li>
+      <li><b>Validate</b><span>causal safeguards</span></li>
+      <li><b>Path reasoning</b><span>conservative chains</span></li>
+      <li><b>Evaluate</b><span>gold used only here</span></li>
+    </ol>
+    <figcaption>All three methods share every stage, including the same assessor, validator and path rules. Only <b>Graph-Guided</b> uses the graph to plan and route retrieval; <b>Multi-Query</b> gets the same number of queries without it.</figcaption>
+  </figure>
+
+  <h2>Three ways to find evidence</h2>
+  <div class="approaches">
+    <div class="card" style="--c:var(--s1)"><h3>Ordinary RAG</h3><p>One broad search for the whole question, one judgment over all links.</p><p class="small muted">Baseline.</p></div>
+    <div class="card" style="--c:var(--s2)"><h3>Multi-Query RAG</h3><p>A model rewrites the question into several searches; results are merged.</p><p class="small muted">Same number of queries as Graph-Guided, no map.</p></div>
+    <div class="card" style="--c:var(--s3)"><h3>Graph-Guided RAG</h3><p>One targeted search per causal link; evidence is routed to that link and judged with its conditions.</p><p class="small muted">Tests whether structure, not query count, matters.</p></div>
+  </div>
+
+  <h2>Relevant vs. valid</h2>
+  <div class="approaches">
+    <div class="card"><h3>Relevant</h3><p>The passage is on topic and quoted word for word.</p><p class="small muted">E5, June 2023 FOMC minutes: “Treasury yields and the expected future path for the federal funds rate shifted upward significantly. Meanwhile, broad equity prices also increased notably.” On topic, but co-movement only.</p></div>
+    <div class="card"><h3>Causally valid</h3><p>The text states the mechanism, before the cutoff, for the right link.</p><p class="small muted">E4, June 2023 FOMC minutes: “with inflation still well above the Committee's 2 percent goal and the labor market remaining very tight, maintaining a restrictive stance for monetary policy would be appropriate”.</p></div>
+    <div class="card"><h3>Genuine contradiction</h3><p>The text negates the link, or is a counter-example with no other drivers named.</p><p class="small muted">Illustrative wording, not from the corpus: “higher rates had little effect on valuations”.</p></div>
+  </div>
 
   <h2>Walkthrough: one real BNY link (E1)</h2>
   <ol class="walk">
@@ -119,7 +129,7 @@
     <li><b>Evaluate.</b> We record the change and its reason; no claim about stock prices is made.</li>
   </ol>
 
-  <h2>Components</h2>
+  <h2>Components in detail</h2>
   <div class="glossary">
     <details><summary>Research objective</summary><dl><dt>What</dt><dd>The question this project asks.</dd><dt>Does</dt><dd>Compares three ways of finding and judging evidence.</dd><dt>Why</dt><dd>Tells us if a cause-and-effect map is worth the extra effort.</dd><dt>Example</dt><dd>Does mapping “spending → earnings” find better evidence than one broad search?</dd></dl></details>
     <details><summary>Input: event, claim or question</summary><dl><dt>What</dt><dd>The thing we start from.</dd><dt>Does</dt><dd>Sets what evidence is needed and, for history, the cutoff time.</dd><dt>Why</dt><dd>A clear input keeps every method on the same task.</dd><dt>Example</dt><dd>Event: retail sales +0.7%. Claim: “5G causes COVID-19.” Question: “Why did revenue rise?”</dd></dl></details>
@@ -130,8 +140,8 @@
     <details><summary>Evidence retrieval</summary><dl><dt>What</dt><dd>Finding candidate passages.</dd><dt>Does</dt><dd>Keyword ranking (BM25) over an eligible corpus, same budget for every method.</dd><dt>Why</dt><dd>If the right passage is never found, no reasoning can fix it.</dd><dt>Example</dt><dd>Future documents (e.g., the July FOMC minutes) are removed before search.</dd></dl></details>
     <details><summary>Evidence extraction</summary><dl><dt>What</dt><dd>Pulling exact quotes or answer spans.</dd><dt>Does</dt><dd>The model must copy text word for word; code checks it.</dd><dt>Why</dt><dd>Exact quotes make every judgment traceable to a source.</dd><dt>Example</dt><dd>A paraphrased quote fails the check and cannot support a label.</dd></dl></details>
     <details><summary>Evidence assessment</summary><dl><dt>What</dt><dd>A model reading the quotes and giving a label.</dd><dt>Does</dt><dd>Labels each link supported, contradicted or insufficient; or gives a claim verdict.</dd><dt>Why</dt><dd>Same model and rules for all methods keeps the comparison fair.</dd><dt>Example</dt><dd>E4: “supported” because the Fed said restrictive policy is appropriate with inflation above goal.</dd></dl></details>
-    <details><summary>Causal evidence validation</summary><dl><dt>What</dt><dd>A rule-based second check after the model.</dd><dt>Does</dt><dd>Checks the quote is on the right link, published before the cutoff, states a cause (not just co-movement), is forward-looking when needed, and flags conflicts, unmet conditions and other drivers. It can only weaken a label.</dd><dt>Why</dt><dd>Catches known model mistakes. It is a safeguard, not proof of causality.</dd><dt>Example</dt><dd>E5 evidence about housing demand is “off-target” for equity valuations.</dd></dl></details>
-    <details><summary>Path-level reasoning</summary><dl><dt>What</dt><dd>Combining link results into chain results.</dd><dt>Does</dt><dd>Supported only if every link is; broken if any is contradicted; contested if evidence conflicts; otherwise incomplete.</dd><dt>Why</dt><dd>One weak link must not create a “proven” chain. Opposing pathways stay side by side, never netted.</dd><dt>Example</dt><dd>E4 supported but E3 insufficient → P2 is “incomplete”.</dd></dl></details>
+    <details><summary>Causal evidence validation</summary><dl><dt>What</dt><dd>A rule-based second check after the model.</dd><dt>Does</dt><dd>Checks the quote is on the right link, published before the cutoff, states a cause (not just co-movement), is forward-looking when needed, and flags conflicts, unmet conditions and other drivers. It can only weaken a label.</dd><dt>Why</dt><dd>Catches known model mistakes. It is a safeguard, not proof of causality.</dd><dt>Example</dt><dd>E5 evidence about housing demand is “off-target” for equity valuations. Validator v2: “rates rose; meanwhile equities rose” is co-movement, so a “contradicted” label is downgraded to insufficient evidence.</dd></dl></details>
+    <details><summary>Path-level reasoning</summary><dl><dt>What</dt><dd>Combining link results into chain results.</dd><dt>Does</dt><dd>Supported only if every link is; broken only if a link has a validated causal contradiction (correlation alone cannot break a chain); contested if evidence conflicts; otherwise incomplete.</dd><dt>Why</dt><dd>One weak link must not create a “proven” chain. Opposing pathways stay side by side, never netted.</dd><dt>Example</dt><dd>E4 supported but E3 insufficient → P2 is “incomplete”.</dd></dl></details>
     <details><summary>FinCausal 2026 benchmark</summary><dl><dt>What</dt><dd>Annual-report passages with causal questions and human-marked answers (UAM / Lancaster, CC BY-NC-SA 4.0).</dd><dt>Does</dt><dd>Tests whether the system extracts the right cause or effect span.</dd><dt>Why</dt><dd>Labelled data shows extraction quality objectively. It is not a retrieval benchmark, so we add clearly labelled distractor passages.</dd><dt>Example</dt><dd>“What reason is behind the COR being 5.3 percentage points lower than in 2016?” → “higher prior-year reserve releases following favourable development on liability classes and the non-repeat of the Ogden charge…” (training-set item).</dd></dl></details>
     <details><summary>AVeriTeC benchmark</summary><dl><dt>What</dt><dd>Real fact-checked claims with four verdicts and annotated evidence (CC BY-NC 4.0).</dd><dt>Does</dt><dd>Tests evidence-based claim verification.</dd><dt>Why</dt><dd>Shows whether the pipeline reaches the right verdict, for causal and non-causal claims separately. It has no gold causal graphs.</dd><dt>Example</dt><dd>“5G causes COVID-19.” → Refuted.</dd></dl></details>
     <details><summary>Evaluation metrics</summary><dl><dt>What</dt><dd>Scores computed only after predictions are made.</dd><dt>Does</dt><dd>Exact Match and token F1 (answer spans); accuracy, macro-F1 and confusion matrix (verdicts); gold-passage hit rate and MRR (retrieval); quote validity; repeat agreement; cost.</dd><dt>Why</dt><dd>Gold labels are hidden from retrieval and reasoning, so scores are honest.</dd><dt>Example</dt><dd>Token F1 0.67 = two thirds word overlap with the reference answer.</dd></dl></details>

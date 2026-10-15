@@ -80,14 +80,24 @@ def bny_graph():
 EDGE_STATES = ("supported", "contradicted", "conflicting", "insufficient_evidence")
 
 
+def _state(j):
+    """A judgment label, or a validator result. A 'contradicted' result without a causal contradiction
+    (correlation only) is treated as insufficient evidence, so it cannot break a chain."""
+    if isinstance(j, dict):
+        if j["judgment"] == "contradicted" and j.get("checks", {}).get("contradiction", "causal") != "causal":
+            return "insufficient_evidence"
+        return j["judgment"]
+    return j or "insufficient_evidence"
+
+
 def aggregate_path(edge_ids, judgments):
-    """Conservative chain rule. `judgments` maps edge_id -> validator judgment label.
+    """Conservative chain rule. `judgments` maps edge_id -> validator judgment label (or validator result).
     - supported   only if EVERY edge is supported (one weak link => the chain is not supported)
-    - broken      if any edge is contradicted
+    - broken      if any edge has a validated causal contradiction (co-movement alone never breaks a chain)
     - contested   if any edge has material evidence on both sides (and none is contradicted)
     - incomplete  otherwise (some edge lacks sufficient evidence)
     Edge states are never multiplied into an effect size or probability."""
-    states = [judgments.get(e, "insufficient_evidence") for e in edge_ids]
+    states = [_state(judgments.get(e)) for e in edge_ids]
     if all(s == "supported" for s in states):
         status = "supported"
     elif "contradicted" in states:
@@ -98,7 +108,8 @@ def aggregate_path(edge_ids, judgments):
         status = "incomplete"
     weakest = [e for e, s in zip(edge_ids, states) if s != "supported"]
     return {"edges": list(edge_ids), "edge_states": states, "status": status,
-            "edges_supported": states.count("supported"), "edges_total": len(states), "unsupported_edges": weakest}
+            "edges_supported": states.count("supported"), "edges_total": len(states), "unsupported_edges": weakest,
+            "broken_by": [e for e, s in zip(edge_ids, states) if s == "contradicted"]}
 
 
 def aggregate_graph(graph, judgments, path_signs=None):

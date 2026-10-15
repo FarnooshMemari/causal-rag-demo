@@ -7,7 +7,7 @@ const hum = x => String(x ?? 'not recorded').replaceAll('_', ' ');
 const num = (x, d = 2) => x === null || x === undefined ? '—' : Number(x).toFixed(d);
 const METHODS = [['ordinary', 'Ordinary RAG', 'var(--s1)'], ['multi_query', 'Multi-Query RAG', 'var(--s2)'], ['graph_guided', 'Graph-Guided RAG', 'var(--s3)']];
 const ORACLE = ['oracle', 'Oracle evidence (diagnostic)', 'var(--s-oracle)'];
-const state = { index: null, record: null, bny: null, poc: null, bench: {}, edge: 'E1', benchName: 'fincausal2026', metric: null, sample: 0, sampleMethod: 'graph_guided' };
+const state = { index: null, record: null, bny: null, poc: null, pocView: 'reviewed', pocPath: '', pocOrigPath: '', bench: {}, edge: 'E1', benchName: 'fincausal2026', metric: null, sample: 0, sampleMethod: 'graph_guided' };
 
 async function getJSON(p) { const r = await fetch(p, { cache: 'no-cache' }); if (!r.ok) throw Error(p + ' HTTP ' + r.status); return r.json(); }
 const pill = s => s === 'computed' ? '<span class="pill computed">Computed</span>' : s === 'recorded' ? '<span class="pill recorded">Recorded</span>' : '<span class="pill pending">Unavailable</span>';
@@ -15,8 +15,8 @@ const latest = (kind, ds, pre) => (state.index?.artifacts || []).filter(a => a.k
 
 /* ---------------- tabs */
 function showTab() {
-  const t = (location.hash || '#overview').slice(1);
-  const tab = ['overview', 'bny', 'benchmarks', 'guide'].includes(t) ? t : 'overview';
+  const t = (location.hash || '#experiment').slice(1);
+  const tab = ['experiment', 'benchmarks', 'guide'].includes(t) ? t : 'experiment';
   QA('.tab').forEach(s => s.hidden = s.id !== 'tab-' + tab);
   QA('nav a').forEach(a => a.dataset.tab === tab ? a.setAttribute('aria-current', 'page') : a.removeAttribute('aria-current'));
 }
@@ -27,49 +27,56 @@ document.addEventListener('mouseover', e => { const t = e.target.closest('[data-
 document.addEventListener('mousemove', e => { if (!tip.hidden) { tip.style.left = Math.min(e.clientX + 12, innerWidth - 270) + 'px'; tip.style.top = e.clientY + 14 + 'px'; } });
 document.addEventListener('mouseout', e => { if (e.target.closest('[data-tip]')) tip.hidden = true; });
 
-/* ---------------- overview */
-function overview() {
-  const b = latest('bny'), f = latest('benchmarks', 'fincausal2026'), a = latest('benchmarks', 'averitec');
-  const card = (title, status, lines) => `<div class="card"><h3>${H(title)} ${pill(status)}</h3>${lines.map(l => `<p>${l}</p>`).join('')}</div>`;
-  Q('#status-board').innerHTML = [
-    card('BNY original v1/v2', state.record ? 'recorded' : 'pending', ['Ordinary vs graph-guided, 3 repeats; E1 revised in v2.', 'Preserved unchanged.']),
-    card('BNY three-method', b ? 'computed' : 'pending', b ? [`Ordinary, multi-query, graph-guided + validator. ${H(b.created_utc.slice(0, 10))}.`, 'One event; no gold labels.'] : ['Not run yet.']),
-    card('FinCausal 2026', f ? 'computed' : 'pending', f ? [`Small dev run: n=${f.n}, ${H(f.split)}.`, 'Not a full-benchmark result.'] : ['Adapter ready; no run saved.']),
-    card('AVeriTeC', a ? 'computed' : 'pending', a ? [`Small dev run: n=${a.n}, ${H(a.split)} split.`, 'Not a full-benchmark result.'] : ['Adapter ready; no run saved.']),
-    card('Full-split evaluation', 'pending', ['Not run (cost-controlled). Official test gold is not public for either dataset.'])
-  ].join('');
-}
-
-/* ---------------- BNY meeting demo: subset of edges, small shared budget, one repeat */
-function poc() {
-  const P = state.poc, el = Q('#bny-poc');
-  if (!P) { el.innerHTML = pill('pending') + ' No demo run saved. Run <code>python -m crag.cli bny-poc</code>.'; return; }
-  const r = P.run, ids = P.edges_assessed, G = P.graph, lab = id => G.nodes.find(n => n.id === id)?.label || id;
+/* ---------------- Experiment: E3 -> E4 -> E5 demo (default page). Every finding below is derived from the saved artifact. */
+const SHORT = { consumption: 'Consumer spending', inflation_pressure: 'Inflation pressure', rate_expectations: 'Expected rate path', equity_valuation_pressure: 'Equity valuations' };
+function experiment() {
+  const P = state.poc, el = Q('#exp-body');
+  if (!P) { el.innerHTML = `<div class="panel">${pill('pending')} No demo run saved. Run <code>python -m crag.cli bny-poc</code>.</div>`; return; }
+  const reviewed = !!P.run.review, useRev = reviewed && state.pocView === 'reviewed';
+  const r = P.run, ids = P.edges_assessed, G = P.graph, lab = id => SHORT[id] || G.nodes.find(n => n.id === id)?.label || id;
   const E = ids.map(id => G.edges.find(e => e.id === id)), nodes = [E[0].source, ...E.map(e => e.target)];
-  const w = 120, svg = `<svg viewBox="-30 0 ${w * (nodes.length - 1) + 100} 64" role="img" aria-label="Causal chain ${nodes.map(lab).join(' to ')}"><defs><marker id="ah2" viewBox="0 0 10 10" refX="10" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0 0L10 5L0 10z" fill="var(--ink-3)"/></marker></defs>${
-    E.map((e, i) => `<line x1="${20 + i * w + 8}" y1="24" x2="${20 + (i + 1) * w - 10}" y2="24" stroke="var(--ink-3)" stroke-width="2" marker-end="url(#ah2)"/><text class="lbl" x="${20 + i * w + w / 2}" y="16" text-anchor="middle">${e.id} ${e.sign > 0 ? '+' : '−'}</text>`).join('')}${
-    nodes.map((n, i) => `<circle cx="${20 + i * w}" cy="24" r="6" fill="var(--accent)"/><text x="${20 + i * w}" y="50" text-anchor="middle" class="small">${H(NODES[n]?.[2] || lab(n))}</text>`).join('')}</svg>`;
   const runs = Object.fromEntries(METHODS.map(([m]) => [m, P.methods[m]?.[0]]));
   const ed = (m, id) => runs[m]?.edges.find(x => x.edge_id === id);
+  const verdict = x => useRev || !x.original_validator ? x.validator : x.original_validator;
+  const paths = m => (useRev || !runs[m].original_paths ? runs[m].paths : runs[m].original_paths).paths;
+  const pathId = Object.keys(runs.graph_guided.paths.paths)[0];
   const rel = x => ['supporting_evidence', 'contradicting_evidence'].flatMap(k => x.validator.quotes[k] || []).filter(q => q.citation_status === 'valid' && q.kind !== 'off_target').length;
   const set = m => new Set(Object.values(runs[m].routing).flat()), ord = set('ordinary');
-  const cell = (m, id) => { const x = ed(m, id); if (!x) return '<td>—</td>'; const v = x.validator;
-    return `<td><span class="badge ${H(v.judgment)}" data-tip="${H(v.reasons.join(' '))}">${hum(v.judgment)}</span><div class="small muted" data-tip="Valid, on-target quotes cited by the assessor (relevance), independent of the verdict">${rel(x)} relevant quote${rel(x) === 1 ? '' : 's'}</div></td>`; };
-  const pathId = Object.keys(runs.graph_guided.paths.paths)[0];
-  el.innerHTML = `<div class="notice"><strong>Small qualitative demonstration.</strong> One event, ${ids.length} edges, one repeat, ${r.budget_chunks} passages per method. It illustrates behaviour; it is not statistical evidence that any method is superior, and no label here establishes causality.</div>
-    <div class="runline">${pill(r.status)} <span>${H(r.model)} · ${H(r.created_utc.slice(0, 10))} · same corpus, model, rubric and ${r.budget_chunks}-passage budget for every method · cost $${num(r.usage?.cost_usd_recorded, 2)}</span></div>
-    <div class="panel"><h2 class="h3" style="margin-top:0">Causal chain tested (${H(pathId.replace('_', ' '))})</h2>${svg}<p class="small muted">Signs are hypotheses from the frozen BNY graph. Evidence must be public before ${H(r.cutoff.slice(0, 16).replace('T', ' '))} ET.</p></div>
-    <div class="tablewrap"><table class="data poc"><caption class="small muted" style="text-align:left">Verdict after citation checks and causal validation (validity) · count of on-target cited quotes (relevance)</caption>
-      <thead><tr><th>Edge</th>${METHODS.map(([, n, c]) => `<th style="border-top:3px solid ${c}">${n}</th>`).join('')}</tr></thead><tbody>
-      ${E.map(e => `<tr><td style="text-align:left">${e.id} · ${H(lab(e.source))} → ${H(lab(e.target))}</td>${METHODS.map(([m]) => cell(m, e.id)).join('')}</tr>`).join('')}
-      <tr><td style="text-align:left"><strong>Chain ${H(pathId.replace('_', ' '))}</strong></td>${METHODS.map(([m]) => { const s = runs[m]?.paths.paths[pathId]; return `<td><span class="badge ${H(s?.status)}">${hum(s?.status)}</span></td>`; }).join('')}</tr>
-      <tr><td style="text-align:left">Queries · passages also retrieved by Ordinary</td>${METHODS.map(([m]) => `<td class="small">${runs[m].n_queries} · ${[...set(m)].filter(c => ord.has(c)).length}/${set(m).size}</td>`).join('')}</tr>
-      </tbody></table></div>
-    <p class="small muted"><strong>Relevance ≠ validity.</strong> A passage can be on topic and still not show the mechanism. “Contradicted” means a cited passage describes movement opposite to the hypothesis; co-movement neither proves nor refutes the mechanism. A chain is supported only if every link is.</p>
-    <div class="compare3">${METHODS.map(([m, name, c]) => { const run = runs[m];
+  // chain diagram
+  const svg = `<ol class="chain" aria-label="Causal chain: ${nodes.map(lab).join(' to ')}">${nodes.map((n, i) => `<li class="cnode"><span class="dot" aria-hidden="true"></span>${H(lab(n))}</li>${E[i] ? `<li class="cedge" aria-label="${E[i].id}, hypothesised sign ${E[i].sign > 0 ? 'positive' : 'negative'}"><span>${E[i].id} (${E[i].sign > 0 ? '+' : '−'})</span></li>` : ''}`).join('')}</ol>`;
+  // findings (computed, never hardcoded)
+  const sup = METHODS.map(([m, n]) => [n, ids.filter(id => verdict(ed(m, id)).judgment === 'supported')]);
+  const anySup = sup.filter(([, xs]) => xs.length);
+  const chainSup = METHODS.filter(([m]) => paths(m)[pathId]?.status === 'supported').map(([, n]) => n);
+  const changes = reviewed ? METHODS.flatMap(([m, n]) => ids.map(id => [n, id, ed(m, id)]).filter(([, , x]) => x.original_validator && x.original_validator.judgment !== x.validator.judgment)
+    .map(([n, id, x]) => `${n} ${id}: ${hum(x.original_validator.judgment)} → ${hum(x.validator.judgment)}`)) : [];
+  const findings = [
+    anySup.length ? `Supported edges: ${anySup.map(([n, xs]) => `<b>${n.replace(' RAG', '')}</b> ${xs.join(', ')}`).join('; ')}. Other methods found no supported edge.` : 'No method found a supported edge.',
+    chainSup.length ? `Full chain supported by: ${chainSup.join(', ')}.` : 'No method supports the full chain: at least one link lacks sufficient evidence in every method.',
+    `Graph-Guided retrieved different evidence: ${[...set('graph_guided')].filter(c => ord.has(c)).length} of ${set('graph_guided').size} passages overlap with Ordinary RAG.`,
+    ...(useRev && changes.length ? [`Validator v2 changed ${changes.join('; ')} (co-movement is not a causal contradiction).`] : [])];
+  const cell = (m, id) => { const x = ed(m, id), v = verdict(x), n = rel(x);
+    return `<td><span class="badge ${H(v.judgment)}" data-tip="${H(v.reasons.join(' '))}">${hum(v.judgment)}</span><div class="rel" data-tip="Relevance: valid, on-topic quotes the assessor cited. Independent of the validity verdict.">${n} relevant quote${n === 1 ? '' : 's'}</div></td>`; };
+  el.innerHTML = `
+    <div class="exp-meta"><span class="tag">Small qualitative demonstration</span><span class="muted small">${H(r.model)} · ${H(r.created_utc.slice(0, 10))} · 1 repeat · ${r.budget_chunks} passages per method · cost $${num(r.usage?.cost_usd_recorded, 2)}</span>
+      ${reviewed ? `<div class="seg" role="tablist" aria-label="Assessment version"><button role="tab" data-pocview="reviewed" aria-selected="${useRev}">Reviewed (validator v2)</button><button role="tab" data-pocview="original" aria-selected="${!useRev}">Original run</button></div>` : ''}</div>
+    <div class="panel chain-panel">${svg}</div>
+    <div class="findings"><h2 class="h3">Key findings</h2><ul>${findings.map(f => `<li>${f}</li>`).join('')}</ul></div>
+    <div class="tablewrap"><table class="data poc"><thead><tr><th>Link</th>${METHODS.map(([, n, c]) => `<th style="box-shadow:inset 0 3px 0 ${c}">${n}</th>`).join('')}</tr></thead><tbody>
+      ${E.map(e => `<tr><th scope="row">${e.id} <span class="muted">${H(lab(e.source))} → ${H(lab(e.target))}</span></th>${METHODS.map(([m]) => cell(m, e.id)).join('')}</tr>`).join('')}
+      <tr class="chainrow"><th scope="row">Chain ${H(pathId.replace('_', ' '))}</th>${METHODS.map(([m]) => { const s = paths(m)[pathId]; return `<td><span class="badge ${H(s?.status)}">${hum(s?.status)}</span></td>`; }).join('')}</tr>
+    </tbody></table></div>
+    <div class="keyline"><div><b>Verdict = causal validity.</b> Does the text state the mechanism, before the cutoff, without being off-target or merely correlated?</div><div><b>Relevant quotes = evidence relevance.</b> On-topic, verbatim quotes cited. Relevant is not the same as valid.</div><div><b>Chain rule.</b> Supported only if every link is; broken only by a validated causal contradiction.</div></div>
+    <details class="panel"><summary>Explanations, quotes and retrieved passages</summary><div class="compare3">${METHODS.map(([m, name, c]) => { const run = runs[m];
       return `<div class="mcol" style="--c:${c}"><h3>${name}</h3>
-        ${E.map(e => { const x = ed(m, e.id); return `<details><summary>${e.id}: ${hum(x.validator.judgment)}</summary><p class="small">${H(x.explanation)}</p><h4 class="small">Supporting</h4>${quoteList(x.validator.quotes, 'supporting_evidence')}<h4 class="small">Contradicting</h4>${quoteList(x.validator.quotes, 'contradicting_evidence')}</details>`; }).join('')}
-        <details><summary>Retrieved passages (${set(m).size})</summary><p class="small"><strong>Queries:</strong><br>${run.queries.map(H).join('<br>')}</p>${Object.entries(run.routing).map(([k, cs]) => `${k !== 'all' ? `<h4 class="small">Routed to ${H(k)}</h4>` : ''}${cs.map(cid => { const p = P.evidence[cid]; return `<details class="psg"><summary class="meta">${H(cid)} · ${H(p.available_at_et.slice(0, 10))}</summary><p class="small">${H(p.text)}</p></details>`; }).join('')}`).join('')}</details></div>`; }).join('')}</div>`;
+        ${E.map(e => { const x = ed(m, e.id), v = verdict(x); return `<details><summary>${e.id}: ${hum(v.judgment)}</summary><ul class="reasons">${v.reasons.map(t => `<li>${H(t)}</li>`).join('')}</ul><p class="small"><b>Assessor:</b> ${H(x.explanation)}</p><h4 class="small">Supporting</h4>${quoteList(x.validator.quotes, 'supporting_evidence')}<h4 class="small">Contradicting</h4>${quoteList(x.validator.quotes, 'contradicting_evidence')}</details>`; }).join('')}
+        <details><summary>Retrieved passages (${set(m).size})</summary><p class="small"><b>Queries:</b><br>${run.queries.map(H).join('<br>')}</p>${Object.entries(run.routing).map(([k, cs]) => `${k !== 'all' ? `<h4 class="small">Routed to ${H(k)}</h4>` : ''}${cs.map(cid => { const p = P.evidence[cid]; return `<details class="psg"><summary class="meta">${H(cid)} · ${H(p.available_at_et.slice(0, 10))}</summary><p class="small">${H(p.text)}</p></details>`; }).join('')}`).join('')}</details></div>`; }).join('')}</div></details>
+    <details class="panel"><summary>Setup and limitations</summary><ul class="small">
+      <li>Same corpus, BM25 retriever, model, assessor prompt and ${r.budget_chunks}-passage budget for all methods. Multi-Query uses as many queries as Graph-Guided (${runs.graph_guided.n_queries}), so differences are not just query count.</li>
+      <li>Evidence must be public before ${H(r.cutoff.slice(0, 16).replace('T', ' '))} ET; future passages retrieved: ${METHODS.map(([m]) => runs[m].future_chunks_retrieved.length).reduce((a, b) => a + b, 0)}.</li>
+      <li>One event, one repeat, no gold labels. This illustrates behaviour; it is not evidence that any method is superior, and no verdict establishes causality.</li>
+      ${reviewed ? `<li>${H(r.review.note)} Validator: ${H(r.review.validator_version)}. Model calls for the review: ${r.review.model_calls}.</li>` : ''}
+      <li>Artifacts: <a href="${H(state.pocPath)}">${H(state.pocPath)}</a>${state.pocOrigPath ? ` · original <a href="${H(state.pocOrigPath)}">${H(state.pocOrigPath)}</a>` : ''}</li></ul></details>`;
 }
 
 /* ---------------- BNY three-method */
@@ -161,7 +168,20 @@ function sampleView(d) {
     <details><summary>Retrieved evidence (${p.retrieved.length})${p.queries.length ? ` · ${p.queries.length} quer${p.queries.length > 1 ? 'ies' : 'y'}` : ''}</summary>${p.queries.length ? `<p class="small muted">${p.queries.map(H).join('<br>')}</p>` : ''}${ev}</details>
     ${!isFC && s.gold.qa_evidence ? `<details><summary>Annotated reference evidence (gold, evaluation only)</summary>${s.gold.qa_evidence.map(q => `<p class="small"><b>${H(q.question)}</b><br>${H(q.answers.join(' / '))}</p>`).join('')}</details>` : ''}`;
 }
+function benchStatus() {
+  const card = (name, ds, note) => { const a = latest('benchmarks', ds);
+    return `<div class="card"><h3>${name}</h3><p>${a ? `${pill('computed')} Small-sample dev run · n=${a.n} · ${H(a.split)}` : `${pill('pending')} No run saved`}</p><p><span class="pill pending">Pending</span> Full evaluation · not run</p><p class="small muted">${note}</p></div>`; };
+  Q('#bench-status').innerHTML = card('FinCausal 2026', 'fincausal2026', 'Extractive QA (EM, token F1) over a controlled corpus with distractors. Not a retrieval benchmark; test gold is not public.') +
+    card('AVeriTeC', 'averitec', 'Four-label claim verification (macro-F1). Causal and non-causal claims scored separately. No gold causal graphs; test labels not public.');
+}
+function causalSplit(d) {
+  if (d.task !== 'claim_verification') return '';
+  const rows = benchRows(d), g = (m, k) => d.metrics[m]?.[k];
+  return `<div class="tablewrap"><table class="data"><caption class="small muted" style="text-align:left">Macro-F1 by claim type (annotated causal vs non-causal). Very small n.</caption><thead><tr><th>Method</th><th>Causal claims</th><th>Non-causal claims</th></tr></thead><tbody>${
+    rows.map(([m, n]) => `<tr><td>${H(n)}</td><td>${num(g(m, 'causal_annotated')?.macro_f1)} <span class="muted">(n=${g(m, 'causal_annotated')?.n ?? '—'})</span></td><td>${num(g(m, 'noncausal_annotated')?.macro_f1)} <span class="muted">(n=${g(m, 'noncausal_annotated')?.n ?? '—'})</span></td></tr>`).join('')}</tbody></table></div>`;
+}
 function benchmarks() {
+  benchStatus();
   QA('[data-bench]').forEach(b => b.setAttribute('aria-selected', b.dataset.bench === state.benchName));
   const a = latest('benchmarks', state.benchName), d = state.bench[state.benchName], cfg = BENCH[state.benchName];
   if (!a || !d) { Q('#bench-body').innerHTML = `<div class="panel">${pill('pending')} <b>No computed run saved for this benchmark.</b><p class="muted">The adapter is implemented. Download the official data and run <code>python -m crag.cli bench-run --dataset ${state.benchName}</code>. No score is shown until a run exists.</p></div>`; return; }
@@ -170,28 +190,30 @@ function benchmarks() {
   const tiles = benchRows(d).map(([m, n, c]) => `<div class="tile" style="--c:${c}"><div class="k">${H(n)}</div><div class="v">${num(d.metrics[m]?.[cfg.primary])}</div><div class="k">${cfg.metrics[0][1]}</div></div>`).join('');
   Q('#bench-body').innerHTML = `
     <div class="runline">${pill(r.status)} <span><b>${state.benchName === 'averitec' ? 'AVeriTeC' : 'FinCausal 2026'}</b> · split <b>${H(ds.split)}</b> · n=${ds.n_cases} · ${H(r.model)} · ${H(r.created_utc.slice(0, 10))} · budget ${r.budget_passages} passages · ${r.repeats} repeat · cost $${num(r.usage?.cost_usd_recorded)}</span></div>
-    <p class="caution">Small development sample: differences between methods are descriptive and within noise. Not a benchmark score.</p>
+    <p class="caution">Small development sample (n=${ds.n_cases}): differences between methods are descriptive and within noise. Not a benchmark score and not evidence of superiority.</p>
     <div class="tiles">${tiles}</div>
-    <div class="chart-wrap"><div class="chart-head"><h2 class="h3" style="margin:0">${H(label)}</h2><label>Metric <select id="metric">${cfg.metrics.map(([k, l]) => `<option value="${k}" ${k === state.metric ? 'selected' : ''}>${l}</option>`).join('')}</select></label></div>
+    ${causalSplit(d)}
+    <details class="panel"><summary>Charts, all metrics and confusion matrices</summary><div class="chart-wrap"><div class="chart-head"><h2 class="h3" style="margin:0">${H(label)}</h2><label>Metric <select id="metric">${cfg.metrics.map(([k, l]) => `<option value="${k}" ${k === state.metric ? 'selected' : ''}>${l}</option>`).join('')}</select></label></div>
       ${chart(d, state.metric, label)}<details><summary>Table view: all metrics</summary>${metricTable(d)}</details>${d.task === 'claim_verification' ? `<details><summary>Confusion matrices &amp; causal vs non-causal claims</summary>${confusion(d).replaceAll('<details>', '<details class="inner">')}</details>` : ''}
-      ${d.graph_construction_eval ? `<details><summary>Graph construction (evaluated separately)</summary><p class="small">${H(d.graph_construction_eval.note)} Detected &amp; annotated causal: ${d.graph_construction_eval.tp} · detected only: ${d.graph_construction_eval.fp} · annotated only: ${d.graph_construction_eval.fn} · neither: ${d.graph_construction_eval.tn}.</p></details>` : ''}</div>
+      ${d.graph_construction_eval ? `<details><summary>Graph construction (evaluated separately)</summary><p class="small">${H(d.graph_construction_eval.note)} Detected &amp; annotated causal: ${d.graph_construction_eval.tp} · detected only: ${d.graph_construction_eval.fp} · annotated only: ${d.graph_construction_eval.fn} · neither: ${d.graph_construction_eval.tn}.</p></details>` : ''}</div></details>
     <details class="panel"><summary>Data, split and provenance</summary><p class="small">${H(ds.citation)} <a href="${H(ds.dataset_doi || ds.paper)}" target="_blank" rel="noopener">source</a> · licence ${H(ds.license)}</p>
       ${['split_note', 'corpus_note', 'relevance_note', 'multi_step_note', 'time_note', 'sampling_note'].filter(k => ds[k]).map(k => `<p class="small"><b>${hum(k.replace('_note', ''))}:</b> ${H(ds[k])}</p>`).join('')}
       <p class="small"><b>Config:</b> ${H(JSON.stringify(d.config))} · provider ${H(r.provider)} · cache ${H(r.llm_cache_namespace)} · artifact <a href="${H(a.path)}">${H(a.path)}</a></p></details>
-    <h2>Inspect samples</h2>
+    <details class="panel"><summary>Inspect samples</summary>
     <div class="samples"><div class="slist" role="list">${d.samples.map((s, i) => { const p = s.methods.graph_guided; const ok = d.task === 'extractive_qa' ? p.em : p.prediction === s.gold.label;
       return `<button role="listitem" data-sample="${i}" aria-pressed="${i === state.sample}">${ok ? '✓' : '✗'} ${H(s.input.slice(0, 90))}${s.input.length > 90 ? '…' : ''}</button>`; }).join('')}</div>
-    <div class="panel" id="sample-view">${sampleView(d)}</div></div>`;
+    <div class="panel" id="sample-view">${sampleView(d)}</div></div></details>`;
 }
 
 /* ---------------- wiring */
 document.addEventListener('click', e => {
-  const t = e.target.closest('[data-bench],[data-sample],[data-smethod],[data-view],#bny-graph .e');
+  const t = e.target.closest('[data-bench],[data-sample],[data-smethod],[data-view],[data-pocview],#bny-graph .e');
   if (!t) return;
   if (t.dataset.bench) { state.benchName = t.dataset.bench; state.sample = 0; state.metric = null; benchmarks(); }
   else if (t.dataset.sample) { state.sample = +t.dataset.sample; benchmarks(); }
   else if (t.dataset.smethod) { state.sampleMethod = t.dataset.smethod; Q('#sample-view').innerHTML = sampleView(state.bench[state.benchName]); }
-  else if (t.dataset.view) { ['poc', 'new', 'orig'].forEach(v => Q('#bny-' + v).hidden = v !== t.dataset.view); QA('[data-view]').forEach(b => b.setAttribute('aria-selected', b === t)); }
+  else if (t.dataset.pocview) { state.pocView = t.dataset.pocview; experiment(); }
+  else if (t.dataset.view) { ['new', 'orig'].forEach(v => Q('#bny-' + v).hidden = v !== t.dataset.view); QA('[data-view]').forEach(b => b.setAttribute('aria-selected', b === t)); }
   else if (t.dataset.edge) { state.edge = t.dataset.edge; bny(); }
 });
 document.addEventListener('keydown', e => { const t = e.target.closest?.('#bny-graph .e'); if (t && (e.key === 'Enter' || e.key === ' ')) { e.preventDefault(); state.edge = t.dataset.edge; bny(); Q(`#bny-graph [data-edge="${state.edge}"]`)?.focus(); } });
@@ -202,9 +224,9 @@ addEventListener('hashchange', showTab);
   showTab();
   try { state.record = await getJSON('results.json'); } catch { state.record = null; }
   try { state.index = await getJSON('artifacts/index.json'); } catch { state.index = { artifacts: [] }; }
-  const b = latest('bny', null, 'bny_three_method'), pc = latest('bny', null, 'bny_poc');
+  const b = latest('bny', null, 'bny_three_method'), pc = (state.index.artifacts || []).find(a => a.name.startsWith('bny_poc') && a.name.endsWith('__reviewed_v2') && a.status === 'computed') || latest('bny', null, 'bny_poc'), po = (state.index.artifacts || []).find(a => a.name === 'bny_poc_E3_E4_E5__llm');
   if (b) try { state.bny = await getJSON(b.path); } catch { state.bny = null; }
-  if (pc) try { state.poc = await getJSON(pc.path); } catch { state.poc = null; }
+  if (pc) try { state.poc = await getJSON(pc.path); state.pocPath = pc.path; state.pocOrigPath = po && po.path !== pc.path ? po.path : ''; } catch { state.poc = null; }
   for (const ds of ['fincausal2026', 'averitec']) { const a = latest('benchmarks', ds); if (a) try { state.bench[ds] = await getJSON(a.path); } catch {} }
-  overview(); poc(); bny(); benchmarks();
+  experiment(); bny(); benchmarks();
 })();

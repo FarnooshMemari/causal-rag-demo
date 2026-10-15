@@ -208,3 +208,44 @@ def test_bny_edge_subset_shares_budget_and_reports_only_covered_paths():
         assert len(ids) <= 9 and not runs[0]["future_chunks_retrieved"] and ids <= set(r["evidence"])
         assert [e["edge_id"] for e in runs[0]["edges"]] == ["E3", "E4", "E5"] and set(runs[0]["paths"]["paths"]) == {"P2_rates"}
     assert r["methods"]["multi_query"][0]["n_queries"] == r["methods"]["graph_guided"][0]["n_queries"] == 3
+
+
+# ---------------------------------------------------------------- v2 contradiction logic (E4/E5 regressions)
+RATES = {"source_terms": ["rates", "yields"], "target_terms": ["equity", "equities"], "requires_forward_looking": False}
+
+
+def test_co_movement_is_not_a_contradiction():
+    v = validate_edge(_it("contradicted", con=[("c1", "Yields rose significantly. Meanwhile, equity prices also increased.")]), RATES)
+    assert v["judgment"] == "insufficient_evidence" and v["checks"]["contradiction"] == "correlation_only"
+    off = validate_edge(_it("contradicted", con=[("c1", "Higher rates were offset by higher equity prices.")]), RATES)
+    assert off["judgment"] == "insufficient_evidence"
+
+
+def test_negated_link_is_a_contradiction_and_confounded_counter_example_is_not():
+    v = validate_edge(_it("contradicted", con=[("c1", "Higher rates had little effect on equity valuations.")]), RATES)
+    assert v["judgment"] == "contradicted" and v["checks"]["contradiction"] == "causal"
+    ce = _it("contradicted", con=[("c1", "Equities rose despite higher rates.")])
+    assert validate_edge(ce, RATES)["judgment"] == "contradicted"
+    assert validate_edge({**ce, "alternative_explanations": ["earnings growth"]}, RATES)["judgment"] == "insufficient_evidence"
+
+
+def test_correlation_only_contradiction_cannot_break_chain():
+    fake = {"judgment": "contradicted", "checks": {"contradiction": "correlation_only"}}
+    assert aggregate_path(["E4", "E5"], {"E4": "supported", "E5": fake})["status"] == "incomplete"
+    real = {"judgment": "contradicted", "checks": {"contradiction": "causal"}}
+    r = aggregate_path(["E4", "E5"], {"E4": "supported", "E5": real})
+    assert r["status"] == "broken" and r["broken_by"] == ["E5"]
+
+
+def test_e4_e5_regression_on_recorded_demo_preserves_original():
+    src = ARTIFACTS / "bny" / "bny_poc_E3_E4_E5__llm.json"
+    if not src.exists():
+        pytest.skip("demo artifact not present")
+    from crag.experiment import review_bny
+    orig = json.loads(src.read_text())
+    rev = review_bny(orig)
+    gg = {e["edge_id"]: e for e in rev["methods"]["graph_guided"][0]["edges"]}
+    assert gg["E4"]["validator"]["judgment"] == "supported"
+    assert gg["E5"]["original_validator"]["judgment"] == "contradicted" and gg["E5"]["validator"]["judgment"] != "contradicted"
+    assert rev["methods"]["graph_guided"][0]["paths"]["paths"]["P2_rates"]["status"] != "broken"
+    assert orig["methods"]["graph_guided"][0]["paths"]["paths"]["P2_rates"]["status"] == "broken"  # input untouched

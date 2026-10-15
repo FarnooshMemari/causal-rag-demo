@@ -35,6 +35,13 @@
       "path": "artifacts/bny/bny_poc_E3_E4_E5__llm.json",
       "status": "computed",
       "created_utc": "2026-10-15T12:25:15+00:00"
+    },
+    {
+      "kind": "bny",
+      "name": "bny_poc_E3_E4_E5__llm__reviewed_v2",
+      "path": "artifacts/bny/bny_poc_E3_E4_E5__llm__reviewed_v2.json",
+      "status": "computed",
+      "created_utc": "2026-10-15T12:25:15+00:00"
     }
   ]
 }

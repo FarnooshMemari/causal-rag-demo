@@ -26,7 +26,7 @@ from .benchmarks import AVERITEC_LABELS, Passage
 from .common import CORPUS, ROOT, cutoff, load, read_jsonl, write_json
 from .graph import aggregate_graph, aggregate_path, bny_graph
 from .metrics import bootstrap_ci, classification_report, exact_match, hit_at_k, mean, reciprocal_rank, token_f1
-from .retrieval import BM25, time_filter
+from .retrieval import BM25, chunk_lookup, time_filter
 from .validator import validate_edge
 
 VERSION = "bench_v1"            # LLM cache namespace: cache/llm_bench_v1/
@@ -562,6 +562,35 @@ def run_bny(backend="heuristic", repeats=1, edge_ids=None, budget=20):
                   "created_utc": datetime.now(timezone.utc).isoformat(timespec="seconds"), "wall_time_s": round(time.time() - t0, 1),
                   "usage": _usage_since(n0) if backend == "llm" else None,
                   "note": "Domain case study (one event), not a gold-labelled benchmark. Labels describe evidence wording, not causal identification."}
+    return out
+
+
+def review_bny(artifact, rules=None, lookup=None, cut=None):
+    """Re-apply the CURRENT validator to the assessor outputs stored in a BNY artifact. No model calls.
+    The original validator result is kept per edge as `original_validator`; the input file is not modified."""
+    graph, cfg = bny_graph(), load("graph.json")
+    rules = rules or load("validation_rules.json")
+    lookup = lookup or chunk_lookup()
+    cut = cut or cutoff()
+    out = json.loads(json.dumps(artifact))
+    signs = {pid: p["net_hypothesised_sign_on_equities"] for pid, p in cfg["pathways"].items()}
+    sel = set(out.get("edges_assessed") or [e.id for e in graph.edges])
+    for runs in out["methods"].values():
+        for run in runs:
+            for x in run["edges"]:
+                q = x["validator"]["quotes"]
+                item = {"edge_id": x["edge_id"], "label": x["assessor_label"], "validated_label": x["citation_checked_label"],
+                        "supporting_evidence": q["supporting_evidence"], "contradicting_evidence": q["contradicting_evidence"],
+                        "evidence_kind": x.get("evidence_kind"), "assumption_status": x.get("assumption_status"),
+                        "alternative_explanations": x.get("alternative_explanations")}
+                x["original_validator"] = {k: x["validator"][k] for k in ("judgment", "reasons")}
+                x["validator"] = validate_edge(item, rules["edges"][x["edge_id"]], lookup, cut, graph.edge(x["edge_id"]).condition)
+            run["original_paths"] = run["paths"]
+            run["paths"] = _paths_within(aggregate_graph(graph, {x["edge_id"]: x["validator"] for x in run["edges"]}, signs), graph, sel)
+    out["run"] = {**out["run"], "status": "computed", "review": {
+        "validator_version": "v2 (contradiction requires a negated link or an unconfounded counter-example)",
+        "reviewed_utc": datetime.now(timezone.utc).isoformat(timespec="seconds"), "model_calls": 0,
+        "note": "Same stored assessor outputs, re-validated. Original verdicts kept as original_validator / original_paths."}}
     return out
 
 

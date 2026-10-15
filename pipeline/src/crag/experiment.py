@@ -510,9 +510,10 @@ def _bny_assess(edges, chunks, graph, event, lookup, backend, tag, repeat, with_
     return res
 
 
-def run_bny(backend="heuristic", repeats=1):
+def run_bny(backend="heuristic", repeats=1, edge_ids=None, budget=20):
     """Ordinary vs multi-query vs graph-guided on the frozen BNY E1-E5 graph and point-in-time corpus.
-    Same corpus/cutoff/BM25/budget (20) as v1; same v3 assessor prompt and schema for all methods."""
+    Same corpus/cutoff/BM25/budget (20) as v1; same v3 assessor prompt and schema for all methods.
+    edge_ids/budget restrict the run to a subset of edges with a smaller shared evidence budget (PoC)."""
     t0, n0 = time.time(), len(_track_log)
     graph, event, cfg = bny_graph(), load("event.json"), load("graph.json")
     rules = load("validation_rules.json")
@@ -521,21 +522,22 @@ def run_bny(backend="heuristic", repeats=1):
     eligible = time_filter(chunks, cut)
     lookup = {c["chunk_id"]: c for c in chunks}
     index = BM25(eligible)
-    budget = 20
-    out = {"methods": {}, "graph": graph.to_dict()}
+    edges = [graph.edge(i) for i in edge_ids] if edge_ids else graph.edges
+    sel = {e.id for e in edges}
+    out = {"methods": {}, "graph": graph.to_dict(), "edges_assessed": [e.id for e in edges]}
     for r in range(repeats):
         # ordinary: one broad query, one call over all edges
         ordinary = index.top(cfg["ordinary_baseline"]["query"], budget)
         # multi-query: same number of queries as graph-guided (5), generated from the broad question only
-        qs = generate_queries(cfg["ordinary_baseline"]["question"], len(graph.edges), backend, r)
+        qs = generate_queries(cfg["ordinary_baseline"]["question"], len(edges), backend, r)
         multi = _fuse([index.top(q, budget) for q in qs], budget)
-        runs = {"ordinary": ([cfg["ordinary_baseline"]["query"]], {"all": ordinary}, _bny_assess(graph.edges, ordinary, graph, event, lookup, backend, "bny_ordinary", r, False)),
-                "multi_query": (qs, {"all": multi}, _bny_assess(graph.edges, multi, graph, event, lookup, backend, "bny_multi", r, False))}
+        runs = {"ordinary": ([cfg["ordinary_baseline"]["query"]], {"all": ordinary}, _bny_assess(edges, ordinary, graph, event, lookup, backend, "bny_ordinary", r, False)),
+                "multi_query": (qs, {"all": multi}, _bny_assess(edges, multi, graph, event, lookup, backend, "bny_multi", r, False))}
         routed, gres = {}, []
-        for e, k in zip(graph.edges, _split_budget(budget, len(graph.edges))):
+        for e, k in zip(edges, _split_budget(budget, len(edges))):
             routed[e.id] = index.top(e.query, k)
             gres += _bny_assess([e], routed[e.id], graph, event, lookup, backend, f"bny_graph_{e.id}", r, True)
-        runs["graph_guided"] = ([e.query for e in graph.edges], routed, gres)
+        runs["graph_guided"] = ([e.query for e in edges], routed, gres)
         for m, (queries, routing, edges_res) in runs.items():
             vals = {x["edge_id"]: validate_edge(x, rules["edges"][x["edge_id"]], lookup, cut, graph.edge(x["edge_id"]).condition) for x in edges_res}
             judg = {k: v["judgment"] for k, v in vals.items()}
@@ -548,7 +550,10 @@ def run_bny(backend="heuristic", repeats=1):
                 "edges": [{"edge_id": x["edge_id"], "assessor_label": x["label"], "citation_checked_label": x["validated_label"],
                            "explanation": x["explanation"], "evidence_kind": x.get("evidence_kind"), "assumption_status": x.get("assumption_status"),
                            "alternative_explanations": x.get("alternative_explanations"), "validator": vals[x["edge_id"]]} for x in edges_res],
-                "paths": aggregate_graph(graph, judg, signs)})
+                "paths": _paths_within(aggregate_graph(graph, judg, signs), graph, sel)})
+    used = {c for runs_ in out["methods"].values() for run in runs_ for v in run["routing"].values() for c in v}
+    out["evidence"] = {c: {"source": lookup[c].get("source") or lookup[c].get("doc_id"), "title": lookup[c].get("title"),
+                           "available_at_et": lookup[c]["available_at_et"], "text": lookup[c]["text"]} for c in sorted(used)}
     out["regression_on_recorded_v1"] = validator_regression_v1(rules, lookup, cut)
     out["run"] = {"backend": backend, "status": "computed" if backend == "llm" else "smoke_heuristic_not_a_result",
                   "provider": llm.PROVIDER if backend == "llm" else None, "model": llm.MODEL if backend == "llm" else None,
@@ -558,6 +563,12 @@ def run_bny(backend="heuristic", repeats=1):
                   "usage": _usage_since(n0) if backend == "llm" else None,
                   "note": "Domain case study (one event), not a gold-labelled benchmark. Labels describe evidence wording, not causal identification."}
     return out
+
+
+def _paths_within(agg, graph, sel):
+    """Keep only pathways whose edges were all assessed; a partially assessed path is not reported."""
+    agg["paths"] = {p: v for p, v in agg["paths"].items() if set(graph.paths[p]) <= sel}
+    return agg
 
 
 def validator_regression_v1(rules, lookup, cut):

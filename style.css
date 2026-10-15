@@ -138,3 +138,9 @@ pre.excerpt{white-space:pre-wrap;font:inherit;font-size:14px;line-height:1.6;bac
   .workspace{display:block}aside{position:static;margin-bottom:20px}#edges{display:grid;grid-template-columns:1fr 1fr;gap:4px}
   .notegrid{grid-template-columns:1fr}.bar{grid-template-columns:96px 1fr 48px;font-size:13px}.glossary{grid-template-columns:1fr}.kv{grid-template-columns:1fr}}
 .inner{margin-left:12px}
+/* meeting demo */
+#bny-poc .notice{border:1px solid var(--line);border-radius:8px;padding:12px 14px;margin:0 0 12px}
+#bny-poc svg{width:100%;max-width:520px;display:block;margin:4px auto}
+table.poc td,table.poc th{text-align:center;vertical-align:top}table.poc td:first-child,table.poc th:first-child{text-align:left}
+#bny-poc .compare3{margin-top:12px}#bny-poc details.psg{margin:4px 0}
+.badge.contradicted,.badge.broken{color:var(--bad);background:var(--bad-bg)}

@@ -197,3 +197,14 @@ def test_artifact_index_consistent():
         assert d["run"]["status"] == a["status"] and a["status"] in ("computed", "smoke_heuristic_not_a_result")
         if a["kind"] == "benchmarks":
             assert d["dataset"]["n_cases"] == a["n"] == len(d["samples"])
+
+
+def test_bny_edge_subset_shares_budget_and_reports_only_covered_paths():
+    from crag.experiment import run_bny
+    r = run_bny("heuristic", 1, ["E3", "E4", "E5"], 9)
+    assert r["run"]["status"] == "smoke_heuristic_not_a_result" and r["edges_assessed"] == ["E3", "E4", "E5"]
+    for m, runs in r["methods"].items():
+        ids = {c for v in runs[0]["routing"].values() for c in v}
+        assert len(ids) <= 9 and not runs[0]["future_chunks_retrieved"] and ids <= set(r["evidence"])
+        assert [e["edge_id"] for e in runs[0]["edges"]] == ["E3", "E4", "E5"] and set(runs[0]["paths"]["paths"]) == {"P2_rates"}
+    assert r["methods"]["multi_query"][0]["n_queries"] == r["methods"]["graph_guided"][0]["n_queries"] == 3

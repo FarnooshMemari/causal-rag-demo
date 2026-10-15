@@ -7,11 +7,11 @@ const hum = x => String(x ?? 'not recorded').replaceAll('_', ' ');
 const num = (x, d = 2) => x === null || x === undefined ? '—' : Number(x).toFixed(d);
 const METHODS = [['ordinary', 'Ordinary RAG', 'var(--s1)'], ['multi_query', 'Multi-Query RAG', 'var(--s2)'], ['graph_guided', 'Graph-Guided RAG', 'var(--s3)']];
 const ORACLE = ['oracle', 'Oracle evidence (diagnostic)', 'var(--s-oracle)'];
-const state = { index: null, record: null, bny: null, bench: {}, edge: 'E1', benchName: 'fincausal2026', metric: null, sample: 0, sampleMethod: 'graph_guided' };
+const state = { index: null, record: null, bny: null, poc: null, bench: {}, edge: 'E1', benchName: 'fincausal2026', metric: null, sample: 0, sampleMethod: 'graph_guided' };
 
 async function getJSON(p) { const r = await fetch(p, { cache: 'no-cache' }); if (!r.ok) throw Error(p + ' HTTP ' + r.status); return r.json(); }
 const pill = s => s === 'computed' ? '<span class="pill computed">Computed</span>' : s === 'recorded' ? '<span class="pill recorded">Recorded</span>' : '<span class="pill pending">Unavailable</span>';
-const latest = (kind, ds) => (state.index?.artifacts || []).filter(a => a.kind === kind && a.status === 'computed' && (!ds || a.dataset === ds)).sort((a, b) => b.created_utc.localeCompare(a.created_utc))[0];
+const latest = (kind, ds, pre) => (state.index?.artifacts || []).filter(a => a.kind === kind && a.status === 'computed' && (!ds || a.dataset === ds) && (!pre || a.name.startsWith(pre))).sort((a, b) => b.created_utc.localeCompare(a.created_utc))[0];
 
 /* ---------------- tabs */
 function showTab() {
@@ -38,6 +38,38 @@ function overview() {
     card('AVeriTeC', a ? 'computed' : 'pending', a ? [`Small dev run: n=${a.n}, ${H(a.split)} split.`, 'Not a full-benchmark result.'] : ['Adapter ready; no run saved.']),
     card('Full-split evaluation', 'pending', ['Not run (cost-controlled). Official test gold is not public for either dataset.'])
   ].join('');
+}
+
+/* ---------------- BNY meeting demo: subset of edges, small shared budget, one repeat */
+function poc() {
+  const P = state.poc, el = Q('#bny-poc');
+  if (!P) { el.innerHTML = pill('pending') + ' No demo run saved. Run <code>python -m crag.cli bny-poc</code>.'; return; }
+  const r = P.run, ids = P.edges_assessed, G = P.graph, lab = id => G.nodes.find(n => n.id === id)?.label || id;
+  const E = ids.map(id => G.edges.find(e => e.id === id)), nodes = [E[0].source, ...E.map(e => e.target)];
+  const w = 120, svg = `<svg viewBox="-30 0 ${w * (nodes.length - 1) + 100} 64" role="img" aria-label="Causal chain ${nodes.map(lab).join(' to ')}"><defs><marker id="ah2" viewBox="0 0 10 10" refX="10" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0 0L10 5L0 10z" fill="var(--ink-3)"/></marker></defs>${
+    E.map((e, i) => `<line x1="${20 + i * w + 8}" y1="24" x2="${20 + (i + 1) * w - 10}" y2="24" stroke="var(--ink-3)" stroke-width="2" marker-end="url(#ah2)"/><text class="lbl" x="${20 + i * w + w / 2}" y="16" text-anchor="middle">${e.id} ${e.sign > 0 ? '+' : '−'}</text>`).join('')}${
+    nodes.map((n, i) => `<circle cx="${20 + i * w}" cy="24" r="6" fill="var(--accent)"/><text x="${20 + i * w}" y="50" text-anchor="middle" class="small">${H(NODES[n]?.[2] || lab(n))}</text>`).join('')}</svg>`;
+  const runs = Object.fromEntries(METHODS.map(([m]) => [m, P.methods[m]?.[0]]));
+  const ed = (m, id) => runs[m]?.edges.find(x => x.edge_id === id);
+  const rel = x => ['supporting_evidence', 'contradicting_evidence'].flatMap(k => x.validator.quotes[k] || []).filter(q => q.citation_status === 'valid' && q.kind !== 'off_target').length;
+  const set = m => new Set(Object.values(runs[m].routing).flat()), ord = set('ordinary');
+  const cell = (m, id) => { const x = ed(m, id); if (!x) return '<td>—</td>'; const v = x.validator;
+    return `<td><span class="badge ${H(v.judgment)}" data-tip="${H(v.reasons.join(' '))}">${hum(v.judgment)}</span><div class="small muted" data-tip="Valid, on-target quotes cited by the assessor (relevance), independent of the verdict">${rel(x)} relevant quote${rel(x) === 1 ? '' : 's'}</div></td>`; };
+  const pathId = Object.keys(runs.graph_guided.paths.paths)[0];
+  el.innerHTML = `<div class="notice"><strong>Small qualitative demonstration.</strong> One event, ${ids.length} edges, one repeat, ${r.budget_chunks} passages per method. It illustrates behaviour; it is not statistical evidence that any method is superior, and no label here establishes causality.</div>
+    <div class="runline">${pill(r.status)} <span>${H(r.model)} · ${H(r.created_utc.slice(0, 10))} · same corpus, model, rubric and ${r.budget_chunks}-passage budget for every method · cost $${num(r.usage?.cost_usd_recorded, 2)}</span></div>
+    <div class="panel"><h2 class="h3" style="margin-top:0">Causal chain tested (${H(pathId.replace('_', ' '))})</h2>${svg}<p class="small muted">Signs are hypotheses from the frozen BNY graph. Evidence must be public before ${H(r.cutoff.slice(0, 16).replace('T', ' '))} ET.</p></div>
+    <div class="tablewrap"><table class="data poc"><caption class="small muted" style="text-align:left">Verdict after citation checks and causal validation (validity) · count of on-target cited quotes (relevance)</caption>
+      <thead><tr><th>Edge</th>${METHODS.map(([, n, c]) => `<th style="border-top:3px solid ${c}">${n}</th>`).join('')}</tr></thead><tbody>
+      ${E.map(e => `<tr><td style="text-align:left">${e.id} · ${H(lab(e.source))} → ${H(lab(e.target))}</td>${METHODS.map(([m]) => cell(m, e.id)).join('')}</tr>`).join('')}
+      <tr><td style="text-align:left"><strong>Chain ${H(pathId.replace('_', ' '))}</strong></td>${METHODS.map(([m]) => { const s = runs[m]?.paths.paths[pathId]; return `<td><span class="badge ${H(s?.status)}">${hum(s?.status)}</span></td>`; }).join('')}</tr>
+      <tr><td style="text-align:left">Queries · passages also retrieved by Ordinary</td>${METHODS.map(([m]) => `<td class="small">${runs[m].n_queries} · ${[...set(m)].filter(c => ord.has(c)).length}/${set(m).size}</td>`).join('')}</tr>
+      </tbody></table></div>
+    <p class="small muted"><strong>Relevance ≠ validity.</strong> A passage can be on topic and still not show the mechanism. “Contradicted” means a cited passage describes movement opposite to the hypothesis; co-movement neither proves nor refutes the mechanism. A chain is supported only if every link is.</p>
+    <div class="compare3">${METHODS.map(([m, name, c]) => { const run = runs[m];
+      return `<div class="mcol" style="--c:${c}"><h3>${name}</h3>
+        ${E.map(e => { const x = ed(m, e.id); return `<details><summary>${e.id}: ${hum(x.validator.judgment)}</summary><p class="small">${H(x.explanation)}</p><h4 class="small">Supporting</h4>${quoteList(x.validator.quotes, 'supporting_evidence')}<h4 class="small">Contradicting</h4>${quoteList(x.validator.quotes, 'contradicting_evidence')}</details>`; }).join('')}
+        <details><summary>Retrieved passages (${set(m).size})</summary><p class="small"><strong>Queries:</strong><br>${run.queries.map(H).join('<br>')}</p>${Object.entries(run.routing).map(([k, cs]) => `${k !== 'all' ? `<h4 class="small">Routed to ${H(k)}</h4>` : ''}${cs.map(cid => { const p = P.evidence[cid]; return `<details class="psg"><summary class="meta">${H(cid)} · ${H(p.available_at_et.slice(0, 10))}</summary><p class="small">${H(p.text)}</p></details>`; }).join('')}`).join('')}</details></div>`; }).join('')}</div>`;
 }
 
 /* ---------------- BNY three-method */
@@ -159,7 +191,7 @@ document.addEventListener('click', e => {
   if (t.dataset.bench) { state.benchName = t.dataset.bench; state.sample = 0; state.metric = null; benchmarks(); }
   else if (t.dataset.sample) { state.sample = +t.dataset.sample; benchmarks(); }
   else if (t.dataset.smethod) { state.sampleMethod = t.dataset.smethod; Q('#sample-view').innerHTML = sampleView(state.bench[state.benchName]); }
-  else if (t.dataset.view) { const orig = t.dataset.view === 'orig'; Q('#bny-orig').hidden = !orig; Q('#bny-new').hidden = orig; QA('[data-view]').forEach(b => b.setAttribute('aria-selected', b === t)); }
+  else if (t.dataset.view) { ['poc', 'new', 'orig'].forEach(v => Q('#bny-' + v).hidden = v !== t.dataset.view); QA('[data-view]').forEach(b => b.setAttribute('aria-selected', b === t)); }
   else if (t.dataset.edge) { state.edge = t.dataset.edge; bny(); }
 });
 document.addEventListener('keydown', e => { const t = e.target.closest?.('#bny-graph .e'); if (t && (e.key === 'Enter' || e.key === ' ')) { e.preventDefault(); state.edge = t.dataset.edge; bny(); Q(`#bny-graph [data-edge="${state.edge}"]`)?.focus(); } });
@@ -170,8 +202,9 @@ addEventListener('hashchange', showTab);
   showTab();
   try { state.record = await getJSON('results.json'); } catch { state.record = null; }
   try { state.index = await getJSON('artifacts/index.json'); } catch { state.index = { artifacts: [] }; }
-  const b = latest('bny');
+  const b = latest('bny', null, 'bny_three_method'), pc = latest('bny', null, 'bny_poc');
   if (b) try { state.bny = await getJSON(b.path); } catch { state.bny = null; }
+  if (pc) try { state.poc = await getJSON(pc.path); } catch { state.poc = null; }
   for (const ds of ['fincausal2026', 'averitec']) { const a = latest('benchmarks', ds); if (a) try { state.bench[ds] = await getJSON(a.path); } catch {} }
-  overview(); bny(); benchmarks();
+  overview(); poc(); bny(); benchmarks();
 })();
